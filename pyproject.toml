@@ -1,0 +1,10 @@
+# Specify that we use setuptools and setuptools_scm (to generate the version
+# string). Actual configuration is in setup.py and setup.cfg.
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+# Make sure isort and Black are compatible
+[tool.isort]
+profile = "black"
+multi_line_output = 3
