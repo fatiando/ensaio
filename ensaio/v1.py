@@ -23,6 +23,8 @@ _REPOSITORY = pooch.create(
         "earth-topography-10arcmin.nc": "md5:c43b61322e03669c4313ba3d9a58028d",
         "southern-africa-gravity.csv.xz": "md5:1dee324a14e647855366d6eb01a1ef35",
     },
+    # The name of an environment variable that can overwrite the path
+    env="ENSAIO_V1_DATA_DIR",
 )
 
 
