@@ -6,7 +6,7 @@ Compatibility notes
 Ensaio version compatibility
 ----------------------------
 
-Our policy...
+We aim 
 
 
 
@@ -23,4 +23,6 @@ following releases to ensure compatibility:
 
     * - **Python version**
       - **Last compatible release**
+    * - 3.7
+      - 1.1.0 (planned for mid 2022)
 
