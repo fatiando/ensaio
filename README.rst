@@ -17,13 +17,6 @@ Part of the `Fatiando a Terra <https://www.fatiando.org>`__ project
     :alt: Compatible Python versions.
     :target: https://pypi.python.org/pypi/ensaio
 
-Disclaimer
-----------
-
-🚨 **This package is in early stages of design and implementation.** 🚨
-
-We welcome any feedback and ideas!
-
 About
 -----
 
