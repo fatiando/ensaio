@@ -12,10 +12,8 @@ Version 1
 
 Functions to download the datasets in the ``v1`` series:
 
-.. automodule:: ensaio.v1
-.. currentmodule:: ensaio.v1
-
 .. autosummary::
    :toctree: generated/
 
-    fetch_alps_gps
+    ensaio.v1.fetch_alps_gps
+    ensaio.v1.fetch_britain_magnetic

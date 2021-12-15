@@ -24,10 +24,6 @@ dependencies:
   - netcdf4
   - pygmt
   - ipython
-  # Test
-  - pytest
-  - pytest-cov
-  - coverage
   # Style
   - black
   - pathspec

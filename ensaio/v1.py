@@ -44,8 +44,12 @@ def fetch_alps_gps():
 
     **Load with:** :func:`pandas.read_csv`
 
+    **Datum:** WGS84
+
     **Original source:**
     `Sánchez et al. (2018) <https://doi.org/10.1594/PANGAEA.886889>`__
+
+    **Original license:** CC-BY
 
     Returns
     -------
@@ -54,3 +58,41 @@ def fetch_alps_gps():
 
     """
     return Path(_REPOSITORY.fetch("alps-gps-velocity.csv.xz"))
+
+
+def fetch_britain_magnetic():
+    """
+    Fetch the digitized airborne magnetic survey of Britain
+
+    This is a digitization of an airborne magnetic survey of Britain. Data are
+    sampled where flight lines crossed contours on the archive maps. Contains
+    only the total field magnetic anomaly, not the magnetic field intensity
+    measurements or corrections.
+
+    The exact date of measurements is not available (only the year).
+
+    There are 541,508 measurements in total with 6 columns available: line and
+    segment ID, year, longitude, latitude (geodetic), height (unknown datum),
+    total field magnetic anomaly.
+
+    Contains British Geological Survey materials © UKRI 2021.
+
+    **Format:** CSV with xz (lzma) compression.
+
+    **Load with:** :func:`pandas.read_csv`
+
+    **Datum:** WGS84
+
+    **Original source:**
+    `British Geological Survey
+    <https://www.bgs.ac.uk/datasets/gb-aeromagnetic-survey/>`__
+
+    **Original license:** Open Government Licence
+
+    Returns
+    -------
+    fname : :class:`pathlib.Path`
+        Path to the downloaded file on disk.
+
+    """
+    return Path(_REPOSITORY.fetch("britain-magnetic.csv.xz"))
