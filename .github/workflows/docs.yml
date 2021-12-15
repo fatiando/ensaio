@@ -122,7 +122,7 @@ jobs:
           key: gallery-v1-${{ hashFiles('doc/gallery_src/v1/*') }}
 
       - name: Build the documentation
-        run: make -C doc clean all
+        run: make -C doc all
         env:
           # Define directory where sample data will be stored
           ENSAIO_V1_DATA_DIR: ${{ runner.temp }}/cache/ensaio/v1
