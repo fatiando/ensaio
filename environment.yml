@@ -17,7 +17,12 @@ dependencies:
   - sphinx==3.5.*
   - sphinx-book-theme==0.1.*
   - sphinx-gallery==0.10.*
+  - sphinx-panels==0.5.*
   - pygmt
+  - ipython
+  - pandas
+  - xarray
+  - netcdf4
   # Test
   - pytest
   - pytest-cov
