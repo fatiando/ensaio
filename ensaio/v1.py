@@ -310,3 +310,38 @@ def fetch_earth_topography():
     """
     repository = _make_repository()
     return Path(repository.fetch("earth-topography-10arcmin.nc"))
+
+
+def fetch_southern_africa_gravity():
+    """
+    Gravity ground-based surveys of Southern Africa
+
+    This dataset is a compilation of several public domain ground measurements
+    of gravity from Southern Africa. The observations are the absolute gravity
+    values in mGal. The horizontal datum is not specified and heights are
+    referenced to "sea level", which we will interpret as the geoid (which
+    realization is likely not relevant since the uncertainty in the height is
+    probably larger than geoid model differences).
+
+    There are 14,359 measurements in total with 4 columns available: longitude,
+    latitude (geodetic), height (orthometric), and absolute gravity.
+
+    **Format:** CSV with xz (lzma) compression.
+
+    **Load with:** :func:`pandas.read_csv`
+
+    **Datum:** WGS84
+
+    **Original source:** `NOAA NCEI
+    <https://ngdc.noaa.gov/mgg/geodas/trackline.html>`__
+
+    **Original license:** Public domain
+
+    Returns
+    -------
+    fname : :class:`pathlib.Path`
+        Path to the downloaded file on disk.
+
+    """
+    repository = _make_repository()
+    return Path(repository.fetch("southern-africa-gravity.csv.xz"))

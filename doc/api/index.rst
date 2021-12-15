@@ -7,8 +7,8 @@ List of functions and classes (API)
 .. currentmodule:: ensaio
 
 
-Version 1
----------
+``ensaio.v1``
+-------------
 
 .. automodule:: ensaio.v1
 
@@ -25,3 +25,4 @@ Functions to download the datasets in the ``v1`` series:
     ensaio.v1.fetch_earth_geoid
     ensaio.v1.fetch_earth_gravity
     ensaio.v1.fetch_earth_topography
+    ensaio.v1.fetch_southern_africa_gravity
