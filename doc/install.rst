@@ -30,6 +30,7 @@ There are different ways to install Ensaio:
 
         python -m pip install --upgrade git+https://github.com/fatiando/ensaio
 
+
 Which Python?
 -------------
 
@@ -49,9 +50,6 @@ doesn't interfere with any other Python installations in your system.
     The commands below should be executed in a terminal. On Windows, use the
     "Anaconda Prompt" app or ``cmd.exe`` if you're not using Anaconda.
 
-
-
-
 .. _dependencies:
 
 Dependencies
@@ -60,4 +58,12 @@ Dependencies
 The required dependencies should be installed automatically when you install
 Ensaio using ``conda`` or ``pip``.
 
-* `pooch <https://www.fatiando.org/pooch/>`__
+* `Pooch <https://www.fatiando.org/pooch/>`__
+
+Note, however, that our examples use other packages to load and plot the data.
+If you wish to run the examples in the documentation, you will have to install:
+
+* `numpy <https://www.numpy.org/>`__
+* `pandas <https://pandas.pydata.org/>`__
+* `xarray <https://xarray.pydata.org/>`__
+* `PyGMT <https://www.pygmt.org/latest/>`__
