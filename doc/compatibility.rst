@@ -1,7 +1,7 @@
 .. _compatibility:
 
-Compatibility notes
-===================
+Versions and compatibility
+==========================
 
 Ensaio version compatibility
 ----------------------------
