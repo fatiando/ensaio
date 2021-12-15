@@ -275,3 +275,38 @@ def fetch_earth_gravity():
     """
     repository = _make_repository()
     return Path(repository.fetch("earth-gravity-10arcmin.nc"))
+
+
+def fetch_earth_topography():
+    """
+    Topography/bathymetry of the Earth at 10 arc-minute resolution
+
+    The grid is global with node spacing of 10 arc-minutes (grid-node
+    registered) and stored in netCDF with CF-compliant metadata.
+
+    The values are derived from a spherical harmonic model of the ETOPO1
+    bedrock grid. Topography values are referenced to "sea level" and are
+    positive upwards.
+
+    There are 1081 x 2161 grid points in total. Coordinates are longitude and
+    latitude (geodetic).
+
+    **Format:** netCDF4 with zlib compression
+
+    **Load with:** :func:`xarray.load_dataarray` (requires the `netcdf4
+    <https://github.com/Unidata/netcdf4-python>`__ library)
+
+    **Datum:** WGS84
+
+    **Original source:** `ETOPO1 <https://doi.org/10.7289/V5C8276M>`__
+
+    **Original license:** Public domain
+
+    Returns
+    -------
+    fname : :class:`pathlib.Path`
+        Path to the downloaded file on disk.
+
+    """
+    repository = _make_repository()
+    return Path(repository.fetch("earth-topography-10arcmin.nc"))

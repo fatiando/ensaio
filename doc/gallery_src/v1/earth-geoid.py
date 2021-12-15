@@ -16,8 +16,8 @@ model of the Earth's gravity field.
 <https://doi.org/10.5880/icgem.2015.1>`__
 
 """
-import xarray as xr
 import pygmt
+import xarray as xr
 
 import ensaio.v1 as ensaio
 
