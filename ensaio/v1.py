@@ -12,6 +12,18 @@ import pooch
 DOI = "10.5281/zenodo.5167357"
 
 
+def cache_folder():
+    """
+    The location of the data cache for v1 datasets
+
+    Returns
+    -------
+    cache : :class:`pathlib.Path`
+        Path to the cache folder.
+    """
+    return Path(pooch.os_cache("ensaio")) / "v1"
+
+
 def _make_repository():
     """
     Create the :class:`pooch.Pooch` instance that is used to download the data.
@@ -35,7 +47,7 @@ def _make_repository():
     if not url.endswith("/"):
         url = url + "/"
     repository = pooch.create(
-        path=Path(pooch.os_cache("ensaio")) / "v1",
+        path=cache_folder(),
         base_url=url,
         registry={
             "alps-gps-velocity.csv.xz": "md5:195ee3d88783ce01b6190c2af89f2b14",
