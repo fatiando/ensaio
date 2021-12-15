@@ -102,7 +102,7 @@ sphinx_gallery_conf = {
 # -----------------------------------------------------------------------------
 html_title = f'{project} <span class="project-version">{version}</span>'
 html_short_title = project
-html_logo = ""
+html_logo = "_static/fatiando-logo.svg"
 html_favicon = "_static/favicon.png"
 html_last_updated_fmt = "%b %d, %Y"
 html_copy_source = True
