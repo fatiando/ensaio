@@ -49,7 +49,11 @@ fig.basemap(
 )
 pygmt.makecpt(cmap="viridis", series=[data.gravity_mgal.min(), data.gravity_mgal.max()])
 fig.plot(
-    x=data.longitude, y=data.latitude, color=data.gravity_mgal, cmap=True, style="c0.05c"
+    x=data.longitude,
+    y=data.latitude,
+    color=data.gravity_mgal,
+    cmap=True,
+    style="c0.05c",
 )
 fig.colorbar(frame='af+l"gravity [mGal]"')
 fig.coast(shorelines=True, water="royalblue4", area_thresh=1e4)
