@@ -96,3 +96,35 @@ def fetch_britain_magnetic():
 
     """
     return Path(_REPOSITORY.fetch("britain-magnetic.csv.xz"))
+
+
+def fetch_british_columbia_lidar():
+    """
+    Fetch lidar point cloud data of the Trail Islands in BC, Canada
+
+    This is a lidar point cloud (ground reflections only) sliced to the small
+    `Trail Islands <https://apps.gov.bc.ca/pub/bcgnws/names/21973.html>`__
+    to the North of Vancouver. The islands have some nice looking topography
+    and their isolated nature creates problems for some interpolation methods.
+
+    There are 829,733 measurements in total with 3 columns available:
+    longitude, latitude (geodetic), and ground elevation (orthometric).
+
+    **Format:** CSV with xz (lzma) compression.
+
+    **Load with:** :func:`pandas.read_csv`
+
+    **Datum:** WGS84
+
+    **Original source:** `LidarBC
+    <https://www2.gov.bc.ca/gov/content/data/geographic-data-services/lidarbc>`__
+
+    **Original license:** Open Government Licence - British Columbia
+
+    Returns
+    -------
+    fname : :class:`pathlib.Path`
+        Path to the downloaded file on disk.
+
+    """
+    return Path(_REPOSITORY.fetch("british-columbia-lidar.csv.xz"))
