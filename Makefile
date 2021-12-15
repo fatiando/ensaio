@@ -2,7 +2,7 @@
 PROJECT=ensaio
 TESTDIR=tmp-test-dir-with-unique-name
 PYTEST_ARGS=--cov-config=../.coveragerc --cov-report=term-missing --cov=$(PROJECT) --doctest-modules -v --pyargs
-CHECK_STYLE=setup.py $(PROJECT) doc/conf.py
+CHECK_STYLE=setup.py $(PROJECT) doc/conf.py doc/gallery_src/
 
 help:
 	@echo "Commands:"

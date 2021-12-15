@@ -17,11 +17,11 @@ in a lot of datasets.
 `Sánchez et al. (2018) <https://doi.org/10.1594/PANGAEA.886889>`__
 
 """
-import pygmt
 import numpy as np
 import pandas as pd
-import ensaio.v1 as ensaio
+import pygmt
 
+import ensaio.v1 as ensaio
 
 ###############################################################################
 # Download and cache the data and return the path to it on disk
@@ -85,7 +85,10 @@ with fig.subplot(
     with fig.set_panel(1):
         fig.basemap(region=region, projection="M?", frame="af")
         fig.coast(area_thresh=1e4, land="#eeeeee")
-        pygmt.makecpt(cmap="polar", series=[data.velocity_up_mmyr.min(), data.velocity_up_mmyr.max()])
+        pygmt.makecpt(
+            cmap="polar",
+            series=[data.velocity_up_mmyr.min(), data.velocity_up_mmyr.max()],
+        )
         fig.plot(
             x=data.longitude,
             y=data.latitude,
