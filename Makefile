@@ -24,15 +24,21 @@ test:
 	cp $(TESTDIR)/.coverage* .
 	rm -rvf $(TESTDIR)
 
-format: isort black
+format: license isort black
 
-check: black-check isort-check flake8
+check: black-check isort-check license-check flake8
 
 black:
 	black $(CHECK_STYLE)
 
 black-check:
 	black --check $(CHECK_STYLE)
+
+license:
+	python license_notice.py
+
+license-check:
+	python license_notice.py --check
 
 isort:
 	isort $(CHECK_STYLE)
