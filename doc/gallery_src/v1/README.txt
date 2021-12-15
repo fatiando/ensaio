@@ -1,7 +1,7 @@
 .. _gallery_v1:
 
-Version 1
-=========
+Datasets (v1)
+=============
 
 About
 -----

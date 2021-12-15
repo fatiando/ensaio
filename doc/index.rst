@@ -23,16 +23,11 @@ Table of contents
 -----------------
 
 .. toctree::
-    :caption: Getting Started
+    :caption: User Guide
     :maxdepth: 1
 
     about.rst
     install.rst
-
-.. toctree::
-    :caption: Datasets
-    :maxdepth: 1
-
     gallery/v1/index.rst
 
 .. toctree::
