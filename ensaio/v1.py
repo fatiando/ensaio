@@ -204,3 +204,36 @@ def fetch_caribbean_bathymetry():
     """
     repository = _make_repository()
     return Path(repository.fetch("caribbean-bathymetry.csv.xz"))
+
+
+def fetch_earth_geoid():
+    """
+    Global 10 arc-minute resolution grid of geoid height of the Earth
+
+    The grid is grid-node registered and stored in netCDF with CF-compliant
+    metadata. The geoid height is derived from the EIGEN-6C4 spherical harmonic
+    model of the Earth's gravity field.
+
+    There are 1081 x 2161 grid points in total. Coordinates are longitude and
+    latitude (geodetic).
+
+    **Format:** netCDF4 with zlib compression
+
+    **Load with:** :func:`xarray.load_dataarray` (requires the `netcdf4
+    <https://github.com/Unidata/netcdf4-python>`__ library)
+
+    **Datum:** WGS84
+
+    **Original source:** `EIGEN-6C4 model
+    <https://doi.org/10.5880/icgem.2015.1>`__
+
+    **Original license:** CC-BY
+
+    Returns
+    -------
+    fname : :class:`pathlib.Path`
+        Path to the downloaded file on disk.
+
+    """
+    repository = _make_repository()
+    return Path(repository.fetch("earth-geoid-10arcmin.nc"))
