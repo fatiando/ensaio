@@ -23,3 +23,4 @@ Functions to download the datasets in the ``v1`` series:
     ensaio.v1.fetch_british_columbia_lidar
     ensaio.v1.fetch_caribbean_bathymetry
     ensaio.v1.fetch_earth_geoid
+    ensaio.v1.fetch_earth_gravity

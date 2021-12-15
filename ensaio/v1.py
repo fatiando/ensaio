@@ -208,11 +208,13 @@ def fetch_caribbean_bathymetry():
 
 def fetch_earth_geoid():
     """
-    Global 10 arc-minute resolution grid of geoid height of the Earth
+    Geoid height of the Earth at 10 arc-minute resolution
 
-    The grid is grid-node registered and stored in netCDF with CF-compliant
-    metadata. The geoid height is derived from the EIGEN-6C4 spherical harmonic
-    model of the Earth's gravity field.
+    The grid is global with node spacing of 10 arc-minutes (grid-node
+    registered) and stored in netCDF with CF-compliant metadata.
+
+    The geoid height is derived from the EIGEN-6C4 spherical harmonic model of
+    the Earth's gravity field.
 
     There are 1081 x 2161 grid points in total. Coordinates are longitude and
     latitude (geodetic).
@@ -237,3 +239,39 @@ def fetch_earth_geoid():
     """
     repository = _make_repository()
     return Path(repository.fetch("earth-geoid-10arcmin.nc"))
+
+
+def fetch_earth_gravity():
+    """
+    Gravity of the Earth at 10 arc-minute resolution
+
+    The grid is global with node spacing of 10 arc-minutes (grid-node
+    registered) and stored in netCDF with CF-compliant metadata.
+
+    The gravity values are derived from the EIGEN-6C4 spherical harmonic model
+    (calculated uniformly at 10 km above the WGS84 ellipsoid). Here "gravity"
+    refers to the combined gravitational and centrifugal accelerations.
+
+    There are 1081 x 2161 grid points in total. Coordinates are longitude and
+    latitude (geodetic) plus a non-dimensional coordinate height (geometric).
+
+    **Format:** netCDF4 with zlib compression
+
+    **Load with:** :func:`xarray.load_dataarray` (requires the `netcdf4
+    <https://github.com/Unidata/netcdf4-python>`__ library)
+
+    **Datum:** WGS84
+
+    **Original source:** `EIGEN-6C4 model
+    <https://doi.org/10.5880/icgem.2015.1>`__
+
+    **Original license:** CC-BY
+
+    Returns
+    -------
+    fname : :class:`pathlib.Path`
+        Path to the downloaded file on disk.
+
+    """
+    repository = _make_repository()
+    return Path(repository.fetch("earth-gravity-10arcmin.nc"))

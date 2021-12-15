@@ -5,12 +5,15 @@
 # This code is part of the Fatiando a Terra project (https://www.fatiando.org)
 #
 """
-Geoid height of the Earth at 10 arc-minute resolution
------------------------------------------------------
+Gravity of the Earth at 10 arc-minute resolution
+------------------------------------------------
 
 The grid is grid-node registered and stored in netCDF with CF-compliant
-metadata. The geoid height is derived from the EIGEN-6C4 spherical harmonic
-model of the Earth's gravity field.
+metadata. The gravity values are derived from the EIGEN-6C4 spherical harmonic
+model. Here "gravity" refers to the combined gravitational and centrifugal
+accelerations.
+
+The data are calculated uniformly at 10 km above the WGS84 ellipsoid.
 
 **Original source:** `EIGEN-6C4 model
 <https://doi.org/10.5880/icgem.2015.1>`__
@@ -23,7 +26,7 @@ import ensaio.v1 as ensaio
 
 ###############################################################################
 # Download and cache the data and return the path to it on disk.
-fname = ensaio.fetch_earth_geoid()
+fname = ensaio.fetch_earth_gravity()
 print(fname)
 
 ###############################################################################
@@ -45,7 +48,7 @@ fig.basemap(
     projection="W15c",
     frame=True,
 )
-fig.grdimage(data, cmap="polar+h")
-fig.colorbar(frame='af+l"geoid height [m]"')
+fig.grdimage(data, cmap="viridis", shading="+nt0.5")
+fig.colorbar(frame='af+l"gravity [mGal]"')
 fig.coast(shorelines=True, resolution="c", area_thresh=1e4)
 fig.show()
