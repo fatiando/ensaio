@@ -109,8 +109,23 @@ jobs:
       - name: Install the package
         run: python -m pip install dist/*.whl
 
+      - name: Cache the v1 datasets
+        uses: actions/cache@v2
+        with:
+          path: ${{ runner.temp }}/cache/ensaio/v1
+          key: ensaio-data-v1-${{ hashFiles('ensaio/v1.py') }}
+
+      - name: Cache the v1 sphinx-gallery runs
+        uses: actions/cache@v2
+        with:
+          path: doc/gallery/v1
+          key: gallery-v1-${{ hashFiles('doc/gallery_src/v1/*') }}
+
       - name: Build the documentation
         run: make -C doc clean all
+        env:
+          # Define directory where sample data will be stored
+          ENSAIO_V1_DATA_DIR: ${{ runner.temp }}/cache/ensaio/v1
 
       # Store the docs as a build artifact so we can deploy it later
       - name: Upload HTML documentation as an artifact
