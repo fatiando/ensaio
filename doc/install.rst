@@ -3,29 +3,6 @@
 Installing
 ==========
 
-Which Python?
--------------
-
-You'll need **Python >= 3.7** (see :ref:`python-versions` if you
-require support for older versions).
-
-We recommend using the
-`Anaconda <https://www.anaconda.com/download>`__
-or `Miniconda <https://docs.conda.io/en/latest/miniconda.html>`__
-Python distributions to ensure you have all dependencies installed and the
-``conda`` package manager available.
-Installing Anaconda does not require administrative rights to your computer and
-doesn't interfere with any other Python installations in your system.
-
-.. note::
-
-    The commands below should be executed in a terminal. On Windows, use the
-    "Anaconda Prompt" app or ``cmd.exe`` if you're not using Anaconda.
-
-
-Installing
-----------
-
 There are different ways to install Ensaio:
 
 .. tabbed:: pip
@@ -52,6 +29,27 @@ There are different ways to install Ensaio:
     .. code:: bash
 
         python -m pip install --upgrade git+https://github.com/fatiando/ensaio
+
+Which Python?
+-------------
+
+You'll need **Python >= 3.7** (see :ref:`python-versions` if you
+require support for older versions).
+
+We recommend using the
+`Anaconda <https://www.anaconda.com/download>`__
+or `Miniconda <https://docs.conda.io/en/latest/miniconda.html>`__
+Python distributions to ensure you have all dependencies installed and the
+``conda`` package manager available.
+Installing Anaconda does not require administrative rights to your computer and
+doesn't interfere with any other Python installations in your system.
+
+.. note::
+
+    The commands below should be executed in a terminal. On Windows, use the
+    "Anaconda Prompt" app or ``cmd.exe`` if you're not using Anaconda.
+
+
 
 
 .. _dependencies:

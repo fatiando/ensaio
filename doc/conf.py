@@ -48,8 +48,9 @@ panels_css_variables = {
 # functions/classes
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3/", None),
-    "pandas": ("http://pandas.pydata.org/pandas-docs/stable/", None),
-    "xarray": ("http://xarray.pydata.org/en/stable/", None),
+    "numpy": ("https://numpy.org/doc/stable/", None),
+    "pandas": ("https://pandas.pydata.org/pandas-docs/stable/", None),
+    "xarray": ("https://xarray.pydata.org/en/stable/", None),
     "pooch": ("https://www.fatiando.org/pooch/latest/", None),
     "pygmt": ("https://www.pygmt.org/latest/", None),
 }
@@ -126,5 +127,5 @@ html_theme_options = {
     "use_issues_button": True,
     "use_repository_button": True,
     "use_download_button": True,
-    "home_page_in_toc": True,
+    "home_page_in_toc": False,
 }
