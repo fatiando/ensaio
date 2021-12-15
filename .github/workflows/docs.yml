@@ -119,7 +119,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: doc/gallery/v1
-          key: gallery-v1-${{ hashFiles('doc/gallery_src/v1/*') }}
+          key: gallery-v1-${{ hashFiles('doc/gallery_src/v1/*.py') }}
 
       - name: Build the documentation
         run: make -C doc all
