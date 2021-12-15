@@ -21,3 +21,4 @@ Functions to download the datasets in the ``v1`` series:
     ensaio.v1.fetch_alps_gps
     ensaio.v1.fetch_britain_magnetic
     ensaio.v1.fetch_british_columbia_lidar
+    ensaio.v1.fetch_caribbean_bathymetry

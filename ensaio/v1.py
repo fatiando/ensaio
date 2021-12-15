@@ -170,3 +170,37 @@ def fetch_british_columbia_lidar():
     """
     repository = _make_repository()
     return Path(repository.fetch("british-columbia-lidar.csv.xz"))
+
+
+def fetch_caribbean_bathymetry():
+    """
+    Single-beam bathymetry of the Caribbean
+
+    This dataset is a compilation of several public domain single-beam
+    bathymetry surveys of the ocean in the Caribbean. The data display a wide
+    range of tectonic activity, uneven distribution, and even clear systematic
+    errors in some of the survey lines.
+
+    There are 1,938,095 measurements in total with 4 columns available:
+    survey ID, longitude, latitude (geodetic), and depth (positive downwards
+    and referenced to "sea level").
+
+    **Format:** CSV with xz (lzma) compression.
+
+    **Load with:** :func:`pandas.read_csv`
+
+    **Datum:** WGS84
+
+    **Original source:** `NOAA NCEI
+    <https://ngdc.noaa.gov/mgg/geodas/trackline.html>`__
+
+    **Original license:** Public domain
+
+    Returns
+    -------
+    fname : :class:`pathlib.Path`
+        Path to the downloaded file on disk.
+
+    """
+    repository = _make_repository()
+    return Path(repository.fetch("caribbean-bathymetry.csv.xz"))
