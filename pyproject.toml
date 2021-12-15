@@ -4,6 +4,11 @@
 requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools_scm]
+version_scheme =  "post-release"
+local_scheme =  "no-local-version"
+write_to =  "ensaio/_version_generated.py"
+
 # Make sure isort and Black are compatible
 [tool.isort]
 profile = "black"
