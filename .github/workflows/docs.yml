@@ -111,12 +111,14 @@ jobs:
         run: python -m pip install dist/*.whl
 
       - name: Cache the v1 datasets
+        if: github.event_name == 'pull_request' 
         uses: actions/cache@v2
         with:
           path: ${{ runner.temp }}/cache/ensaio/v1
           key: ensaio-data-v1-${{ hashFiles('ensaio/v1.py') }}
 
       - name: Cache the v1 sphinx-gallery runs
+        if: github.event_name == 'pull_request' 
         uses: actions/cache@v2
         with:
           path: doc/gallery/v1
