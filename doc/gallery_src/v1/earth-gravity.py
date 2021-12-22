@@ -31,12 +31,6 @@ print(fname)
 
 ###############################################################################
 # Load the netCDF grid with xarray.
-#
-# .. note::
-#
-#     Requires the `netcdf4 <https://github.com/Unidata/netcdf4-python>`__
-#     library.
-#
 data = xr.load_dataarray(fname)
 data
 
