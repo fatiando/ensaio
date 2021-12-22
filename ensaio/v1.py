@@ -4,51 +4,38 @@
 #
 # This code is part of the Fatiando a Terra project (https://www.fatiando.org)
 #
-import os
+"""
+The datasets in the version 1 series.
+"""
 from pathlib import Path
 
 import pooch
 
+from ._utils import download_url
+
+#: The DOI of the source data archive
 DOI = "10.5281/zenodo.5167357"
+#: Environment variable used to specify the download URL
+#: (defaults to the DOI)
+ENVIRONMENT_VARIABLE_URL = "ENSAIO_V1_URL"
+#: Environment variable used to specify the cache folder
+#: (defaults to ``ensaio/v1`` in the system default cache)
+ENVIRONMENT_VARIABLE_CACHE = "ENSAIO_V1_DATA_DIR"
 
 
-def cache_folder():
+def _repository():
     """
-    The location of the data cache for v1 datasets
+    Create the pooch.Pooch instance that fetches the datasets
 
     Returns
     -------
-    cache : :class:`pathlib.Path`
-        Path to the cache folder.
+    repository : :class:`pooch.Pooch`
     """
-    return Path(pooch.os_cache("ensaio")) / "v1"
-
-
-def _make_repository():
-    """
-    Create the :class:`pooch.Pooch` instance that is used to download the data.
-
-    Set's the cache location to the OS default plus ``ensaio/v1`` and can be
-    set manually using the ``ENSAIO_V1_DATA_DIR`` environment variable.
-
-    The download URL can be set using the ``ENSAIO_V1_URL`` environment
-    variable (default is ``doi:10.5281/zenodo.5167357``).
-
-    Returns
-    -------
-    repository : pooch.Pooch
-
-    """
-    url_var = "ENSAIO_V1_URL"
-    if url_var in os.environ and os.environ[url_var]:
-        url = os.environ[url_var]
-    else:
-        url = f"doi:{DOI}"
-    if not url.endswith("/"):
-        url = url + "/"
     repository = pooch.create(
-        path=cache_folder(),
-        base_url=url,
+        path=Path(pooch.os_cache("ensaio")) / "v1",
+        base_url=download_url(url=f"doi:{DOI}", env=ENVIRONMENT_VARIABLE_URL),
+        env=ENVIRONMENT_VARIABLE_CACHE,
+        retry_if_failed=3,
         registry={
             "alps-gps-velocity.csv.xz": "md5:195ee3d88783ce01b6190c2af89f2b14",
             "britain-magnetic.csv.xz": "md5:8dbbda02c7e74f63adc461909358f056",
@@ -59,10 +46,27 @@ def _make_repository():
             "earth-topography-10arcmin.nc": "md5:c43b61322e03669c4313ba3d9a58028d",
             "southern-africa-gravity.csv.xz": "md5:1dee324a14e647855366d6eb01a1ef35",
         },
-        # The name of an environment variable that can overwrite the path
-        env="ENSAIO_V1_DATA_DIR",
     )
     return repository
+
+
+def cache_folder():
+    """
+    The location of the data cache for v1 datasets
+
+    This folder is not guaranteed to exist in the file system until a dataset
+    has been downloaded.
+
+    The default location is a ``ensaio/v1/`` folder in the system-dependent
+    default cache folder. A different path can also be specified by the
+    ``ENSAIO_V1_DATA_DIR`` environment variable.
+
+    Returns
+    -------
+    cache : :class:`pathlib.Path`
+        Path to the cache folder.
+    """
+    return _repository().abspath
 
 
 def fetch_alps_gps():
@@ -96,8 +100,7 @@ def fetch_alps_gps():
         Path to the downloaded file on disk.
 
     """
-    repository = _make_repository()
-    return Path(repository.fetch("alps-gps-velocity.csv.xz"))
+    return Path(_repository().fetch("alps-gps-velocity.csv.xz"))
 
 
 def fetch_britain_magnetic():
@@ -135,8 +138,7 @@ def fetch_britain_magnetic():
         Path to the downloaded file on disk.
 
     """
-    repository = _make_repository()
-    return Path(repository.fetch("britain-magnetic.csv.xz"))
+    return Path(_repository().fetch("britain-magnetic.csv.xz"))
 
 
 def fetch_british_columbia_lidar():
@@ -168,8 +170,7 @@ def fetch_british_columbia_lidar():
         Path to the downloaded file on disk.
 
     """
-    repository = _make_repository()
-    return Path(repository.fetch("british-columbia-lidar.csv.xz"))
+    return Path(_repository().fetch("british-columbia-lidar.csv.xz"))
 
 
 def fetch_caribbean_bathymetry():
@@ -202,8 +203,7 @@ def fetch_caribbean_bathymetry():
         Path to the downloaded file on disk.
 
     """
-    repository = _make_repository()
-    return Path(repository.fetch("caribbean-bathymetry.csv.xz"))
+    return Path(_repository().fetch("caribbean-bathymetry.csv.xz"))
 
 
 def fetch_earth_geoid():
@@ -237,8 +237,7 @@ def fetch_earth_geoid():
         Path to the downloaded file on disk.
 
     """
-    repository = _make_repository()
-    return Path(repository.fetch("earth-geoid-10arcmin.nc"))
+    return Path(_repository().fetch("earth-geoid-10arcmin.nc"))
 
 
 def fetch_earth_gravity():
@@ -273,20 +272,19 @@ def fetch_earth_gravity():
         Path to the downloaded file on disk.
 
     """
-    repository = _make_repository()
-    return Path(repository.fetch("earth-gravity-10arcmin.nc"))
+    return Path(_repository().fetch("earth-gravity-10arcmin.nc"))
 
 
 def fetch_earth_topography():
     """
-    Topography/bathymetry of the Earth at 10 arc-minute resolution
+    Topography of the Earth at 10 arc-minute resolution
 
     The grid is global with node spacing of 10 arc-minutes (grid-node
     registered) and stored in netCDF with CF-compliant metadata.
 
     The values are derived from a spherical harmonic model of the ETOPO1
-    bedrock grid. Topography values are referenced to "sea level" and are
-    positive upwards.
+    bedrock grid. Topography/bathymetry values are referenced to "sea level"
+    and are positive upwards.
 
     There are 1081 x 2161 grid points in total. Coordinates are longitude and
     latitude (geodetic).
@@ -308,8 +306,7 @@ def fetch_earth_topography():
         Path to the downloaded file on disk.
 
     """
-    repository = _make_repository()
-    return Path(repository.fetch("earth-topography-10arcmin.nc"))
+    return Path(_repository().fetch("earth-topography-10arcmin.nc"))
 
 
 def fetch_southern_africa_gravity():
@@ -343,5 +340,4 @@ def fetch_southern_africa_gravity():
         Path to the downloaded file on disk.
 
     """
-    repository = _make_repository()
-    return Path(repository.fetch("southern-africa-gravity.csv.xz"))
+    return Path(_repository().fetch("southern-africa-gravity.csv.xz"))

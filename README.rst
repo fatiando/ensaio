@@ -13,6 +13,9 @@ Part of the `Fatiando a Terra <https://www.fatiando.org>`__ project
 .. image:: https://img.shields.io/conda/vn/conda-forge/ensaio.svg?style=flat-square
     :alt: Latest version on conda-forge
     :target: https://github.com/conda-forge/ensaio-feedstock
+.. image:: https://img.shields.io/codecov/c/github/fatiando/ensaio/main.svg?style=flat-square
+    :alt: Test coverage status
+    :target: https://codecov.io/gh/fatiando/ensaio
 .. image:: https://img.shields.io/pypi/pyversions/ensaio.svg?style=flat-square
     :alt: Compatible Python versions.
     :target: https://pypi.python.org/pypi/ensaio
@@ -43,12 +46,28 @@ Project goals
   modules in Ensaio: `ensaio.v1`, `ensaio.v2`, etc. Major releases of Ensaio
   will be few and far between (if any).
 
+Contacting Us
+-------------
+
+Find out more about how to reach us at
+`fatiando.org/contact <https://www.fatiando.org/contact/>`__
+
 Contributing
 ------------
 
-See our
-`Contributing Guide <https://github.com/fatiando/ensaio/blob/master/CONTRIBUTING.md>`__
-for information on how you can help and give feedback.
+Code of conduct
++++++++++++++++
+
+Please note that this project is released with a
+`Code of Conduct <https://github.com/fatiando/community/blob/main/CODE_OF_CONDUCT.md>`__.
+By participating in this project you agree to abide by its terms.
+
+Contributing Guidelines
++++++++++++++++++++++++
+
+Please read our
+`Contributing Guide <https://github.com/fatiando/ensaio/blob/main/CONTRIBUTING.md>`__
+to see how you can help and give feedback.
 
 License
 -------
