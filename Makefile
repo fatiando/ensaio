@@ -1,6 +1,6 @@
 # Build, package, test, and clean
 PROJECT=ensaio
-CHECK_STYLE=setup.py $(PROJECT) doc/conf.py doc/gallery_src/
+CHECK_STYLE=setup.py $(PROJECT) doc/conf.py doc/gallery_src/ tools
 
 help:
 	@echo "Commands:"
@@ -25,10 +25,10 @@ black-check:
 	black --check $(CHECK_STYLE)
 
 license:
-	python license_notice.py
+	python tools/license_notice.py
 
 license-check:
-	python license_notice.py --check
+	python tools/license_notice.py --check
 
 isort:
 	isort $(CHECK_STYLE)
