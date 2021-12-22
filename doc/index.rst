@@ -33,9 +33,9 @@ computer already.
 
     New to Ensaio? Start here!
 
-    .. link-button:: install
+    .. link-button:: using
         :type: ref
-        :text: Installing
+        :text: Downloading data
         :classes: btn-outline-primary btn-block stretched-link
 
     ---
@@ -91,7 +91,9 @@ Table of contents
     :maxdepth: 1
 
     install.rst
+    tutorial/using.rst
     gallery/v1/index.rst
+    tutorial/developers.rst
 
 .. toctree::
     :caption: Reference

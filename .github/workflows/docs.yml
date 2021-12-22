@@ -111,18 +111,25 @@ jobs:
         run: python -m pip install dist/*.whl
 
       - name: Cache the v1 datasets
-        if: github.event_name == 'pull_request' 
+        if: github.event_name == 'pull_request'
         uses: actions/cache@v2
         with:
           path: ${{ runner.temp }}/cache/ensaio/v1
           key: ensaio-data-v1-${{ hashFiles('ensaio/v1.py') }}
 
       - name: Cache the v1 sphinx-gallery runs
-        if: github.event_name == 'pull_request' 
+        if: github.event_name == 'pull_request'
         uses: actions/cache@v2
         with:
           path: doc/gallery/v1
           key: gallery-v1-${{ hashFiles('doc/gallery_src/v1/*.py') }}
+
+      - name: Cache the tutorial sphinx-gallery runs
+        if: github.event_name == 'pull_request'
+        uses: actions/cache@v2
+        with:
+          path: doc/tutorial
+          key: tutorial-${{ hashFiles('doc/tutorial_src/*.py') }}
 
       - name: Build the documentation
         run: make -C doc all

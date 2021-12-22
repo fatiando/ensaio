@@ -11,6 +11,7 @@ dist/
 doc/_build
 doc/api/generated
 doc/gallery
+doc/tutorial
 .ipynb_checkpoints
 *.eggs
 *.egg-info

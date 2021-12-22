@@ -43,5 +43,6 @@ Module variables:
    :toctree: generated/
 
     ensaio.v1.DOI
+    ensaio.v1.URL
     ensaio.v1.ENVIRONMENT_VARIABLE_URL
     ensaio.v1.ENVIRONMENT_VARIABLE_CACHE
