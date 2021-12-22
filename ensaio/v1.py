@@ -13,8 +13,11 @@ import pooch
 
 from ._utils import download_url
 
-#: The DOI of the source data archive
+#: The DOI of the source data archive on Zenodo
 DOI = "10.5281/zenodo.5167357"
+#: The download URL of the source data release on GitHub (append a data file
+#: name to download it)
+URL = "https://github.com/fatiando/data/releases/download/v1.0.0"
 #: Environment variable used to specify the download URL
 #: (defaults to the DOI)
 ENVIRONMENT_VARIABLE_URL = "ENSAIO_V1_URL"
