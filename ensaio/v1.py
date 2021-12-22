@@ -4,12 +4,14 @@
 #
 # This code is part of the Fatiando a Terra project (https://www.fatiando.org)
 #
-import os
 from pathlib import Path
 
 import pooch
 
+from ._utils import download_url
+
 DOI = "10.5281/zenodo.5167357"
+ENVIRONMENT_VARIABLE = "ENSAIO_V1_URL"
 
 
 def cache_folder():
@@ -39,16 +41,9 @@ def _make_repository():
     repository : pooch.Pooch
 
     """
-    url_var = "ENSAIO_V1_URL"
-    if url_var in os.environ and os.environ[url_var]:
-        url = os.environ[url_var]
-    else:
-        url = f"doi:{DOI}"
-    if not url.endswith("/"):
-        url = url + "/"
     repository = pooch.create(
         path=cache_folder(),
-        base_url=url,
+        base_url=download_url(url=f"doi:{DOI}", env=ENVIRONMENT_VARIABLE),
         registry={
             "alps-gps-velocity.csv.xz": "md5:195ee3d88783ce01b6190c2af89f2b14",
             "britain-magnetic.csv.xz": "md5:8dbbda02c7e74f63adc461909358f056",
