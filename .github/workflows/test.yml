@@ -147,7 +147,7 @@ jobs:
         run: python -m pip freeze
 
       - name: Cache the v1 datasets
-        if: github.event_name == 'pull_request' || matrix.cached == 'true'
+        if: matrix.cached == 'true'
         uses: actions/cache@v2
         with:
           path: ${{ runner.temp }}/cache/ensaio/v1
