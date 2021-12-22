@@ -22,15 +22,6 @@ data release.
 
 .. automodule:: ensaio.v1
 
-Module variables:
-
-.. autosummary::
-   :toctree: generated/
-
-    ensaio.v1.DOI
-    ensaio.v1.ENVIRONMENT_VARIABLE_URL
-    ensaio.v1.ENVIRONMENT_VARIABLE_CACHE
-
 Functions:
 
 .. autosummary::
@@ -45,3 +36,12 @@ Functions:
     ensaio.v1.fetch_earth_gravity
     ensaio.v1.fetch_earth_topography
     ensaio.v1.fetch_southern_africa_gravity
+
+Module variables:
+
+.. autosummary::
+   :toctree: generated/
+
+    ensaio.v1.DOI
+    ensaio.v1.ENVIRONMENT_VARIABLE_URL
+    ensaio.v1.ENVIRONMENT_VARIABLE_CACHE

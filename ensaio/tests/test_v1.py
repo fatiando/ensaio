@@ -21,7 +21,14 @@ FETCH_FUNCTIONS = [
 
 
 @pytest.mark.parametrize("fetch", FETCH_FUNCTIONS)
-def test_fetch_v1_datasets(fetch):
+def test_v1_fetch_datasets(fetch):
     "Check that fetching works and the file exists once downloaded"
     path = fetch()
+    assert path.exists()
+
+
+def test_v1_cache_folder():
+    "Check that the cache folder exists by default after a fetch call"
+    FETCH_FUNCTIONS[0]()
+    path = v1.cache_folder()
     assert path.exists()
