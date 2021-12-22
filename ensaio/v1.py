@@ -11,7 +11,8 @@ import pooch
 from ._utils import download_url
 
 DOI = "10.5281/zenodo.5167357"
-ENVIRONMENT_VARIABLE = "ENSAIO_V1_URL"
+ENVIRONMENT_VARIABLE_URL = "ENSAIO_V1_URL"
+ENVIRONMENT_VARIABLE_CACHE = "ENSAIO_V1_DATA_DIR"
 
 
 def cache_folder():
@@ -43,7 +44,7 @@ def _make_repository():
     """
     repository = pooch.create(
         path=cache_folder(),
-        base_url=download_url(url=f"doi:{DOI}", env=ENVIRONMENT_VARIABLE),
+        base_url=download_url(url=f"doi:{DOI}", env=ENVIRONMENT_VARIABLE_URL),
         registry={
             "alps-gps-velocity.csv.xz": "md5:195ee3d88783ce01b6190c2af89f2b14",
             "britain-magnetic.csv.xz": "md5:8dbbda02c7e74f63adc461909358f056",
@@ -54,8 +55,7 @@ def _make_repository():
             "earth-topography-10arcmin.nc": "md5:c43b61322e03669c4313ba3d9a58028d",
             "southern-africa-gravity.csv.xz": "md5:1dee324a14e647855366d6eb01a1ef35",
         },
-        # The name of an environment variable that can overwrite the path
-        env="ENSAIO_V1_DATA_DIR",
+        env=ENVIRONMENT_VARIABLE_CACHE,
     )
     return repository
 

@@ -32,7 +32,7 @@ jobs:
   #############################################################################
   # Run tests and upload to codecov
   test:
-    name: ${{ matrix.os }} python=${{ matrix.python }} dependencies=${{ matrix.dependencies }}
+    name: ${{ matrix.os }} python=${{ matrix.python }} dependencies=${{ matrix.dependencies }} cached=${{ matrix.cached }}
     runs-on: ${{ matrix.os }}-latest
     strategy:
       # Otherwise, the workflow would stop if a single job fails. We want to
@@ -49,6 +49,13 @@ jobs:
         dependencies:
           - latest
           - oldest
+        cached:
+          - true
+        include:
+          - os: ubuntu
+            python: "3.10"
+            dependencies: latest
+            cached: false
     env:
       REQUIREMENTS: env/requirements-test.txt
       # Used to tag codecov submissions
@@ -139,8 +146,17 @@ jobs:
       - name: List installed packages
         run: python -m pip freeze
 
+      - name: Cache the v1 datasets
+        if: github.event_name == 'pull_request' || matrix.cached == 'true'
+        uses: actions/cache@v2
+        with:
+          path: ${{ runner.temp }}/cache/ensaio/v1
+          key: ensaio-data-v1-${{ hashFiles('ensaio/v1.py') }}
+
       - name: Run the tests
         run: make test
+        env:
+          ENSAIO_V1_DATA_DIR: ${{ runner.temp }}/cache/ensaio/v1
 
       - name: Convert coverage report to XML for codecov
         run: coverage xml
