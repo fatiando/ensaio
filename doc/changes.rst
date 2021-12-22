@@ -30,6 +30,9 @@ Includes:
 * LiDAR point cloud of the Trail Islands in British Columbia, Canada
 * Ground gravity of Southern Africa
 
+**This is the only release that will be compatible with Python 3.6.**
+Later releases will require Python >= 3.7.
+
 This release contains contributions from:
 
 * Leonardo Uieda
