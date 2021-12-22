@@ -1,12 +1,12 @@
 .. _compatibility:
 
-Versions and compatibility
-==========================
+Version compatibility
+=====================
 
 Ensaio version compatibility
 ----------------------------
 
-Ensaio uses `semantic version <https://semver.org/>`__ (i.e.,
+Ensaio uses `semantic versioning <https://semver.org/>`__ (i.e.,
 ``MAJOR.MINOR.BUGFIX`` format):
 
 * Major releases mean that backwards incompatible changes were made.
