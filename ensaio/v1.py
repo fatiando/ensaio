@@ -53,9 +53,9 @@ def _repository():
     return repository
 
 
-def cache_folder():
+def locate():
     """
-    The location of the data cache for v1 datasets
+    Return the location of the system-dependent data cache for v1 datasets
 
     This folder is not guaranteed to exist in the file system until a dataset
     has been downloaded.
@@ -66,7 +66,7 @@ def cache_folder():
 
     Returns
     -------
-    cache : :class:`pathlib.Path`
+    path : :class:`pathlib.Path`
         Path to the cache folder.
     """
     return _repository().abspath

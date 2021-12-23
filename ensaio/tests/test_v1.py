@@ -27,8 +27,8 @@ def test_v1_fetch_datasets(fetch):
     assert path.exists()
 
 
-def test_v1_cache_folder():
+def test_v1_locate():
     "Check that the cache folder exists by default after a fetch call"
     FETCH_FUNCTIONS[0]()
-    path = v1.cache_folder()
+    path = v1.locate()
     assert path.exists()
