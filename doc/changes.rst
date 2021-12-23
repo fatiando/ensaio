@@ -6,11 +6,11 @@ Changelog
 Version 0.1.0
 -------------
 
-*Released on: 2021/12/23*
+Released on: 2021/12/23
 
-**First trial release of Ensaio** (Portuguese for "rehearsal"), a Python
-package for downloading open-access sample datasets for Geoscience.
-Used for testing our systems and implementation.
+doi:`10.5281/zenodo.5784203 <https://doi.org/10.5281/zenodo.5784203>`__
+
+First trial release of Ensaio. Used for testing our systems and implementation.
 
 This release contains contributions from:
 
@@ -24,9 +24,9 @@ This release contains contributions from:
 
     doi:`10.5281/zenodo.5784203 <https://doi.org/10.5281/zenodo.5784203>`__
 
-    **First release of Ensaio** (Portuguese for "rehearsal"), a Python package
-    for downloading open-access sample datasets for Geoscience. It taps into the
-    curated data collection in
+    **First major release of Ensaio** (Portuguese for "rehearsal"), a Python
+    package for downloading open-access sample datasets for Geoscience. It taps
+    into the curated data collection in
     `github.com/fatiando/data <https://github.com/fatiando/data>`__ and uses
     `Pooch <https://www.fatiando.org/pooch>`__ to manage downloading and caching
     the data files.

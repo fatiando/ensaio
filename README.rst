@@ -17,6 +17,9 @@ Part of the `Fatiando a Terra <https://www.fatiando.org>`__ project
 .. image:: https://img.shields.io/pypi/pyversions/ensaio.svg?style=flat-square
     :alt: Compatible Python versions.
     :target: https://pypi.python.org/pypi/ensaio
+.. image:: https://img.shields.io/badge/doi-10.5281%2Fzenodo.5784203-blue?style=flat-square
+    :alt: DOI used to cite Ensaio
+    :target: https://doi.org/10.5281/zenodo.5784203
 
 About
 -----
