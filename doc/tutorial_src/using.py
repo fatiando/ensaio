@@ -68,8 +68,8 @@ data
 # -------------------
 #
 # The location of the cache folder varies by operating system. Use the
-# :func:`ensaio.v1.cache_folder` function to get its location on your computer.
-print(ensaio.cache_folder())
+# :func:`ensaio.v1.locate` function to get its location on your computer.
+print(ensaio.locate())
 
 ###############################################################################
 # You can also set the location manually by creating a ``ENSAIO_V1_DATA_DIR``
