@@ -1,7 +1,5 @@
-Ensaio
-======
-
-   Practice datasets to probe your code
+.. image:: https://github.com/fatiando/ensaio/raw/main/doc/_static/readme-banner.png
+   :alt: Ensaio: Practice datasets to probe your code
 
 `Documentation <https://www.fatiando.org/ensaio>`__ |
 `Documentation (dev version) <https://www.fatiando.org/ensaio/dev>`__ |
