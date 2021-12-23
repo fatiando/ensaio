@@ -1,0 +1,12 @@
+ensaio.v1.locate
+================
+
+.. currentmodule:: ensaio.v1
+
+.. autofunction:: locate
+
+.. include:: backreferences/ensaio.v1.locate.examples
+
+.. raw:: html
+
+     <div style='clear:both'></div>

@@ -1,0 +1,10 @@
+ensaio.v1.ENVIRONMENT\_VARIABLE\_CACHE
+======================================
+
+.. currentmodule:: ensaio.v1
+
+.. autodata:: ENVIRONMENT_VARIABLE_CACHE
+
+.. raw:: html
+
+      <div style='clear:both'></div>

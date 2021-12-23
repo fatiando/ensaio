@@ -1,0 +1,648 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>Downloading data | Ensaio v0.0.post52</title>
+    
+
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.87249bd3f7b54630a2508c1b61607c7f.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Available datasets (v1)" href="../gallery/v1/index.html" />
+    <link rel="prev" title="Installing" href="../install.html" />
+    <!-- Google Analytics tracking code -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new
+            Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-38125837-1', 'auto', {'storage': 'none'});
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/fatiando-logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Ensaio <span class="project-version">v0.0.post52</span></h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  User Guide
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../install.html">
+   Installing
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Downloading data
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../gallery/v1/index.html">
+   Available datasets (v1)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/v1/britain-magnetic.html">
+     Airborne magnetic survey of Britain
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/v1/alps-gps-velocity.html">
+     Alpine 3-component GPS velocities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/v1/earth-geoid.html">
+     Geoid height of the Earth at 10 arc-minute resolution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/v1/southern-africa-gravity.html">
+     Gravity ground-based surveys of Southern Africa
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/v1/earth-gravity.html">
+     Gravity of the Earth at 10 arc-minute resolution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/v1/british-columbia-lidar.html">
+     Lidar point cloud of the Trail Islands in British Columbia, Canada
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/v1/caribbean-bathymetry.html">
+     Single-beam bathymetry of the Caribbean
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/v1/earth-topography.html">
+     Topography of the Earth at 10 arc-minute resolution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="developers.html">
+   Using Ensaio in your project
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../api/index.html">
+   List of functions and classes (API)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.v1.locate.html">
+     ensaio.v1.locate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.v1.fetch_alps_gps.html">
+     ensaio.v1.fetch_alps_gps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.v1.fetch_britain_magnetic.html">
+     ensaio.v1.fetch_britain_magnetic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.v1.fetch_british_columbia_lidar.html">
+     ensaio.v1.fetch_british_columbia_lidar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.v1.fetch_caribbean_bathymetry.html">
+     ensaio.v1.fetch_caribbean_bathymetry
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.v1.fetch_earth_geoid.html">
+     ensaio.v1.fetch_earth_geoid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.v1.fetch_earth_gravity.html">
+     ensaio.v1.fetch_earth_gravity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.v1.fetch_earth_topography.html">
+     ensaio.v1.fetch_earth_topography
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.v1.fetch_southern_africa_gravity.html">
+     ensaio.v1.fetch_southern_africa_gravity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.v1.DOI.html">
+     ensaio.v1.DOI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.v1.URL.html">
+     ensaio.v1.URL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.v1.ENVIRONMENT_VARIABLE_URL.html">
+     ensaio.v1.ENVIRONMENT_VARIABLE_URL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.v1.ENVIRONMENT_VARIABLE_CACHE.html">
+     ensaio.v1.ENVIRONMENT_VARIABLE_CACHE
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../compatibility.html">
+   Version compatibility
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../changes.html">
+   Changelog
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../versions.html">
+   Documentation for other versions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Community
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://www.fatiando.org/contact/">
+   Join the community
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/fatiando/community/blob/main/CODE_OF_CONDUCT.md">
+   Code of Conduct
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/fatiando/ensaio/blob/main/CONTRIBUTING.md">
+   How to contribute
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/fatiando/ensaio">
+   Source code on GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/fatiando/ensaio/blob/main/AUTHORS.md">
+   Authors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://www.fatiando.org">
+   Fatiando a Terra
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/tutorial/using.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/fatiando/ensaio"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/fatiando/ensaio/issues/new?title=Issue%20on%20page%20%2Ftutorial/using.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/fatiando/ensaio/edit/main/doc/tutorial/using.rst"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#where-are-the-data">
+   Where are the data?
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-tutorial-using-py"><span class="std std-ref">here</span></a>
+to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="downloading-data">
+<span id="using"></span><span id="sphx-glr-tutorial-using-py"></span><h1>Downloading data<a class="headerlink" href="#downloading-data" title="Permalink to this headline">¶</a></h1>
+<p>Ensaio provides functions for downloading datasets from the <a class="reference external" href="https://github.com/fatiando/data">fatiando/data</a> collection to your computer. The
+functions are available through different modules for each major release of
+the data collection. For example, datasets from the version 1.X series are
+available through <a class="reference internal" href="../api/index.html#module-ensaio.v1" title="ensaio.v1"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ensaio.v1</span></code></a>.</p>
+<p>The recommended way to use Ensaio is to import a particular version module like
+so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load Pandas as well so we can read in some data</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">import</span> <span class="nn">ensaio.v1</span> <span class="k">as</span> <span class="nn">ensaio</span>
+</pre></div>
+</div>
+<p>To download a particular dataset, say our Southern Africa gravity data,
+call the corresponding <code class="docutils literal notranslate"><span class="pre">fetch_</span></code> functions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fname</span></a> <span class="o">=</span> <a href="../api/generated/ensaio.v1.fetch_southern_africa_gravity.html#ensaio.v1.fetch_southern_africa_gravity" title="ensaio.v1.fetch_southern_africa_gravity" class="sphx-glr-backref-module-ensaio-v1 sphx-glr-backref-type-py-function"><span class="n">ensaio</span><span class="o">.</span><span class="n">fetch_southern_africa_gravity</span></a><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fname</span></a><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/runner/work/_temp/cache/ensaio/v1/southern-africa-gravity.csv.xz
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can browse a list of all available datasets in <a class="reference internal" href="../api/index.html#api"><span class="std std-ref">List of functions and classes (API)</span></a> or
+<a class="reference internal" href="../gallery/v1/index.html#gallery-v1"><span class="std std-ref">Available datasets (v1)</span></a>.</p>
+</div>
+<p>If the data are not yet available on your computer, Ensaio will automatically
+download it and return the path to the downloaded file.
+In the file had already been downloaded, Ensaio won’t repeat the download and
+will only return the path to the existing file.</p>
+<p>This means that placing the code above in a Python script or Jupyter notebook
+will mean that whoever runs it is guaranteed to get the data on their
+computer.
+Running the code multiple times or using the same data in multiple places
+will only trigger a single download, saving bandwidth and storage space.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensaio uses <a class="reference external" href="https://www.fatiando.org/pooch/">Pooch</a> under the hood to
+make all of this work.</p>
+</div>
+<p>Once we have the path to the data file, we can load it like we would any
+other data file. In this case, our data is in a CSV file so the natural
+choice is to use <a class="reference external" href="https://pandas.pydata.org/">Pandas</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span></a> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html#pandas.read_csv" title="pandas.read_csv" class="sphx-glr-backref-module-pandas sphx-glr-backref-type-py-function"><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fname</span></a><span class="p">)</span>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span></a>
+</pre></div>
+</div>
+<div class="output_subarea output_html rendered_html output_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>longitude</th>
+      <th>latitude</th>
+      <th>height_sea_level_m</th>
+      <th>gravity_mgal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>18.34444</td>
+      <td>-34.12971</td>
+      <td>32.2</td>
+      <td>979656.12</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>18.36028</td>
+      <td>-34.08833</td>
+      <td>592.5</td>
+      <td>979508.21</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>18.37418</td>
+      <td>-34.19583</td>
+      <td>18.4</td>
+      <td>979666.46</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>18.40388</td>
+      <td>-34.23972</td>
+      <td>25.0</td>
+      <td>979671.03</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>18.41112</td>
+      <td>-34.16444</td>
+      <td>228.7</td>
+      <td>979616.11</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>14354</th>
+      <td>21.22500</td>
+      <td>-17.95833</td>
+      <td>1053.1</td>
+      <td>978182.09</td>
+    </tr>
+    <tr>
+      <th>14355</th>
+      <td>21.27500</td>
+      <td>-17.98333</td>
+      <td>1033.3</td>
+      <td>978183.09</td>
+    </tr>
+    <tr>
+      <th>14356</th>
+      <td>21.70833</td>
+      <td>-17.99166</td>
+      <td>1041.8</td>
+      <td>978182.69</td>
+    </tr>
+    <tr>
+      <th>14357</th>
+      <td>21.85000</td>
+      <td>-17.95833</td>
+      <td>1033.3</td>
+      <td>978193.18</td>
+    </tr>
+    <tr>
+      <th>14358</th>
+      <td>21.98333</td>
+      <td>-17.94166</td>
+      <td>1022.6</td>
+      <td>978211.38</td>
+    </tr>
+  </tbody>
+</table>
+<p>14359 rows × 4 columns</p>
+</div>
+</div>
+<br />
+<br /><div class="admonition-using-ensaio-in-your-project-documentation admonition">
+<p class="admonition-title">Using Ensaio in your project documentation?</p>
+<p>Make sure you take a look at <a class="reference internal" href="developers.html#developers"><span class="std std-ref">Using Ensaio in your project</span></a> for useful tips and
+tricks.</p>
+</div>
+<div class="section" id="where-are-the-data">
+<h2>Where are the data?<a class="headerlink" href="#where-are-the-data" title="Permalink to this headline">¶</a></h2>
+<p>The location of the cache folder varies by operating system. Use the
+<a class="reference internal" href="../api/generated/ensaio.v1.locate.html#ensaio.v1.locate" title="ensaio.v1.locate"><code class="xref py py-func docutils literal notranslate"><span class="pre">ensaio.v1.locate</span></code></a> function to get its location on your computer.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../api/generated/ensaio.v1.locate.html#ensaio.v1.locate" title="ensaio.v1.locate" class="sphx-glr-backref-module-ensaio-v1 sphx-glr-backref-type-py-function"><span class="n">ensaio</span><span class="o">.</span><span class="n">locate</span></a><span class="p">())</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/runner/work/_temp/cache/ensaio/v1
+</pre></div>
+</div>
+<p>You can also set the location manually by creating a <code class="docutils literal notranslate"><span class="pre">ENSAIO_V1_DATA_DIR</span></code>
+environment variable with the desired path. Ensaio will search for this
+variable and if found will use its value instead of the default cache folder.</p>
+<p>Similar variables and functions are available for each data collection
+version.</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.033 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-using-py">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/f7a8e12efd36cbef5dbf64ec50950247/using.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">using.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/0ecae00b55286b02e285e52e454beaf1/using.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">using.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+</div>
+
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../install.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Installing</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../gallery/v1/index.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Available datasets (v1)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+            &copy; Copyright 2021, The Ensaio Developers.<br/>
+          Last updated on Dec 23, 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

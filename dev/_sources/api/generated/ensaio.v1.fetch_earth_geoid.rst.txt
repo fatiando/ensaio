@@ -1,0 +1,12 @@
+ensaio.v1.fetch\_earth\_geoid
+=============================
+
+.. currentmodule:: ensaio.v1
+
+.. autofunction:: fetch_earth_geoid
+
+.. include:: backreferences/ensaio.v1.fetch_earth_geoid.examples
+
+.. raw:: html
+
+     <div style='clear:both'></div>
