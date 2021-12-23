@@ -13,16 +13,11 @@
     </p>
 
 
-Ensaio (Portuguese for "rehearsal") is a Python package for downloading
+**Ensaio** (Portuguese for "rehearsal") is a Python package for downloading
 open-access sample datasets for Geoscience.
 It taps into the curated collection from `fatiando/data
 <https://github.com/fatiando/data>`__ that is designed for use in tutorials,
 documentation, and teaching.
-
-Our code uses `Pooch <https://www.fatiando.org/pooch>`__ to manage downloading
-and caching the data on your computer.
-This means that datasets are only downloaded if they can't be found on your
-computer already.
 
 .. panels::
     :header: text-center text-large
@@ -40,6 +35,18 @@ computer already.
 
     ---
 
+    **Need help?**
+    ^^^^^^^^^^^^^^
+
+    Ask on our community channels
+
+    .. link-button:: https://www.fatiando.org/contact
+        :type: url
+        :text: Join the conversation
+        :classes: btn-outline-primary btn-block stretched-link
+
+    ---
+
     **Browse our datasets**
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -48,18 +55,6 @@ computer already.
     .. link-button:: gallery_v1
         :type: ref
         :text: Gallery
-        :classes: btn-outline-primary btn-block stretched-link
-
-    ---
-
-    **Need help?**
-    ^^^^^^^^^^^^^^
-
-    Get in touch with the Fatiando team
-
-    .. link-button:: https://www.fatiando.org/contact
-        :type: url
-        :text: Join our Slack
         :classes: btn-outline-primary btn-block stretched-link
 
     ---
