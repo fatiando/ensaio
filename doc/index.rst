@@ -8,10 +8,10 @@
 
 .. raw:: html
 
-    <p class="lead centered front-page-callout">
-        Practice datasets to probe your code
+    <p class="centered lead front-page-callout">
+      Practice datasets to probe your code
     </p>
-
+    <img class="front-page-banner" src="_static/banner.png" alt="A sampling of our datasets">
 
 **Ensaio** (Portuguese for "rehearsal") is a Python package for downloading
 open-access sample datasets for Geoscience.

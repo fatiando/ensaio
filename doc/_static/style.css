@@ -22,6 +22,10 @@ span.project-version {
 }
 
 .front-page-callout {
+  margin-bottom: 2rem;
+}
+
+.front-page-banner {
   margin-bottom: 4rem;
 }
 
