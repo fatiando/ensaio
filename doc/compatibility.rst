@@ -50,6 +50,8 @@ following releases to ensure compatibility:
 
     * - **Python version**
       - **Last compatible release**
+    * - 3.6
+      - 1.0.0
     * - 3.7
-      - 1.2.0 (planned for late 2022)
+      - 1.X.0 (planned for late 2022)
 

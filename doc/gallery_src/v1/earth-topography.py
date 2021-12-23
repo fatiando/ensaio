@@ -5,8 +5,8 @@
 # This code is part of the Fatiando a Terra project (https://www.fatiando.org)
 #
 """
-Topography/bathymetry of the Earth at 10 arc-minute resolution
---------------------------------------------------------------
+Topography of the Earth at 10 arc-minute resolution
+---------------------------------------------------
 
 The grid is grid-node registered and stored in netCDF with CF-compliant
 metadata. The values are derived from a spherical harmonic model of the ETOPO1
@@ -28,12 +28,6 @@ print(fname)
 
 ###############################################################################
 # Load the netCDF grid with xarray.
-#
-# .. note::
-#
-#     Requires the `netcdf4 <https://github.com/Unidata/netcdf4-python>`__
-#     library.
-#
 data = xr.load_dataarray(fname)
 data
 
