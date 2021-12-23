@@ -1,0 +1,10 @@
+ensaio.v1.DOI
+=============
+
+.. currentmodule:: ensaio.v1
+
+.. autodata:: DOI
+
+.. raw:: html
+
+      <div style='clear:both'></div>

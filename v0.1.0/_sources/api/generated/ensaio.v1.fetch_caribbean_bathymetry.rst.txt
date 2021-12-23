@@ -1,0 +1,12 @@
+ensaio.v1.fetch\_caribbean\_bathymetry
+======================================
+
+.. currentmodule:: ensaio.v1
+
+.. autofunction:: fetch_caribbean_bathymetry
+
+.. include:: backreferences/ensaio.v1.fetch_caribbean_bathymetry.examples
+
+.. raw:: html
+
+     <div style='clear:both'></div>
