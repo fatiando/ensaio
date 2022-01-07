@@ -95,14 +95,14 @@ jobs:
           key: conda-${{ runner.os }}-${{ env.PYTHON }}-${{ hashFiles('requirements-full.txt') }}
 
       - name: Install requirements
-        run: mamba install --quiet --file requirements-full.txt python=$PYTHON
+        run: mamba install --quiet --file requirements-full.txt python==$PYTHON
 
       - name: List installed packages
         run: mamba list
 
       - name: Build source and wheel distributions
         run: |
-          python setup.py sdist bdist_wheel
+          make build
           echo ""
           echo "Generated files:"
           ls -lh dist/
