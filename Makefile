@@ -11,11 +11,15 @@ help:
 	@echo "  test      run the test suite (including doctests) and report coverage"
 	@echo "  format    automatically format the code"
 	@echo "  check     run code style and quality checks"
+	@echo "  build     build source and wheel distributions"
 	@echo "  clean     clean up build and generated files"
 	@echo ""
 
+build:
+	python -m build .
+
 install:
-	pip install --no-deps -e .
+	python -m pip install --no-deps -e .
 
 test:
 	# Run a tmp folder to make sure the tests are run on the installed version
