@@ -5,22 +5,22 @@
 
 Computation times
 =================
-**02:36.148** total execution time for **gallery_v1** files:
+**02:28.819** total execution time for **gallery_v1** files:
 
 +----------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_gallery_v1_caribbean-bathymetry.py` (``caribbean-bathymetry.py``)       | 00:57.123 | 0.0 MB |
+| :ref:`sphx_glr_gallery_v1_caribbean-bathymetry.py` (``caribbean-bathymetry.py``)       | 00:55.233 | 0.0 MB |
 +----------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_gallery_v1_british-columbia-lidar.py` (``british-columbia-lidar.py``)   | 00:32.501 | 0.0 MB |
+| :ref:`sphx_glr_gallery_v1_british-columbia-lidar.py` (``british-columbia-lidar.py``)   | 00:31.102 | 0.0 MB |
 +----------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_gallery_v1_britain-magnetic.py` (``britain-magnetic.py``)               | 00:23.015 | 0.0 MB |
+| :ref:`sphx_glr_gallery_v1_britain-magnetic.py` (``britain-magnetic.py``)               | 00:21.780 | 0.0 MB |
 +----------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_gallery_v1_earth-gravity.py` (``earth-gravity.py``)                     | 00:11.482 | 0.0 MB |
+| :ref:`sphx_glr_gallery_v1_earth-gravity.py` (``earth-gravity.py``)                     | 00:10.715 | 0.0 MB |
 +----------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_gallery_v1_earth-topography.py` (``earth-topography.py``)               | 00:10.470 | 0.0 MB |
+| :ref:`sphx_glr_gallery_v1_earth-topography.py` (``earth-topography.py``)               | 00:10.204 | 0.0 MB |
 +----------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_gallery_v1_earth-geoid.py` (``earth-geoid.py``)                         | 00:08.362 | 0.0 MB |
+| :ref:`sphx_glr_gallery_v1_earth-geoid.py` (``earth-geoid.py``)                         | 00:07.942 | 0.0 MB |
 +----------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_gallery_v1_alps-gps-velocity.py` (``alps-gps-velocity.py``)             | 00:07.191 | 0.0 MB |
+| :ref:`sphx_glr_gallery_v1_alps-gps-velocity.py` (``alps-gps-velocity.py``)             | 00:06.362 | 0.0 MB |
 +----------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_gallery_v1_southern-africa-gravity.py` (``southern-africa-gravity.py``) | 00:06.004 | 0.0 MB |
+| :ref:`sphx_glr_gallery_v1_southern-africa-gravity.py` (``southern-africa-gravity.py``) | 00:05.481 | 0.0 MB |
 +----------------------------------------------------------------------------------------+-----------+--------+
