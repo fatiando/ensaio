@@ -5,4 +5,5 @@
 # This code is part of the Fatiando a Terra project (https://www.fatiando.org)
 #
 # Import functions/classes to make the public API
+from ._fetchers import fetch_southern_africa_gravity, locate
 from ._version import __version__

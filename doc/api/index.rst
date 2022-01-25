@@ -3,6 +3,21 @@
 List of functions and classes (API)
 ===================================
 
+.. automodule:: ensaio
+
+Functions used to download the datasets and cache them locally.
+
+.. autosummary::
+    :toctree: generated/
+
+    ensaio.locate
+    ensaio.fetch_southern_africa_gravity
+
+
+----
+
+Old!
+
 Functions and variables used to download the datasets and cache them locally.
 Use the respective module to access the datasets in each major version of the
 data release.
