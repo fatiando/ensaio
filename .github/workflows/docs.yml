@@ -111,19 +111,19 @@ jobs:
       - name: Install the package
         run: python -m pip install dist/*.whl
 
-      - name: Cache the v1 datasets
+      - name: Cache the datasets
         if: github.event_name == 'pull_request'
         uses: actions/cache@v2
         with:
-          path: ${{ runner.temp }}/cache/ensaio/v1
-          key: ensaio-data-v1-${{ hashFiles('ensaio/v1.py') }}
+          path: ${{ runner.temp }}/cache/ensaio
+          key: ensaio-data-${{ hashFiles('ensaio/_fetchers.py') }}
 
-      - name: Cache the v1 sphinx-gallery runs
+      - name: Cache the sphinx-gallery runs
         if: github.event_name == 'pull_request'
         uses: actions/cache@v2
         with:
-          path: doc/gallery/v1
-          key: gallery-v1-${{ hashFiles('doc/gallery_src/v1/*.py') }}
+          path: doc/gallery/
+          key: gallery-${{ hashFiles('doc/gallery_src/*.py') }}
 
       - name: Cache the tutorial sphinx-gallery runs
         if: github.event_name == 'pull_request'
@@ -136,7 +136,7 @@ jobs:
         run: make -C doc all
         env:
           # Define directory where sample data will be stored
-          ENSAIO_V1_DATA_DIR: ${{ runner.temp }}/cache/ensaio/v1
+          ENSAIO_DATA_DIR: ${{ runner.temp }}/cache/ensaio/
 
       # Store the docs as a build artifact so we can deploy it later
       - name: Upload HTML documentation as an artifact
