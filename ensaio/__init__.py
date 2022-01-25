@@ -5,5 +5,15 @@
 # This code is part of the Fatiando a Terra project (https://www.fatiando.org)
 #
 # Import functions/classes to make the public API
-from ._fetchers import fetch_southern_africa_gravity, locate
+from ._fetchers import (
+    fetch_alps_gps,
+    fetch_britain_magnetic,
+    fetch_british_columbia_lidar,
+    fetch_caribbean_bathymetry,
+    fetch_earth_geoid,
+    fetch_earth_gravity,
+    fetch_earth_topography,
+    fetch_southern_africa_gravity,
+    locate,
+)
 from ._version import __version__

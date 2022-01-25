@@ -5,25 +5,25 @@
 # This code is part of the Fatiando a Terra project (https://www.fatiando.org)
 #
 """
-Topography of the Earth at 10 arc-minute resolution
+Earth geoid height grid at 10 arc-minute resolution
 ---------------------------------------------------
 
 The grid is grid-node registered and stored in netCDF with CF-compliant
-metadata. The values are derived from a spherical harmonic model of the ETOPO1
-bedrock grid. Topography values are referenced to "sea level" and are positive
-upwards.
+metadata. The geoid height is derived from the EIGEN-6C4 spherical harmonic
+model of the Earth's gravity field.
 
-**Original source:** `ETOPO1 <https://doi.org/10.7289/V5C8276M>`__
+**Original source:** `EIGEN-6C4 model
+<https://doi.org/10.5880/icgem.2015.1>`__
 
 """
 import pygmt
 import xarray as xr
 
-import ensaio.v1 as ensaio
+import ensaio
 
 ###############################################################################
 # Download and cache the data and return the path to it on disk.
-fname = ensaio.fetch_earth_topography()
+fname = ensaio.fetch_earth_geoid(version=1)
 print(fname)
 
 ###############################################################################
@@ -39,7 +39,7 @@ fig.basemap(
     projection="W15c",
     frame=True,
 )
-fig.grdimage(data, cmap="etopo1", shading="+nt0.5")
-fig.colorbar(frame='af+l"topography [m]"')
+fig.grdimage(data, cmap="polar+h")
+fig.colorbar(frame='af+l"geoid height [m]"')
 fig.coast(shorelines=True, resolution="c", area_thresh=1e4)
 fig.show()
