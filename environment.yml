@@ -24,7 +24,8 @@ dependencies:
   - pandas
   - xarray
   - netcdf4
-  - pygmt
+  - pygmt==0.5.0
+  - gmt==6.2.0
   - ipython
   # Style
   - black
