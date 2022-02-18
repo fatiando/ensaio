@@ -22,11 +22,11 @@ probably larger than geoid model differences).
 import pandas as pd
 import pygmt
 
-import ensaio.v1 as ensaio
+import ensaio
 
 ###############################################################################
 # Download and cache the data and return the path to it on disk
-fname = ensaio.fetch_southern_africa_gravity()
+fname = ensaio.fetch_southern_africa_gravity(version=1)
 print(fname)
 
 ###############################################################################

@@ -144,17 +144,17 @@ jobs:
       - name: List installed packages
         run: python -m pip freeze
 
-      - name: Cache the v1 datasets
+      - name: Cache the datasets
         if: matrix.cached
         uses: actions/cache@v2
         with:
-          path: ${{ runner.temp }}/cache/ensaio/v1
-          key: ensaio-data-v1-${{ hashFiles('ensaio/v1.py') }}
+          path: ${{ runner.temp }}/cache/ensaio
+          key: ensaio-data-${{ hashFiles('ensaio/_fetchers.py') }}
 
       - name: Run the tests
         run: make test
         env:
-          ENSAIO_V1_DATA_DIR: ${{ runner.temp }}/cache/ensaio/v1
+          ENSAIO_DATA_DIR: ${{ runner.temp }}/cache/ensaio
 
       - name: Convert coverage report to XML for codecov
         run: coverage xml

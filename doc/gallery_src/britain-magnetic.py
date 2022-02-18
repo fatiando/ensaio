@@ -5,7 +5,7 @@
 # This code is part of the Fatiando a Terra project (https://www.fatiando.org)
 #
 """
-Airborne magnetic survey of Britain
+Magnetic airborne survey of Britain
 -----------------------------------
 
 This is a digitization of an airborne magnetic survey of Britain. Data are
@@ -26,11 +26,11 @@ import numpy as np
 import pandas as pd
 import pygmt
 
-import ensaio.v1 as ensaio
+import ensaio
 
 ###############################################################################
 # Download and cache the data and return the path to it on disk
-fname = ensaio.fetch_britain_magnetic()
+fname = ensaio.fetch_britain_magnetic(version=1)
 print(fname)
 
 ###############################################################################

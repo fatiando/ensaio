@@ -26,8 +26,8 @@ About
 
 **Ensaio** (Portuguese for "rehearsal") is a Python package for downloading
 open-access sample datasets for Geoscience.
-It taps into the curated collection from `fatiando/data
-<https://github.com/fatiando/data>`__ that is designed for use in tutorials,
+It taps into the `Fatiando a Terra FAIR data collection
+<https://github.com/fatiando-data>`__ that is designed for use in tutorials,
 documentation, and teaching.
 
 It uses `Pooch <https://www.fatiando.org/pooch>`__ to manage downloading and
@@ -43,9 +43,9 @@ Project goals
 * Only download and let the user load the data. This helps make tutorials and
   examples more easily extended to a user's own data.
 * Be fully backwards compatible. We achieve this by separating **data**
-  versions from **Ensaio** versions. Major releases of the data get separate
-  modules in Ensaio: `ensaio.v1`, `ensaio.v2`, etc. Major releases of Ensaio
-  will be few and far between (if any).
+  versions from **Ensaio** versions. Data fetching functions allow you to
+  choose any data version that is older than the version of Ensaio that's
+  installed. Major releases of Ensaio will be few and far between (if any).
 
 Contacting Us
 -------------

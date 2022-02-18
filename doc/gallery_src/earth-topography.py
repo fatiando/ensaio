@@ -5,28 +5,25 @@
 # This code is part of the Fatiando a Terra project (https://www.fatiando.org)
 #
 """
-Gravity of the Earth at 10 arc-minute resolution
-------------------------------------------------
+Earth topography grid at 10 arc-minute resolution
+-------------------------------------------------
 
 The grid is grid-node registered and stored in netCDF with CF-compliant
-metadata. The gravity values are derived from the EIGEN-6C4 spherical harmonic
-model. Here "gravity" refers to the combined gravitational and centrifugal
-accelerations.
+metadata. The values are derived from a spherical harmonic model of the ETOPO1
+bedrock grid. Topography values are referenced to "sea level" and are positive
+upwards.
 
-The data are calculated uniformly at 10 km above the WGS84 ellipsoid.
-
-**Original source:** `EIGEN-6C4 model
-<https://doi.org/10.5880/icgem.2015.1>`__
+**Original source:** `ETOPO1 <https://doi.org/10.7289/V5C8276M>`__
 
 """
 import pygmt
 import xarray as xr
 
-import ensaio.v1 as ensaio
+import ensaio
 
 ###############################################################################
 # Download and cache the data and return the path to it on disk.
-fname = ensaio.fetch_earth_gravity()
+fname = ensaio.fetch_earth_topography(version=1)
 print(fname)
 
 ###############################################################################
@@ -42,7 +39,7 @@ fig.basemap(
     projection="W15c",
     frame=True,
 )
-fig.grdimage(data, cmap="viridis", shading="+nt0.5")
-fig.colorbar(frame='af+l"gravity [mGal]"')
+fig.grdimage(data, cmap="etopo1", shading="+nt0.5")
+fig.colorbar(frame='af+l"topography [m]"')
 fig.coast(shorelines=True, resolution="c", area_thresh=1e4)
 fig.show()

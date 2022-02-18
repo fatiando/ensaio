@@ -5,26 +5,26 @@
 # This code is part of the Fatiando a Terra project (https://www.fatiando.org)
 #
 """
-Single-beam bathymetry of the Caribbean
----------------------------------------
+Lidar point cloud of the Trail Islands in British Columbia, Canada
+------------------------------------------------------------------
 
-This dataset is a compilation of several public domain single-beam bathymetry
-surveys of the ocean in the Caribbean. The data display a wide range of
-tectonic activity, uneven distribution, and even clear systematic errors in
-some of the survey lines.
+This is a lidar point cloud (ground reflections only) sliced to the small
+`Trail Islands <https://apps.gov.bc.ca/pub/bcgnws/names/21973.html>`__
+to the North of Vancouver. The islands have some nice looking topography and
+their isolated nature creates problems for some interpolation methods.
 
-**Original source:** `NOAA NCEI
-<https://ngdc.noaa.gov/mgg/geodas/trackline.html>`__
+**Original source:** `LidarBC
+<https://www2.gov.bc.ca/gov/content/data/geographic-data-services/lidarbc>`__
 
 """
 import pandas as pd
 import pygmt
 
-import ensaio.v1 as ensaio
+import ensaio
 
 ###############################################################################
 # Download and cache the data and return the path to it on disk
-fname = ensaio.fetch_caribbean_bathymetry()
+fname = ensaio.fetch_british_columbia_lidar(version=1)
 print(fname)
 
 ###############################################################################
@@ -33,7 +33,7 @@ data = pd.read_csv(fname)
 data
 
 ###############################################################################
-# Make a PyGMT map with the data points colored by the depth.
+# Make a PyGMT map with the data points colored by the elevation.
 fig = pygmt.Figure()
 fig.basemap(
     region=[
@@ -45,10 +45,9 @@ fig.basemap(
     projection="M15c",
     frame=True,
 )
-pygmt.makecpt(cmap="viridis", series=[data.depth_m.min(), data.depth_m.max()])
+pygmt.makecpt(cmap="viridis", series=[data.elevation_m.min(), data.elevation_m.max()])
 fig.plot(
-    x=data.longitude, y=data.latitude, color=data.depth_m, cmap=True, style="c0.02c"
+    x=data.longitude, y=data.latitude, color=data.elevation_m, cmap=True, style="c0.05c"
 )
-fig.colorbar(frame='af+l"bathymetric depth [m]"')
-fig.coast(land="#666666")
+fig.colorbar(frame='af+l"elevation [m]"')
 fig.show()

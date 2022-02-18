@@ -5,8 +5,8 @@
 # This code is part of the Fatiando a Terra project (https://www.fatiando.org)
 #
 """
-Alpine 3-component GPS velocities
----------------------------------
+GPS velocities (3-component) for the Alps
+-----------------------------------------
 
 This is a compilation of 3D GPS velocities for the Alps. The horizontal
 velocities are reference to the Eurasian frame. All velocity components and
@@ -21,11 +21,11 @@ import numpy as np
 import pandas as pd
 import pygmt
 
-import ensaio.v1 as ensaio
+import ensaio
 
 ###############################################################################
 # Download and cache the data and return the path to it on disk
-fname = ensaio.fetch_alps_gps()
+fname = ensaio.fetch_alps_gps(version=1)
 print(fname)
 
 ###############################################################################
