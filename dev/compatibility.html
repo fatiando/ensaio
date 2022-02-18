@@ -47,7 +47,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Changelog" href="changes.html" />
-    <link rel="prev" title="ensaio.v1.ENVIRONMENT_VARIABLE_CACHE" href="api/generated/ensaio.v1.ENVIRONMENT_VARIABLE_CACHE.html" />
+    <link rel="prev" title="ensaio.fetch_southern_africa_gravity" href="api/generated/ensaio.fetch_southern_africa_gravity.html" />
     <!-- Plausible analytics for anonymous usage statistics -->
     <script defer data-domain="fatiando.org" src="https://plausible.io/js/plausible.js"></script>
 
@@ -97,9 +97,14 @@
    Downloading data
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorial/developers.html">
+   Using Ensaio in your project
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="gallery/v1/index.html">
-   Available datasets (v1)
+  <a class="reference internal" href="gallery/index.html">
+   Available datasets
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -108,51 +113,46 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="gallery/v1/britain-magnetic.html">
-     Airborne magnetic survey of Britain
+    <a class="reference internal" href="gallery/caribbean-bathymetry.html">
+     Bathymetry single-beam surveys of the Caribbean
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gallery/v1/alps-gps-velocity.html">
-     Alpine 3-component GPS velocities
+    <a class="reference internal" href="gallery/earth-geoid.html">
+     Earth geoid height grid at 10 arc-minute resolution
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gallery/v1/earth-geoid.html">
-     Geoid height of the Earth at 10 arc-minute resolution
+    <a class="reference internal" href="gallery/earth-gravity.html">
+     Earth gravity grid at 10 arc-minute resolution
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gallery/v1/southern-africa-gravity.html">
+    <a class="reference internal" href="gallery/earth-topography.html">
+     Earth topography grid at 10 arc-minute resolution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gallery/alps-gps-velocity.html">
+     GPS velocities (3-component) for the Alps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gallery/southern-africa-gravity.html">
      Gravity ground-based surveys of Southern Africa
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gallery/v1/earth-gravity.html">
-     Gravity of the Earth at 10 arc-minute resolution
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="gallery/v1/british-columbia-lidar.html">
+    <a class="reference internal" href="gallery/british-columbia-lidar.html">
      Lidar point cloud of the Trail Islands in British Columbia, Canada
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gallery/v1/caribbean-bathymetry.html">
-     Single-beam bathymetry of the Caribbean
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="gallery/v1/earth-topography.html">
-     Topography of the Earth at 10 arc-minute resolution
+    <a class="reference internal" href="gallery/britain-magnetic.html">
+     Magnetic airborne survey of Britain
     </a>
    </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tutorial/developers.html">
-   Using Ensaio in your project
-  </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -172,68 +172,48 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="api/generated/ensaio.v1.locate.html">
-     ensaio.v1.locate
+    <a class="reference internal" href="api/generated/ensaio.locate.html">
+     ensaio.locate
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="api/generated/ensaio.v1.fetch_alps_gps.html">
-     ensaio.v1.fetch_alps_gps
+    <a class="reference internal" href="api/generated/ensaio.fetch_alps_gps.html">
+     ensaio.fetch_alps_gps
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="api/generated/ensaio.v1.fetch_britain_magnetic.html">
-     ensaio.v1.fetch_britain_magnetic
+    <a class="reference internal" href="api/generated/ensaio.fetch_britain_magnetic.html">
+     ensaio.fetch_britain_magnetic
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="api/generated/ensaio.v1.fetch_british_columbia_lidar.html">
-     ensaio.v1.fetch_british_columbia_lidar
+    <a class="reference internal" href="api/generated/ensaio.fetch_british_columbia_lidar.html">
+     ensaio.fetch_british_columbia_lidar
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="api/generated/ensaio.v1.fetch_caribbean_bathymetry.html">
-     ensaio.v1.fetch_caribbean_bathymetry
+    <a class="reference internal" href="api/generated/ensaio.fetch_caribbean_bathymetry.html">
+     ensaio.fetch_caribbean_bathymetry
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="api/generated/ensaio.v1.fetch_earth_geoid.html">
-     ensaio.v1.fetch_earth_geoid
+    <a class="reference internal" href="api/generated/ensaio.fetch_earth_geoid.html">
+     ensaio.fetch_earth_geoid
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="api/generated/ensaio.v1.fetch_earth_gravity.html">
-     ensaio.v1.fetch_earth_gravity
+    <a class="reference internal" href="api/generated/ensaio.fetch_earth_gravity.html">
+     ensaio.fetch_earth_gravity
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="api/generated/ensaio.v1.fetch_earth_topography.html">
-     ensaio.v1.fetch_earth_topography
+    <a class="reference internal" href="api/generated/ensaio.fetch_earth_topography.html">
+     ensaio.fetch_earth_topography
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="api/generated/ensaio.v1.fetch_southern_africa_gravity.html">
-     ensaio.v1.fetch_southern_africa_gravity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="api/generated/ensaio.v1.DOI.html">
-     ensaio.v1.DOI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="api/generated/ensaio.v1.URL.html">
-     ensaio.v1.URL
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="api/generated/ensaio.v1.ENVIRONMENT_VARIABLE_URL.html">
-     ensaio.v1.ENVIRONMENT_VARIABLE_URL
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="api/generated/ensaio.v1.ENVIRONMENT_VARIABLE_CACHE.html">
-     ensaio.v1.ENVIRONMENT_VARIABLE_CACHE
+    <a class="reference internal" href="api/generated/ensaio.fetch_southern_africa_gravity.html">
+     ensaio.fetch_southern_africa_gravity
     </a>
    </li>
   </ul>
@@ -457,18 +437,20 @@ major releases sparingly and with ample warning.</strong></p>
 </div>
 <div class="section" id="source-data-releases">
 <h2>Source data releases<a class="headerlink" href="#source-data-releases" title="Permalink to this headline">¶</a></h2>
-<p>New releases of Ensaio will tend to accompany releases of the source data
-collection in the <a class="reference external" href="https://github.com/fatiando/data">fatiando/data</a>
-repository.
-However, the <strong>version numbers will not necessarily match</strong>.</p>
-<p>A major release of the data collection will result in a <strong>new module being
-added to Ensaio</strong> (for example, the data release <code class="docutils literal notranslate"><span class="pre">2.0.0</span></code> will prompt an
-Ensaio release with the <code class="docutils literal notranslate"><span class="pre">ensaio.v2</span></code> module added).
-The <code class="docutils literal notranslate"><span class="pre">1.*.*</span></code> data will still be accessible through the <code class="docutils literal notranslate"><span class="pre">ensaio.v1</span></code> module.
-The modules for previous releases will not be removed unless absolutely
-necessary.</p>
-<p>This means that upgrading Ensaio should almost always be safe and documentation
-using <code class="docutils literal notranslate"><span class="pre">1.*.*</span></code> data should still work after <code class="docutils literal notranslate"><span class="pre">2.*.*</span></code> data is released.</p>
+<p>New releases of Ensaio will tend to accompany releases of new datasets or new
+versions of existing data in the
+<a class="reference external" href="https://github.com/fatiando-data">Fatiando a Terra Datasets</a> collection.</p>
+<p>Older versions of each dataset will still remain available (as much as
+possible) and can be accessed by setting the <code class="docutils literal notranslate"><span class="pre">version</span></code> argument of the
+<code class="docutils literal notranslate"><span class="pre">fetch_*</span></code> functions accordingly.
+This means that <strong>upgrading Ensaio should almost always be safe</strong>.
+Documentation using version <code class="docutils literal notranslate"><span class="pre">1</span></code> of a dataset will still use the same data
+(and hopefully produce the same results) after version <code class="docutils literal notranslate"><span class="pre">2</span></code> is included in
+Ensaio.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See <a class="reference internal" href="tutorial/developers.html#developers"><span class="std std-ref">Using Ensaio in your project</span></a> for more tips and tricks.</p>
+</div>
 </div>
 <div class="section" id="python-version-compatibility">
 <span id="python-versions"></span><h2>Python version compatibility<a class="headerlink" href="#python-version-compatibility" title="Permalink to this headline">¶</a></h2>
@@ -500,11 +482,11 @@ following releases to ensure compatibility:</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="api/generated/ensaio.v1.ENVIRONMENT_VARIABLE_CACHE.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="api/generated/ensaio.fetch_southern_africa_gravity.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">ensaio.v1.ENVIRONMENT_VARIABLE_CACHE</p>
+            <p class="prev-next-title">ensaio.fetch_southern_africa_gravity</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="changes.html" title="next page">
@@ -522,7 +504,7 @@ following releases to ensure compatibility:</p>
   <p>
     
         &copy; Copyright 2022, The Ensaio Developers.<br/>
-      Last updated on Jan 22, 2022.<br/>
+      Last updated on Feb 18, 2022.<br/>
   </p>
 </footer>
 </main>

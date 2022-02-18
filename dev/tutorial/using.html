@@ -46,7 +46,7 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Available datasets (v1)" href="../gallery/v1/index.html" />
+    <link rel="next" title="Using Ensaio in your project" href="developers.html" />
     <link rel="prev" title="Installing" href="../install.html" />
     <!-- Plausible analytics for anonymous usage statistics -->
     <script defer data-domain="fatiando.org" src="https://plausible.io/js/plausible.js"></script>
@@ -97,9 +97,14 @@
    Downloading data
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="developers.html">
+   Using Ensaio in your project
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../gallery/v1/index.html">
-   Available datasets (v1)
+  <a class="reference internal" href="../gallery/index.html">
+   Available datasets
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -108,51 +113,46 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../gallery/v1/britain-magnetic.html">
-     Airborne magnetic survey of Britain
+    <a class="reference internal" href="../gallery/caribbean-bathymetry.html">
+     Bathymetry single-beam surveys of the Caribbean
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../gallery/v1/alps-gps-velocity.html">
-     Alpine 3-component GPS velocities
+    <a class="reference internal" href="../gallery/earth-geoid.html">
+     Earth geoid height grid at 10 arc-minute resolution
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../gallery/v1/earth-geoid.html">
-     Geoid height of the Earth at 10 arc-minute resolution
+    <a class="reference internal" href="../gallery/earth-gravity.html">
+     Earth gravity grid at 10 arc-minute resolution
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../gallery/v1/southern-africa-gravity.html">
+    <a class="reference internal" href="../gallery/earth-topography.html">
+     Earth topography grid at 10 arc-minute resolution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/alps-gps-velocity.html">
+     GPS velocities (3-component) for the Alps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/southern-africa-gravity.html">
      Gravity ground-based surveys of Southern Africa
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../gallery/v1/earth-gravity.html">
-     Gravity of the Earth at 10 arc-minute resolution
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../gallery/v1/british-columbia-lidar.html">
+    <a class="reference internal" href="../gallery/british-columbia-lidar.html">
      Lidar point cloud of the Trail Islands in British Columbia, Canada
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../gallery/v1/caribbean-bathymetry.html">
-     Single-beam bathymetry of the Caribbean
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../gallery/v1/earth-topography.html">
-     Topography of the Earth at 10 arc-minute resolution
+    <a class="reference internal" href="../gallery/britain-magnetic.html">
+     Magnetic airborne survey of Britain
     </a>
    </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="developers.html">
-   Using Ensaio in your project
-  </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -172,68 +172,48 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.v1.locate.html">
-     ensaio.v1.locate
+    <a class="reference internal" href="../api/generated/ensaio.locate.html">
+     ensaio.locate
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.v1.fetch_alps_gps.html">
-     ensaio.v1.fetch_alps_gps
+    <a class="reference internal" href="../api/generated/ensaio.fetch_alps_gps.html">
+     ensaio.fetch_alps_gps
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.v1.fetch_britain_magnetic.html">
-     ensaio.v1.fetch_britain_magnetic
+    <a class="reference internal" href="../api/generated/ensaio.fetch_britain_magnetic.html">
+     ensaio.fetch_britain_magnetic
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.v1.fetch_british_columbia_lidar.html">
-     ensaio.v1.fetch_british_columbia_lidar
+    <a class="reference internal" href="../api/generated/ensaio.fetch_british_columbia_lidar.html">
+     ensaio.fetch_british_columbia_lidar
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.v1.fetch_caribbean_bathymetry.html">
-     ensaio.v1.fetch_caribbean_bathymetry
+    <a class="reference internal" href="../api/generated/ensaio.fetch_caribbean_bathymetry.html">
+     ensaio.fetch_caribbean_bathymetry
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.v1.fetch_earth_geoid.html">
-     ensaio.v1.fetch_earth_geoid
+    <a class="reference internal" href="../api/generated/ensaio.fetch_earth_geoid.html">
+     ensaio.fetch_earth_geoid
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.v1.fetch_earth_gravity.html">
-     ensaio.v1.fetch_earth_gravity
+    <a class="reference internal" href="../api/generated/ensaio.fetch_earth_gravity.html">
+     ensaio.fetch_earth_gravity
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.v1.fetch_earth_topography.html">
-     ensaio.v1.fetch_earth_topography
+    <a class="reference internal" href="../api/generated/ensaio.fetch_earth_topography.html">
+     ensaio.fetch_earth_topography
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.v1.fetch_southern_africa_gravity.html">
-     ensaio.v1.fetch_southern_africa_gravity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.v1.DOI.html">
-     ensaio.v1.DOI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.v1.URL.html">
-     ensaio.v1.URL
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.v1.ENVIRONMENT_VARIABLE_URL.html">
-     ensaio.v1.ENVIRONMENT_VARIABLE_URL
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.v1.ENVIRONMENT_VARIABLE_CACHE.html">
-     ensaio.v1.ENVIRONMENT_VARIABLE_CACHE
+    <a class="reference internal" href="../api/generated/ensaio.fetch_southern_africa_gravity.html">
+     ensaio.fetch_southern_africa_gravity
     </a>
    </li>
   </ul>
@@ -425,21 +405,21 @@ to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="downloading-data">
 <span id="using"></span><span id="sphx-glr-tutorial-using-py"></span><h1>Downloading data<a class="headerlink" href="#downloading-data" title="Permalink to this headline">¶</a></h1>
-<p>Ensaio provides functions for downloading datasets from the <a class="reference external" href="https://github.com/fatiando/data">fatiando/data</a> collection to your computer. The
-functions are available through different modules for each major release of
-the data collection. For example, datasets from the version 1.X series are
-available through <a class="reference internal" href="../api/index.html#module-ensaio.v1" title="ensaio.v1"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ensaio.v1</span></code></a>.</p>
-<p>The recommended way to use Ensaio is to import a particular version module like
-so:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load Pandas as well so we can read in some data</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<p>Ensaio provides functions for downloading datasets from the <a class="reference external" href="https://github.com/fatiando-data">Fatiando a Terra
+Datasets</a> collection to your computer.
+These functions don’t attempt to do any loading of the data into memory and
+only return the path of the downloaded file on your computer.</p>
+<p>To take care of the actual loading of the data, we’ll import
+<a class="reference external" href="https://pandas.pydata.org/">Pandas</a> as well since the data we’ll use is in
+CSV format.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="kn">import</span> <span class="nn">ensaio.v1</span> <span class="k">as</span> <span class="nn">ensaio</span>
+<span class="kn">import</span> <span class="nn">ensaio</span>
 </pre></div>
 </div>
-<p>To download a particular dataset, say our Southern Africa gravity data,
-call the corresponding <code class="docutils literal notranslate"><span class="pre">fetch_</span></code> functions:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fname</span></a> <span class="o">=</span> <a href="../api/generated/ensaio.v1.fetch_southern_africa_gravity.html#ensaio.v1.fetch_southern_africa_gravity" title="ensaio.v1.fetch_southern_africa_gravity" class="sphx-glr-backref-module-ensaio-v1 sphx-glr-backref-type-py-function"><span class="n">ensaio</span><span class="o">.</span><span class="n">fetch_southern_africa_gravity</span></a><span class="p">()</span>
+<p>To download a particular dataset, say version 1 of our Southern Africa
+gravity data, call the corresponding <code class="docutils literal notranslate"><span class="pre">fetch_*</span></code> functions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fname</span></a> <span class="o">=</span> <a href="../api/generated/ensaio.fetch_southern_africa_gravity.html#ensaio.fetch_southern_africa_gravity" title="ensaio.fetch_southern_africa_gravity" class="sphx-glr-backref-module-ensaio sphx-glr-backref-type-py-function"><span class="n">ensaio</span><span class="o">.</span><span class="n">fetch_southern_africa_gravity</span></a><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fname</span></a><span class="p">)</span>
 </pre></div>
 </div>
@@ -449,8 +429,9 @@ call the corresponding <code class="docutils literal notranslate"><span class="p
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You can browse a list of all available datasets in <a class="reference internal" href="../api/index.html#api"><span class="std std-ref">List of functions and classes (API)</span></a> or
-<a class="reference internal" href="../gallery/v1/index.html#gallery-v1"><span class="std std-ref">Available datasets (v1)</span></a>.</p>
+<p>The version of the data should <strong>always</strong> be explicitly included so that
+you code continues to work in the same way even if a newer version of the
+data is released.</p>
 </div>
 <p>If the data are not yet available on your computer, Ensaio will automatically
 download it and return the path to the downloaded file.
@@ -582,28 +563,26 @@ choice is to use <a class="reference external" href="https://pandas.pydata.org/"
 </div>
 </div>
 <br />
-<br /><div class="admonition-using-ensaio-in-your-project-documentation admonition">
-<p class="admonition-title">Using Ensaio in your project documentation?</p>
-<p>Make sure you take a look at <a class="reference internal" href="developers.html#developers"><span class="std std-ref">Using Ensaio in your project</span></a> for useful tips and
-tricks.</p>
+<br /><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>You can browse a list of all available datasets in <a class="reference internal" href="../api/index.html#api"><span class="std std-ref">List of functions and classes (API)</span></a> or
+<a class="reference internal" href="../gallery/index.html#gallery"><span class="std std-ref">Available datasets</span></a>.</p>
 </div>
 <div class="section" id="where-are-the-data">
 <h2>Where are the data?<a class="headerlink" href="#where-are-the-data" title="Permalink to this headline">¶</a></h2>
 <p>The location of the cache folder varies by operating system. Use the
-<a class="reference internal" href="../api/generated/ensaio.v1.locate.html#ensaio.v1.locate" title="ensaio.v1.locate"><code class="xref py py-func docutils literal notranslate"><span class="pre">ensaio.v1.locate</span></code></a> function to get its location on your computer.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../api/generated/ensaio.v1.locate.html#ensaio.v1.locate" title="ensaio.v1.locate" class="sphx-glr-backref-module-ensaio-v1 sphx-glr-backref-type-py-function"><span class="n">ensaio</span><span class="o">.</span><span class="n">locate</span></a><span class="p">())</span>
+<a class="reference internal" href="../api/generated/ensaio.locate.html#ensaio.locate" title="ensaio.locate"><code class="xref py py-func docutils literal notranslate"><span class="pre">ensaio.locate</span></code></a> function to get its location on your computer.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../api/generated/ensaio.locate.html#ensaio.locate" title="ensaio.locate" class="sphx-glr-backref-module-ensaio sphx-glr-backref-type-py-function"><span class="n">ensaio</span><span class="o">.</span><span class="n">locate</span></a><span class="p">())</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/runner/work/_temp/cache/ensaio/v1
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/runner/work/_temp/cache/ensaio
 </pre></div>
 </div>
-<p>You can also set the location manually by creating a <code class="docutils literal notranslate"><span class="pre">ENSAIO_V1_DATA_DIR</span></code>
+<p>You can also set the location manually by creating a <code class="docutils literal notranslate"><span class="pre">ENSAIO_DATA_DIR</span></code>
 environment variable with the desired path. Ensaio will search for this
 variable and if found will use its value instead of the default cache folder.</p>
-<p>Similar variables and functions are available for each data collection
-version.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.032 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.028 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-using-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/f7a8e12efd36cbef5dbf64ec50950247/using.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">using.py</span></code></a></p>
@@ -629,10 +608,10 @@ version.</p>
             <p class="prev-next-title">Installing</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../gallery/v1/index.html" title="next page">
+    <a class='right-next' id="next-link" href="developers.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Available datasets (v1)</p>
+        <p class="prev-next-title">Using Ensaio in your project</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -644,7 +623,7 @@ version.</p>
   <p>
     
         &copy; Copyright 2022, The Ensaio Developers.<br/>
-      Last updated on Jan 22, 2022.<br/>
+      Last updated on Feb 18, 2022.<br/>
   </p>
 </footer>
 </main>

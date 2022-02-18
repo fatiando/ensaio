@@ -13,7 +13,7 @@ Tutorials
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Ensaio provides functions for downloading datasets from the `fatiando/data &lt;https://github.com/...">
+    <div class="sphx-glr-thumbcontainer" tooltip="Ensaio provides functions for downloading datasets from the `Fatiando a Terra Datasets &lt;https:/...">
 
 .. only:: html
 

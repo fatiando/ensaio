@@ -3,6 +3,34 @@
 Changelog
 =========
 
+Version 0.2.0
+-------------
+
+Released on: 2022/02/18
+
+doi:`10.5281/zenodo.6143350 <https://doi.org/10.5281/zenodo.6143350>`__
+
+**Breaking change**:
+
+* Version datasets individually instead of using the entire data bundle and
+  versioning all datasets based on the module name. This means that functions
+  won't have to be repeated and updating one dataset doesn't mean copying all
+  of the others along with it (since the collection would be new). Versions are
+  now specified as a required ``version`` argument in all ``fetch_*``
+  functions. (`#18 <https://github.com/fatiando/ensaio/pull/18>`__)
+
+Maintenance:
+
+* Replace Google Analytics for Plausible so our docs have a more privacy-friendly analytics solution (`#17 <https://github.com/fatiando/ensaio/pull/17>`__)
+* Use `Dependente <https://github.com/fatiando/dependente>`__ to capture dependencies on CI (`#16 <https://github.com/fatiando/ensaio/pull/16>`__)
+* Use `build <https://github.com/pypa/build/>`__ instead of ``setup.py`` (`#15 <https://github.com/fatiando/ensaio/pull/15>`__)
+* Remove unused files from the source distributions (`#14 <https://github.com/fatiando/ensaio/pull/14>`__)
+
+This release contains contributions from:
+
+* Santiago Soler
+* Leonardo Uieda
+
 Version 0.1.0
 -------------
 

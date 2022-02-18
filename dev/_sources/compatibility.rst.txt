@@ -22,20 +22,22 @@ major releases sparingly and with ample warning.**
 Source data releases
 --------------------
 
-New releases of Ensaio will tend to accompany releases of the source data
-collection in the `fatiando/data <https://github.com/fatiando/data>`__
-repository.
-However, the **version numbers will not necessarily match**.
+New releases of Ensaio will tend to accompany releases of new datasets or new
+versions of existing data in the
+`Fatiando a Terra Datasets <https://github.com/fatiando-data>`__ collection.
 
-A major release of the data collection will result in a **new module being
-added to Ensaio** (for example, the data release ``2.0.0`` will prompt an
-Ensaio release with the ``ensaio.v2`` module added).
-The ``1.*.*`` data will still be accessible through the ``ensaio.v1`` module.
-The modules for previous releases will not be removed unless absolutely
-necessary.
+Older versions of each dataset will still remain available (as much as
+possible) and can be accessed by setting the ``version`` argument of the
+``fetch_*`` functions accordingly.
+This means that **upgrading Ensaio should almost always be safe**.
+Documentation using version ``1`` of a dataset will still use the same data
+(and hopefully produce the same results) after version ``2`` is included in
+Ensaio.
 
-This means that upgrading Ensaio should almost always be safe and documentation
-using ``1.*.*`` data should still work after ``2.*.*`` data is released.
+.. seealso::
+
+    See :ref:`developers` for more tips and tricks.
+
 
 .. _python-versions:
 

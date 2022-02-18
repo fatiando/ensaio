@@ -10,31 +10,31 @@
 Downloading data
 ================
 
-Ensaio provides functions for downloading datasets from the `fatiando/data
-<https://github.com/fatiando/data>`__ collection to your computer. The
-functions are available through different modules for each major release of
-the data collection. For example, datasets from the version 1.X series are
-available through :mod:`ensaio.v1`.
+Ensaio provides functions for downloading datasets from the `Fatiando a Terra
+Datasets <https://github.com/fatiando-data>`__ collection to your computer.
+These functions don't attempt to do any loading of the data into memory and
+only return the path of the downloaded file on your computer.
 
-The recommended way to use Ensaio is to import a particular version module like
-so:
+To take care of the actual loading of the data, we'll import
+`Pandas <https://pandas.pydata.org/>`__ as well since the data we'll use is in
+CSV format.
 """
-# Load Pandas as well so we can read in some data
 import pandas as pd
 
-import ensaio.v1 as ensaio
+import ensaio
 
 ###############################################################################
-# To download a particular dataset, say our Southern Africa gravity data,
-# call the corresponding ``fetch_`` functions:
-fname = ensaio.fetch_southern_africa_gravity()
+# To download a particular dataset, say version 1 of our Southern Africa
+# gravity data, call the corresponding ``fetch_*`` functions:
+fname = ensaio.fetch_southern_africa_gravity(version=1)
 print(fname)
 
 ###############################################################################
 # .. tip::
 #
-#     You can browse a list of all available datasets in :ref:`api` or
-#     :ref:`gallery_v1`.
+#     The version of the data should **always** be explicitly included so that
+#     you code continues to work in the same way even if a newer version of the
+#     data is released.
 #
 # If the data are not yet available on your computer, Ensaio will automatically
 # download it and return the path to the downloaded file.
@@ -59,22 +59,19 @@ data = pd.read_csv(fname)
 data
 
 ###############################################################################
-# .. admonition:: Using Ensaio in your project documentation?
+# .. seealso::
 #
-#     Make sure you take a look at :ref:`developers` for useful tips and
-#     tricks.
+#     You can browse a list of all available datasets in :ref:`api` or
+#     :ref:`gallery`.
 #
 # Where are the data?
 # -------------------
 #
 # The location of the cache folder varies by operating system. Use the
-# :func:`ensaio.v1.locate` function to get its location on your computer.
+# :func:`ensaio.locate` function to get its location on your computer.
 print(ensaio.locate())
 
 ###############################################################################
-# You can also set the location manually by creating a ``ENSAIO_V1_DATA_DIR``
+# You can also set the location manually by creating a ``ENSAIO_DATA_DIR``
 # environment variable with the desired path. Ensaio will search for this
 # variable and if found will use its value instead of the default cache folder.
-#
-# Similar variables and functions are available for each data collection
-# version.
