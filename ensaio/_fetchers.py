@@ -13,62 +13,68 @@ from pathlib import Path
 import pooch
 
 REGISTRY = {
-    "v1": [
-        {
-            "fname": "alps-gps-velocity.csv.xz",
+    "alps-gps-velocity.csv.xz": {
+        "v1": {
             "hash": "md5:195ee3d88783ce01b6190c2af89f2b14",
             "doi": "doi:10.5281/zenodo.5879163",
             "url": "https://github.com/fatiando-data/alps-gps-velocity/releases/download/v1",
         },
-        {
-            "fname": "britain-magnetic.csv.xz",
+    },
+    "britain-magnetic.csv.xz": {
+        "v1": {
             "hash": "md5:8dbbda02c7e74f63adc461909358f056",
             "doi": "doi:10.5281/zenodo.5879260",
             "url": "https://github.com/fatiando-data/britain-magnetic/releases/download/v1",
         },
-        {
-            "fname": "british-columbia-lidar.csv.xz",
+    },
+    "british-columbia-lidar.csv.xz": {
+        "v1": {
             "hash": "md5:354c725a95036bd8340bc14e043ece5a",
             "doi": "doi:10.5281/zenodo.5881887",
             "url": "https://github.com/fatiando-data/british-columbia-lidar/releases/download/v1",
         },
-        {
-            "fname": "caribbean-bathymetry.csv.xz",
+    },
+    "caribbean-bathymetry.csv.xz": {
+        "v1": {
             "hash": "md5:a7332aa6e69c77d49d7fb54b764caa82",
             "doi": "doi:10.5281/zenodo.5882211",
             "url": "https://github.com/fatiando-data/caribbean-bathymetry/releases/download/v1",
         },
-        {
-            "fname": "earth-geoid-10arcmin.nc",
+    },
+    "earth-geoid-10arcmin.nc": {
+        "v1": {
             "hash": "md5:39b97344e704eb68fa381df2eb47da0f",
             "doi": "doi:10.5281/zenodo.5882205",
             "url": "https://github.com/fatiando-data/earth-geoid-10arcmin/releases/download/v1",
         },
-        {
-            "fname": "earth-gravity-10arcmin.nc",
+    },
+    "earth-gravity-10arcmin.nc": {
+        "v1": {
             "hash": "md5:56df20e0e67e28ebe4739a2f0357c4a6",
             "doi": "doi:10.5281/zenodo.5882207",
             "url": "https://github.com/fatiando-data/earth-gravity-10arcmin/releases/download/v1",
         },
-        {
-            "fname": "earth-topography-10arcmin.nc",
+    },
+    "earth-topography-10arcmin.nc": {
+        "v1": {
             "hash": "md5:c43b61322e03669c4313ba3d9a58028d",
             "doi": "doi:10.5281/zenodo.5882203",
             "url": "https://github.com/fatiando-data/earth-topography-10arcmin/releases/download/v1",
         },
-        {
-            "fname": "southern-africa-gravity.csv.xz",
+    },
+    "southern-africa-gravity.csv.xz": {
+        "v1": {
             "hash": "md5:1dee324a14e647855366d6eb01a1ef35",
             "doi": "doi:10.5281/zenodo.5882430",
             "url": "https://github.com/fatiando-data/southern-africa-gravity/releases/download/v1",
         },
-    ],
+    },
 }
 
 
-def _repository(version):
+def _repository(fname, version):
     """
-    Create the Pooch instance that fetches the datasets of a particular version
+    Create the Pooch instance that fetches a dataset of a particular version
 
     Cache location defaults to ``pooch.os_cache("ensaio")`` and can be
     overwritten with the ``ENSAIO_DATA_DIR`` environment variable.
@@ -79,8 +85,10 @@ def _repository(version):
 
     Parameters
     ----------
+    fname : str
+        Name of the data file we want to fetch.
     version : int
-        Version number of the datasets that we want to fetch.
+        Version number of the dataset that we want to fetch.
 
     Returns
     -------
@@ -94,11 +102,7 @@ def _repository(version):
         source = "url"
     else:
         source = "doi"
-    urls = {
-        entry["fname"]: _sanitize_url(entry[source]) + entry["fname"]
-        for entry in REGISTRY[version_str]
-    }
-    registry = {entry["fname"]: entry["hash"] for entry in REGISTRY[version_str]}
+    entry = REGISTRY[fname][version_str]
     repository = pooch.create(
         path=Path(pooch.os_cache("ensaio")),
         # Just here so that Pooch doesn't complain about there not being a
@@ -107,8 +111,8 @@ def _repository(version):
         version=version_str,
         env="ENSAIO_DATA_DIR",
         retry_if_failed=3,
-        registry=registry,
-        urls=urls,
+        registry={fname: entry["hash"]},
+        urls={fname: _sanitize_url(entry[source]) + fname},
     )
     return repository
 
@@ -148,7 +152,7 @@ def locate():
     path : :class:`pathlib.Path`
         Path to the cache folder.
     """
-    return _repository(version=1).abspath.parent
+    return _repository(fname="alps-gps-velocity.csv.xz", version=1).abspath.parent
 
 
 def _check_versions(version, allowed, name):
@@ -212,7 +216,8 @@ def fetch_alps_gps(version):
 
     """
     _check_versions(version, allowed={1}, name="Alps GPS velocity")
-    return Path(_repository(version).fetch("alps-gps-velocity.csv.xz"))
+    fname = "alps-gps-velocity.csv.xz"
+    return Path(_repository(fname, version).fetch(fname))
 
 
 def fetch_britain_magnetic(version):
@@ -261,7 +266,8 @@ def fetch_britain_magnetic(version):
 
     """
     _check_versions(version, allowed={1}, name="Britain aeromagnetic")
-    return Path(_repository(version).fetch("britain-magnetic.csv.xz"))
+    fname = "britain-magnetic.csv.xz"
+    return Path(_repository(fname, version).fetch(fname))
 
 
 def fetch_british_columbia_lidar(version):
@@ -306,7 +312,8 @@ def fetch_british_columbia_lidar(version):
 
     """
     _check_versions(version, allowed={1}, name="British Columbia lidar")
-    return Path(_repository(version).fetch("british-columbia-lidar.csv.xz"))
+    fname = "british-columbia-lidar.csv.xz"
+    return Path(_repository(fname, version).fetch(fname))
 
 
 def fetch_caribbean_bathymetry(version):
@@ -351,7 +358,8 @@ def fetch_caribbean_bathymetry(version):
 
     """
     _check_versions(version, allowed={1}, name="Caribbean bathymetry")
-    return Path(_repository(version).fetch("caribbean-bathymetry.csv.xz"))
+    fname = "caribbean-bathymetry.csv.xz"
+    return Path(_repository(fname, version).fetch(fname))
 
 
 def fetch_earth_geoid(version):
@@ -396,7 +404,8 @@ def fetch_earth_geoid(version):
 
     """
     _check_versions(version, allowed={1}, name="Earth geoid grid")
-    return Path(_repository(version).fetch("earth-geoid-10arcmin.nc"))
+    fname = "earth-geoid-10arcmin.nc"
+    return Path(_repository(fname, version).fetch(fname))
 
 
 def fetch_earth_gravity(version):
@@ -443,7 +452,8 @@ def fetch_earth_gravity(version):
 
     """
     _check_versions(version, allowed={1}, name="Earth gravity grid")
-    return Path(_repository(version).fetch("earth-gravity-10arcmin.nc"))
+    fname = "earth-gravity-10arcmin.nc"
+    return Path(_repository(fname, version).fetch(fname))
 
 
 def fetch_earth_topography(version):
@@ -487,7 +497,8 @@ def fetch_earth_topography(version):
 
     """
     _check_versions(version, allowed={1}, name="Earth topography grid")
-    return Path(_repository(version).fetch("earth-topography-10arcmin.nc"))
+    fname = "earth-topography-10arcmin.nc"
+    return Path(_repository(fname, version).fetch(fname))
 
 
 def fetch_southern_africa_gravity(version):
@@ -531,4 +542,5 @@ def fetch_southern_africa_gravity(version):
 
     """
     _check_versions(version, allowed={1}, name="Southern Africa gravity")
-    return Path(_repository(version).fetch("southern-africa-gravity.csv.xz"))
+    fname = "southern-africa-gravity.csv.xz"
+    return Path(_repository(fname, version).fetch(fname))
