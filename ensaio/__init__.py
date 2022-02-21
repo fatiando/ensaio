@@ -13,6 +13,7 @@ from ._fetchers import (
     fetch_earth_geoid,
     fetch_earth_gravity,
     fetch_earth_topography,
+    fetch_osborne_magnetic,
     fetch_southern_africa_gravity,
     locate,
 )

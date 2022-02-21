@@ -62,6 +62,13 @@ REGISTRY = {
             "url": "https://github.com/fatiando-data/earth-topography-10arcmin/releases/download/v1",
         },
     },
+    "osborne-magnetic.csv.xz": {
+        "v1": {
+            "hash": "md5:b26777bdde2f1ecb97dda655c8b1cf71",
+            "doi": "doi:10.5281/zenodo.5882209",
+            "url": "https://github.com/fatiando-data/osborne-magnetic/releases/download/v1",
+        },
+    },
     "southern-africa-gravity.csv.xz": {
         "v1": {
             "hash": "md5:1dee324a14e647855366d6eb01a1ef35",
@@ -498,6 +505,55 @@ def fetch_earth_topography(version):
     """
     _check_versions(version, allowed={1}, name="Earth topography grid")
     fname = "earth-topography-10arcmin.nc"
+    return Path(_repository(fname, version).fetch(fname))
+
+
+def fetch_osborne_magnetic(version):
+    """
+    Magnetic airborne survey of the Osborne Mine and surroundings, Australia
+
+    This is a section of a survey acquired in 1990 by the Queensland
+    Government, Australia. The line data have approximately 80 m terrain
+    clearance and 200 m line spacing. Total field anomalies are in nT. The
+    flight height was calculated by summing the terrain clearance to
+    interpolated values of SRTM (referenced to sea level). The section contains
+    the total field magnetic anomalies associated with the Osborne Mine,
+    Lightning Creek sill complex, and the Brumby prospect.
+
+    There are ~990,000 measurements in total with 5 columns available: flight
+    line number, longitude, latitude (geodetic), height (orthometric), and the
+    total field magnetic anomaly.
+
+    **Format:** CSV with xz (lzma) compression.
+
+    **Load with:** :func:`pandas.read_csv`
+
+    **Original source:** `Geophysical Acquisition & Processing Section 2019.
+    MIM Data from Mt Isa Inlier, QLD (P1029), magnetic line data, AWAGS
+    levelled. Geoscience Australia, Canberra
+    <http://pid.geoscience.gov.au/dataset/ga/142419>`__
+
+    **Original license:** CC-BY
+
+    **Versions:**
+
+    * `1
+      <https://github.com/fatiando-data/osborne-magnetic/releases/tag/v1>`_
+      (doi:`10.5281/zenodo.5882209 <https://doi.org/10.5281/zenodo.5882209>`__)
+
+    Parameters
+    ----------
+    version : int
+        The data version to fetch. See the available versions above.
+
+    Returns
+    -------
+    fname : :class:`pathlib.Path`
+        Path to the downloaded file on disk.
+
+    """
+    _check_versions(version, allowed={1}, name="Osborne mine magnetic")
+    fname = "osborne-magnetic.csv.xz"
     return Path(_repository(fname, version).fetch(fname))
 
 
