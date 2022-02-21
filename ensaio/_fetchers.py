@@ -69,6 +69,13 @@ REGISTRY = {
             "url": "https://github.com/fatiando-data/osborne-magnetic/releases/download/v1",
         },
     },
+    "sierra-negra-topography.csv.xz": {
+        "v1": {
+            "hash": "md5:9f6f64d47d26773e37b154cf964724e3",
+            "doi": "doi:10.5281/zenodo.6139057",
+            "url": "https://github.com/fatiando-data/sierra-negra-topography/releases/download/v1",
+        },
+    },
     "southern-africa-gravity.csv.xz": {
         "v1": {
             "hash": "md5:1dee324a14e647855366d6eb01a1ef35",
@@ -279,7 +286,7 @@ def fetch_britain_magnetic(version):
 
 def fetch_british_columbia_lidar(version):
     """
-    Lidar point cloud data of the Trail Islands in BC, Canada
+    Topography (lidar point cloud) data of the Trail Islands in BC, Canada
 
     This is a lidar point cloud (ground reflections only) sliced to the small
     `Trail Islands <https://apps.gov.bc.ca/pub/bcgnws/names/21973.html>`__
@@ -554,6 +561,50 @@ def fetch_osborne_magnetic(version):
     """
     _check_versions(version, allowed={1}, name="Osborne mine magnetic")
     fname = "osborne-magnetic.csv.xz"
+    return Path(_repository(fname, version).fetch(fname))
+
+
+def fetch_sierra_negra_topography(version):
+    """
+    Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador
+
+    This is a structure-from-motion point cloud of the 2018 lava flows of the
+    Sierra Negra volcano, located on the Galápagos islands, Ecuador. The survey
+    is of a small region on the flank of the volcano. The horizontal datum is
+    WGS84 but the vertical datum for "elevation" is unspecified.
+
+    There are ~1,700,000 measurements in total with 3 columns available:
+    longitude, latitude (geodetic), elevation.
+
+    **Format:** CSV with xz (lzma) compression.
+
+    **Load with:** :func:`pandas.read_csv`
+
+    **Original source:** `Carr, B. (2020). Sierra Negra Volcano (TIR Flight 3):
+    Galápagos, Ecuador, October 22 2018. Distributed by OpenTopography.
+    <https://doi.org/10.5069/G957196P>`__
+
+    **Original license:** CC-BY
+
+    **Versions:**
+
+    * `1
+      <https://github.com/fatiando-data/sierra-negra-topography/releases/tag/v1>`_
+      (doi:`10.5281/zenodo.6139057 <https://doi.org/10.5281/zenodo.6139057>`__)
+
+    Parameters
+    ----------
+    version : int
+        The data version to fetch. See the available versions above.
+
+    Returns
+    -------
+    fname : :class:`pathlib.Path`
+        Path to the downloaded file on disk.
+
+    """
+    _check_versions(version, allowed={1}, name="Sierra Negra volcano topography")
+    fname = "sierra-negra-topography.csv.xz"
     return Path(_repository(fname, version).fetch(fname))
 
 
