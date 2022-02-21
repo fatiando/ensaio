@@ -36,56 +36,32 @@ data = pd.read_csv(fname)
 data
 
 ###############################################################################
-# Make two PyGMT maps with the data points colored by the total field magnetic
-# anomaly and also the observation height.
-
-region = [
-    data.longitude.min(),
-    data.longitude.max(),
-    data.latitude.min(),
-    data.latitude.max(),
-]
-
+# Make a PyGMT map with the data points colored by the total field magnetic
+# anomaly.
 fig = pygmt.Figure()
-with fig.subplot(
-    nrows=1,
-    ncols=2,
-    figsize=("30c", "20c"),
-    sharey="l",  # shared y-axis on the left side
-    frame="WSrt",
-):
-    with fig.set_panel(0):
-        fig.basemap(projection="M?", region=region, frame="af")
-        scale = 1500
-        pygmt.makecpt(cmap="polar+h", series=[-scale, scale], background=True)
-        fig.plot(
-            x=data.longitude,
-            y=data.latitude,
-            color=data.total_field_anomaly_nt,
-            style="c0.075c",
-            cmap=True,
-        )
-        fig.colorbar(
-            frame='af+l"total field magnetic anomaly [nT]"',
-            position="JBC+h+o0/1c+e",
-        )
-    with fig.set_panel(1):
-        fig.basemap(projection="M?", region=region, frame="af")
-        pygmt.makecpt(
-            cmap="viridis",
-            series=[data.height_orthometric_m.min(), data.height_orthometric_m.max()],
-        )
-        fig.plot(
-            x=data.longitude,
-            y=data.latitude,
-            color=data.height_orthometric_m,
-            style="c0.075c",
-            cmap=True,
-        )
-        fig.colorbar(
-            frame='af+l"observation height [m]"',
-            position="JBC+h+o0/1c",
-        )
+fig.basemap(
+    projection="M15c",
+    region=[
+        data.longitude.min(),
+        data.longitude.max(),
+        data.latitude.min(),
+        data.latitude.max(),
+    ],
+    frame="af",
+)
+scale = 1500
+pygmt.makecpt(cmap="polar+h", series=[-scale, scale], background=True)
+fig.plot(
+    x=data.longitude,
+    y=data.latitude,
+    color=data.total_field_anomaly_nt,
+    style="c0.075c",
+    cmap=True,
+)
+fig.colorbar(
+    frame='af+l"total field magnetic anomaly [nT]"',
+    position="JBC+h+o0/1c+e",
+)
 fig.show()
 
 ###############################################################################
