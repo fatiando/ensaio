@@ -5,16 +5,17 @@
 # This code is part of the Fatiando a Terra project (https://www.fatiando.org)
 #
 """
-Topography of the Trail Islands in British Columbia, Canada
------------------------------------------------------------
+Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador
+----------------------------------------------------------------------
 
-This is a lidar point cloud (ground reflections only) sliced to the small
-`Trail Islands <https://apps.gov.bc.ca/pub/bcgnws/names/21973.html>`__
-to the North of Vancouver. The islands have some nice looking topography and
-their isolated nature creates problems for some interpolation methods.
+This is a structure-from-motion point cloud of the 2018 lava flows of the
+Sierra Negra volcano, located on the Galápagos islands, Ecuador. The survey
+covers a small region at the flank of the volcano and shows different
+structures and terrain roughness on the lava flows.
 
-**Original source:** `LidarBC
-<https://www2.gov.bc.ca/gov/content/data/geographic-data-services/lidarbc>`__
+**Original source:** `Carr, B. (2020). Sierra Negra Volcano (TIR Flight 3):
+Galápagos, Ecuador, October 22 2018. Distributed by OpenTopography.
+<https://doi.org/10.5069/G957196P>`__
 
 """
 import pandas as pd
@@ -24,7 +25,7 @@ import ensaio
 
 ###############################################################################
 # Download and cache the data and return the path to it on disk
-fname = ensaio.fetch_british_columbia_lidar(version=1)
+fname = ensaio.fetch_sierra_negra_topography(version=1)
 print(fname)
 
 ###############################################################################
@@ -47,7 +48,7 @@ fig.basemap(
 )
 pygmt.makecpt(cmap="viridis", series=[data.elevation_m.min(), data.elevation_m.max()])
 fig.plot(
-    x=data.longitude, y=data.latitude, color=data.elevation_m, cmap=True, style="c0.05c"
+    x=data.longitude, y=data.latitude, color=data.elevation_m, cmap=True, style="c0.01c"
 )
 fig.colorbar(frame='af+l"elevation [m]"')
 fig.show()
