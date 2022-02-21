@@ -510,7 +510,7 @@ def fetch_earth_topography(version):
 
 def fetch_osborne_magnetic(version):
     """
-    Magnetic airborne survey of the Osborne mine and surroundings, Australia
+    Magnetic airborne survey of the Osborne Mine and surroundings, Australia
 
     This is a section of a survey acquired in 1990 by the Queensland
     Government, Australia. The line data have approximately 80 m terrain
