@@ -1,0 +1,246 @@
+:orphan:
+
+
+
+.. _sphx_glr_gallery:
+
+.. _gallery:
+
+Available datasets
+==================
+
+Use the functions in the :mod:`ensaio` module to download and cache (store)
+each dataset on your computer.
+See the :ref:`api` for more information about each dataset, the original data
+sources, and their licenses.
+The datasets are prepared for use in Ensaio in the repositories of the
+`Fatiando a Terra Datasets <https://github.com/fatiando-data>`__ GitHub
+organization.
+
+.. tip::
+
+    Click on the images for examples of fetching, loading, and plotting each
+    dataset.
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This dataset is a compilation of several public domain single-beam bathymetry surveys of the oc...">
+
+.. only:: html
+
+ .. figure:: /gallery/images/thumb/sphx_glr_caribbean-bathymetry_thumb.png
+     :alt: Bathymetry single-beam surveys of the Caribbean
+
+     :ref:`sphx_glr_gallery_caribbean-bathymetry.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/caribbean-bathymetry
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="The grid is grid-node registered and stored in netCDF with CF-compliant metadata. The geoid hei...">
+
+.. only:: html
+
+ .. figure:: /gallery/images/thumb/sphx_glr_earth-geoid_thumb.png
+     :alt: Earth geoid height grid at 10 arc-minute resolution
+
+     :ref:`sphx_glr_gallery_earth-geoid.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/earth-geoid
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="The grid is grid-node registered and stored in netCDF with CF-compliant metadata. The gravity v...">
+
+.. only:: html
+
+ .. figure:: /gallery/images/thumb/sphx_glr_earth-gravity_thumb.png
+     :alt: Earth gravity grid at 10 arc-minute resolution
+
+     :ref:`sphx_glr_gallery_earth-gravity.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/earth-gravity
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="The grid is grid-node registered and stored in netCDF with CF-compliant metadata. The values ar...">
+
+.. only:: html
+
+ .. figure:: /gallery/images/thumb/sphx_glr_earth-topography_thumb.png
+     :alt: Earth topography grid at 10 arc-minute resolution
+
+     :ref:`sphx_glr_gallery_earth-topography.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/earth-topography
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a compilation of 3D GPS velocities for the Alps. The horizontal velocities are referenc...">
+
+.. only:: html
+
+ .. figure:: /gallery/images/thumb/sphx_glr_alps-gps-velocity_thumb.png
+     :alt: GPS velocities (3-component) for the Alps
+
+     :ref:`sphx_glr_gallery_alps-gps-velocity.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/alps-gps-velocity
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This dataset is a compilation of several public domain ground measurements of gravity from Sout...">
+
+.. only:: html
+
+ .. figure:: /gallery/images/thumb/sphx_glr_southern-africa-gravity_thumb.png
+     :alt: Gravity ground-based surveys of Southern Africa
+
+     :ref:`sphx_glr_gallery_southern-africa-gravity.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/southern-africa-gravity
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a digitization of an airborne magnetic survey of Britain. Data are sampled where flight...">
+
+.. only:: html
+
+ .. figure:: /gallery/images/thumb/sphx_glr_britain-magnetic_thumb.png
+     :alt: Magnetic airborne survey of Britain
+
+     :ref:`sphx_glr_gallery_britain-magnetic.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/britain-magnetic
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a section of a survey acquired in 1990 by the Queensland Government, Australia. The lin...">
+
+.. only:: html
+
+ .. figure:: /gallery/images/thumb/sphx_glr_osborne-magnetic_thumb.png
+     :alt: Magnetic airborne survey of the Osborne Mine, Australia
+
+     :ref:`sphx_glr_gallery_osborne-magnetic.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/osborne-magnetic
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a structure-from-motion point cloud of the 2018 lava flows of the Sierra Negra volcano,...">
+
+.. only:: html
+
+ .. figure:: /gallery/images/thumb/sphx_glr_sierra-negra-topography_thumb.png
+     :alt: Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador
+
+     :ref:`sphx_glr_gallery_sierra-negra-topography.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/sierra-negra-topography
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a lidar point cloud (ground reflections only) sliced to the small `Trail Islands &lt;https...">
+
+.. only:: html
+
+ .. figure:: /gallery/images/thumb/sphx_glr_british-columbia-lidar_thumb.png
+     :alt: Topography of the Trail Islands in British Columbia, Canada
+
+     :ref:`sphx_glr_gallery_british-columbia-lidar.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/british-columbia-lidar
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
+.. only:: html
+
+ .. rst-class:: sphx-glr-signature
+
+    `Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_
