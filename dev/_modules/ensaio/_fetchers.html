@@ -141,13 +141,23 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../gallery/british-columbia-lidar.html">
-     Lidar point cloud of the Trail Islands in British Columbia, Canada
+    <a class="reference internal" href="../../gallery/britain-magnetic.html">
+     Magnetic airborne survey of Britain
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../gallery/britain-magnetic.html">
-     Magnetic airborne survey of Britain
+    <a class="reference internal" href="../../gallery/osborne-magnetic.html">
+     Magnetic airborne survey of the Osborne Mine, Australia
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/sierra-negra-topography.html">
+     Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/british-columbia-lidar.html">
+     Topography of the Trail Islands in British Columbia, Canada
     </a>
    </li>
   </ul>
@@ -207,6 +217,16 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../api/generated/ensaio.fetch_earth_topography.html">
      ensaio.fetch_earth_topography
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../api/generated/ensaio.fetch_osborne_magnetic.html">
+     ensaio.fetch_osborne_magnetic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../api/generated/ensaio.fetch_sierra_negra_topography.html">
+     ensaio.fetch_sierra_negra_topography
     </a>
    </li>
    <li class="toctree-l2">
@@ -414,6 +434,20 @@
             <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:c43b61322e03669c4313ba3d9a58028d&quot;</span><span class="p">,</span>
             <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5882203&quot;</span><span class="p">,</span>
             <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/earth-topography-10arcmin/releases/download/v1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;osborne-magnetic.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:b26777bdde2f1ecb97dda655c8b1cf71&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5882209&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/osborne-magnetic/releases/download/v1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;sierra-negra-topography.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:9f6f64d47d26773e37b154cf964724e3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.6139057&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/sierra-negra-topography/releases/download/v1&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
     <span class="s2">&quot;southern-africa-gravity.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -626,7 +660,7 @@
 
 <div class="viewcode-block" id="fetch_british_columbia_lidar"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_british_columbia_lidar.html#ensaio.fetch_british_columbia_lidar">[docs]</a><span class="k">def</span> <span class="nf">fetch_british_columbia_lidar</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Lidar point cloud data of the Trail Islands in BC, Canada</span>
+<span class="sd">    Topography (lidar point cloud) data of the Trail Islands in BC, Canada</span>
 
 <span class="sd">    This is a lidar point cloud (ground reflections only) sliced to the small</span>
 <span class="sd">    `Trail Islands &lt;https://apps.gov.bc.ca/pub/bcgnws/names/21973.html&gt;`__</span>
@@ -855,6 +889,99 @@
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
 
 
+<div class="viewcode-block" id="fetch_osborne_magnetic"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_osborne_magnetic.html#ensaio.fetch_osborne_magnetic">[docs]</a><span class="k">def</span> <span class="nf">fetch_osborne_magnetic</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Magnetic airborne survey of the Osborne Mine and surroundings, Australia</span>
+
+<span class="sd">    This is a section of a survey acquired in 1990 by the Queensland</span>
+<span class="sd">    Government, Australia. The line data have approximately 80 m terrain</span>
+<span class="sd">    clearance and 200 m line spacing. Total field anomalies are in nT. The</span>
+<span class="sd">    flight height was calculated by summing the terrain clearance to</span>
+<span class="sd">    interpolated values of SRTM (referenced to sea level). The section contains</span>
+<span class="sd">    the total field magnetic anomalies associated with the Osborne Mine,</span>
+<span class="sd">    Lightning Creek sill complex, and the Brumby prospect.</span>
+
+<span class="sd">    There are ~990,000 measurements in total with 5 columns available: flight</span>
+<span class="sd">    line number, longitude, latitude (geodetic), height (orthometric), and the</span>
+<span class="sd">    total field magnetic anomaly.</span>
+
+<span class="sd">    **Format:** CSV with xz (lzma) compression.</span>
+
+<span class="sd">    **Load with:** :func:`pandas.read_csv`</span>
+
+<span class="sd">    **Original source:** `Geophysical Acquisition &amp; Processing Section 2019.</span>
+<span class="sd">    MIM Data from Mt Isa Inlier, QLD (P1029), magnetic line data, AWAGS</span>
+<span class="sd">    levelled. Geoscience Australia, Canberra</span>
+<span class="sd">    &lt;http://pid.geoscience.gov.au/dataset/ga/142419&gt;`__</span>
+
+<span class="sd">    **Original license:** CC-BY</span>
+
+<span class="sd">    **Versions:**</span>
+
+<span class="sd">    * `1</span>
+<span class="sd">      &lt;https://github.com/fatiando-data/osborne-magnetic/releases/tag/v1&gt;`_</span>
+<span class="sd">      (doi:`10.5281/zenodo.5882209 &lt;https://doi.org/10.5281/zenodo.5882209&gt;`__)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    version : int</span>
+<span class="sd">        The data version to fetch. See the available versions above.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fname : :class:`pathlib.Path`</span>
+<span class="sd">        Path to the downloaded file on disk.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Osborne mine magnetic&quot;</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;osborne-magnetic.csv.xz&quot;</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="fetch_sierra_negra_topography"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_sierra_negra_topography.html#ensaio.fetch_sierra_negra_topography">[docs]</a><span class="k">def</span> <span class="nf">fetch_sierra_negra_topography</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador</span>
+
+<span class="sd">    This is a structure-from-motion point cloud of the 2018 lava flows of the</span>
+<span class="sd">    Sierra Negra volcano, located on the Galápagos islands, Ecuador. The survey</span>
+<span class="sd">    is of a small region on the flank of the volcano. The horizontal datum is</span>
+<span class="sd">    WGS84 but the vertical datum for &quot;elevation&quot; is unspecified.</span>
+
+<span class="sd">    There are ~1,700,000 measurements in total with 3 columns available:</span>
+<span class="sd">    longitude, latitude (geodetic), elevation.</span>
+
+<span class="sd">    **Format:** CSV with xz (lzma) compression.</span>
+
+<span class="sd">    **Load with:** :func:`pandas.read_csv`</span>
+
+<span class="sd">    **Original source:** `Carr, B. (2020). Sierra Negra Volcano (TIR Flight 3):</span>
+<span class="sd">    Galápagos, Ecuador, October 22 2018. Distributed by OpenTopography.</span>
+<span class="sd">    &lt;https://doi.org/10.5069/G957196P&gt;`__</span>
+
+<span class="sd">    **Original license:** CC-BY</span>
+
+<span class="sd">    **Versions:**</span>
+
+<span class="sd">    * `1</span>
+<span class="sd">      &lt;https://github.com/fatiando-data/sierra-negra-topography/releases/tag/v1&gt;`_</span>
+<span class="sd">      (doi:`10.5281/zenodo.6139057 &lt;https://doi.org/10.5281/zenodo.6139057&gt;`__)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    version : int</span>
+<span class="sd">        The data version to fetch. See the available versions above.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fname : :class:`pathlib.Path`</span>
+<span class="sd">        Path to the downloaded file on disk.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Sierra Negra volcano topography&quot;</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;sierra-negra-topography.csv.xz&quot;</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
+
+
 <div class="viewcode-block" id="fetch_southern_africa_gravity"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_southern_africa_gravity.html#ensaio.fetch_southern_africa_gravity">[docs]</a><span class="k">def</span> <span class="nf">fetch_southern_africa_gravity</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Gravity ground-based surveys of Southern Africa</span>
@@ -913,7 +1040,7 @@
   <p>
     
         &copy; Copyright 2022, The Ensaio Developers.<br/>
-      Last updated on Feb 18, 2022.<br/>
+      Last updated on Mar 28, 2022.<br/>
   </p>
 </footer>
 </main>

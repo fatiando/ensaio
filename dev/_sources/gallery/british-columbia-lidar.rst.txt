@@ -18,8 +18,8 @@
 .. _sphx_glr_gallery_british-columbia-lidar.py:
 
 
-Lidar point cloud of the Trail Islands in British Columbia, Canada
-------------------------------------------------------------------
+Topography of the Trail Islands in British Columbia, Canada
+-----------------------------------------------------------
 
 This is a lidar point cloud (ground reflections only) sliced to the small
 `Trail Islands <https://apps.gov.bc.ca/pub/bcgnws/names/21973.html>`__
@@ -236,7 +236,7 @@ Make a PyGMT map with the data points colored by the elevation.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  38.163 seconds)
+   **Total running time of the script:** ( 0 minutes  36.428 seconds)
 
 
 .. _sphx_glr_download_gallery_british-columbia-lidar.py:

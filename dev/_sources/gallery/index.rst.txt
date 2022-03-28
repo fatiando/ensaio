@@ -152,27 +152,6 @@ organization.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is a lidar point cloud (ground reflections only) sliced to the small `Trail Islands &lt;https...">
-
-.. only:: html
-
- .. figure:: /gallery/images/thumb/sphx_glr_british-columbia-lidar_thumb.png
-     :alt: Lidar point cloud of the Trail Islands in British Columbia, Canada
-
-     :ref:`sphx_glr_gallery_british-columbia-lidar.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /gallery/british-columbia-lidar
-
-.. raw:: html
-
     <div class="sphx-glr-thumbcontainer" tooltip="This is a digitization of an airborne magnetic survey of Britain. Data are sampled where flight...">
 
 .. only:: html
@@ -191,6 +170,69 @@ organization.
    :hidden:
 
    /gallery/britain-magnetic
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a section of a survey acquired in 1990 by the Queensland Government, Australia. The lin...">
+
+.. only:: html
+
+ .. figure:: /gallery/images/thumb/sphx_glr_osborne-magnetic_thumb.png
+     :alt: Magnetic airborne survey of the Osborne Mine, Australia
+
+     :ref:`sphx_glr_gallery_osborne-magnetic.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/osborne-magnetic
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a structure-from-motion point cloud of the 2018 lava flows of the Sierra Negra volcano,...">
+
+.. only:: html
+
+ .. figure:: /gallery/images/thumb/sphx_glr_sierra-negra-topography_thumb.png
+     :alt: Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador
+
+     :ref:`sphx_glr_gallery_sierra-negra-topography.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/sierra-negra-topography
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a lidar point cloud (ground reflections only) sliced to the small `Trail Islands &lt;https...">
+
+.. only:: html
+
+ .. figure:: /gallery/images/thumb/sphx_glr_british-columbia-lidar_thumb.png
+     :alt: Topography of the Trail Islands in British Columbia, Canada
+
+     :ref:`sphx_glr_gallery_british-columbia-lidar.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/british-columbia-lidar
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>

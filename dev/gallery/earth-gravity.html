@@ -143,13 +143,23 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="british-columbia-lidar.html">
-     Lidar point cloud of the Trail Islands in British Columbia, Canada
+    <a class="reference internal" href="britain-magnetic.html">
+     Magnetic airborne survey of Britain
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="britain-magnetic.html">
-     Magnetic airborne survey of Britain
+    <a class="reference internal" href="osborne-magnetic.html">
+     Magnetic airborne survey of the Osborne Mine, Australia
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sierra-negra-topography.html">
+     Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="british-columbia-lidar.html">
+     Topography of the Trail Islands in British Columbia, Canada
     </a>
    </li>
   </ul>
@@ -209,6 +219,16 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../api/generated/ensaio.fetch_earth_topography.html">
      ensaio.fetch_earth_topography
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.fetch_osborne_magnetic.html">
+     ensaio.fetch_osborne_magnetic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.fetch_sierra_negra_topography.html">
+     ensaio.fetch_sierra_negra_topography
     </a>
    </li>
    <li class="toctree-l2">
@@ -786,7 +806,7 @@ Attributes:
     description:     magnitude of the gravity acceleration vector (gravitatio...
     units:           mGal
     actual_range:    [974748.6 980201.9]
-    icgem_metadata:  generating_institute: gfz-potsdam\ngenerating_date: 2021...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'gravity'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1081</li><li><span class='xr-has-index'>longitude</span>: 2161</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-5d45c4d3-f2af-4b92-927f-981cc297eff7' class='xr-array-in' type='checkbox' checked><label for='section-5d45c4d3-f2af-4b92-927f-981cc297eff7' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>9.801e+05 9.801e+05 9.801e+05 ... 9.802e+05 9.802e+05 9.802e+05</span></div><div class='xr-array-data'><pre>array([[980106.5 , 980106.5 , 980106.5 , ..., 980106.5 , 980106.5 ,
+    icgem_metadata:  generating_institute: gfz-potsdam\ngenerating_date: 2021...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'gravity'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1081</li><li><span class='xr-has-index'>longitude</span>: 2161</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-bb3fe629-498c-4248-aae5-86b3e63d5b05' class='xr-array-in' type='checkbox' checked><label for='section-bb3fe629-498c-4248-aae5-86b3e63d5b05' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>9.801e+05 9.801e+05 9.801e+05 ... 9.802e+05 9.802e+05 9.802e+05</span></div><div class='xr-array-data'><pre>array([[980106.5 , 980106.5 , 980106.5 , ..., 980106.5 , 980106.5 ,
         980106.5 ],
        [980108.25, 980108.25, 980108.25, ..., 980108.25, 980108.25,
         980108.25],
@@ -798,16 +818,16 @@ Attributes:
        [980160.44, 980160.44, 980160.44, ..., 980160.44, 980160.44,
         980160.44],
        [980157.5 , 980157.5 , 980157.5 , ..., 980157.5 , 980157.5 ,
-        980157.5 ]], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-864508a5-cafd-4998-a87e-dd3cbf377e06' class='xr-section-summary-in' type='checkbox'  checked><label for='section-864508a5-cafd-4998-a87e-dd3cbf377e06' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-180.0 -179.8 ... 179.8 180.0</div><input id='attrs-2dcfc3c3-1d42-413c-859b-2cf6f55b77d9' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2dcfc3c3-1d42-413c-859b-2cf6f55b77d9' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-456927fe-8a7a-4b54-9fa2-ecf6044b8f98' class='xr-var-data-in' type='checkbox'><label for='data-456927fe-8a7a-4b54-9fa2-ecf6044b8f98' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[-180.  180.]</dd></dl></div><div class='xr-var-data'><pre>array([-180.      , -179.833333, -179.666667, ...,  179.666667,  179.833333,
-        180.      ])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-90.0 -89.83 -89.67 ... 89.83 90.0</div><input id='attrs-48f959cd-f40a-47ee-a9cd-2e90f9869268' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-48f959cd-f40a-47ee-a9cd-2e90f9869268' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4e08c137-b48b-41bd-9841-31161a93aebb' class='xr-var-data-in' type='checkbox'><label for='data-4e08c137-b48b-41bd-9841-31161a93aebb' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-90.  90.]</dd></dl></div><div class='xr-var-data'><pre>array([-90.      , -89.833333, -89.666667, ...,  89.666667,  89.833333,
-        90.      ])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>(latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>1e+04 1e+04 1e+04 ... 1e+04 1e+04</div><input id='attrs-855e91ea-d55d-4902-8898-574b818c4d68' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-855e91ea-d55d-4902-8898-574b818c4d68' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b3224a58-5a21-4fcb-96b6-3018657520ed' class='xr-var-data-in' type='checkbox'><label for='data-b3224a58-5a21-4fcb-96b6-3018657520ed' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>geometric height</dd><dt><span>standard_name :</span></dt><dd>height_above_reference_ellipsoid</dd><dt><span>description :</span></dt><dd>height of gravity computation points above the WGS84 ellipsoid</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[10000. 10000.]</dd></dl></div><div class='xr-var-data'><pre>array([[10000., 10000., 10000., ..., 10000., 10000., 10000.],
+        980157.5 ]], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-194e51b4-aff9-4cac-a67e-465e1cd58350' class='xr-section-summary-in' type='checkbox'  checked><label for='section-194e51b4-aff9-4cac-a67e-465e1cd58350' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-180.0 -179.8 ... 179.8 180.0</div><input id='attrs-9a90abc8-5567-4352-be2b-7dd658d131c1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9a90abc8-5567-4352-be2b-7dd658d131c1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ac875656-6b70-4ac2-88ec-4b6cb4b2354d' class='xr-var-data-in' type='checkbox'><label for='data-ac875656-6b70-4ac2-88ec-4b6cb4b2354d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[-180.  180.]</dd></dl></div><div class='xr-var-data'><pre>array([-180.      , -179.833333, -179.666667, ...,  179.666667,  179.833333,
+        180.      ])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-90.0 -89.83 -89.67 ... 89.83 90.0</div><input id='attrs-b6d31b1b-201b-4b29-a094-09c7f66bdaea' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b6d31b1b-201b-4b29-a094-09c7f66bdaea' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7dfb7a8a-77e1-4e20-ac95-efbe2bf26ce0' class='xr-var-data-in' type='checkbox'><label for='data-7dfb7a8a-77e1-4e20-ac95-efbe2bf26ce0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-90.  90.]</dd></dl></div><div class='xr-var-data'><pre>array([-90.      , -89.833333, -89.666667, ...,  89.666667,  89.833333,
+        90.      ])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>(latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>1e+04 1e+04 1e+04 ... 1e+04 1e+04</div><input id='attrs-33ed0c06-b8cd-458c-a787-3c21945e69e2' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-33ed0c06-b8cd-458c-a787-3c21945e69e2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-af0bd170-2a29-4d2e-ad09-9d952c183133' class='xr-var-data-in' type='checkbox'><label for='data-af0bd170-2a29-4d2e-ad09-9d952c183133' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>geometric height</dd><dt><span>standard_name :</span></dt><dd>height_above_reference_ellipsoid</dd><dt><span>description :</span></dt><dd>height of gravity computation points above the WGS84 ellipsoid</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[10000. 10000.]</dd></dl></div><div class='xr-var-data'><pre>array([[10000., 10000., 10000., ..., 10000., 10000., 10000.],
        [10000., 10000., 10000., ..., 10000., 10000., 10000.],
        [10000., 10000., 10000., ..., 10000., 10000., 10000.],
        ...,
        [10000., 10000., 10000., ..., 10000., 10000., 10000.],
        [10000., 10000., 10000., ..., 10000., 10000., 10000.],
        [10000., 10000., 10000., ..., 10000., 10000., 10000.]],
-      dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-d7ee6a66-9bf2-41bc-83d1-02de1f79d856' class='xr-section-summary-in' type='checkbox'  ><label for='section-d7ee6a66-9bf2-41bc-83d1-02de1f79d856' class='xr-section-summary' >Attributes: <span>(11)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>Gravity acceleration (EIGEN-6C4) at a constant geometric height</dd><dt><span>crs :</span></dt><dd>WGS84</dd><dt><span>source :</span></dt><dd>Generated from the EIGEN-6C4 model by the ICGEM Calculation Service (http://icgem.gfz-potsdam.de)</dd><dt><span>license :</span></dt><dd>Creative Commons Attribution 4.0 International Licence</dd><dt><span>references :</span></dt><dd>https://doi.org/10.5880/icgem.2015.1</dd><dt><span>long_name :</span></dt><dd>gravity acceleration</dd><dt><span>description :</span></dt><dd>magnitude of the gravity acceleration vector (gravitational + centrifugal)</dd><dt><span>units :</span></dt><dd>mGal</dd><dt><span>actual_range :</span></dt><dd>[974748.6 980201.9]</dd><dt><span>icgem_metadata :</span></dt><dd>generating_institute: gfz-potsdam
+      dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-1e85759e-ecde-4b6e-ac5e-990b6945e19b' class='xr-section-summary-in' type='checkbox'  ><label for='section-1e85759e-ecde-4b6e-ac5e-990b6945e19b' class='xr-section-summary' >Attributes: <span>(11)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>Gravity acceleration (EIGEN-6C4) at a constant geometric height</dd><dt><span>crs :</span></dt><dd>WGS84</dd><dt><span>source :</span></dt><dd>Generated from the EIGEN-6C4 model by the ICGEM Calculation Service (http://icgem.gfz-potsdam.de)</dd><dt><span>license :</span></dt><dd>Creative Commons Attribution 4.0 International Licence</dd><dt><span>references :</span></dt><dd>https://doi.org/10.5880/icgem.2015.1</dd><dt><span>long_name :</span></dt><dd>gravity acceleration</dd><dt><span>description :</span></dt><dd>magnitude of the gravity acceleration vector (gravitational + centrifugal)</dd><dt><span>units :</span></dt><dd>mGal</dd><dt><span>actual_range :</span></dt><dd>[974748.6 980201.9]</dd><dt><span>icgem_metadata :</span></dt><dd>generating_institute: gfz-potsdam
 generating_date: 2021/06/11
 product_type: gravity_field
 body: earth
@@ -859,7 +879,7 @@ attributes_units: deg. deg. mgal</dd></dl></div></li></ul></div></div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  16.386 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  15.072 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-gallery-earth-gravity-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/e358b283e0455be73005c944b407319e/earth-gravity.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">earth-gravity.py</span></code></a></p>
@@ -899,7 +919,7 @@ attributes_units: deg. deg. mgal</dd></dl></div></li></ul></div></div>
   <p>
     
         &copy; Copyright 2022, The Ensaio Developers.<br/>
-      Last updated on Feb 18, 2022.<br/>
+      Last updated on Mar 28, 2022.<br/>
   </p>
 </footer>
 </main>

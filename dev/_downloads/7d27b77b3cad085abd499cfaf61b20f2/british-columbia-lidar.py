@@ -5,8 +5,8 @@
 # This code is part of the Fatiando a Terra project (https://www.fatiando.org)
 #
 """
-Lidar point cloud of the Trail Islands in British Columbia, Canada
-------------------------------------------------------------------
+Topography of the Trail Islands in British Columbia, Canada
+-----------------------------------------------------------
 
 This is a lidar point cloud (ground reflections only) sliced to the small
 `Trail Islands <https://apps.gov.bc.ca/pub/bcgnws/names/21973.html>`__
