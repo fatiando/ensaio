@@ -3,6 +3,22 @@
 Changelog
 =========
 
+Version 0.3.0
+-------------
+
+Released on: 2022/03/28
+
+DOI: https://doi.org/10.5281/zenodo.6390020
+
+New data:
+
+* Add the Sierra Negra volcano point cloud topography data (`#23 <https://github.com/fatiando/ensaio/pull/23>`__)
+* Add the Osborne Mine aeromagnetic data (`#22 <https://github.com/fatiando/ensaio/pull/22>`__)
+
+This release contains contributions from:
+
+* Leonardo Uieda
+
 Version 0.2.0
 -------------
 
