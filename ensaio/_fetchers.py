@@ -83,6 +83,13 @@ REGISTRY = {
             "url": "https://github.com/fatiando-data/southern-africa-gravity/releases/download/v1",
         },
     },
+    "southern-africa-topography.nc.xz": {
+        "v1": {
+            "hash": "md5:c260aa074e2d34ca75aeca07c8740e5a",
+            "doi": "doi:CHANGEME",
+            "url": "https://github.com/fatiando-data/southern-africa-gravity/releases/download/v1",
+        },
+    },
 }
 
 
@@ -650,4 +657,45 @@ def fetch_southern_africa_gravity(version):
     """
     _check_versions(version, allowed={1}, name="Southern Africa gravity")
     fname = "southern-africa-gravity.csv.xz"
+    return Path(_repository(fname, version).fetch(fname))
+
+
+def fetch_southern_africa_topography(version):
+    """
+    Topography and bathymetry data for Southern Africa
+
+    The topography and bathymetry of South Africa from the ETOPO1 model,
+    downsampled to a 0.1 degree grid. Heights are referenced to sea level.
+
+    There are ~14,000 measurements in total with 4 columns available:
+    longitude, latitude (geodetic), height (orthometric), and absolute gravity.
+
+    **Format:** netCDF4 with zlib compression
+
+    **Load with:** :func:`xarray.load_dataarray` (requires the `netcdf4
+    <https://github.com/Unidata/netcdf4-python>`__ library)
+
+    **Original source:** `ETOPO1 <https://doi.org/10.7289/V5C8276M>`__
+
+    **Original license:** Public domain
+
+    **Versions:**
+
+    * `1
+      <https://github.com/fatiando-data/southern-africa-gravity/releases/tag/v1>`_
+      (doi:`CHANGEME <https://doi.org/CHANGEME>`__)
+
+    Parameters
+    ----------
+    version : int
+        The data version to fetch. See the available versions above.
+
+    Returns
+    -------
+    fname : :class:`pathlib.Path`
+        Path to the downloaded file on disk.
+
+    """
+    _check_versions(version, allowed={1}, name="Southern Africa topography")
+    fname = "southern-africa-topography.nc.xz"
     return Path(_repository(fname, version).fetch(fname))
