@@ -1,6 +1,21 @@
-<h1><img src="https://github.com/fatiando/ensaio/raw/main/doc/_static/readme-banner.png" alt="Ensaio"></h1>
+<img src="https://github.com/fatiando/ensaio/raw/main/doc/_static/readme-banner.png" alt="Ensaio">
 
-<h2 align="center">Practice datasets to probe your code</h2>
+---
+
+<h2 align="center"><strong>Practice datasets to probe your code</strong></h2>
+
+<p align="center">
+<a href="https://www.fatiando.org/ensaio"><strong>Documentation</strong> (latest)</a> •
+<a href="https://www.fatiando.org/ensaio/dev">Documentation (main branch)</a> •
+<a href="https://github.com/fatiando/ensaio/blob/main/CONTRIBUTING.md"><strong>Contributing</strong></a> •
+<a href="https://www.fatiando.org/contact/"><strong>Contact</strong></a>
+</p>
+
+
+<p align="center">
+Part of the <a href="https://www.fatiando.org"><strong>Fatiando a Terra</strong></a> project
+</p>
+
 
 <p align="center">
 <a href="https://pypi.python.org/pypi/ensaio"><img src="http://img.shields.io/pypi/v/ensaio.svg?style=flat-square" alt="Latest version on PyPI"></a>
@@ -10,13 +25,7 @@
 <a href="https://doi.org/10.5281/zenodo.5784202"><img src="https://img.shields.io/badge/doi-10.5281%2Fzenodo.5784202-blue?style=flat-square" alt="DOI used to cite Ensaio"></a>
 </p>
 
----
 
-<p align="center">
-<a href="https://www.fatiando.org/ensaio"><strong>Documentation</strong></a> •
-<a href="https://www.fatiando.org/ensaio/dev">Documentation (dev version)</a> •
-Part of the <a href="https://www.fatiando.org"><strong>Fatiando a Terra</strong></a> project
-</p>
 
 ## About
 
