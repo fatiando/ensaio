@@ -6,7 +6,7 @@
 
 <p align="center">
 <a href="https://www.fatiando.org/ensaio"><strong>Documentation</strong> (latest)</a> •
-<a href="https://www.fatiando.org/ensaio/dev">Documentation (main branch)</a> •
+<a href="https://www.fatiando.org/ensaio/dev"><strong>Documentation</strong> (main branch)</a> •
 <a href="https://github.com/fatiando/ensaio/blob/main/CONTRIBUTING.md"><strong>Contributing</strong></a> •
 <a href="https://www.fatiando.org/contact/"><strong>Contact</strong></a>
 </p>
