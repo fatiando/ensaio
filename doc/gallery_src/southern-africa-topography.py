@@ -18,8 +18,8 @@ considered as the geoid).
 <https://doi.org/10.7289/V5C8276M>`__
 
 """
-import xarray as xr
 import pygmt
+import xarray as xr
 
 import ensaio
 
