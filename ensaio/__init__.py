@@ -16,6 +16,7 @@ from ._fetchers import (
     fetch_osborne_magnetic,
     fetch_sierra_negra_topography,
     fetch_southern_africa_gravity,
+    fetch_southern_africa_topography,
     locate,
 )
 from ._version import __version__

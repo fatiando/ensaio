@@ -19,3 +19,4 @@ List of functions and classes (API)
     ensaio.fetch_osborne_magnetic
     ensaio.fetch_sierra_negra_topography
     ensaio.fetch_southern_africa_gravity
+    ensaio.fetch_southern_africa_topography
