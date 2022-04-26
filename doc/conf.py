@@ -35,6 +35,7 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx_panels",
     "sphinx_gallery.gen_gallery",
+    "jupyter_sphinx",
 ]
 
 # Disable including boostrap CSS for sphinx_panels since it's already included
@@ -79,9 +80,9 @@ add_function_parentheses = False
 # -----------------------------------------------------------------------------
 sphinx_gallery_conf = {
     # path to your examples scripts
-    "examples_dirs": ["gallery_src", "tutorial_src"],
+    "examples_dirs": ["gallery_src"],
     # path where to save gallery generated examples
-    "gallery_dirs": ["gallery", "tutorial"],
+    "gallery_dirs": ["gallery"],
     "filename_pattern": r"\.py",
     # Remove the "Download all examples" button from the top level gallery
     "download_all_examples": False,
