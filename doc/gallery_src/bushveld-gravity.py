@@ -22,8 +22,8 @@ gravity compilation available through NOAA NCEI.
 * topography: `ETOPO1 <https://doi.org/10.7289/V5C8276M>`__
 
 """
-import pandas as pd
 import numpy as np
+import pandas as pd
 import pygmt
 
 import ensaio
