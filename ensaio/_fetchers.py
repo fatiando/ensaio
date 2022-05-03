@@ -34,6 +34,13 @@ REGISTRY = {
             "url": "https://github.com/fatiando-data/british-columbia-lidar/releases/download/v1",
         },
     },
+    "bushveld-gravity.csv.xz": {
+        "v1": {
+            "hash": "md5:368284cc210c6bbe256e9e49e892f262",
+            "doi": "doi:10.5281/zenodo.6511942",
+            "url": "https://github.com/fatiando-data/bushveld-gravity/releases/download/v1",
+        },
+    },
     "caribbean-bathymetry.csv.xz": {
         "v1": {
             "hash": "md5:a7332aa6e69c77d49d7fb54b764caa82",
@@ -334,6 +341,53 @@ def fetch_british_columbia_lidar(version):
     """
     _check_versions(version, allowed={1}, name="British Columbia lidar")
     fname = "british-columbia-lidar.csv.xz"
+    return Path(_repository(fname, version).fetch(fname))
+
+
+def fetch_bushveld_gravity(version):
+    """
+    Gravity ground-based data over the Bushveld Complex, Southern Africa
+
+    This dataset contains ground gravity observations over the area that
+    comprises the Bushveld Igenous Complex in Southern Africa, including
+    preprocessed gravity fields such as the **gravity disturbance** and the
+    **bouguer gravity disturbance** (topography-free gravity disturbance). In
+    addition, the dataset contains the heights of the observation points
+    referenced on the WGS84 reference ellipsoid and over the mean sea-level
+    (what can be considered to be the geoid). This dataset was built upon
+    a portion of the Southern Africa gravity compilation available through
+    `NOAA NCEI <https://www.ngdc.noaa.gov/mgg/gravity/>`__.
+
+    **Format:** CSV with xz (lzma) compression.
+
+    **Load with:** :func:`pandas.read_csv`
+
+    **Original source:** `NOAA NCEI <https://www.ngdc.noaa.gov/mgg/gravity/>`__
+    (gravity) and `ETOPO1 <https://doi.org/10.7289/V5C8276M>`__ (topography)
+
+    **Original license:** `public domain
+    <https://ngdc.noaa.gov/ngdcinfo/privacy.html>`__ (gravity) and `public
+    domain <https://ngdc.noaa.gov/mgg/global/dem_faq.html#sec-2.4>`__
+    (topography)
+
+    **Versions:**
+
+    * `1
+      <https://github.com/fatiando-data/bushveld-gravity/releases/tag/v1>`_
+      (doi:`10.5281/zenodo.6511942 <https://doi.org/10.5281/zenodo.6511942>`__)
+
+    Parameters
+    ----------
+    version : int
+        The data version to fetch. See the available versions above.
+
+    Returns
+    -------
+    fname : :class:`pathlib.Path`
+        Path to the downloaded file on disk.
+    """
+    _check_versions(version, allowed={1}, name="Bushveld gravity data")
+    fname = "bushveld-gravity.csv.xz"
     return Path(_repository(fname, version).fetch(fname))
 
 

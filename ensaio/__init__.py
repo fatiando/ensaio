@@ -9,6 +9,7 @@ from ._fetchers import (
     fetch_alps_gps,
     fetch_britain_magnetic,
     fetch_british_columbia_lidar,
+    fetch_bushveld_gravity,
     fetch_caribbean_bathymetry,
     fetch_earth_geoid,
     fetch_earth_gravity,
