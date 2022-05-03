@@ -3,6 +3,40 @@
 Changelog
 =========
 
+Version 0.4.0
+-------------
+
+Released on: 2022/05/03
+
+DOI: https://doi.org/10.5281/zenodo.6513957
+
+New data:
+
+* Gravity ground-based data for the Bushveld Igneous Complex, Southern Africa.
+  Includes observation heights referenced to the ellipsoid and geoid, as well
+  as precomputed gravity disturbance and a topography-free gravity disturbance.
+  Useful for tutorials that are broken up into parts so we don't have to start
+  computations from observed gravity every time.
+  (`#32 <https://github.com/fatiando/ensaio/pull/32>`__)
+* Topography grid for Southern Africa at full ETOPO1 resolution. Pairs with the
+  Southern Africa gravity data. (`#27 <https://github.com/fatiando/ensaio/pull/27>`__)
+
+Documentation:
+
+* A logo for Ensaio! (`#28 <https://github.com/fatiando/ensaio/pull/28>`__)
+* Convert tutorials from sphinx-gallery `.py` files to plain `.rst` files using
+  jupyter-sphinx (`#31 <https://github.com/fatiando/ensaio/pull/31>`__)
+
+Maintenance:
+
+* Convert the README to Markdown (`#29 <https://github.com/fatiando/ensaio/pull/29>`__)
+
+
+This release contains contributions from:
+
+* Santiago Soler
+* Leonardo Uieda
+
 Version 0.3.0
 -------------
 
