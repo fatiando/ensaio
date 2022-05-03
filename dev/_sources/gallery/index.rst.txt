@@ -131,6 +131,27 @@ organization.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="This dataset contains ground gravity observations over the area that comprises the Bushveld Ige...">
+
+.. only:: html
+
+ .. figure:: /gallery/images/thumb/sphx_glr_bushveld-gravity_thumb.png
+     :alt: Gravity ground-based data over the Bushveld Complex, Southern Africa
+
+     :ref:`sphx_glr_gallery_bushveld-gravity.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/bushveld-gravity
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="This dataset is a compilation of several public domain ground measurements of gravity from Sout...">
 
 .. only:: html
@@ -191,6 +212,27 @@ organization.
    :hidden:
 
    /gallery/osborne-magnetic
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This dataset consists in a regular grid with topography and bathymetry over Southern Africa. It...">
+
+.. only:: html
+
+ .. figure:: /gallery/images/thumb/sphx_glr_southern-africa-topography_thumb.png
+     :alt: Topography and bathymetry of Southern Africa
+
+     :ref:`sphx_glr_gallery_southern-africa-topography.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/southern-africa-topography
 
 .. raw:: html
 

@@ -28,6 +28,8 @@
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.87249bd3f7b54630a2508c1b61607c7f.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
@@ -42,6 +44,9 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -70,7 +75,7 @@
         
       
       
-      <img src="../_static/fatiando-logo.svg" class="logo" alt="logo">
+      <img src="../_static/ensaio-logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Ensaio <span class="project-version">dev</span></h1>
@@ -138,6 +143,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="bushveld-gravity.html">
+     Gravity ground-based data over the Bushveld Complex, Southern Africa
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="southern-africa-gravity.html">
      Gravity ground-based surveys of Southern Africa
     </a>
@@ -150,6 +160,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="osborne-magnetic.html">
      Magnetic airborne survey of the Osborne Mine, Australia
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="southern-africa-topography.html">
+     Topography and bathymetry of Southern Africa
     </a>
    </li>
    <li class="toctree-l2">
@@ -202,6 +217,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.fetch_bushveld_gravity.html">
+     ensaio.fetch_bushveld_gravity
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../api/generated/ensaio.fetch_caribbean_bathymetry.html">
      ensaio.fetch_caribbean_bathymetry
     </a>
@@ -234,6 +254,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../api/generated/ensaio.fetch_southern_africa_gravity.html">
      ensaio.fetch_southern_africa_gravity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.fetch_southern_africa_topography.html">
+     ensaio.fetch_southern_africa_topography
     </a>
    </li>
   </ul>
@@ -436,33 +461,45 @@ dataset.</p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="This dataset is a compilation of several public domain ground measurements of gravity from Sout..."><div class="figure align-default" id="id6">
+<div class="sphx-glr-thumbcontainer" tooltip="This dataset contains ground gravity observations over the area that comprises the Bushveld Ige..."><div class="figure align-default" id="id6">
+<img alt="Gravity ground-based data over the Bushveld Complex, Southern Africa" src="../_images/sphx_glr_bushveld-gravity_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="bushveld-gravity.html#sphx-glr-gallery-bushveld-gravity-py"><span class="std std-ref">Gravity ground-based data over the Bushveld Complex, Southern Africa</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="This dataset is a compilation of several public domain ground measurements of gravity from Sout..."><div class="figure align-default" id="id7">
 <img alt="Gravity ground-based surveys of Southern Africa" src="../_images/sphx_glr_southern-africa-gravity_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="southern-africa-gravity.html#sphx-glr-gallery-southern-africa-gravity-py"><span class="std std-ref">Gravity ground-based surveys of Southern Africa</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="southern-africa-gravity.html#sphx-glr-gallery-southern-africa-gravity-py"><span class="std std-ref">Gravity ground-based surveys of Southern Africa</span></a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="This is a digitization of an airborne magnetic survey of Britain. Data are sampled where flight..."><div class="figure align-default" id="id7">
+<div class="sphx-glr-thumbcontainer" tooltip="This is a digitization of an airborne magnetic survey of Britain. Data are sampled where flight..."><div class="figure align-default" id="id8">
 <img alt="Magnetic airborne survey of Britain" src="../_images/sphx_glr_britain-magnetic_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="britain-magnetic.html#sphx-glr-gallery-britain-magnetic-py"><span class="std std-ref">Magnetic airborne survey of Britain</span></a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="britain-magnetic.html#sphx-glr-gallery-britain-magnetic-py"><span class="std std-ref">Magnetic airborne survey of Britain</span></a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="This is a section of a survey acquired in 1990 by the Queensland Government, Australia. The lin..."><div class="figure align-default" id="id8">
+<div class="sphx-glr-thumbcontainer" tooltip="This is a section of a survey acquired in 1990 by the Queensland Government, Australia. The lin..."><div class="figure align-default" id="id9">
 <img alt="Magnetic airborne survey of the Osborne Mine, Australia" src="../_images/sphx_glr_osborne-magnetic_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="osborne-magnetic.html#sphx-glr-gallery-osborne-magnetic-py"><span class="std std-ref">Magnetic airborne survey of the Osborne Mine, Australia</span></a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="osborne-magnetic.html#sphx-glr-gallery-osborne-magnetic-py"><span class="std std-ref">Magnetic airborne survey of the Osborne Mine, Australia</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="This is a structure-from-motion point cloud of the 2018 lava flows of the Sierra Negra volcano,..."><div class="figure align-default" id="id9">
+<div class="sphx-glr-thumbcontainer" tooltip="This dataset consists in a regular grid with topography and bathymetry over Southern Africa. It..."><div class="figure align-default" id="id10">
+<img alt="Topography and bathymetry of Southern Africa" src="../_images/sphx_glr_southern-africa-topography_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="southern-africa-topography.html#sphx-glr-gallery-southern-africa-topography-py"><span class="std std-ref">Topography and bathymetry of Southern Africa</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="This is a structure-from-motion point cloud of the 2018 lava flows of the Sierra Negra volcano,..."><div class="figure align-default" id="id11">
 <img alt="Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador" src="../_images/sphx_glr_sierra-negra-topography_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="sierra-negra-topography.html#sphx-glr-gallery-sierra-negra-topography-py"><span class="std std-ref">Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="sierra-negra-topography.html#sphx-glr-gallery-sierra-negra-topography-py"><span class="std std-ref">Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="This is a lidar point cloud (ground reflections only) sliced to the small `Trail Islands &lt;https..."><div class="figure align-default" id="id10">
+<div class="sphx-glr-thumbcontainer" tooltip="This is a lidar point cloud (ground reflections only) sliced to the small `Trail Islands &lt;https..."><div class="figure align-default" id="id12">
 <img alt="Topography of the Trail Islands in British Columbia, Canada" src="../_images/sphx_glr_british-columbia-lidar_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="british-columbia-lidar.html#sphx-glr-gallery-british-columbia-lidar-py"><span class="std std-ref">Topography of the Trail Islands in British Columbia, Canada</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="british-columbia-lidar.html#sphx-glr-gallery-british-columbia-lidar-py"><span class="std std-ref">Topography of the Trail Islands in British Columbia, Canada</span></a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
@@ -497,7 +534,7 @@ dataset.</p>
   <p>
     
         &copy; Copyright 2022, The Ensaio Developers.<br/>
-      Last updated on Mar 28, 2022.<br/>
+      Last updated on May 03, 2022.<br/>
   </p>
 </footer>
 </main>

@@ -28,6 +28,8 @@
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.87249bd3f7b54630a2508c1b61607c7f.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
@@ -42,12 +44,15 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Topography of the Trail Islands in British Columbia, Canada" href="british-columbia-lidar.html" />
-    <link rel="prev" title="Magnetic airborne survey of the Osborne Mine, Australia" href="osborne-magnetic.html" />
+    <link rel="prev" title="Topography and bathymetry of Southern Africa" href="southern-africa-topography.html" />
     <!-- Plausible analytics for anonymous usage statistics -->
     <script defer data-domain="fatiando.org" src="https://plausible.io/js/plausible.js"></script>
 
@@ -70,7 +75,7 @@
         
       
       
-      <img src="../_static/fatiando-logo.svg" class="logo" alt="logo">
+      <img src="../_static/ensaio-logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Ensaio <span class="project-version">dev</span></h1>
@@ -138,6 +143,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="bushveld-gravity.html">
+     Gravity ground-based data over the Bushveld Complex, Southern Africa
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="southern-africa-gravity.html">
      Gravity ground-based surveys of Southern Africa
     </a>
@@ -150,6 +160,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="osborne-magnetic.html">
      Magnetic airborne survey of the Osborne Mine, Australia
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="southern-africa-topography.html">
+     Topography and bathymetry of Southern Africa
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -202,6 +217,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.fetch_bushveld_gravity.html">
+     ensaio.fetch_bushveld_gravity
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../api/generated/ensaio.fetch_caribbean_bathymetry.html">
      ensaio.fetch_caribbean_bathymetry
     </a>
@@ -234,6 +254,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../api/generated/ensaio.fetch_southern_africa_gravity.html">
      ensaio.fetch_southern_africa_gravity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.fetch_southern_africa_topography.html">
+     ensaio.fetch_southern_africa_topography
     </a>
    </li>
   </ul>
@@ -546,7 +571,7 @@ Galápagos, Ecuador, October 22 2018. Distributed by OpenTopography.</a></p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  2.322 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  21.706 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-gallery-sierra-negra-topography-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/2e72282bb38d3e607170eac4390ce8df/sierra-negra-topography.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">sierra-negra-topography.py</span></code></a></p>
@@ -564,11 +589,11 @@ Galápagos, Ecuador, October 22 2018. Distributed by OpenTopography.</a></p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="osborne-magnetic.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="southern-africa-topography.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Magnetic airborne survey of the Osborne Mine, Australia</p>
+            <p class="prev-next-title">Topography and bathymetry of Southern Africa</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="british-columbia-lidar.html" title="next page">
@@ -586,7 +611,7 @@ Galápagos, Ecuador, October 22 2018. Distributed by OpenTopography.</a></p>
   <p>
     
         &copy; Copyright 2022, The Ensaio Developers.<br/>
-      Last updated on Mar 28, 2022.<br/>
+      Last updated on May 03, 2022.<br/>
   </p>
 </footer>
 </main>

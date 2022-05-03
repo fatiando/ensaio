@@ -28,6 +28,8 @@
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.87249bd3f7b54630a2508c1b61607c7f.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
@@ -42,11 +44,14 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/thebelab-helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Version compatibility" href="../../compatibility.html" />
+    <link rel="next" title="ensaio.fetch_southern_africa_topography" href="ensaio.fetch_southern_africa_topography.html" />
     <link rel="prev" title="ensaio.fetch_sierra_negra_topography" href="ensaio.fetch_sierra_negra_topography.html" />
     <!-- Plausible analytics for anonymous usage statistics -->
     <script defer data-domain="fatiando.org" src="https://plausible.io/js/plausible.js"></script>
@@ -70,7 +75,7 @@
         
       
       
-      <img src="../../_static/fatiando-logo.svg" class="logo" alt="logo">
+      <img src="../../_static/ensaio-logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Ensaio <span class="project-version">dev</span></h1>
@@ -138,6 +143,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/bushveld-gravity.html">
+     Gravity ground-based data over the Bushveld Complex, Southern Africa
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../gallery/southern-africa-gravity.html">
      Gravity ground-based surveys of Southern Africa
     </a>
@@ -150,6 +160,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../gallery/osborne-magnetic.html">
      Magnetic airborne survey of the Osborne Mine, Australia
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/southern-africa-topography.html">
+     Topography and bathymetry of Southern Africa
     </a>
    </li>
    <li class="toctree-l2">
@@ -202,6 +217,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="ensaio.fetch_bushveld_gravity.html">
+     ensaio.fetch_bushveld_gravity
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="ensaio.fetch_caribbean_bathymetry.html">
      ensaio.fetch_caribbean_bathymetry
     </a>
@@ -234,6 +254,11 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      ensaio.fetch_southern_africa_gravity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ensaio.fetch_southern_africa_topography.html">
+     ensaio.fetch_southern_africa_topography
     </a>
    </li>
   </ul>
@@ -443,7 +468,7 @@ probably larger than geoid model differences).</p>
 <p>There are ~14,000 measurements in total with 4 columns available:
 longitude, latitude (geodetic), height (orthometric), and absolute gravity.</p>
 <p><strong>Format:</strong> CSV with xz (lzma) compression.</p>
-<p><strong>Load with:</strong> <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html#pandas.read_csv" title="(in pandas v1.4.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">pandas.read_csv</span></code></a></p>
+<p><strong>Load with:</strong> <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html#pandas.read_csv" title="(in pandas v1.4.2)"><code class="xref py py-func docutils literal notranslate"><span class="pre">pandas.read_csv</span></code></a></p>
 <p><strong>Original source:</strong> <a class="reference external" href="https://ngdc.noaa.gov/mgg/geodas/trackline.html">NOAA NCEI</a></p>
 <p><strong>Original license:</strong> Public domain</p>
 <p><strong>Versions:</strong></p>
@@ -467,14 +492,6 @@ longitude, latitude (geodetic), height (orthometric), and absolute gravity.</p>
 <img alt="Gravity ground-based surveys of Southern Africa" src="../../_images/sphx_glr_southern-africa-gravity_thumb.png" />
 <p class="caption"><span class="caption-text"><a class="reference internal" href="../../gallery/southern-africa-gravity.html#sphx-glr-gallery-southern-africa-gravity-py"><span class="std std-ref">Gravity ground-based surveys of Southern Africa</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Ensaio provides functions for downloading datasets from the `Fatiando a Terra Datasets &lt;https:/..."><div class="figure align-default" id="id3">
-<img alt="Downloading data" src="../../_images/sphx_glr_using_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../../tutorial/using.html#sphx-glr-tutorial-using-py"><span class="std std-ref">Downloading data</span></a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="One of the main use cases of Ensaio is to provide reproducible and easy-to-access data for the ..."><div class="figure align-default" id="id4">
-<img alt="Using Ensaio in your project" src="../../_images/sphx_glr_developers_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../../tutorial/developers.html#sphx-glr-tutorial-developers-py"><span class="std std-ref">Using Ensaio in your project</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
-</div>
 </div><div style='clear:both'></div></div>
 </div>
 
@@ -491,10 +508,10 @@ longitude, latitude (geodetic), height (orthometric), and absolute gravity.</p>
             <p class="prev-next-title">ensaio.fetch_sierra_negra_topography</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../../compatibility.html" title="next page">
+    <a class='right-next' id="next-link" href="ensaio.fetch_southern_africa_topography.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Version compatibility</p>
+        <p class="prev-next-title">ensaio.fetch_southern_africa_topography</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -506,7 +523,7 @@ longitude, latitude (geodetic), height (orthometric), and absolute gravity.</p>
   <p>
     
         &copy; Copyright 2022, The Ensaio Developers.<br/>
-      Last updated on Mar 28, 2022.<br/>
+      Last updated on May 03, 2022.<br/>
   </p>
 </footer>
 </main>

@@ -28,6 +28,8 @@
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.87249bd3f7b54630a2508c1b61607c7f.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
@@ -42,6 +44,9 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -70,7 +75,7 @@
         
       
       
-      <img src="../_static/fatiando-logo.svg" class="logo" alt="logo">
+      <img src="../_static/ensaio-logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Ensaio <span class="project-version">dev</span></h1>
@@ -138,6 +143,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/bushveld-gravity.html">
+     Gravity ground-based data over the Bushveld Complex, Southern Africa
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../gallery/southern-africa-gravity.html">
      Gravity ground-based surveys of Southern Africa
     </a>
@@ -150,6 +160,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../gallery/osborne-magnetic.html">
      Magnetic airborne survey of the Osborne Mine, Australia
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/southern-africa-topography.html">
+     Topography and bathymetry of Southern Africa
     </a>
    </li>
    <li class="toctree-l2">
@@ -202,6 +217,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.fetch_bushveld_gravity.html">
+     ensaio.fetch_bushveld_gravity
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../api/generated/ensaio.fetch_caribbean_bathymetry.html">
      ensaio.fetch_caribbean_bathymetry
     </a>
@@ -234,6 +254,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../api/generated/ensaio.fetch_southern_africa_gravity.html">
      ensaio.fetch_southern_africa_gravity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.fetch_southern_africa_topography.html">
+     ensaio.fetch_southern_africa_topography
     </a>
    </li>
   </ul>
@@ -428,13 +453,8 @@
             
               <div>
                 
-  <div class="sphx-glr-download-link-note admonition note">
-<p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-tutorial-developers-py"><span class="std std-ref">here</span></a>
-to download the full example code</p>
-</div>
-<div class="sphx-glr-example-title section" id="using-ensaio-in-your-project">
-<span id="developers"></span><span id="sphx-glr-tutorial-developers-py"></span><h1>Using Ensaio in your project<a class="headerlink" href="#using-ensaio-in-your-project" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="using-ensaio-in-your-project">
+<span id="developers"></span><h1>Using Ensaio in your project<a class="headerlink" href="#using-ensaio-in-your-project" title="Permalink to this headline">¶</a></h1>
 <p>One of the main use cases of Ensaio is to provide reproducible and
 easy-to-access data for the documentation of other Python projects.
 These are a few tips and tricks for using Ensaio in your own project.</p>
@@ -445,10 +465,16 @@ our very best to always keep the older data versions available as well to
 avoid breaking existing tutorials and documentation.</p>
 <p>We recommend always explicitly setting the data version when fetching a
 dataset:</p>
+<div class="jupyter_cell jupyter_container docutils container">
+<div class="cell_input code_cell docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ensaio</span>
 
-<a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fname</span></a> <span class="o">=</span> <a href="../api/generated/ensaio.fetch_southern_africa_gravity.html#ensaio.fetch_southern_africa_gravity" title="ensaio.fetch_southern_africa_gravity" class="sphx-glr-backref-module-ensaio sphx-glr-backref-type-py-function"><span class="n">ensaio</span><span class="o">.</span><span class="n">fetch_southern_africa_gravity</span></a><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="n">ensaio</span><span class="o">.</span><span class="n">fetch_southern_africa_gravity</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
 </div>
 <p>This way, your documentation/tutorial should still use the same data (and
 hopefully still produce the same result) even if new versions of Ensaio are
@@ -474,16 +500,6 @@ This will minimize the load that is placed on public data servers like
 Zenodo.
 When using GitHub Actions, this may even make the downloads much faster since
 the data source is likely physically closer to the CI infrastructure.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.001 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-developers-py">
-<div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../_downloads/30b78acd7b891ea0e59e7c3de2bb8c01/developers.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">developers.py</span></code></a></p>
-</div>
-<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../_downloads/8aa8c61fa9276f08c898b49940a7299b/developers.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">developers.ipynb</span></code></a></p>
-</div>
-</div>
-<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
 </div>
 </div>
 
@@ -515,7 +531,7 @@ the data source is likely physically closer to the CI infrastructure.</p>
   <p>
     
         &copy; Copyright 2022, The Ensaio Developers.<br/>
-      Last updated on Mar 28, 2022.<br/>
+      Last updated on May 03, 2022.<br/>
   </p>
 </footer>
 </main>

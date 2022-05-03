@@ -15,9 +15,14 @@
 
 **Ensaio** (Portuguese for "rehearsal") is a Python package for downloading
 open-access sample datasets for Geoscience.
-It taps into the curated collection of `Fatiando a Terra Datasets
+It taps into the `Fatiando a Terra FAIR data collection
 <https://github.com/fatiando-data>`__ that is designed for use in tutorials,
 documentation, and teaching.
+
+It uses `Pooch <https://www.fatiando.org/pooch>`__ to manage downloading and
+caching the data on your computer.
+This means that datasets are only downloaded if they can't be found on your
+computer already.
 
 .. panels::
     :header: text-center text-large
