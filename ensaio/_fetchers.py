@@ -346,7 +346,7 @@ def fetch_british_columbia_lidar(version):
 
 def fetch_bushveld_gravity(version):
     """
-    Observed and preprocessed gravity data over Bushveld, Southern Africa
+    Gravity ground-based data over the Bushveld Complex, Southern Africa
 
     This dataset contains ground gravity observations over the area that
     comprises the Bushveld Igenous Complex in Southern Africa, including

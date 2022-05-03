@@ -5,12 +5,12 @@
 # This code is part of the Fatiando a Terra project (https://www.fatiando.org)
 #
 """
-Observed and preprocessed gravity data over Bushveld, Southern Africa
----------------------------------------------------------------------
+Gravity ground-based data over the Bushveld Complex, Southern Africa
+--------------------------------------------------------------------
 
 This dataset contains ground gravity observations over the area that comprises
 the Bushveld Igenous Complex in Southern Africa, including preprocessed gravity
-fields such as the **gravity disturbance** and the **bouguer gravity
+fields such as the **gravity disturbance** and the **Bouguer gravity
 disturbance** (topography-free gravity disturbance). In addition, the dataset
 contains the heights of the observation points referenced on the WGS84
 reference ellipsoid and over the mean sea-level (what can be considered to be
@@ -43,14 +43,15 @@ data
 fig = pygmt.Figure()
 fig.basemap(
     region=[
-        data.longitude.min() - 0.5,
-        data.longitude.max() + 0.5,
-        data.latitude.min() - 0.5,
-        data.latitude.max() + 0.5,
+        data.longitude.min(),
+        data.longitude.max(),
+        data.latitude.min(),
+        data.latitude.max(),
     ],
     projection="M15c",
     frame=True,
 )
+fig.coast(land="#444444")
 scale = np.max(np.abs(data.gravity_disturbance_mgal))
 pygmt.makecpt(
     cmap="polar",
