@@ -69,6 +69,13 @@ REGISTRY = {
             "url": "https://github.com/fatiando-data/earth-topography-10arcmin/releases/download/v1",
         },
     },
+    "lightning-creek-magnetic-grid.nc": {
+        "v1": {
+            "hash": "md5:4b19c2eabe75865183964983861cbf68",
+            "doi": "doi:10.5281/zenodo.7079711",
+            "url": "https://github.com/fatiando-data/lightning-creek-magnetic-grid/releases/download/v1",
+        },
+    },
     "osborne-magnetic.csv.xz": {
         "v1": {
             "hash": "md5:b26777bdde2f1ecb97dda655c8b1cf71",
@@ -573,6 +580,49 @@ def fetch_earth_topography(version):
     """
     _check_versions(version, allowed={1}, name="Earth topography grid")
     fname = "earth-topography-10arcmin.nc"
+    return Path(_repository(fname, version).fetch(fname))
+
+
+def fetch_lightning_creek_magnetic(version):
+    """
+    Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia
+
+    This is a section of a survey acquired in 1990 by the Queensland
+    Government, Australia. The grid has 50 m resolution (UTM coordinates) and
+    is at a uniform orthometric height of 500 m. Total field anomalies are in
+    nT.
+
+    **Format:** netCDF4 with zlib compression
+
+    **Load with:** :func:`xarray.load_dataarray` (requires the `netcdf4
+    <https://github.com/Unidata/netcdf4-python>`__ library)
+
+    **Original source:** `Geophysical Acquisition & Processing Section 2019.
+    MIM Data from Mt Isa Inlier, QLD (P1029), magnetic line data, AWAGS
+    levelled. Geoscience Australia, Canberra
+    <http://pid.geoscience.gov.au/dataset/ga/142419>`__
+
+    **Original license:** CC-BY
+
+    **Versions:**
+
+    * `1
+      <https://github.com/fatiando-data/lightning-creek-magnetic-grid/releases/tag/v1>`_
+      (doi:`10.5281/zenodo.7079711 <https://doi.org/10.5281/zenodo.7079711>`__)
+
+    Parameters
+    ----------
+    version : int
+        The data version to fetch. See the available versions above.
+
+    Returns
+    -------
+    fname : :class:`pathlib.Path`
+        Path to the downloaded file on disk.
+
+    """
+    _check_versions(version, allowed={1}, name="Lightning Creek magnetic")
+    fname = "lightning-creek-magnetic-grid.nc"
     return Path(_repository(fname, version).fetch(fname))
 
 
