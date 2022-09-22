@@ -14,6 +14,7 @@ from ._fetchers import (
     fetch_earth_geoid,
     fetch_earth_gravity,
     fetch_earth_topography,
+    fetch_lightning_creek_magnetic,
     fetch_osborne_magnetic,
     fetch_sierra_negra_topography,
     fetch_southern_africa_gravity,
