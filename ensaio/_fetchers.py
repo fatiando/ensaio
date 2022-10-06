@@ -608,7 +608,6 @@ def fetch_lightning_creek_magnetic(version):
     `Code
     <https://github.com/fatiando-data/lightning-creek-magnetic-grid>`__
     
-
     **Original license:** CC-BY
 
     **Versions:**
