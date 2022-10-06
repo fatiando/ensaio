@@ -18,7 +18,8 @@ Inlier, QLD (P1029), magnetic line data, AWAGS levelled. Geoscience Australia,
 Canberra <http://pid.geoscience.gov.au/dataset/ga/142419>`__
 
 **Pre-processing:**
-[Source code](https://github.com/fatiando-data/lightning-creek-magnetic-grid) that prepares the original dataset for redistribution by filtering,
+[Source code](https://github.com/fatiando-data/lightning-creek-magnetic-grid)
+that prepares the original dataset for redistribution by filtering,
 standardizing, converting coordinates, compressing etc.
 
 """
