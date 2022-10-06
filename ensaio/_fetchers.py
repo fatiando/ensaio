@@ -602,10 +602,9 @@ def fetch_lightning_creek_magnetic(version):
     levelled. Geoscience Australia, Canberra
     <http://pid.geoscience.gov.au/dataset/ga/142419>`__
 
-    **Pre-processing:** Repository for preparation of original dataset
+    **Pre-processing:** `Repository for preparation of original dataset
     for redistribution by filtering, standardizing, converting coordinates,
     compressing, etc.
-    `Code
     <https://github.com/fatiando-data/lightning-creek-magnetic-grid>`__
     
     **Original license:** CC-BY
