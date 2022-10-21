@@ -606,7 +606,7 @@ def fetch_lightning_creek_magnetic(version):
     for redistribution by filtering, standardizing, converting coordinates,
     compressing, etc.
     <https://github.com/fatiando-data/lightning-creek-magnetic-grid>`__
-    
+
     **Original license:** CC-BY
 
     **Versions:**
