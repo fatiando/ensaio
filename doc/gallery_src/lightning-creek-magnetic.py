@@ -17,10 +17,9 @@ is at a uniform orthometric height of 500 m.
 Inlier, QLD (P1029), magnetic line data, AWAGS levelled. Geoscience Australia,
 Canberra <http://pid.geoscience.gov.au/dataset/ga/142419>`__
 
-**Pre-processing:**
-[Source code](https://github.com/fatiando-data/lightning-creek-magnetic-grid)
-that prepares the original dataset for redistribution by filtering,
-standardizing, converting coordinates, compressing etc.
+**Pre-processing:** `Source code for preparation of original dataset
+for redistribution in Ensaio 
+<https://github.com/fatiando-data/lightning-creek-magnetic-grid>`__
 
 """
 import pygmt
