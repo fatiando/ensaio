@@ -233,6 +233,10 @@ def fetch_alps_gps(version):
 
     **Original license:** CC-BY
 
+    **Pre-processing:** `Source code for preparation of the original dataset
+    for redistribution in Ensaio
+    <https://github.com/fatiando-data/alps-gps-velocity>`__
+
     **Versions:**
 
     * `1
@@ -602,11 +606,11 @@ def fetch_lightning_creek_magnetic(version):
     levelled. Geoscience Australia, Canberra
     <http://pid.geoscience.gov.au/dataset/ga/142419>`__
 
-    **Pre-processing:** `Source code for preparation of original dataset
+    **Original license:** CC-BY
+
+    **Pre-processing:** `Source code for preparation of the original dataset
     for redistribution in Ensaio
     <https://github.com/fatiando-data/lightning-creek-magnetic-grid>`__
-
-    **Original license:** CC-BY
 
     **Versions:**
 
