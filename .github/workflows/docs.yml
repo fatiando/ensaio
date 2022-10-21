@@ -90,7 +90,7 @@ jobs:
           cat requirements-full.txt
 
       - name: Setup caching for conda packages
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/conda_pkgs_dir
           key: conda-${{ runner.os }}-${{ env.PYTHON }}-${{ hashFiles('requirements-full.txt') }}
@@ -113,21 +113,21 @@ jobs:
 
       - name: Cache the datasets
         if: github.event_name == 'pull_request'
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ runner.temp }}/cache/ensaio
           key: ensaio-data-${{ hashFiles('ensaio/_fetchers.py') }}
 
       - name: Cache the sphinx-gallery runs
         if: github.event_name == 'pull_request'
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: doc/gallery/
           key: gallery-${{ hashFiles('doc/gallery_src/*.py') }}
 
       - name: Cache the tutorial sphinx-gallery runs
         if: github.event_name == 'pull_request'
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: doc/tutorial
           key: tutorial-${{ hashFiles('doc/tutorial_src/*.py') }}
