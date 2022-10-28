@@ -18,8 +18,12 @@ the geoid). This dataset was built upon a portion of the Southern Africa
 gravity compilation available through NOAA NCEI.
 
 **Original source:**
-* gravity: `NOAA NCEI <https://www.ngdc.noaa.gov/mgg/gravity/>`__
-* topography: `ETOPO1 <https://doi.org/10.7289/V5C8276M>`__
+
+* Gravity: `NOAA NCEI <https://www.ngdc.noaa.gov/mgg/gravity/>`__
+* Topography: `ETOPO1 <https://doi.org/10.7289/V5C8276M>`__
+
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio <https://github.com/fatiando-data/bushveld-gravity>`__
 
 """
 import numpy as np
