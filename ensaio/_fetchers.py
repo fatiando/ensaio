@@ -287,6 +287,10 @@ def fetch_britain_magnetic(version):
 
     **Original license:** Open Government Licence
 
+    **Pre-processing:** `Source code for preparation of the original dataset
+    for redistribution in Ensaio
+    <https://github.com/fatiando-data/britain-magnetic>`__
+
     **Versions:**
 
     * `1
@@ -332,6 +336,10 @@ def fetch_british_columbia_lidar(version):
     <https://www2.gov.bc.ca/gov/content/data/geographic-data-services/lidarbc>`__
 
     **Original license:** Open Government Licence - British Columbia
+
+    **Pre-processing:** `Source code for preparation of the original dataset
+    for redistribution in Ensaio
+    <https://github.com/fatiando-data/british-columbia-lidar>`__
 
     **Versions:**
 
@@ -381,6 +389,10 @@ def fetch_bushveld_gravity(version):
     domain <https://ngdc.noaa.gov/mgg/global/dem_faq.html#sec-2.4>`__
     (topography)
 
+    **Pre-processing:** `Source code for preparation of the original dataset
+    for redistribution in Ensaio
+    <https://github.com/fatiando-data/bushveld-gravity>`__
+
     **Versions:**
 
     * `1
@@ -425,6 +437,10 @@ def fetch_caribbean_bathymetry(version):
     <https://ngdc.noaa.gov/mgg/geodas/trackline.html>`__
 
     **Original license:** Public domain
+
+    **Pre-processing:** `Source code for preparation of the original dataset
+    for redistribution in Ensaio
+    <https://github.com/fatiando-data/caribbean-bathymetry>`__
 
     **Versions:**
 
@@ -471,6 +487,10 @@ def fetch_earth_geoid(version):
     <https://doi.org/10.5880/icgem.2015.1>`__
 
     **Original license:** CC-BY
+
+    **Pre-processing:** `Source code for preparation of the original dataset
+    for redistribution in Ensaio
+    <https://github.com/fatiando-data/earth-geoid-10arcmin>`__
 
     **Versions:**
 
@@ -520,6 +540,10 @@ def fetch_earth_gravity(version):
 
     **Original license:** CC-BY
 
+    **Pre-processing:** `Source code for preparation of the original dataset
+    for redistribution in Ensaio
+    <https://github.com/fatiando-data/earth-gravity-10arcmin>`__
+
     **Versions:**
 
     * `1
@@ -564,6 +588,10 @@ def fetch_earth_topography(version):
     **Original source:** `ETOPO1 <https://doi.org/10.7289/V5C8276M>`__
 
     **Original license:** Public domain
+
+    **Pre-processing:** `Source code for preparation of the original dataset
+    for redistribution in Ensaio
+    <https://github.com/fatiando-data/earth-topography-10arcmin>`__
 
     **Versions:**
 
@@ -661,6 +689,10 @@ def fetch_osborne_magnetic(version):
 
     **Original license:** CC-BY
 
+    **Pre-processing:** `Source code for preparation of the original dataset
+    for redistribution in Ensaio
+    <https://github.com/fatiando-data/osborne-magnetic>`__
+
     **Versions:**
 
     * `1
@@ -704,6 +736,10 @@ def fetch_sierra_negra_topography(version):
     <https://doi.org/10.5069/G957196P>`__
 
     **Original license:** CC-BY
+
+    **Pre-processing:** `Source code for preparation of the original dataset
+    for redistribution in Ensaio
+    <https://github.com/fatiando-data/sierra-negra-topography>`__
 
     **Versions:**
 
@@ -750,6 +786,10 @@ def fetch_southern_africa_gravity(version):
 
     **Original license:** Public domain
 
+    **Pre-processing:** `Source code for preparation of the original dataset
+    for redistribution in Ensaio
+    <https://github.com/fatiando-data/southern-africa-gravity>`__
+
     **Versions:**
 
     * `1
@@ -788,6 +828,10 @@ def fetch_southern_africa_topography(version):
     **Original source:** `ETOPO1 <https://doi.org/10.7289/V5C8276M>`__
 
     **Original license:** Public domain
+
+    **Pre-processing:** `Source code for preparation of the original dataset
+    for redistribution in Ensaio
+    <https://github.com/fatiando-data/southern-africa-topography>`__
 
     **Versions:**
 

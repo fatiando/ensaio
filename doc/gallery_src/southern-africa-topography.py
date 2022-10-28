@@ -17,6 +17,9 @@ considered as the geoid).
 **Original source:** `ETOPO1
 <https://doi.org/10.7289/V5C8276M>`__
 
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio
+<https://github.com/fatiando-data/southern-africa-topography>`__
 """
 import pygmt
 import xarray as xr

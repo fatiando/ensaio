@@ -17,6 +17,10 @@ structures and terrain roughness on the lava flows.
 Galápagos, Ecuador, October 22 2018. Distributed by OpenTopography.
 <https://doi.org/10.5069/G957196P>`__
 
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio
+<https://github.com/fatiando-data/sierra-negra-topography>`__
+
 """
 import pandas as pd
 import pygmt

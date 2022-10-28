@@ -16,6 +16,10 @@ their isolated nature creates problems for some interpolation methods.
 **Original source:** `LidarBC
 <https://www2.gov.bc.ca/gov/content/data/geographic-data-services/lidarbc>`__
 
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio
+<https://github.com/fatiando-data/british-columbia-lidar>`__
+
 """
 import pandas as pd
 import pygmt

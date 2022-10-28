@@ -16,6 +16,10 @@ some of the survey lines.
 **Original source:** `NOAA NCEI
 <https://ngdc.noaa.gov/mgg/geodas/trackline.html>`__
 
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio
+<https://github.com/fatiando-data/caribbean-bathymetry>`__
+
 """
 import pandas as pd
 import pygmt
