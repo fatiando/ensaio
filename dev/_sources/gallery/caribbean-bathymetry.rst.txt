@@ -29,7 +29,11 @@ some of the survey lines.
 **Original source:** `NOAA NCEI
 <https://ngdc.noaa.gov/mgg/geodas/trackline.html>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 20-25
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio
+<https://github.com/fatiando-data/caribbean-bathymetry>`__
+
+.. GENERATED FROM PYTHON SOURCE LINES 24-29
 
 .. code-block:: default
 
@@ -45,11 +49,11 @@ some of the survey lines.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 26-27
+.. GENERATED FROM PYTHON SOURCE LINES 30-31
 
 Download and cache the data and return the path to it on disk
 
-.. GENERATED FROM PYTHON SOURCE LINES 27-30
+.. GENERATED FROM PYTHON SOURCE LINES 31-34
 
 .. code-block:: default
 
@@ -71,11 +75,11 @@ Download and cache the data and return the path to it on disk
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-32
+.. GENERATED FROM PYTHON SOURCE LINES 35-36
 
 Load the CSV formatted data with pandas
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-35
+.. GENERATED FROM PYTHON SOURCE LINES 36-39
 
 .. code-block:: default
 
@@ -200,11 +204,11 @@ Load the CSV formatted data with pandas
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-37
+.. GENERATED FROM PYTHON SOURCE LINES 40-41
 
 Make a PyGMT map with the data points colored by the depth.
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-55
+.. GENERATED FROM PYTHON SOURCE LINES 41-59
 
 .. code-block:: default
 
@@ -249,7 +253,7 @@ Make a PyGMT map with the data points colored by the depth.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  3.400 seconds)
+   **Total running time of the script:** ( 0 minutes  58.244 seconds)
 
 
 .. _sphx_glr_download_gallery_caribbean-bathymetry.py:

@@ -30,7 +30,11 @@ structures and terrain roughness on the lava flows.
 Galápagos, Ecuador, October 22 2018. Distributed by OpenTopography.
 <https://doi.org/10.5069/G957196P>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 21-26
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio
+<https://github.com/fatiando-data/sierra-negra-topography>`__
+
+.. GENERATED FROM PYTHON SOURCE LINES 25-30
 
 .. code-block:: default
 
@@ -46,11 +50,11 @@ Galápagos, Ecuador, October 22 2018. Distributed by OpenTopography.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 27-28
+.. GENERATED FROM PYTHON SOURCE LINES 31-32
 
 Download and cache the data and return the path to it on disk
 
-.. GENERATED FROM PYTHON SOURCE LINES 28-31
+.. GENERATED FROM PYTHON SOURCE LINES 32-35
 
 .. code-block:: default
 
@@ -72,11 +76,11 @@ Download and cache the data and return the path to it on disk
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-33
+.. GENERATED FROM PYTHON SOURCE LINES 36-37
 
 Load the CSV formatted data with pandas
 
-.. GENERATED FROM PYTHON SOURCE LINES 33-36
+.. GENERATED FROM PYTHON SOURCE LINES 37-40
 
 .. code-block:: default
 
@@ -189,11 +193,11 @@ Load the CSV formatted data with pandas
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-38
+.. GENERATED FROM PYTHON SOURCE LINES 41-42
 
 Make a PyGMT map with the data points colored by the elevation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-55
+.. GENERATED FROM PYTHON SOURCE LINES 42-59
 
 .. code-block:: default
 
@@ -237,7 +241,7 @@ Make a PyGMT map with the data points colored by the elevation.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  21.706 seconds)
+   **Total running time of the script:** ( 0 minutes  51.992 seconds)
 
 
 .. _sphx_glr_download_gallery_sierra-negra-topography.py:

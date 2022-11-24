@@ -46,7 +46,7 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/thebelab-helper.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -163,6 +163,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="gallery/lightning-creek-magnetic.html">
+     Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="gallery/southern-africa-topography.html">
      Topography and bathymetry of Southern Africa
     </a>
@@ -239,6 +244,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="api/generated/ensaio.fetch_earth_topography.html">
      ensaio.fetch_earth_topography
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/generated/ensaio.fetch_lightning_creek_magnetic.html">
+     ensaio.fetch_lightning_creek_magnetic
     </a>
    </li>
    <li class="toctree-l2">
@@ -405,6 +415,11 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-5-0">
+   Version 0.5.0
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#version-0-4-0">
    Version 0.4.0
   </a>
@@ -445,6 +460,11 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-5-0">
+   Version 0.5.0
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#version-0-4-0">
    Version 0.4.0
   </a>
@@ -475,10 +495,40 @@
                 
   <div class="section" id="changelog">
 <span id="changes"></span><h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="version-0-5-0">
+<h2>Version 0.5.0<a class="headerlink" href="#version-0-5-0" title="Permalink to this headline">¶</a></h2>
+<p>Released on: 2022/11/24</p>
+<p>DOI: <a class="reference external" href="https://doi.org/10.5281/zenodo.7260639">https://doi.org/10.5281/zenodo.7260639</a></p>
+<p>New data:</p>
+<ul class="simple">
+<li><p>Add the Lightning Creek magnetic anomaly grid (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/38">#38</a>)</p></li>
+</ul>
+<p>Documentation:</p>
+<ul class="simple">
+<li><p>Add links to processing repositories on GitHub (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/40">#40</a>, <a class="reference external" href="https://github.com/fatiando/ensaio/pull/45">#45</a> and <a class="reference external" href="https://github.com/fatiando/ensaio/pull/46">#46</a>)</p></li>
+<li><p>Add impostor syndrome disclaimer etc to the README (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/37">#37</a>)</p></li>
+</ul>
+<p>Maintenance:</p>
+<ul class="simple">
+<li><p>Drop support for Python 3.6  (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/50">#50</a>)</p></li>
+<li><p>Update method of setting outputs in Actions (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/44">#44</a>)</p></li>
+<li><p>Simplify the CI matrix for the test workflow (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/43">#43</a>)</p></li>
+<li><p>Update the GitHub Actions “cache” to v3 (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/42">#42</a>)</p></li>
+</ul>
+<p>This release contains contributions from:</p>
+<ul class="simple">
+<li><p>Mariana Gomez</p></li>
+<li><p>Leonardo Uieda</p></li>
+</ul>
+</div>
 <div class="section" id="version-0-4-0">
 <h2>Version 0.4.0<a class="headerlink" href="#version-0-4-0" title="Permalink to this headline">¶</a></h2>
 <p>Released on: 2022/05/03</p>
 <p>DOI: <a class="reference external" href="https://doi.org/10.5281/zenodo.6513957">https://doi.org/10.5281/zenodo.6513957</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Ensaio v0.4.0 is the last release that is compatible with Python 3.6.</strong></p>
+</div>
 <p>New data:</p>
 <ul class="simple">
 <li><p>Gravity ground-based data for the Bushveld Igneous Complex, Southern Africa.
@@ -586,7 +636,7 @@ functions. (<a class="reference external" href="https://github.com/fatiando/ensa
   <p>
     
         &copy; Copyright 2022, The Ensaio Developers.<br/>
-      Last updated on May 03, 2022.<br/>
+      Last updated on Nov 24, 2022.<br/>
   </p>
 </footer>
 </main>

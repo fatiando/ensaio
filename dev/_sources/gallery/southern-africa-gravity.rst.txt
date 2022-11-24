@@ -31,7 +31,11 @@ probably larger than geoid model differences).
 **Original source:** `NOAA NCEI
 <https://ngdc.noaa.gov/mgg/geodas/trackline.html>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 22-27
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio
+<https://github.com/fatiando-data/southern-africa-gravity>`__
+
+.. GENERATED FROM PYTHON SOURCE LINES 25-30
 
 .. code-block:: default
 
@@ -47,11 +51,11 @@ probably larger than geoid model differences).
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 28-29
+.. GENERATED FROM PYTHON SOURCE LINES 31-32
 
 Download and cache the data and return the path to it on disk
 
-.. GENERATED FROM PYTHON SOURCE LINES 29-32
+.. GENERATED FROM PYTHON SOURCE LINES 32-35
 
 .. code-block:: default
 
@@ -73,11 +77,11 @@ Download and cache the data and return the path to it on disk
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 33-34
+.. GENERATED FROM PYTHON SOURCE LINES 36-37
 
 Load the CSV formatted data with pandas
 
-.. GENERATED FROM PYTHON SOURCE LINES 34-37
+.. GENERATED FROM PYTHON SOURCE LINES 37-40
 
 .. code-block:: default
 
@@ -202,11 +206,11 @@ Load the CSV formatted data with pandas
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-39
+.. GENERATED FROM PYTHON SOURCE LINES 41-42
 
 Make a PyGMT map with the data points colored by the gravity data.
 
-.. GENERATED FROM PYTHON SOURCE LINES 39-61
+.. GENERATED FROM PYTHON SOURCE LINES 42-64
 
 .. code-block:: default
 
@@ -255,7 +259,7 @@ Make a PyGMT map with the data points colored by the gravity data.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  7.035 seconds)
+   **Total running time of the script:** ( 0 minutes  6.559 seconds)
 
 
 .. _sphx_glr_download_gallery_southern-africa-gravity.py:

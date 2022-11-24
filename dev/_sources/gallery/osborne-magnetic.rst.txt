@@ -32,7 +32,10 @@ Lightning Creek sill complex, and the Brumby prospect.
 Inlier, QLD (P1029), magnetic line data, AWAGS levelled. Geoscience Australia,
 Canberra <http://pid.geoscience.gov.au/dataset/ga/142419>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 23-28
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio <https://github.com/fatiando-data/osborne-magnetic>`__
+
+.. GENERATED FROM PYTHON SOURCE LINES 25-30
 
 .. code-block:: default
 
@@ -48,11 +51,11 @@ Canberra <http://pid.geoscience.gov.au/dataset/ga/142419>`__
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 29-30
+.. GENERATED FROM PYTHON SOURCE LINES 31-32
 
 Download and cache the data and return the path to it on disk
 
-.. GENERATED FROM PYTHON SOURCE LINES 30-33
+.. GENERATED FROM PYTHON SOURCE LINES 32-35
 
 .. code-block:: default
 
@@ -74,11 +77,11 @@ Download and cache the data and return the path to it on disk
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 34-35
+.. GENERATED FROM PYTHON SOURCE LINES 36-37
 
 Load the CSV formatted data with pandas
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-38
+.. GENERATED FROM PYTHON SOURCE LINES 37-40
 
 .. code-block:: default
 
@@ -215,12 +218,12 @@ Load the CSV formatted data with pandas
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 39-41
+.. GENERATED FROM PYTHON SOURCE LINES 41-43
 
 Make a PyGMT map with the data points colored by the total field magnetic
 anomaly.
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-67
+.. GENERATED FROM PYTHON SOURCE LINES 43-69
 
 .. code-block:: default
 
@@ -270,7 +273,7 @@ anomaly.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 68-71
+.. GENERATED FROM PYTHON SOURCE LINES 70-73
 
 The anomaly at the bottom left is the Osborne Mine. The ones on the top right
 are the Lightning Creek sill complex (the largest) and the Brumby prospect
@@ -279,7 +282,7 @@ are the Lightning Creek sill complex (the largest) and the Brumby prospect
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  42.112 seconds)
+   **Total running time of the script:** ( 0 minutes  39.027 seconds)
 
 
 .. _sphx_glr_download_gallery_osborne-magnetic.py:

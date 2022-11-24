@@ -16,6 +16,10 @@ in a lot of datasets.
 **Original source:**
 `Sánchez et al. (2018) <https://doi.org/10.1594/PANGAEA.886889>`__
 
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio
+<https://github.com/fatiando-data/alps-gps-velocity>`__
+
 """
 import numpy as np
 import pandas as pd

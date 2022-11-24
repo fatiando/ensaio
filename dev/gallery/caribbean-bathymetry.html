@@ -46,7 +46,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/thebelab-helper.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -163,6 +163,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="lightning-creek-magnetic.html">
+     Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="southern-africa-topography.html">
      Topography and bathymetry of Southern Africa
     </a>
@@ -239,6 +244,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../api/generated/ensaio.fetch_earth_topography.html">
      ensaio.fetch_earth_topography
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/generated/ensaio.fetch_lightning_creek_magnetic.html">
+     ensaio.fetch_lightning_creek_magnetic
     </a>
    </li>
    <li class="toctree-l2">
@@ -429,6 +439,8 @@ surveys of the ocean in the Caribbean. The data display a wide range of
 tectonic activity, uneven distribution, and even clear systematic errors in
 some of the survey lines.</p>
 <p><strong>Original source:</strong> <a class="reference external" href="https://ngdc.noaa.gov/mgg/geodas/trackline.html">NOAA NCEI</a></p>
+<p><strong>Pre-processing:</strong> <a class="reference external" href="https://github.com/fatiando-data/caribbean-bathymetry">Source code for preparation of the original dataset for
+redistribution in Ensaio</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">pygmt</span>
 
@@ -583,7 +595,7 @@ some of the survey lines.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  3.400 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  58.244 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-gallery-caribbean-bathymetry-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/4310522ef02e03c5becf39f64720585c/caribbean-bathymetry.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">caribbean-bathymetry.py</span></code></a></p>
@@ -623,7 +635,7 @@ some of the survey lines.</p>
   <p>
     
         &copy; Copyright 2022, The Ensaio Developers.<br/>
-      Last updated on May 03, 2022.<br/>
+      Last updated on Nov 24, 2022.<br/>
   </p>
 </footer>
 </main>

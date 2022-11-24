@@ -29,7 +29,11 @@ their isolated nature creates problems for some interpolation methods.
 **Original source:** `LidarBC
 <https://www2.gov.bc.ca/gov/content/data/geographic-data-services/lidarbc>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 20-25
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio
+<https://github.com/fatiando-data/british-columbia-lidar>`__
+
+.. GENERATED FROM PYTHON SOURCE LINES 24-29
 
 .. code-block:: default
 
@@ -45,11 +49,11 @@ their isolated nature creates problems for some interpolation methods.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 26-27
+.. GENERATED FROM PYTHON SOURCE LINES 30-31
 
 Download and cache the data and return the path to it on disk
 
-.. GENERATED FROM PYTHON SOURCE LINES 27-30
+.. GENERATED FROM PYTHON SOURCE LINES 31-34
 
 .. code-block:: default
 
@@ -71,11 +75,11 @@ Download and cache the data and return the path to it on disk
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-32
+.. GENERATED FROM PYTHON SOURCE LINES 35-36
 
 Load the CSV formatted data with pandas
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-35
+.. GENERATED FROM PYTHON SOURCE LINES 36-39
 
 .. code-block:: default
 
@@ -188,11 +192,11 @@ Load the CSV formatted data with pandas
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-37
+.. GENERATED FROM PYTHON SOURCE LINES 40-41
 
 Make a PyGMT map with the data points colored by the elevation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-54
+.. GENERATED FROM PYTHON SOURCE LINES 41-58
 
 .. code-block:: default
 
@@ -236,7 +240,7 @@ Make a PyGMT map with the data points colored by the elevation.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  46.320 seconds)
+   **Total running time of the script:** ( 0 minutes  33.206 seconds)
 
 
 .. _sphx_glr_download_gallery_british-columbia-lidar.py:

@@ -18,6 +18,9 @@ probably larger than geoid model differences).
 **Original source:** `NOAA NCEI
 <https://ngdc.noaa.gov/mgg/geodas/trackline.html>`__
 
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio
+<https://github.com/fatiando-data/southern-africa-gravity>`__
 """
 import pandas as pd
 import pygmt

@@ -215,6 +215,27 @@ organization.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a section of an airborne survey acquired in 1990 by the Queensland Government, Australi...">
+
+.. only:: html
+
+ .. figure:: /gallery/images/thumb/sphx_glr_lightning-creek-magnetic_thumb.png
+     :alt: Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia
+
+     :ref:`sphx_glr_gallery_lightning-creek-magnetic.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/lightning-creek-magnetic
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="This dataset consists in a regular grid with topography and bathymetry over Southern Africa. It...">
 
 .. only:: html

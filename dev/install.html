@@ -46,7 +46,7 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/thebelab-helper.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -163,6 +163,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="gallery/lightning-creek-magnetic.html">
+     Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="gallery/southern-africa-topography.html">
      Topography and bathymetry of Southern Africa
     </a>
@@ -239,6 +244,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="api/generated/ensaio.fetch_earth_topography.html">
      ensaio.fetch_earth_topography
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/generated/ensaio.fetch_lightning_creek_magnetic.html">
+     ensaio.fetch_lightning_creek_magnetic
     </a>
    </li>
    <li class="toctree-l2">
@@ -457,16 +467,16 @@
 <span id="install"></span><h1>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h1>
 <p>There are different ways to install Ensaio:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="c2a9a3d5-9638-4526-b0b8-ea614832e35e" name="55caf5b4-2412-4962-a72c-0b0d2bfcdaa1" type="radio">
-</input><label class="tabbed-label" for="c2a9a3d5-9638-4526-b0b8-ea614832e35e">
+<input checked="checked" id="afdfc05d-a4ea-4692-af68-f7f7ee5fe6d7" name="14d15ffa-2265-4b13-b5ef-8b91d0a9f521" type="radio">
+</input><label class="tabbed-label" for="afdfc05d-a4ea-4692-af68-f7f7ee5fe6d7">
 pip</label><div class="tabbed-content docutils">
 <p>Using the <a class="reference external" href="https://pypi.org/project/pip/">pip</a> package manager:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install ensaio
 </pre></div>
 </div>
 </div>
-<input id="87c40347-99ee-45b1-9794-05bf9535d023" name="55caf5b4-2412-4962-a72c-0b0d2bfcdaa1" type="radio">
-</input><label class="tabbed-label" for="87c40347-99ee-45b1-9794-05bf9535d023">
+<input id="74b68a84-729b-498e-9c67-23f868400c6b" name="14d15ffa-2265-4b13-b5ef-8b91d0a9f521" type="radio">
+</input><label class="tabbed-label" for="74b68a84-729b-498e-9c67-23f868400c6b">
 conda</label><div class="tabbed-content docutils">
 <p>Using the <a class="reference external" href="https://conda.io/">conda</a> package manager that comes with the
 Anaconda/Miniconda distribution:</p>
@@ -474,8 +484,8 @@ Anaconda/Miniconda distribution:</p>
 </pre></div>
 </div>
 </div>
-<input id="789d2925-2923-4c56-b915-a7f0539b13be" name="55caf5b4-2412-4962-a72c-0b0d2bfcdaa1" type="radio">
-</input><label class="tabbed-label" for="789d2925-2923-4c56-b915-a7f0539b13be">
+<input id="508ff707-2d5e-4cbf-b159-234337d9937a" name="14d15ffa-2265-4b13-b5ef-8b91d0a9f521" type="radio">
+</input><label class="tabbed-label" for="508ff707-2d5e-4cbf-b159-234337d9937a">
 Development version</label><div class="tabbed-content docutils">
 <p>Using <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install the latest <strong>unreleased</strong> version from GitHub
 (<strong>not recommended</strong> in most situations):</p>
@@ -491,7 +501,7 @@ Development version</label><div class="tabbed-content docutils">
 </div>
 <div class="section" id="which-python">
 <h2>Which Python?<a class="headerlink" href="#which-python" title="Permalink to this headline">¶</a></h2>
-<p>You’ll need <strong>Python &gt;= 3.6</strong> (see <a class="reference internal" href="compatibility.html#python-versions"><span class="std std-ref">Python version compatibility</span></a> for information on
+<p>You’ll need <strong>Python &gt;= 3.7</strong> (see <a class="reference internal" href="compatibility.html#python-versions"><span class="std std-ref">Python version compatibility</span></a> for information on
 Python version compatibility).</p>
 <p>We recommend using the
 <a class="reference external" href="https://www.anaconda.com/download">Anaconda</a>
@@ -550,7 +560,7 @@ install:</p>
   <p>
     
         &copy; Copyright 2022, The Ensaio Developers.<br/>
-      Last updated on May 03, 2022.<br/>
+      Last updated on Nov 24, 2022.<br/>
   </p>
 </footer>
 </main>

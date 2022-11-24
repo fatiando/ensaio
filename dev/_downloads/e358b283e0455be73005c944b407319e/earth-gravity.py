@@ -18,6 +18,10 @@ The data are calculated uniformly at 10 km above the WGS84 ellipsoid.
 **Original source:** `EIGEN-6C4 model
 <https://doi.org/10.5880/icgem.2015.1>`__
 
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio
+<https://github.com/fatiando-data/earth-gravity-10arcmin>`__
+
 """
 import pygmt
 import xarray as xr

@@ -21,6 +21,9 @@ Contains British Geological Survey materials © UKRI 2021.
 `British Geological Survey
 <https://www.bgs.ac.uk/datasets/gb-aeromagnetic-survey/>`__
 
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio <https://github.com/fatiando-data/britain-magnetic>`__
+
 """
 import numpy as np
 import pandas as pd

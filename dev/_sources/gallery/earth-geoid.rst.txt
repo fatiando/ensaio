@@ -28,7 +28,11 @@ model of the Earth's gravity field.
 **Original source:** `EIGEN-6C4 model
 <https://doi.org/10.5880/icgem.2015.1>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 19-24
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio
+<https://github.com/fatiando-data/earth-geoid-10arcmin>`__
+
+.. GENERATED FROM PYTHON SOURCE LINES 22-27
 
 .. code-block:: default
 
@@ -44,11 +48,11 @@ model of the Earth's gravity field.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 25-26
+.. GENERATED FROM PYTHON SOURCE LINES 28-29
 
 Download and cache the data and return the path to it on disk.
 
-.. GENERATED FROM PYTHON SOURCE LINES 26-29
+.. GENERATED FROM PYTHON SOURCE LINES 29-32
 
 .. code-block:: default
 
@@ -70,11 +74,11 @@ Download and cache the data and return the path to it on disk.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 30-31
+.. GENERATED FROM PYTHON SOURCE LINES 33-34
 
 Load the netCDF grid with xarray.
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-34
+.. GENERATED FROM PYTHON SOURCE LINES 34-37
 
 .. code-block:: default
 
@@ -120,6 +124,7 @@ Load the netCDF grid with xarray.
     }
 
     html[theme=dark],
+    body[data-theme=dark],
     body.vscode-dark {
       --xr-font-color0: rgba(255, 255, 255, 1);
       --xr-font-color2: rgba(255, 255, 255, 0.54);
@@ -349,6 +354,11 @@ Load the netCDF grid with xarray.
       grid-column: 4;
     }
 
+    .xr-index-preview {
+      grid-column: 2 / 5;
+      color: var(--xr-font-color2);
+    }
+
     .xr-var-name,
     .xr-var-dims,
     .xr-var-dtype,
@@ -370,14 +380,16 @@ Load the netCDF grid with xarray.
     }
 
     .xr-var-attrs,
-    .xr-var-data {
+    .xr-var-data,
+    .xr-index-data {
       display: none;
       background-color: var(--xr-background-color) !important;
       padding-bottom: 5px !important;
     }
 
     .xr-var-attrs-in:checked ~ .xr-var-attrs,
-    .xr-var-data-in:checked ~ .xr-var-data {
+    .xr-var-data-in:checked ~ .xr-var-data,
+    .xr-index-data-in:checked ~ .xr-index-data {
       display: block;
     }
 
@@ -387,13 +399,16 @@ Load the netCDF grid with xarray.
 
     .xr-var-name span,
     .xr-var-data,
+    .xr-index-name div,
+    .xr-index-data,
     .xr-attrs {
       padding-left: 25px !important;
     }
 
     .xr-attrs,
     .xr-var-attrs,
-    .xr-var-data {
+    .xr-var-data,
+    .xr-index-data {
       grid-column: 1 / -1;
     }
 
@@ -431,7 +446,8 @@ Load the netCDF grid with xarray.
     }
 
     .xr-icon-database,
-    .xr-icon-file-text2 {
+    .xr-icon-file-text2,
+    .xr-no-icon {
       display: inline-block;
       vertical-align: middle;
       width: 1em;
@@ -469,7 +485,7 @@ Load the netCDF grid with xarray.
         description:     height of the geoid with respect to the WGS84 ellipsoid
         units:           m
         actual_range:    [-106.5   86. ]
-        icgem_metadata:  generating_institute: gfz-potsdam\ngenerating_date: 2021...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'geoid'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1081</li><li><span class='xr-has-index'>longitude</span>: 2161</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-99ebe908-bdfd-421e-abe8-112f13e77d0c' class='xr-array-in' type='checkbox' checked><label for='section-99ebe908-bdfd-421e-abe8-112f13e77d0c' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-29.5 -29.5 -29.5 -29.5 -29.5 -29.5 ... 15.4 15.4 15.4 15.4 15.4 15.4</span></div><div class='xr-array-data'><pre>array([[-29.5     , -29.5     , -29.5     , ..., -29.5     , -29.5     ,
+        icgem_metadata:  generating_institute: gfz-potsdam\ngenerating_date: 2021...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'geoid'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1081</li><li><span class='xr-has-index'>longitude</span>: 2161</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-640da6de-38b5-4d00-927d-973710b1c47d' class='xr-array-in' type='checkbox' checked><label for='section-640da6de-38b5-4d00-927d-973710b1c47d' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-29.5 -29.5 -29.5 -29.5 -29.5 -29.5 ... 15.4 15.4 15.4 15.4 15.4 15.4</span></div><div class='xr-array-data'><pre>array([[-29.5     , -29.5     , -29.5     , ..., -29.5     , -29.5     ,
             -29.5     ],
            [-29.5     , -29.5     , -29.5     , ..., -29.5     , -29.5     ,
             -29.5     ],
@@ -481,9 +497,27 @@ Load the netCDF grid with xarray.
            [ 15.2     ,  15.2     ,  15.2     , ...,  15.2     ,  15.2     ,
              15.2     ],
            [ 15.400001,  15.400001,  15.400001, ...,  15.400001,  15.400001,
-             15.400001]], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-c2728efc-93ec-41ca-a78a-31ea3bec9a47' class='xr-section-summary-in' type='checkbox'  checked><label for='section-c2728efc-93ec-41ca-a78a-31ea3bec9a47' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-180.0 -179.8 ... 179.8 180.0</div><input id='attrs-30e9f113-bb01-40f6-8f02-5bd0b64ecd59' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-30e9f113-bb01-40f6-8f02-5bd0b64ecd59' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f02eb163-f526-492b-a96a-033192817d6f' class='xr-var-data-in' type='checkbox'><label for='data-f02eb163-f526-492b-a96a-033192817d6f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[-180.  180.]</dd></dl></div><div class='xr-var-data'><pre>array([-180.      , -179.833333, -179.666667, ...,  179.666667,  179.833333,
-            180.      ])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-90.0 -89.83 -89.67 ... 89.83 90.0</div><input id='attrs-4b3d16bf-7cc4-4e91-8dc6-d4f44fc3d08d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4b3d16bf-7cc4-4e91-8dc6-d4f44fc3d08d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e82e75e9-9768-4b40-af26-f00ca3f5d844' class='xr-var-data-in' type='checkbox'><label for='data-e82e75e9-9768-4b40-af26-f00ca3f5d844' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-90.  90.]</dd></dl></div><div class='xr-var-data'><pre>array([-90.      , -89.833333, -89.666667, ...,  89.666667,  89.833333,
-            90.      ])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-3fcf6191-2b57-4276-b9c7-752661359890' class='xr-section-summary-in' type='checkbox'  ><label for='section-3fcf6191-2b57-4276-b9c7-752661359890' class='xr-section-summary' >Attributes: <span>(12)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>Geoid height (EIGEN-6C4) with respect to WGS84</dd><dt><span>crs :</span></dt><dd>WGS84</dd><dt><span>source :</span></dt><dd>Generated from the EIGEN-6C4 model by the ICGEM Calculation Service (http://icgem.gfz-potsdam.de)</dd><dt><span>license :</span></dt><dd>Creative Commons Attribution 4.0 International Licence</dd><dt><span>references :</span></dt><dd>https://doi.org/10.5880/icgem.2015.1</dd><dt><span>long_name :</span></dt><dd>geoid height</dd><dt><span>standard_name :</span></dt><dd>geoid_height_above_reference_ellipsoid</dd><dt><span>description :</span></dt><dd>height of the geoid with respect to the WGS84 ellipsoid</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[-106.5   86. ]</dd><dt><span>icgem_metadata :</span></dt><dd>generating_institute: gfz-potsdam
+             15.400001]], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-1184e321-2fce-4de0-a741-ced93b0ed670' class='xr-section-summary-in' type='checkbox'  checked><label for='section-1184e321-2fce-4de0-a741-ced93b0ed670' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-180.0 -179.8 ... 179.8 180.0</div><input id='attrs-b229c0e9-1d1f-42ff-8219-145326a446ce' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b229c0e9-1d1f-42ff-8219-145326a446ce' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d26e7f5b-6771-4a9b-891f-c6532e74c2ca' class='xr-var-data-in' type='checkbox'><label for='data-d26e7f5b-6771-4a9b-891f-c6532e74c2ca' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[-180.  180.]</dd></dl></div><div class='xr-var-data'><pre>array([-180.      , -179.833333, -179.666667, ...,  179.666667,  179.833333,
+            180.      ])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-90.0 -89.83 -89.67 ... 89.83 90.0</div><input id='attrs-4b0ae1a2-6428-40f7-be1b-b2d286c2c690' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4b0ae1a2-6428-40f7-be1b-b2d286c2c690' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b09a25c8-944b-4a93-938d-55a39aff4561' class='xr-var-data-in' type='checkbox'><label for='data-b09a25c8-944b-4a93-938d-55a39aff4561' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-90.  90.]</dd></dl></div><div class='xr-var-data'><pre>array([-90.      , -89.833333, -89.666667, ...,  89.666667,  89.833333,
+            90.      ])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-cc40d545-6f49-4e3b-9510-261a08d5e299' class='xr-section-summary-in' type='checkbox'  ><label for='section-cc40d545-6f49-4e3b-9510-261a08d5e299' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-faebe9ca-896c-4c91-b369-ec4b1e5b68d4' class='xr-index-data-in' type='checkbox'/><label for='index-faebe9ca-896c-4c91-b369-ec4b1e5b68d4' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([             -180.0, -179.83333333333334, -179.66666666666666,
+                               -179.5, -179.33333333333334, -179.16666666666666,
+                               -179.0, -178.83333333333334, -178.66666666666666,
+                               -178.5,
+                  ...
+                                178.5,  178.66666666666663,  178.83333333333331,
+                                179.0,  179.16666666666663,  179.33333333333331,
+                                179.5,  179.66666666666663,  179.83333333333331,
+                                180.0],
+                 dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=2161))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-c7b67f16-05ce-4b17-8341-4d4c58b48ca1' class='xr-index-data-in' type='checkbox'/><label for='index-c7b67f16-05ce-4b17-8341-4d4c58b48ca1' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([             -90.0, -89.83333333333333, -89.66666666666667,
+                               -89.5, -89.33333333333333, -89.16666666666667,
+                               -89.0, -88.83333333333333, -88.66666666666667,
+                               -88.5,
+                  ...
+                                88.5,  88.66666666666666,  88.83333333333331,
+                                89.0,  89.16666666666666,  89.33333333333331,
+                                89.5,  89.66666666666666,  89.83333333333331,
+                                90.0],
+                 dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=1081))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-50e97e45-3b67-4efb-9924-67b9e9b2dcce' class='xr-section-summary-in' type='checkbox'  ><label for='section-50e97e45-3b67-4efb-9924-67b9e9b2dcce' class='xr-section-summary' >Attributes: <span>(12)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>Geoid height (EIGEN-6C4) with respect to WGS84</dd><dt><span>crs :</span></dt><dd>WGS84</dd><dt><span>source :</span></dt><dd>Generated from the EIGEN-6C4 model by the ICGEM Calculation Service (http://icgem.gfz-potsdam.de)</dd><dt><span>license :</span></dt><dd>Creative Commons Attribution 4.0 International Licence</dd><dt><span>references :</span></dt><dd>https://doi.org/10.5880/icgem.2015.1</dd><dt><span>long_name :</span></dt><dd>geoid height</dd><dt><span>standard_name :</span></dt><dd>geoid_height_above_reference_ellipsoid</dd><dt><span>description :</span></dt><dd>height of the geoid with respect to the WGS84 ellipsoid</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[-106.5   86. ]</dd><dt><span>icgem_metadata :</span></dt><dd>generating_institute: gfz-potsdam
     generating_date: 2021/06/11
     product_type: gravity_field
     body: earth
@@ -522,11 +556,11 @@ Load the netCDF grid with xarray.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-36
+.. GENERATED FROM PYTHON SOURCE LINES 38-39
 
 Make a PyGMT pseudo-color map of the grid in a Mollweide projection.
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-46
+.. GENERATED FROM PYTHON SOURCE LINES 39-49
 
 .. code-block:: default
 
@@ -563,7 +597,7 @@ Make a PyGMT pseudo-color map of the grid in a Mollweide projection.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.550 seconds)
+   **Total running time of the script:** ( 0 minutes  9.631 seconds)
 
 
 .. _sphx_glr_download_gallery_earth-geoid.py:

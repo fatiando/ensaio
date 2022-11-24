@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-        <title>ensaio.fetch_bushveld_gravity | Ensaio dev</title>
+        <title>ensaio.fetch_lightning_creek_magnetic | Ensaio dev</title>
     
 
     
@@ -51,8 +51,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ensaio.fetch_caribbean_bathymetry" href="ensaio.fetch_caribbean_bathymetry.html" />
-    <link rel="prev" title="ensaio.fetch_british_columbia_lidar" href="ensaio.fetch_british_columbia_lidar.html" />
+    <link rel="next" title="ensaio.fetch_osborne_magnetic" href="ensaio.fetch_osborne_magnetic.html" />
+    <link rel="prev" title="ensaio.fetch_earth_topography" href="ensaio.fetch_earth_topography.html" />
     <!-- Plausible analytics for anonymous usage statistics -->
     <script defer data-domain="fatiando.org" src="https://plausible.io/js/plausible.js"></script>
 
@@ -221,8 +221,8 @@
      ensaio.fetch_british_columbia_lidar
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="ensaio.fetch_bushveld_gravity.html">
      ensaio.fetch_bushveld_gravity
     </a>
    </li>
@@ -246,8 +246,8 @@
      ensaio.fetch_earth_topography
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ensaio.fetch_lightning_creek_magnetic.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      ensaio.fetch_lightning_creek_magnetic
     </a>
    </li>
@@ -366,7 +366,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/api/generated/ensaio.fetch_bushveld_gravity.rst.txt"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/api/generated/ensaio.fetch_lightning_creek_magnetic.rst.txt"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.rst</button></a>
         <!-- Download PDF via print -->
@@ -386,10 +386,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/fatiando/ensaio/issues/new?title=Issue%20on%20page%20%2Fapi/generated/ensaio.fetch_bushveld_gravity.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/fatiando/ensaio/issues/new?title=Issue%20on%20page%20%2Fapi/generated/ensaio.fetch_lightning_creek_magnetic.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/fatiando/ensaio/edit/main/doc/api/generated/ensaio.fetch_bushveld_gravity.rst"><button
+        <a class="edit-button" href="https://github.com/fatiando/ensaio/edit/main/doc/api/generated/ensaio.fetch_lightning_creek_magnetic.rst"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -415,11 +415,11 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-using-ensaio-fetch-bushveld-gravity">
+  <a class="reference internal nav-link" href="#examples-using-ensaio-fetch-lightning-creek-magnetic">
    Examples using
    <code class="docutils literal notranslate">
     <span class="pre">
-     ensaio.fetch_bushveld_gravity
+     ensaio.fetch_lightning_creek_magnetic
     </span>
    </code>
   </a>
@@ -434,7 +434,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>ensaio.fetch_bushveld_gravity</h1>
+                <h1>ensaio.fetch_lightning_creek_magnetic</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -445,11 +445,11 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-using-ensaio-fetch-bushveld-gravity">
+  <a class="reference internal nav-link" href="#examples-using-ensaio-fetch-lightning-creek-magnetic">
    Examples using
    <code class="docutils literal notranslate">
     <span class="pre">
-     ensaio.fetch_bushveld_gravity
+     ensaio.fetch_lightning_creek_magnetic
     </span>
    </code>
   </a>
@@ -463,34 +463,28 @@
             
               <div>
                 
-  <div class="section" id="ensaio-fetch-bushveld-gravity">
-<h1>ensaio.fetch_bushveld_gravity<a class="headerlink" href="#ensaio-fetch-bushveld-gravity" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="ensaio-fetch-lightning-creek-magnetic">
+<h1>ensaio.fetch_lightning_creek_magnetic<a class="headerlink" href="#ensaio-fetch-lightning-creek-magnetic" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="ensaio.fetch_bushveld_gravity">
-<span class="sig-prename descclassname"><span class="pre">ensaio.</span></span><span class="sig-name descname"><span class="pre">fetch_bushveld_gravity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">version</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ensaio/_fetchers.html#fetch_bushveld_gravity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ensaio.fetch_bushveld_gravity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gravity ground-based data over the Bushveld Complex, Southern Africa</p>
-<p>This dataset contains ground gravity observations over the area that
-comprises the Bushveld Igenous Complex in Southern Africa, including
-preprocessed gravity fields such as the <strong>gravity disturbance</strong> and the
-<strong>bouguer gravity disturbance</strong> (topography-free gravity disturbance). In
-addition, the dataset contains the heights of the observation points
-referenced on the WGS84 reference ellipsoid and over the mean sea-level
-(what can be considered to be the geoid). This dataset was built upon
-a portion of the Southern Africa gravity compilation available through
-<a class="reference external" href="https://www.ngdc.noaa.gov/mgg/gravity/">NOAA NCEI</a>.</p>
-<p><strong>Format:</strong> CSV with xz (lzma) compression.</p>
-<p><strong>Load with:</strong> <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html#pandas.read_csv" title="(in pandas v1.5.2)"><code class="xref py py-func docutils literal notranslate"><span class="pre">pandas.read_csv</span></code></a></p>
-<p><strong>Original source:</strong> <a class="reference external" href="https://www.ngdc.noaa.gov/mgg/gravity/">NOAA NCEI</a>
-(gravity) and <a class="reference external" href="https://doi.org/10.7289/V5C8276M">ETOPO1</a> (topography)</p>
-<p><strong>Original license:</strong> <a class="reference external" href="https://ngdc.noaa.gov/ngdcinfo/privacy.html">public domain</a> (gravity) and <a class="reference external" href="https://ngdc.noaa.gov/mgg/global/dem_faq.html#sec-2.4">public
-domain</a>
-(topography)</p>
-<p><strong>Pre-processing:</strong> <a class="reference external" href="https://github.com/fatiando-data/bushveld-gravity">Source code for preparation of the original dataset
+<dt class="sig sig-object py" id="ensaio.fetch_lightning_creek_magnetic">
+<span class="sig-prename descclassname"><span class="pre">ensaio.</span></span><span class="sig-name descname"><span class="pre">fetch_lightning_creek_magnetic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">version</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ensaio/_fetchers.html#fetch_lightning_creek_magnetic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ensaio.fetch_lightning_creek_magnetic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia</p>
+<p>This is a section of a survey acquired in 1990 by the Queensland
+Government, Australia. The grid has 50 m resolution (UTM coordinates) and
+is at a uniform orthometric height of 500 m. Total field anomalies are in
+nT.</p>
+<p><strong>Format:</strong> netCDF4 with zlib compression</p>
+<p><strong>Load with:</strong> <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.load_dataarray.html#xarray.load_dataarray" title="(in xarray v2022.11.1.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">xarray.load_dataarray</span></code></a> (requires the <a class="reference external" href="https://github.com/Unidata/netcdf4-python">netcdf4</a> library)</p>
+<p><strong>Original source:</strong> <a class="reference external" href="http://pid.geoscience.gov.au/dataset/ga/142419">Geophysical Acquisition &amp; Processing Section 2019.
+MIM Data from Mt Isa Inlier, QLD (P1029), magnetic line data, AWAGS
+levelled. Geoscience Australia, Canberra</a></p>
+<p><strong>Original license:</strong> CC-BY</p>
+<p><strong>Pre-processing:</strong> <a class="reference external" href="https://github.com/fatiando-data/lightning-creek-magnetic-grid">Source code for preparation of the original dataset
 for redistribution in Ensaio</a></p>
 <p><strong>Versions:</strong></p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/fatiando-data/bushveld-gravity/releases/tag/v1">1</a>
-(doi:<a class="reference external" href="https://doi.org/10.5281/zenodo.6511942">10.5281/zenodo.6511942</a>)</p></li>
+<li><p><a class="reference external" href="https://github.com/fatiando-data/lightning-creek-magnetic-grid/releases/tag/v1">1</a>
+(doi:<a class="reference external" href="https://doi.org/10.5281/zenodo.7079711">10.5281/zenodo.7079711</a>)</p></li>
 </ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -502,11 +496,11 @@ for redistribution in Ensaio</a></p>
 </dl>
 </dd></dl>
 
-<div class="section" id="examples-using-ensaio-fetch-bushveld-gravity">
-<h2>Examples using <code class="docutils literal notranslate"><span class="pre">ensaio.fetch_bushveld_gravity</span></code><a class="headerlink" href="#examples-using-ensaio-fetch-bushveld-gravity" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="This dataset contains ground gravity observations over the area that comprises the Bushveld Ige..."><div class="figure align-default" id="id2">
-<img alt="Gravity ground-based data over the Bushveld Complex, Southern Africa" src="../../_images/sphx_glr_bushveld-gravity_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../../gallery/bushveld-gravity.html#sphx-glr-gallery-bushveld-gravity-py"><span class="std std-ref">Gravity ground-based data over the Bushveld Complex, Southern Africa</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<div class="section" id="examples-using-ensaio-fetch-lightning-creek-magnetic">
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">ensaio.fetch_lightning_creek_magnetic</span></code><a class="headerlink" href="#examples-using-ensaio-fetch-lightning-creek-magnetic" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="This is a section of an airborne survey acquired in 1990 by the Queensland Government, Australi..."><div class="figure align-default" id="id2">
+<img alt="Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia" src="../../_images/sphx_glr_lightning-creek-magnetic_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../gallery/lightning-creek-magnetic.html#sphx-glr-gallery-lightning-creek-magnetic-py"><span class="std std-ref">Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 </div><div style='clear:both'></div></div>
 </div>
@@ -517,17 +511,17 @@ for redistribution in Ensaio</a></p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="ensaio.fetch_british_columbia_lidar.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="ensaio.fetch_earth_topography.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">ensaio.fetch_british_columbia_lidar</p>
+            <p class="prev-next-title">ensaio.fetch_earth_topography</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="ensaio.fetch_caribbean_bathymetry.html" title="next page">
+    <a class='right-next' id="next-link" href="ensaio.fetch_osborne_magnetic.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ensaio.fetch_caribbean_bathymetry</p>
+        <p class="prev-next-title">ensaio.fetch_osborne_magnetic</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

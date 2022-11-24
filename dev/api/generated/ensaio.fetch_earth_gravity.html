@@ -46,7 +46,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/thebelab-helper.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -163,6 +163,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/lightning-creek-magnetic.html">
+     Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../gallery/southern-africa-topography.html">
      Topography and bathymetry of Southern Africa
     </a>
@@ -239,6 +244,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="ensaio.fetch_earth_topography.html">
      ensaio.fetch_earth_topography
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ensaio.fetch_lightning_creek_magnetic.html">
+     ensaio.fetch_lightning_creek_magnetic
     </a>
    </li>
    <li class="toctree-l2">
@@ -468,9 +478,11 @@ refers to the combined gravitational and centrifugal accelerations.</p>
 <p>There are 1081 x 2161 grid points in total. Coordinates are longitude and
 latitude (geodetic) plus a non-dimensional coordinate height (geometric).</p>
 <p><strong>Format:</strong> netCDF4 with zlib compression</p>
-<p><strong>Load with:</strong> <a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.load_dataarray.html#xarray.load_dataarray" title="(in xarray v2022.3.1.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">xarray.load_dataarray</span></code></a> (requires the <a class="reference external" href="https://github.com/Unidata/netcdf4-python">netcdf4</a> library)</p>
+<p><strong>Load with:</strong> <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.load_dataarray.html#xarray.load_dataarray" title="(in xarray v2022.11.1.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">xarray.load_dataarray</span></code></a> (requires the <a class="reference external" href="https://github.com/Unidata/netcdf4-python">netcdf4</a> library)</p>
 <p><strong>Original source:</strong> <a class="reference external" href="https://doi.org/10.5880/icgem.2015.1">EIGEN-6C4 model</a></p>
 <p><strong>Original license:</strong> CC-BY</p>
+<p><strong>Pre-processing:</strong> <a class="reference external" href="https://github.com/fatiando-data/earth-gravity-10arcmin">Source code for preparation of the original dataset
+for redistribution in Ensaio</a></p>
 <p><strong>Versions:</strong></p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/fatiando-data/earth-gravity-10arcmin/releases/tag/v1">1</a>
@@ -478,10 +490,10 @@ latitude (geodetic) plus a non-dimensional coordinate height (geometric).</p>
 </ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The data version to fetch. See the available versions above.</p>
+<dd class="field-odd"><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) – The data version to fetch. See the available versions above.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pathlib.Path</span></code></a>) – Path to the downloaded file on disk.</p>
+<dd class="field-even"><p><strong>fname</strong> (<a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pathlib.Path</span></code></a>) – Path to the downloaded file on disk.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -523,7 +535,7 @@ latitude (geodetic) plus a non-dimensional coordinate height (geometric).</p>
   <p>
     
         &copy; Copyright 2022, The Ensaio Developers.<br/>
-      Last updated on May 03, 2022.<br/>
+      Last updated on Nov 24, 2022.<br/>
   </p>
 </footer>
 </main>

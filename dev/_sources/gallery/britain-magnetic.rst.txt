@@ -34,7 +34,10 @@ Contains British Geological Survey materials © UKRI 2021.
 `British Geological Survey
 <https://www.bgs.ac.uk/datasets/gb-aeromagnetic-survey/>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 25-31
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio <https://github.com/fatiando-data/britain-magnetic>`__
+
+.. GENERATED FROM PYTHON SOURCE LINES 28-34
 
 .. code-block:: default
 
@@ -51,11 +54,11 @@ Contains British Geological Survey materials © UKRI 2021.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-33
+.. GENERATED FROM PYTHON SOURCE LINES 35-36
 
 Download and cache the data and return the path to it on disk
 
-.. GENERATED FROM PYTHON SOURCE LINES 33-36
+.. GENERATED FROM PYTHON SOURCE LINES 36-39
 
 .. code-block:: default
 
@@ -77,11 +80,11 @@ Download and cache the data and return the path to it on disk
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-38
+.. GENERATED FROM PYTHON SOURCE LINES 40-41
 
 Load the CSV formatted data with pandas
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-41
+.. GENERATED FROM PYTHON SOURCE LINES 41-44
 
 .. code-block:: default
 
@@ -230,12 +233,12 @@ Load the CSV formatted data with pandas
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 42-44
+.. GENERATED FROM PYTHON SOURCE LINES 45-47
 
 Make a PyGMT map with the data points colored by the total field magnetic
 anomaly.
 
-.. GENERATED FROM PYTHON SOURCE LINES 44-60
+.. GENERATED FROM PYTHON SOURCE LINES 47-63
 
 .. code-block:: default
 
@@ -278,7 +281,7 @@ anomaly.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  24.859 seconds)
+   **Total running time of the script:** ( 0 minutes  22.136 seconds)
 
 
 .. _sphx_glr_download_gallery_britain-magnetic.py:

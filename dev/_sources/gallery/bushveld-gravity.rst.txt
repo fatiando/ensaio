@@ -31,10 +31,14 @@ the geoid). This dataset was built upon a portion of the Southern Africa
 gravity compilation available through NOAA NCEI.
 
 **Original source:**
-* gravity: `NOAA NCEI <https://www.ngdc.noaa.gov/mgg/gravity/>`__
-* topography: `ETOPO1 <https://doi.org/10.7289/V5C8276M>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 25-31
+* Gravity: `NOAA NCEI <https://www.ngdc.noaa.gov/mgg/gravity/>`__
+* Topography: `ETOPO1 <https://doi.org/10.7289/V5C8276M>`__
+
+**Pre-processing:** `Source code for preparation of the original dataset for
+redistribution in Ensaio <https://github.com/fatiando-data/bushveld-gravity>`__
+
+.. GENERATED FROM PYTHON SOURCE LINES 29-35
 
 .. code-block:: default
 
@@ -51,11 +55,11 @@ gravity compilation available through NOAA NCEI.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-33
+.. GENERATED FROM PYTHON SOURCE LINES 36-37
 
 Download and cache the data and return the path to it on disk
 
-.. GENERATED FROM PYTHON SOURCE LINES 33-36
+.. GENERATED FROM PYTHON SOURCE LINES 37-40
 
 .. code-block:: default
 
@@ -77,11 +81,11 @@ Download and cache the data and return the path to it on disk
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-38
+.. GENERATED FROM PYTHON SOURCE LINES 41-42
 
 Load the CSV formatted data with pandas
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-41
+.. GENERATED FROM PYTHON SOURCE LINES 42-45
 
 .. code-block:: default
 
@@ -242,11 +246,11 @@ Load the CSV formatted data with pandas
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 42-43
+.. GENERATED FROM PYTHON SOURCE LINES 46-47
 
 Make a PyGMT map with the data points colored by the gravity data.
 
-.. GENERATED FROM PYTHON SOURCE LINES 43-69
+.. GENERATED FROM PYTHON SOURCE LINES 47-73
 
 .. code-block:: default
 
@@ -299,7 +303,7 @@ Make a PyGMT map with the data points colored by the gravity data.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.357 seconds)
+   **Total running time of the script:** ( 0 minutes  6.090 seconds)
 
 
 .. _sphx_glr_download_gallery_bushveld-gravity.py:
