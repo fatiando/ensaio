@@ -21,6 +21,7 @@ Documentation:
 
 Maintenance:
 
+* Drop support for Python 3.6  (`#50 <https://github.com/fatiando/ensaio/pull/50>`__)
 * Update method of setting outputs in Actions (`#44 <https://github.com/fatiando/ensaio/pull/44>`__)
 * Simplify the CI matrix for the test workflow (`#43 <https://github.com/fatiando/ensaio/pull/43>`__)
 * Update the GitHub Actions "cache" to v3 (`#42 <https://github.com/fatiando/ensaio/pull/42>`__)
@@ -36,6 +37,10 @@ Version 0.4.0
 Released on: 2022/05/03
 
 DOI: https://doi.org/10.5281/zenodo.6513957
+
+.. warning::
+
+    **Ensaio v0.4.0 is the last release that is compatible with Python 3.6.**
 
 New data:
 
