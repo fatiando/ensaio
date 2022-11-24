@@ -39,7 +39,7 @@ There are different ways to install Ensaio:
 Which Python?
 -------------
 
-You'll need **Python >= 3.6** (see :ref:`python-versions` for information on
+You'll need **Python >= 3.7** (see :ref:`python-versions` for information on
 Python version compatibility).
 
 We recommend using the
