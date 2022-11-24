@@ -3,12 +3,44 @@
 Changelog
 =========
 
+Version 0.5.0
+-------------
+
+Released on: 2022/11/24
+
+DOI: https://doi.org/10.5281/zenodo.7260639
+
+New data:
+
+* Add the Lightning Creek magnetic anomaly grid (`#38 <https://github.com/fatiando/ensaio/pull/38>`__)
+
+Documentation:
+
+* Add links to processing repositories on GitHub (`#40 <https://github.com/fatiando/ensaio/pull/40>`__, `#45 <https://github.com/fatiando/ensaio/pull/45>`__ and `#46 <https://github.com/fatiando/ensaio/pull/46>`__)
+* Add impostor syndrome disclaimer etc to the README (`#37 <https://github.com/fatiando/ensaio/pull/37>`__)
+
+Maintenance:
+
+* Drop support for Python 3.6  (`#50 <https://github.com/fatiando/ensaio/pull/50>`__)
+* Update method of setting outputs in Actions (`#44 <https://github.com/fatiando/ensaio/pull/44>`__)
+* Simplify the CI matrix for the test workflow (`#43 <https://github.com/fatiando/ensaio/pull/43>`__)
+* Update the GitHub Actions "cache" to v3 (`#42 <https://github.com/fatiando/ensaio/pull/42>`__)
+
+This release contains contributions from:
+
+* Mariana Gomez
+* Leonardo Uieda
+
 Version 0.4.0
 -------------
 
 Released on: 2022/05/03
 
 DOI: https://doi.org/10.5281/zenodo.6513957
+
+.. warning::
+
+    **Ensaio v0.4.0 is the last release that is compatible with Python 3.6.**
 
 New data:
 
@@ -30,7 +62,6 @@ Documentation:
 Maintenance:
 
 * Convert the README to Markdown (`#29 <https://github.com/fatiando/ensaio/pull/29>`__)
-
 
 This release contains contributions from:
 
