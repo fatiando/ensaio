@@ -1,0 +1,1292 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>ensaio._fetchers | Ensaio v0.5.0</title>
+    
+
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.87249bd3f7b54630a2508c1b61607c7f.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/thebelab-helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <!-- Plausible analytics for anonymous usage statistics -->
+    <script defer data-domain="fatiando.org" src="https://plausible.io/js/plausible.js"></script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/ensaio-logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Ensaio <span class="project-version">v0.5.0</span></h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  User Guide
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../install.html">
+   Installing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tutorial/using.html">
+   Downloading data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tutorial/developers.html">
+   Using Ensaio in your project
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../gallery/index.html">
+   Available datasets
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/caribbean-bathymetry.html">
+     Bathymetry single-beam surveys of the Caribbean
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/earth-geoid.html">
+     Earth geoid height grid at 10 arc-minute resolution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/earth-gravity.html">
+     Earth gravity grid at 10 arc-minute resolution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/earth-topography.html">
+     Earth topography grid at 10 arc-minute resolution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/alps-gps-velocity.html">
+     GPS velocities (3-component) for the Alps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/bushveld-gravity.html">
+     Gravity ground-based data over the Bushveld Complex, Southern Africa
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/southern-africa-gravity.html">
+     Gravity ground-based surveys of Southern Africa
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/britain-magnetic.html">
+     Magnetic airborne survey of Britain
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/osborne-magnetic.html">
+     Magnetic airborne survey of the Osborne Mine, Australia
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/lightning-creek-magnetic.html">
+     Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/southern-africa-topography.html">
+     Topography and bathymetry of Southern Africa
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/sierra-negra-topography.html">
+     Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/british-columbia-lidar.html">
+     Topography of the Trail Islands in British Columbia, Canada
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../api/index.html">
+   List of functions and classes (API)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../api/generated/ensaio.locate.html">
+     ensaio.locate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../api/generated/ensaio.fetch_alps_gps.html">
+     ensaio.fetch_alps_gps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../api/generated/ensaio.fetch_britain_magnetic.html">
+     ensaio.fetch_britain_magnetic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../api/generated/ensaio.fetch_british_columbia_lidar.html">
+     ensaio.fetch_british_columbia_lidar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../api/generated/ensaio.fetch_bushveld_gravity.html">
+     ensaio.fetch_bushveld_gravity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../api/generated/ensaio.fetch_caribbean_bathymetry.html">
+     ensaio.fetch_caribbean_bathymetry
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../api/generated/ensaio.fetch_earth_geoid.html">
+     ensaio.fetch_earth_geoid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../api/generated/ensaio.fetch_earth_gravity.html">
+     ensaio.fetch_earth_gravity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../api/generated/ensaio.fetch_earth_topography.html">
+     ensaio.fetch_earth_topography
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../api/generated/ensaio.fetch_lightning_creek_magnetic.html">
+     ensaio.fetch_lightning_creek_magnetic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../api/generated/ensaio.fetch_osborne_magnetic.html">
+     ensaio.fetch_osborne_magnetic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../api/generated/ensaio.fetch_sierra_negra_topography.html">
+     ensaio.fetch_sierra_negra_topography
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../api/generated/ensaio.fetch_southern_africa_gravity.html">
+     ensaio.fetch_southern_africa_gravity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../api/generated/ensaio.fetch_southern_africa_topography.html">
+     ensaio.fetch_southern_africa_topography
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../compatibility.html">
+   Version compatibility
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../changes.html">
+   Changelog
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../versions.html">
+   Documentation for other versions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Community
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://www.fatiando.org/contact/">
+   Join the community
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/fatiando/community/blob/main/CODE_OF_CONDUCT.md">
+   Code of Conduct
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/fatiando/ensaio/blob/main/CONTRIBUTING.md">
+   How to contribute
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/fatiando/ensaio">
+   Source code on GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/fatiando/ensaio/blob/main/AUTHORS.md">
+   Authors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://www.fatiando.org">
+   Fatiando a Terra
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/fatiando/ensaio"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/fatiando/ensaio/issues/new?title=Issue%20on%20page%20%2F_modules/ensaio/_fetchers.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <h1>Source code for ensaio._fetchers</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (c) 2021 The Ensaio Developers.</span>
+<span class="c1"># Distributed under the terms of the BSD 3-Clause License.</span>
+<span class="c1"># SPDX-License-Identifier: BSD-3-Clause</span>
+<span class="c1">#</span>
+<span class="c1"># This code is part of the Fatiando a Terra project (https://www.fatiando.org)</span>
+<span class="c1">#</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Functions that fetch each of our sample datasets.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">import</span> <span class="nn">pooch</span>
+
+<span class="n">REGISTRY</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;alps-gps-velocity.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:195ee3d88783ce01b6190c2af89f2b14&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5879163&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/alps-gps-velocity/releases/download/v1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;britain-magnetic.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:8dbbda02c7e74f63adc461909358f056&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5879260&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/britain-magnetic/releases/download/v1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;british-columbia-lidar.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:354c725a95036bd8340bc14e043ece5a&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5881887&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/british-columbia-lidar/releases/download/v1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;bushveld-gravity.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:368284cc210c6bbe256e9e49e892f262&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.6511942&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/bushveld-gravity/releases/download/v1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;caribbean-bathymetry.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:a7332aa6e69c77d49d7fb54b764caa82&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5882211&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/caribbean-bathymetry/releases/download/v1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;earth-geoid-10arcmin.nc&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:39b97344e704eb68fa381df2eb47da0f&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5882205&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/earth-geoid-10arcmin/releases/download/v1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;earth-gravity-10arcmin.nc&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:56df20e0e67e28ebe4739a2f0357c4a6&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5882207&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/earth-gravity-10arcmin/releases/download/v1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;earth-topography-10arcmin.nc&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:c43b61322e03669c4313ba3d9a58028d&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5882203&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/earth-topography-10arcmin/releases/download/v1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;lightning-creek-magnetic-grid.nc&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:4b19c2eabe75865183964983861cbf68&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.7079711&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/lightning-creek-magnetic-grid/releases/download/v1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;osborne-magnetic.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:b26777bdde2f1ecb97dda655c8b1cf71&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5882209&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/osborne-magnetic/releases/download/v1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;sierra-negra-topography.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:9f6f64d47d26773e37b154cf964724e3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.6139057&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/sierra-negra-topography/releases/download/v1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;southern-africa-gravity.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:1dee324a14e647855366d6eb01a1ef35&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5882430&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/southern-africa-gravity/releases/download/v1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;southern-africa-topography.nc&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:609d14fe4e551c5dcf320cdceedd30e8&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.6481379&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/southern-africa-topography/releases/download/v1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create the Pooch instance that fetches a dataset of a particular version</span>
+
+<span class="sd">    Cache location defaults to ``pooch.os_cache(&quot;ensaio&quot;)`` and can be</span>
+<span class="sd">    overwritten with the ``ENSAIO_DATA_DIR`` environment variable.</span>
+
+<span class="sd">    The data source defaults to the Zenodo DOI and can be switched to the</span>
+<span class="sd">    GitHub release URL by setting the environment variable</span>
+<span class="sd">    ``ENSAIO_DATA_FROM_GITHUB=true``.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    fname : str</span>
+<span class="sd">        Name of the data file we want to fetch.</span>
+<span class="sd">    version : int</span>
+<span class="sd">        Version number of the dataset that we want to fetch.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    repository : :class:`pooch.Pooch`</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">version_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;v</span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="c1"># Decide if we need to pull data from GitHub or the Zenodo DOIs</span>
+    <span class="n">envvar</span> <span class="o">=</span> <span class="s2">&quot;ENSAIO_DATA_FROM_GITHUB&quot;</span>
+    <span class="k">if</span> <span class="n">envvar</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">envvar</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;true&quot;</span><span class="p">:</span>
+        <span class="n">source</span> <span class="o">=</span> <span class="s2">&quot;url&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">source</span> <span class="o">=</span> <span class="s2">&quot;doi&quot;</span>
+    <span class="n">entry</span> <span class="o">=</span> <span class="n">REGISTRY</span><span class="p">[</span><span class="n">fname</span><span class="p">][</span><span class="n">version_str</span><span class="p">]</span>
+    <span class="n">repository</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="n">pooch</span><span class="o">.</span><span class="n">os_cache</span><span class="p">(</span><span class="s2">&quot;ensaio&quot;</span><span class="p">)),</span>
+        <span class="c1"># Just here so that Pooch doesn&#39;t complain about there not being a</span>
+        <span class="c1"># format marker in the string.</span>
+        <span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">{version}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">version</span><span class="o">=</span><span class="n">version_str</span><span class="p">,</span>
+        <span class="n">env</span><span class="o">=</span><span class="s2">&quot;ENSAIO_DATA_DIR&quot;</span><span class="p">,</span>
+        <span class="n">retry_if_failed</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+        <span class="n">registry</span><span class="o">=</span><span class="p">{</span><span class="n">fname</span><span class="p">:</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;hash&quot;</span><span class="p">]},</span>
+        <span class="n">urls</span><span class="o">=</span><span class="p">{</span><span class="n">fname</span><span class="p">:</span> <span class="n">_sanitize_url</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="n">source</span><span class="p">])</span> <span class="o">+</span> <span class="n">fname</span><span class="p">},</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">repository</span>
+
+
+<span class="k">def</span> <span class="nf">_sanitize_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Makes sure that the URL ends with a trailing ``/`` for Pooch.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    url : str</span>
+<span class="sd">        The URL for downloading the data, with or without a trailing ``/``.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    url : str</span>
+<span class="sd">        Sanitized download URL.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">url</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span>
+    <span class="k">return</span> <span class="n">url</span>
+
+
+<div class="viewcode-block" id="locate"><a class="viewcode-back" href="../../api/generated/ensaio.locate.html#ensaio.locate">[docs]</a><span class="k">def</span> <span class="nf">locate</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the location of the system-dependent data cache folder</span>
+
+<span class="sd">    This folder is not guaranteed to exist in the file system until a dataset</span>
+<span class="sd">    has been downloaded.</span>
+
+<span class="sd">    The default location is a ``ensaio/`` folder in the system-dependent</span>
+<span class="sd">    default cache folder. A different path can also be specified through the</span>
+<span class="sd">    ``ENSAIO_DATA_DIR`` environment variable.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    path : :class:`pathlib.Path`</span>
+<span class="sd">        Path to the cache folder.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="s2">&quot;alps-gps-velocity.csv.xz&quot;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">abspath</span><span class="o">.</span><span class="n">parent</span></div>
+
+
+<span class="k">def</span> <span class="nf">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if the version is in the allowed range, raise an error if not.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    version : int</span>
+<span class="sd">        Integer version of the data.</span>
+<span class="sd">    allowed : set or list</span>
+<span class="sd">        List or set of allowed values for the version.</span>
+<span class="sd">    name : str</span>
+<span class="sd">        Name of the dataset (used in the error message).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">version</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allowed</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Invalid version=</span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2"> for </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> dataset. Must be one of </span><span class="si">{</span><span class="n">allowed</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+
+
+<div class="viewcode-block" id="fetch_alps_gps"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_alps_gps.html#ensaio.fetch_alps_gps">[docs]</a><span class="k">def</span> <span class="nf">fetch_alps_gps</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Alpine 3-component GPS velocity dataset</span>
+
+<span class="sd">    This is a compilation of 3D GPS velocities for the Alps. The horizontal</span>
+<span class="sd">    velocities are reference to the Eurasian frame. Coordinates are referenced</span>
+<span class="sd">    to WGS84. All velocity components and even the position have error</span>
+<span class="sd">    estimates, which is very useful and rare to find in a lot of datasets.</span>
+
+<span class="sd">    There ~200 stations in total. The data available are: station ID,</span>
+<span class="sd">    longitude, latitude (geodetic), height (geometric), ground velocity in the</span>
+<span class="sd">    East, North, and upward directions, and the estimated uncertainties in each</span>
+<span class="sd">    of these.</span>
+
+<span class="sd">    **Format:** CSV with xz (lzma) compression.</span>
+
+<span class="sd">    **Load with:** :func:`pandas.read_csv`</span>
+
+<span class="sd">    **Original source:**</span>
+<span class="sd">    `Sánchez et al. (2018) &lt;https://doi.org/10.1594/PANGAEA.886889&gt;`__</span>
+
+<span class="sd">    **Original license:** CC-BY</span>
+
+<span class="sd">    **Pre-processing:** `Source code for preparation of the original dataset</span>
+<span class="sd">    for redistribution in Ensaio</span>
+<span class="sd">    &lt;https://github.com/fatiando-data/alps-gps-velocity&gt;`__</span>
+
+<span class="sd">    **Versions:**</span>
+
+<span class="sd">    * `1</span>
+<span class="sd">      &lt;https://github.com/fatiando-data/alps-gps-velocity/releases/tag/v1&gt;`_</span>
+<span class="sd">      (doi:`10.5281/zenodo.5879163 &lt;https://doi.org/10.5281/zenodo.5879163&gt;`__)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    version : int</span>
+<span class="sd">        The data version to fetch. See the available versions above.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fname : :class:`pathlib.Path`</span>
+<span class="sd">        Path to the downloaded file on disk.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alps GPS velocity&quot;</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;alps-gps-velocity.csv.xz&quot;</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="fetch_britain_magnetic"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_britain_magnetic.html#ensaio.fetch_britain_magnetic">[docs]</a><span class="k">def</span> <span class="nf">fetch_britain_magnetic</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Digitized airborne magnetic survey of Britain</span>
+
+<span class="sd">    This is a digitization of an airborne magnetic survey of Britain. Data are</span>
+<span class="sd">    sampled where flight lines crossed contours on the archive maps. Contains</span>
+<span class="sd">    only the total field magnetic anomaly, not the magnetic field intensity</span>
+<span class="sd">    measurements or corrections.</span>
+
+<span class="sd">    The exact date of measurements is not available (only the year). The</span>
+<span class="sd">    horizontal datum is WGS84 but the vertical datum is not specified.</span>
+
+<span class="sd">    There are 541,508 measurements in total with 6 columns available: line and</span>
+<span class="sd">    segment ID, year, longitude, latitude (geodetic), height (unknown datum),</span>
+<span class="sd">    total field magnetic anomaly.</span>
+
+<span class="sd">    Contains British Geological Survey materials © UKRI 2021.</span>
+
+<span class="sd">    **Format:** CSV with xz (lzma) compression.</span>
+
+<span class="sd">    **Load with:** :func:`pandas.read_csv`</span>
+
+<span class="sd">    **Original source:**</span>
+<span class="sd">    `British Geological Survey</span>
+<span class="sd">    &lt;https://www.bgs.ac.uk/datasets/gb-aeromagnetic-survey/&gt;`__</span>
+
+<span class="sd">    **Original license:** Open Government Licence</span>
+
+<span class="sd">    **Pre-processing:** `Source code for preparation of the original dataset</span>
+<span class="sd">    for redistribution in Ensaio</span>
+<span class="sd">    &lt;https://github.com/fatiando-data/britain-magnetic&gt;`__</span>
+
+<span class="sd">    **Versions:**</span>
+
+<span class="sd">    * `1</span>
+<span class="sd">      &lt;https://github.com/fatiando-data/britain-magnetic/releases/tag/v1&gt;`_</span>
+<span class="sd">      (doi:`10.5281/zenodo.5879260 &lt;https://doi.org/10.5281/zenodo.5879260&gt;`__)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    version : int</span>
+<span class="sd">        The data version to fetch. See the available versions above.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fname : :class:`pathlib.Path`</span>
+<span class="sd">        Path to the downloaded file on disk.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Britain aeromagnetic&quot;</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;britain-magnetic.csv.xz&quot;</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="fetch_british_columbia_lidar"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_british_columbia_lidar.html#ensaio.fetch_british_columbia_lidar">[docs]</a><span class="k">def</span> <span class="nf">fetch_british_columbia_lidar</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Topography (lidar point cloud) data of the Trail Islands in BC, Canada</span>
+
+<span class="sd">    This is a lidar point cloud (ground reflections only) sliced to the small</span>
+<span class="sd">    `Trail Islands &lt;https://apps.gov.bc.ca/pub/bcgnws/names/21973.html&gt;`__</span>
+<span class="sd">    to the North of Vancouver. The islands have some nice looking topography</span>
+<span class="sd">    and their isolated nature creates problems for some interpolation methods.</span>
+
+<span class="sd">    The horizontal datum is WGS84 and the elevation is referenced to &quot;mean sea</span>
+<span class="sd">    level&quot;.</span>
+
+<span class="sd">    There are ~800,000 measurements in total with 3 columns available:</span>
+<span class="sd">    longitude, latitude (geodetic), and ground elevation (orthometric).</span>
+
+<span class="sd">    **Format:** CSV with xz (lzma) compression.</span>
+
+<span class="sd">    **Load with:** :func:`pandas.read_csv`</span>
+
+<span class="sd">    **Original source:** `LidarBC</span>
+<span class="sd">    &lt;https://www2.gov.bc.ca/gov/content/data/geographic-data-services/lidarbc&gt;`__</span>
+
+<span class="sd">    **Original license:** Open Government Licence - British Columbia</span>
+
+<span class="sd">    **Pre-processing:** `Source code for preparation of the original dataset</span>
+<span class="sd">    for redistribution in Ensaio</span>
+<span class="sd">    &lt;https://github.com/fatiando-data/british-columbia-lidar&gt;`__</span>
+
+<span class="sd">    **Versions:**</span>
+
+<span class="sd">    * `1</span>
+<span class="sd">      &lt;https://github.com/fatiando-data/british-columbia-lidar/releases/tag/v1&gt;`_</span>
+<span class="sd">      (doi:`10.5281/zenodo.5881887 &lt;https://doi.org/10.5281/zenodo.5881887&gt;`__)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    version : int</span>
+<span class="sd">        The data version to fetch. See the available versions above.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fname : :class:`pathlib.Path`</span>
+<span class="sd">        Path to the downloaded file on disk.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;British Columbia lidar&quot;</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;british-columbia-lidar.csv.xz&quot;</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="fetch_bushveld_gravity"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_bushveld_gravity.html#ensaio.fetch_bushveld_gravity">[docs]</a><span class="k">def</span> <span class="nf">fetch_bushveld_gravity</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gravity ground-based data over the Bushveld Complex, Southern Africa</span>
+
+<span class="sd">    This dataset contains ground gravity observations over the area that</span>
+<span class="sd">    comprises the Bushveld Igenous Complex in Southern Africa, including</span>
+<span class="sd">    preprocessed gravity fields such as the **gravity disturbance** and the</span>
+<span class="sd">    **bouguer gravity disturbance** (topography-free gravity disturbance). In</span>
+<span class="sd">    addition, the dataset contains the heights of the observation points</span>
+<span class="sd">    referenced on the WGS84 reference ellipsoid and over the mean sea-level</span>
+<span class="sd">    (what can be considered to be the geoid). This dataset was built upon</span>
+<span class="sd">    a portion of the Southern Africa gravity compilation available through</span>
+<span class="sd">    `NOAA NCEI &lt;https://www.ngdc.noaa.gov/mgg/gravity/&gt;`__.</span>
+
+<span class="sd">    **Format:** CSV with xz (lzma) compression.</span>
+
+<span class="sd">    **Load with:** :func:`pandas.read_csv`</span>
+
+<span class="sd">    **Original source:** `NOAA NCEI &lt;https://www.ngdc.noaa.gov/mgg/gravity/&gt;`__</span>
+<span class="sd">    (gravity) and `ETOPO1 &lt;https://doi.org/10.7289/V5C8276M&gt;`__ (topography)</span>
+
+<span class="sd">    **Original license:** `public domain</span>
+<span class="sd">    &lt;https://ngdc.noaa.gov/ngdcinfo/privacy.html&gt;`__ (gravity) and `public</span>
+<span class="sd">    domain &lt;https://ngdc.noaa.gov/mgg/global/dem_faq.html#sec-2.4&gt;`__</span>
+<span class="sd">    (topography)</span>
+
+<span class="sd">    **Pre-processing:** `Source code for preparation of the original dataset</span>
+<span class="sd">    for redistribution in Ensaio</span>
+<span class="sd">    &lt;https://github.com/fatiando-data/bushveld-gravity&gt;`__</span>
+
+<span class="sd">    **Versions:**</span>
+
+<span class="sd">    * `1</span>
+<span class="sd">      &lt;https://github.com/fatiando-data/bushveld-gravity/releases/tag/v1&gt;`_</span>
+<span class="sd">      (doi:`10.5281/zenodo.6511942 &lt;https://doi.org/10.5281/zenodo.6511942&gt;`__)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    version : int</span>
+<span class="sd">        The data version to fetch. See the available versions above.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fname : :class:`pathlib.Path`</span>
+<span class="sd">        Path to the downloaded file on disk.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Bushveld gravity data&quot;</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;bushveld-gravity.csv.xz&quot;</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="fetch_caribbean_bathymetry"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_caribbean_bathymetry.html#ensaio.fetch_caribbean_bathymetry">[docs]</a><span class="k">def</span> <span class="nf">fetch_caribbean_bathymetry</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Single-beam bathymetry of the Caribbean</span>
+
+<span class="sd">    This dataset is a compilation of several public domain single-beam</span>
+<span class="sd">    bathymetry surveys of the ocean in the Caribbean. The data display a wide</span>
+<span class="sd">    range of tectonic activity, uneven distribution, and even clear systematic</span>
+<span class="sd">    errors in some of the survey lines.</span>
+
+<span class="sd">    The horizontal datum is WGS84 and the bathymetric depth is positive</span>
+<span class="sd">    downwards and referenced to &quot;mean sea level&quot;.</span>
+
+<span class="sd">    There are 1,938,095 measurements in total with 4 columns available:</span>
+<span class="sd">    survey ID, longitude, latitude (geodetic), and depth.</span>
+
+<span class="sd">    **Format:** CSV with xz (lzma) compression.</span>
+
+<span class="sd">    **Load with:** :func:`pandas.read_csv`</span>
+
+<span class="sd">    **Original source:** `NOAA NCEI</span>
+<span class="sd">    &lt;https://ngdc.noaa.gov/mgg/geodas/trackline.html&gt;`__</span>
+
+<span class="sd">    **Original license:** Public domain</span>
+
+<span class="sd">    **Pre-processing:** `Source code for preparation of the original dataset</span>
+<span class="sd">    for redistribution in Ensaio</span>
+<span class="sd">    &lt;https://github.com/fatiando-data/caribbean-bathymetry&gt;`__</span>
+
+<span class="sd">    **Versions:**</span>
+
+<span class="sd">    * `1</span>
+<span class="sd">      &lt;https://github.com/fatiando-data/caribbean-bathymetry/releases/tag/v1&gt;`_</span>
+<span class="sd">      (doi:`10.5281/zenodo.5882211 &lt;https://doi.org/10.5281/zenodo.5882211&gt;`__)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    version : int</span>
+<span class="sd">        The data version to fetch. See the available versions above.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fname : :class:`pathlib.Path`</span>
+<span class="sd">        Path to the downloaded file on disk.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Caribbean bathymetry&quot;</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;caribbean-bathymetry.csv.xz&quot;</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="fetch_earth_geoid"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_earth_geoid.html#ensaio.fetch_earth_geoid">[docs]</a><span class="k">def</span> <span class="nf">fetch_earth_geoid</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Geoid height of the Earth at 10 arc-minute resolution</span>
+
+<span class="sd">    The grid is global with node spacing of 10 arc-minutes (grid-node</span>
+<span class="sd">    registered) and stored in netCDF with CF-compliant metadata.</span>
+<span class="sd">    The geoid height is derived from the EIGEN-6C4 spherical harmonic model of</span>
+<span class="sd">    the Earth&#39;s gravity field with respect to the WGS84 ellipsoid.</span>
+
+<span class="sd">    The horizontal datum is WGS84.</span>
+
+<span class="sd">    There are 1081 x 2161 grid points in total. Coordinates are longitude and</span>
+<span class="sd">    latitude (geodetic).</span>
+
+<span class="sd">    **Format:** netCDF4 with zlib compression</span>
+
+<span class="sd">    **Load with:** :func:`xarray.load_dataarray` (requires the `netcdf4</span>
+<span class="sd">    &lt;https://github.com/Unidata/netcdf4-python&gt;`__ library)</span>
+
+<span class="sd">    **Original source:** `EIGEN-6C4 model</span>
+<span class="sd">    &lt;https://doi.org/10.5880/icgem.2015.1&gt;`__</span>
+
+<span class="sd">    **Original license:** CC-BY</span>
+
+<span class="sd">    **Pre-processing:** `Source code for preparation of the original dataset</span>
+<span class="sd">    for redistribution in Ensaio</span>
+<span class="sd">    &lt;https://github.com/fatiando-data/earth-geoid-10arcmin&gt;`__</span>
+
+<span class="sd">    **Versions:**</span>
+
+<span class="sd">    * `1</span>
+<span class="sd">      &lt;https://github.com/fatiando-data/earth-geoid-10arcmin/releases/tag/v1&gt;`_</span>
+<span class="sd">      (doi:`10.5281/zenodo.5882205 &lt;https://doi.org/10.5281/zenodo.5882205&gt;`__)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    version : int</span>
+<span class="sd">        The data version to fetch. See the available versions above.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fname : :class:`pathlib.Path`</span>
+<span class="sd">        Path to the downloaded file on disk.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Earth geoid grid&quot;</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;earth-geoid-10arcmin.nc&quot;</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="fetch_earth_gravity"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_earth_gravity.html#ensaio.fetch_earth_gravity">[docs]</a><span class="k">def</span> <span class="nf">fetch_earth_gravity</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gravity of the Earth at 10 arc-minute resolution</span>
+
+<span class="sd">    The grid is global with node spacing of 10 arc-minutes (grid-node</span>
+<span class="sd">    registered) and stored in netCDF with CF-compliant metadata.</span>
+
+<span class="sd">    The gravity values are derived from the EIGEN-6C4 spherical harmonic model</span>
+<span class="sd">    (calculated uniformly at 10 km above the WGS84 ellipsoid). Here &quot;gravity&quot;</span>
+<span class="sd">    refers to the combined gravitational and centrifugal accelerations.</span>
+
+<span class="sd">    The horizontal and vertical datum is WGS84.</span>
+
+<span class="sd">    There are 1081 x 2161 grid points in total. Coordinates are longitude and</span>
+<span class="sd">    latitude (geodetic) plus a non-dimensional coordinate height (geometric).</span>
+
+<span class="sd">    **Format:** netCDF4 with zlib compression</span>
+
+<span class="sd">    **Load with:** :func:`xarray.load_dataarray` (requires the `netcdf4</span>
+<span class="sd">    &lt;https://github.com/Unidata/netcdf4-python&gt;`__ library)</span>
+
+<span class="sd">    **Original source:** `EIGEN-6C4 model</span>
+<span class="sd">    &lt;https://doi.org/10.5880/icgem.2015.1&gt;`__</span>
+
+<span class="sd">    **Original license:** CC-BY</span>
+
+<span class="sd">    **Pre-processing:** `Source code for preparation of the original dataset</span>
+<span class="sd">    for redistribution in Ensaio</span>
+<span class="sd">    &lt;https://github.com/fatiando-data/earth-gravity-10arcmin&gt;`__</span>
+
+<span class="sd">    **Versions:**</span>
+
+<span class="sd">    * `1</span>
+<span class="sd">      &lt;https://github.com/fatiando-data/earth-gravity-10arcmin/releases/tag/v1&gt;`_</span>
+<span class="sd">      (doi:`10.5281/zenodo.5882207 &lt;https://doi.org/10.5281/zenodo.5882207&gt;`__)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    version : int</span>
+<span class="sd">        The data version to fetch. See the available versions above.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fname : :class:`pathlib.Path`</span>
+<span class="sd">        Path to the downloaded file on disk.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Earth gravity grid&quot;</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;earth-gravity-10arcmin.nc&quot;</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="fetch_earth_topography"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_earth_topography.html#ensaio.fetch_earth_topography">[docs]</a><span class="k">def</span> <span class="nf">fetch_earth_topography</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Topography of the Earth at 10 arc-minute resolution</span>
+
+<span class="sd">    The grid is global with node spacing of 10 arc-minutes (grid-node</span>
+<span class="sd">    registered) and stored in netCDF with CF-compliant metadata.</span>
+
+<span class="sd">    The values are derived from a spherical harmonic model of the ETOPO1</span>
+<span class="sd">    bedrock grid. Topography/bathymetry values are referenced to &quot;sea level&quot;</span>
+<span class="sd">    and are positive upwards. The horizontal datum is WGS84.</span>
+
+<span class="sd">    There are 1081 x 2161 grid points in total. Coordinates are longitude and</span>
+<span class="sd">    latitude (geodetic).</span>
+
+<span class="sd">    **Format:** netCDF4 with zlib compression</span>
+
+<span class="sd">    **Load with:** :func:`xarray.load_dataarray` (requires the `netcdf4</span>
+<span class="sd">    &lt;https://github.com/Unidata/netcdf4-python&gt;`__ library)</span>
+
+<span class="sd">    **Original source:** `ETOPO1 &lt;https://doi.org/10.7289/V5C8276M&gt;`__</span>
+
+<span class="sd">    **Original license:** Public domain</span>
+
+<span class="sd">    **Pre-processing:** `Source code for preparation of the original dataset</span>
+<span class="sd">    for redistribution in Ensaio</span>
+<span class="sd">    &lt;https://github.com/fatiando-data/earth-topography-10arcmin&gt;`__</span>
+
+<span class="sd">    **Versions:**</span>
+
+<span class="sd">    * `1</span>
+<span class="sd">      &lt;https://github.com/fatiando-data/earth-topography-10arcmin/releases/tag/v1&gt;`_</span>
+<span class="sd">      (doi:`10.5281/zenodo.5882203 &lt;https://doi.org/10.5281/zenodo.5882203&gt;`__)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    version : int</span>
+<span class="sd">        The data version to fetch. See the available versions above.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fname : :class:`pathlib.Path`</span>
+<span class="sd">        Path to the downloaded file on disk.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Earth topography grid&quot;</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;earth-topography-10arcmin.nc&quot;</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="fetch_lightning_creek_magnetic"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_lightning_creek_magnetic.html#ensaio.fetch_lightning_creek_magnetic">[docs]</a><span class="k">def</span> <span class="nf">fetch_lightning_creek_magnetic</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia</span>
+
+<span class="sd">    This is a section of a survey acquired in 1990 by the Queensland</span>
+<span class="sd">    Government, Australia. The grid has 50 m resolution (UTM coordinates) and</span>
+<span class="sd">    is at a uniform orthometric height of 500 m. Total field anomalies are in</span>
+<span class="sd">    nT.</span>
+
+<span class="sd">    **Format:** netCDF4 with zlib compression</span>
+
+<span class="sd">    **Load with:** :func:`xarray.load_dataarray` (requires the `netcdf4</span>
+<span class="sd">    &lt;https://github.com/Unidata/netcdf4-python&gt;`__ library)</span>
+
+<span class="sd">    **Original source:** `Geophysical Acquisition &amp; Processing Section 2019.</span>
+<span class="sd">    MIM Data from Mt Isa Inlier, QLD (P1029), magnetic line data, AWAGS</span>
+<span class="sd">    levelled. Geoscience Australia, Canberra</span>
+<span class="sd">    &lt;http://pid.geoscience.gov.au/dataset/ga/142419&gt;`__</span>
+
+<span class="sd">    **Original license:** CC-BY</span>
+
+<span class="sd">    **Pre-processing:** `Source code for preparation of the original dataset</span>
+<span class="sd">    for redistribution in Ensaio</span>
+<span class="sd">    &lt;https://github.com/fatiando-data/lightning-creek-magnetic-grid&gt;`__</span>
+
+<span class="sd">    **Versions:**</span>
+
+<span class="sd">    * `1</span>
+<span class="sd">      &lt;https://github.com/fatiando-data/lightning-creek-magnetic-grid/releases/tag/v1&gt;`_</span>
+<span class="sd">      (doi:`10.5281/zenodo.7079711 &lt;https://doi.org/10.5281/zenodo.7079711&gt;`__)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    version : int</span>
+<span class="sd">        The data version to fetch. See the available versions above.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fname : :class:`pathlib.Path`</span>
+<span class="sd">        Path to the downloaded file on disk.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Lightning Creek magnetic&quot;</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;lightning-creek-magnetic-grid.nc&quot;</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="fetch_osborne_magnetic"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_osborne_magnetic.html#ensaio.fetch_osborne_magnetic">[docs]</a><span class="k">def</span> <span class="nf">fetch_osborne_magnetic</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Magnetic airborne survey of the Osborne Mine and surroundings, Australia</span>
+
+<span class="sd">    This is a section of a survey acquired in 1990 by the Queensland</span>
+<span class="sd">    Government, Australia. The line data have approximately 80 m terrain</span>
+<span class="sd">    clearance and 200 m line spacing. Total field anomalies are in nT. The</span>
+<span class="sd">    flight height was calculated by summing the terrain clearance to</span>
+<span class="sd">    interpolated values of SRTM (referenced to sea level). The section contains</span>
+<span class="sd">    the total field magnetic anomalies associated with the Osborne Mine,</span>
+<span class="sd">    Lightning Creek sill complex, and the Brumby prospect.</span>
+
+<span class="sd">    There are ~990,000 measurements in total with 5 columns available: flight</span>
+<span class="sd">    line number, longitude, latitude (geodetic), height (orthometric), and the</span>
+<span class="sd">    total field magnetic anomaly.</span>
+
+<span class="sd">    **Format:** CSV with xz (lzma) compression.</span>
+
+<span class="sd">    **Load with:** :func:`pandas.read_csv`</span>
+
+<span class="sd">    **Original source:** `Geophysical Acquisition &amp; Processing Section 2019.</span>
+<span class="sd">    MIM Data from Mt Isa Inlier, QLD (P1029), magnetic line data, AWAGS</span>
+<span class="sd">    levelled. Geoscience Australia, Canberra</span>
+<span class="sd">    &lt;http://pid.geoscience.gov.au/dataset/ga/142419&gt;`__</span>
+
+<span class="sd">    **Original license:** CC-BY</span>
+
+<span class="sd">    **Pre-processing:** `Source code for preparation of the original dataset</span>
+<span class="sd">    for redistribution in Ensaio</span>
+<span class="sd">    &lt;https://github.com/fatiando-data/osborne-magnetic&gt;`__</span>
+
+<span class="sd">    **Versions:**</span>
+
+<span class="sd">    * `1</span>
+<span class="sd">      &lt;https://github.com/fatiando-data/osborne-magnetic/releases/tag/v1&gt;`_</span>
+<span class="sd">      (doi:`10.5281/zenodo.5882209 &lt;https://doi.org/10.5281/zenodo.5882209&gt;`__)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    version : int</span>
+<span class="sd">        The data version to fetch. See the available versions above.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fname : :class:`pathlib.Path`</span>
+<span class="sd">        Path to the downloaded file on disk.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Osborne mine magnetic&quot;</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;osborne-magnetic.csv.xz&quot;</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="fetch_sierra_negra_topography"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_sierra_negra_topography.html#ensaio.fetch_sierra_negra_topography">[docs]</a><span class="k">def</span> <span class="nf">fetch_sierra_negra_topography</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador</span>
+
+<span class="sd">    This is a structure-from-motion point cloud of the 2018 lava flows of the</span>
+<span class="sd">    Sierra Negra volcano, located on the Galápagos islands, Ecuador. The survey</span>
+<span class="sd">    is of a small region on the flank of the volcano. The horizontal datum is</span>
+<span class="sd">    WGS84 but the vertical datum for &quot;elevation&quot; is unspecified.</span>
+
+<span class="sd">    There are ~1,700,000 measurements in total with 3 columns available:</span>
+<span class="sd">    longitude, latitude (geodetic), elevation.</span>
+
+<span class="sd">    **Format:** CSV with xz (lzma) compression.</span>
+
+<span class="sd">    **Load with:** :func:`pandas.read_csv`</span>
+
+<span class="sd">    **Original source:** `Carr, B. (2020). Sierra Negra Volcano (TIR Flight 3):</span>
+<span class="sd">    Galápagos, Ecuador, October 22 2018. Distributed by OpenTopography.</span>
+<span class="sd">    &lt;https://doi.org/10.5069/G957196P&gt;`__</span>
+
+<span class="sd">    **Original license:** CC-BY</span>
+
+<span class="sd">    **Pre-processing:** `Source code for preparation of the original dataset</span>
+<span class="sd">    for redistribution in Ensaio</span>
+<span class="sd">    &lt;https://github.com/fatiando-data/sierra-negra-topography&gt;`__</span>
+
+<span class="sd">    **Versions:**</span>
+
+<span class="sd">    * `1</span>
+<span class="sd">      &lt;https://github.com/fatiando-data/sierra-negra-topography/releases/tag/v1&gt;`_</span>
+<span class="sd">      (doi:`10.5281/zenodo.6139057 &lt;https://doi.org/10.5281/zenodo.6139057&gt;`__)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    version : int</span>
+<span class="sd">        The data version to fetch. See the available versions above.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fname : :class:`pathlib.Path`</span>
+<span class="sd">        Path to the downloaded file on disk.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Sierra Negra volcano topography&quot;</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;sierra-negra-topography.csv.xz&quot;</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="fetch_southern_africa_gravity"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_southern_africa_gravity.html#ensaio.fetch_southern_africa_gravity">[docs]</a><span class="k">def</span> <span class="nf">fetch_southern_africa_gravity</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gravity ground-based surveys of Southern Africa</span>
+
+<span class="sd">    This dataset is a compilation of several public domain ground measurements</span>
+<span class="sd">    of gravity from Southern Africa. The observations are the absolute gravity</span>
+<span class="sd">    values in mGal. The horizontal datum is not specified and heights are</span>
+<span class="sd">    referenced to &quot;sea level&quot;, which we will interpret as the geoid (which</span>
+<span class="sd">    realization is likely not relevant since the uncertainty in the height is</span>
+<span class="sd">    probably larger than geoid model differences).</span>
+
+<span class="sd">    There are ~14,000 measurements in total with 4 columns available:</span>
+<span class="sd">    longitude, latitude (geodetic), height (orthometric), and absolute gravity.</span>
+
+<span class="sd">    **Format:** CSV with xz (lzma) compression.</span>
+
+<span class="sd">    **Load with:** :func:`pandas.read_csv`</span>
+
+<span class="sd">    **Original source:** `NOAA NCEI</span>
+<span class="sd">    &lt;https://ngdc.noaa.gov/mgg/geodas/trackline.html&gt;`__</span>
+
+<span class="sd">    **Original license:** Public domain</span>
+
+<span class="sd">    **Pre-processing:** `Source code for preparation of the original dataset</span>
+<span class="sd">    for redistribution in Ensaio</span>
+<span class="sd">    &lt;https://github.com/fatiando-data/southern-africa-gravity&gt;`__</span>
+
+<span class="sd">    **Versions:**</span>
+
+<span class="sd">    * `1</span>
+<span class="sd">      &lt;https://github.com/fatiando-data/southern-africa-gravity/releases/tag/v1&gt;`_</span>
+<span class="sd">      (doi:`10.5281/zenodo.5882430 &lt;https://doi.org/10.5281/zenodo.5882430&gt;`__)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    version : int</span>
+<span class="sd">        The data version to fetch. See the available versions above.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fname : :class:`pathlib.Path`</span>
+<span class="sd">        Path to the downloaded file on disk.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Southern Africa gravity&quot;</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;southern-africa-gravity.csv.xz&quot;</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="fetch_southern_africa_topography"><a class="viewcode-back" href="../../api/generated/ensaio.fetch_southern_africa_topography.html#ensaio.fetch_southern_africa_topography">[docs]</a><span class="k">def</span> <span class="nf">fetch_southern_africa_topography</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Topography and bathymetry data for Southern Africa</span>
+
+<span class="sd">    This is a topography and bathymetry grid with a resolution of 1 arc-minute</span>
+<span class="sd">    over Southern Africa. The grid was generated by cropping the ETOPO1 global</span>
+<span class="sd">    topography grid. The heights are referenced to the mean sea level.</span>
+
+<span class="sd">    **Format:** netCDF4 with zlib compression</span>
+
+<span class="sd">    **Load with:** :func:`xarray.load_dataarray` (requires the `netcdf4</span>
+<span class="sd">    &lt;https://github.com/Unidata/netcdf4-python&gt;`__ library)</span>
+
+<span class="sd">    **Original source:** `ETOPO1 &lt;https://doi.org/10.7289/V5C8276M&gt;`__</span>
+
+<span class="sd">    **Original license:** Public domain</span>
+
+<span class="sd">    **Pre-processing:** `Source code for preparation of the original dataset</span>
+<span class="sd">    for redistribution in Ensaio</span>
+<span class="sd">    &lt;https://github.com/fatiando-data/southern-africa-topography&gt;`__</span>
+
+<span class="sd">    **Versions:**</span>
+
+<span class="sd">    * `1</span>
+<span class="sd">      &lt;https://github.com/fatiando-data/southern-africa-topography/releases/tag/v1&gt;`_</span>
+<span class="sd">      (doi:`10.5281/zenodo.6481379 &lt;https://doi.org/10.5281/zenodo.6481379&gt;`__)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    version : int</span>
+<span class="sd">        The data version to fetch. See the available versions above.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fname : :class:`pathlib.Path`</span>
+<span class="sd">        Path to the downloaded file on disk.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Southern Africa topography&quot;</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;southern-africa-topography.nc&quot;</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
+</pre></div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+        &copy; Copyright 2022, The Ensaio Developers.<br/>
+      Last updated on Nov 25, 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
