@@ -58,7 +58,7 @@ def test_data_source_from_github(use_github):
     "Check that GitHub is used as a data source when the env variable is set"
     backup = None
     try:
-        backup = os.environ.get("ENSAIO_DATA_FROM_GITHUB", None)
+        backup = os.environ.get("ENSAIO_DATA_FROM_GITHUB")
         os.environ["ENSAIO_DATA_FROM_GITHUB"] = use_github
         repo = _fetchers._repository(fname="alps-gps-velocity.csv.xz", version=1)
         if use_github == "True":
