@@ -163,6 +163,7 @@ jobs:
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
+          token: ${{ secrets.CODECOV_TOKEN }}
           file: ./coverage.xml
           env_vars: OS,PYTHON,DEPENDENCIES
           # Fail the job so we know coverage isn't being updated. Otherwise it
