@@ -2,53 +2,62 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     
         <title>Earth geoid height grid at 10 arc-minute resolution | Ensaio dev</title>
     
 
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.87249bd3f7b54630a2508c1b61607c7f.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=fc90c160" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/thebelab-helper.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'gallery/earth-geoid';</script>
+    <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Earth gravity grid at 10 arc-minute resolution" href="earth-gravity.html" />
@@ -57,406 +66,399 @@
     <script defer data-domain="fatiando.org" src="https://plausible.io/js/plausible.js"></script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
-      
-      
-      <img src="../_static/ensaio-logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Ensaio <span class="project-version">dev</span></h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  User Guide
- </span>
-</p>
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Ensaio <span class="project-version">dev</span></p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../install.html">
-   Installing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../tutorial/using.html">
-   Downloading data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../tutorial/developers.html">
-   Using Ensaio in your project
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
-   Available datasets
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="caribbean-bathymetry.html">
-     Bathymetry single-beam surveys of the Caribbean
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Earth geoid height grid at 10 arc-minute resolution
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="earth-gravity.html">
-     Earth gravity grid at 10 arc-minute resolution
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="earth-topography.html">
-     Earth topography grid at 10 arc-minute resolution
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="alps-gps-velocity.html">
-     GPS velocities (3-component) for the Alps
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="bushveld-gravity.html">
-     Gravity ground-based data over the Bushveld Complex, Southern Africa
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="southern-africa-gravity.html">
-     Gravity ground-based surveys of Southern Africa
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="britain-magnetic.html">
-     Magnetic airborne survey of Britain
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="osborne-magnetic.html">
-     Magnetic airborne survey of the Osborne Mine, Australia
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="lightning-creek-magnetic.html">
-     Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="southern-africa-topography.html">
-     Topography and bathymetry of Southern Africa
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sierra-negra-topography.html">
-     Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="british-columbia-lidar.html">
-     Topography of the Trail Islands in British Columbia, Canada
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/using.html">Downloading data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/developers.html">Using Ensaio in your project</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Available datasets</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="caribbean-bathymetry.html">Bathymetry single-beam surveys of the Caribbean</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Earth geoid height grid at 10 arc-minute resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="earth-gravity.html">Earth gravity grid at 10 arc-minute resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="earth-topography.html">Earth topography grid at 10 arc-minute resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alps-gps-velocity.html">GPS velocities (3-component) for the Alps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bushveld-gravity.html">Gravity ground-based data over the Bushveld Complex, Southern Africa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="southern-africa-gravity.html">Gravity ground-based surveys of Southern Africa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="britain-magnetic.html">Magnetic airborne survey of Britain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osborne-magnetic.html">Magnetic airborne survey of the Osborne Mine, Australia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lightning-creek-magnetic.html">Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="southern-africa-topography.html">Topography and bathymetry of Southern Africa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sierra-negra-topography.html">Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="british-columbia-lidar.html">Topography of the Trail Islands in British Columbia, Canada</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Reference
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../api/index.html">
-   List of functions and classes (API)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.locate.html">
-     ensaio.locate
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_alps_gps.html">
-     ensaio.fetch_alps_gps
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_britain_magnetic.html">
-     ensaio.fetch_britain_magnetic
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_british_columbia_lidar.html">
-     ensaio.fetch_british_columbia_lidar
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_bushveld_gravity.html">
-     ensaio.fetch_bushveld_gravity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_caribbean_bathymetry.html">
-     ensaio.fetch_caribbean_bathymetry
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_earth_geoid.html">
-     ensaio.fetch_earth_geoid
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_earth_gravity.html">
-     ensaio.fetch_earth_gravity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_earth_topography.html">
-     ensaio.fetch_earth_topography
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_lightning_creek_magnetic.html">
-     ensaio.fetch_lightning_creek_magnetic
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_osborne_magnetic.html">
-     ensaio.fetch_osborne_magnetic
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_sierra_negra_topography.html">
-     ensaio.fetch_sierra_negra_topography
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_southern_africa_gravity.html">
-     ensaio.fetch_southern_africa_gravity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_southern_africa_topography.html">
-     ensaio.fetch_southern_africa_topography
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../compatibility.html">
-   Version compatibility
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../changes.html">
-   Changelog
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../versions.html">
-   Documentation for other versions
-  </a>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Community
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference external" href="https://www.fatiando.org/contact/">
-   Join the community
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://github.com/fatiando/community/blob/main/CODE_OF_CONDUCT.md">
-   Code of Conduct
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://github.com/fatiando/ensaio/blob/main/CONTRIBUTING.md">
-   How to contribute
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://github.com/fatiando/ensaio">
-   Source code on GitHub
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://github.com/fatiando/ensaio/blob/main/AUTHORS.md">
-   Authors
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://www.fatiando.org">
-   Fatiando a Terra
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/index.html">List of functions and classes (API)</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.locate.html">ensaio.locate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_alps_gps.html">ensaio.fetch_alps_gps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_britain_magnetic.html">ensaio.fetch_britain_magnetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_british_columbia_lidar.html">ensaio.fetch_british_columbia_lidar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_bushveld_gravity.html">ensaio.fetch_bushveld_gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_caribbean_bathymetry.html">ensaio.fetch_caribbean_bathymetry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_earth_geoid.html">ensaio.fetch_earth_geoid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_earth_gravity.html">ensaio.fetch_earth_gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_earth_topography.html">ensaio.fetch_earth_topography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_lightning_creek_magnetic.html">ensaio.fetch_lightning_creek_magnetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_osborne_magnetic.html">ensaio.fetch_osborne_magnetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_sierra_negra_topography.html">ensaio.fetch_sierra_negra_topography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_southern_africa_gravity.html">ensaio.fetch_southern_africa_gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_southern_africa_topography.html">ensaio.fetch_southern_africa_topography</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../compatibility.html">Version compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versions.html">Documentation for other versions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.fatiando.org/contact/">Join the community</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fatiando/community/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fatiando/ensaio/blob/main/CONTRIBUTING.md">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fatiando/ensaio">Source code on GitHub</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fatiando/ensaio/blob/main/AUTHORS.md">Authors</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.fatiando.org">Fatiando a Terra</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/gallery/earth-geoid.rst.txt"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.rst</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/fatiando/ensaio" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fatiando/ensaio/edit/main/doc/gallery/earth-geoid.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fatiando/ensaio/issues/new?title=Issue%20on%20page%20%2Fgallery/earth-geoid.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/fatiando/ensaio"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/fatiando/ensaio/issues/new?title=Issue%20on%20page%20%2Fgallery/earth-geoid.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/fatiando/ensaio/edit/main/doc/gallery/earth-geoid.rst"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/gallery/earth-geoid.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Earth geoid height grid at 10 arc-minute resolution</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Earth geoid height grid at 10 arc-minute resolution</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+
+              
                 
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-gallery-earth-geoid-py"><span class="std std-ref">here</span></a>
+<p><a class="reference internal" href="#sphx-glr-download-gallery-earth-geoid-py"><span class="std std-ref">Go to the end</span></a>
 to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="earth-geoid-height-grid-at-10-arc-minute-resolution">
-<span id="sphx-glr-gallery-earth-geoid-py"></span><h1>Earth geoid height grid at 10 arc-minute resolution<a class="headerlink" href="#earth-geoid-height-grid-at-10-arc-minute-resolution" title="Permalink to this headline">¶</a></h1>
+<section class="sphx-glr-example-title" id="earth-geoid-height-grid-at-10-arc-minute-resolution">
+<span id="sphx-glr-gallery-earth-geoid-py"></span><h1>Earth geoid height grid at 10 arc-minute resolution<a class="headerlink" href="#earth-geoid-height-grid-at-10-arc-minute-resolution" title="Link to this heading">#</a></h1>
 <p>The grid is grid-node registered and stored in netCDF with CF-compliant
 metadata. The geoid height is derived from the EIGEN-6C4 spherical harmonic
 model of the Earth’s gravity field.</p>
 <p><strong>Original source:</strong> <a class="reference external" href="https://doi.org/10.5880/icgem.2015.1">EIGEN-6C4 model</a></p>
 <p><strong>Pre-processing:</strong> <a class="reference external" href="https://github.com/fatiando-data/earth-geoid-10arcmin">Source code for preparation of the original dataset for
 redistribution in Ensaio</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygmt</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygmt</span>
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 
 <span class="kn">import</span> <span class="nn">ensaio</span>
 </pre></div>
 </div>
 <p>Download and cache the data and return the path to it on disk.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fname</span></a> <span class="o">=</span> <a href="../api/generated/ensaio.fetch_earth_geoid.html#ensaio.fetch_earth_geoid" title="ensaio.fetch_earth_geoid" class="sphx-glr-backref-module-ensaio sphx-glr-backref-type-py-function"><span class="n">ensaio</span><span class="o">.</span><span class="n">fetch_earth_geoid</span></a><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fname</span></a> <span class="o">=</span> <a href="../api/generated/ensaio.fetch_earth_geoid.html#ensaio.fetch_earth_geoid" title="ensaio.fetch_earth_geoid" class="sphx-glr-backref-module-ensaio sphx-glr-backref-type-py-function"><span class="n">ensaio</span><span class="o">.</span><span class="n">fetch_earth_geoid</span></a><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fname</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/runner/work/_temp/cache/ensaio/v1/earth-geoid-10arcmin.nc
 </pre></div>
 </div>
 <p>Load the netCDF grid with xarray.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="xarray.core.dataarray.DataArray" class="sphx-glr-backref-module-xarray-core-dataarray sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span></a> <span class="o">=</span> <a href="https://docs.xarray.dev/en/stable/generated/xarray.load_dataarray.html#xarray.load_dataarray" title="xarray.load_dataarray" class="sphx-glr-backref-module-xarray sphx-glr-backref-type-py-function"><span class="n">xr</span><span class="o">.</span><span class="n">load_dataarray</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fname</span></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="xarray.core.dataarray.DataArray" class="sphx-glr-backref-module-xarray-core-dataarray sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span></a> <span class="o">=</span> <a href="https://docs.xarray.dev/en/stable/generated/xarray.load_dataarray.html#xarray.load_dataarray" title="xarray.load_dataarray" class="sphx-glr-backref-module-xarray sphx-glr-backref-type-py-function"><span class="n">xr</span><span class="o">.</span><span class="n">load_dataarray</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fname</span></a><span class="p">)</span>
 <a href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="xarray.core.dataarray.DataArray" class="sphx-glr-backref-module-xarray-core-dataarray sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span></a>
 </pre></div>
 </div>
@@ -853,7 +855,7 @@ Attributes:
     description:     height of the geoid with respect to the WGS84 ellipsoid
     units:           m
     actual_range:    [-106.5   86. ]
-    icgem_metadata:  generating_institute: gfz-potsdam\ngenerating_date: 2021...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'geoid'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1081</li><li><span class='xr-has-index'>longitude</span>: 2161</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-640da6de-38b5-4d00-927d-973710b1c47d' class='xr-array-in' type='checkbox' checked><label for='section-640da6de-38b5-4d00-927d-973710b1c47d' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-29.5 -29.5 -29.5 -29.5 -29.5 -29.5 ... 15.4 15.4 15.4 15.4 15.4 15.4</span></div><div class='xr-array-data'><pre>array([[-29.5     , -29.5     , -29.5     , ..., -29.5     , -29.5     ,
+    icgem_metadata:  generating_institute: gfz-potsdam\ngenerating_date: 2021...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'geoid'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1081</li><li><span class='xr-has-index'>longitude</span>: 2161</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-6bb03689-7810-46c4-876a-4dd2ac37e2f7' class='xr-array-in' type='checkbox' checked><label for='section-6bb03689-7810-46c4-876a-4dd2ac37e2f7' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-29.5 -29.5 -29.5 -29.5 -29.5 -29.5 ... 15.4 15.4 15.4 15.4 15.4 15.4</span></div><div class='xr-array-data'><pre>array([[-29.5     , -29.5     , -29.5     , ..., -29.5     , -29.5     ,
         -29.5     ],
        [-29.5     , -29.5     , -29.5     , ..., -29.5     , -29.5     ,
         -29.5     ],
@@ -865,27 +867,27 @@ Attributes:
        [ 15.2     ,  15.2     ,  15.2     , ...,  15.2     ,  15.2     ,
          15.2     ],
        [ 15.400001,  15.400001,  15.400001, ...,  15.400001,  15.400001,
-         15.400001]], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-1184e321-2fce-4de0-a741-ced93b0ed670' class='xr-section-summary-in' type='checkbox'  checked><label for='section-1184e321-2fce-4de0-a741-ced93b0ed670' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-180.0 -179.8 ... 179.8 180.0</div><input id='attrs-b229c0e9-1d1f-42ff-8219-145326a446ce' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b229c0e9-1d1f-42ff-8219-145326a446ce' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d26e7f5b-6771-4a9b-891f-c6532e74c2ca' class='xr-var-data-in' type='checkbox'><label for='data-d26e7f5b-6771-4a9b-891f-c6532e74c2ca' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[-180.  180.]</dd></dl></div><div class='xr-var-data'><pre>array([-180.      , -179.833333, -179.666667, ...,  179.666667,  179.833333,
-        180.      ])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-90.0 -89.83 -89.67 ... 89.83 90.0</div><input id='attrs-4b0ae1a2-6428-40f7-be1b-b2d286c2c690' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4b0ae1a2-6428-40f7-be1b-b2d286c2c690' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b09a25c8-944b-4a93-938d-55a39aff4561' class='xr-var-data-in' type='checkbox'><label for='data-b09a25c8-944b-4a93-938d-55a39aff4561' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-90.  90.]</dd></dl></div><div class='xr-var-data'><pre>array([-90.      , -89.833333, -89.666667, ...,  89.666667,  89.833333,
-        90.      ])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-cc40d545-6f49-4e3b-9510-261a08d5e299' class='xr-section-summary-in' type='checkbox'  ><label for='section-cc40d545-6f49-4e3b-9510-261a08d5e299' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-faebe9ca-896c-4c91-b369-ec4b1e5b68d4' class='xr-index-data-in' type='checkbox'/><label for='index-faebe9ca-896c-4c91-b369-ec4b1e5b68d4' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([             -180.0, -179.83333333333334, -179.66666666666666,
-                           -179.5, -179.33333333333334, -179.16666666666666,
-                           -179.0, -178.83333333333334, -178.66666666666666,
-                           -178.5,
-              ...
-                            178.5,  178.66666666666663,  178.83333333333331,
-                            179.0,  179.16666666666663,  179.33333333333331,
-                            179.5,  179.66666666666663,  179.83333333333331,
-                            180.0],
-             dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=2161))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-c7b67f16-05ce-4b17-8341-4d4c58b48ca1' class='xr-index-data-in' type='checkbox'/><label for='index-c7b67f16-05ce-4b17-8341-4d4c58b48ca1' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([             -90.0, -89.83333333333333, -89.66666666666667,
-                           -89.5, -89.33333333333333, -89.16666666666667,
-                           -89.0, -88.83333333333333, -88.66666666666667,
-                           -88.5,
-              ...
-                            88.5,  88.66666666666666,  88.83333333333331,
-                            89.0,  89.16666666666666,  89.33333333333331,
-                            89.5,  89.66666666666666,  89.83333333333331,
-                            90.0],
-             dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=1081))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-50e97e45-3b67-4efb-9924-67b9e9b2dcce' class='xr-section-summary-in' type='checkbox'  ><label for='section-50e97e45-3b67-4efb-9924-67b9e9b2dcce' class='xr-section-summary' >Attributes: <span>(12)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>Geoid height (EIGEN-6C4) with respect to WGS84</dd><dt><span>crs :</span></dt><dd>WGS84</dd><dt><span>source :</span></dt><dd>Generated from the EIGEN-6C4 model by the ICGEM Calculation Service (http://icgem.gfz-potsdam.de)</dd><dt><span>license :</span></dt><dd>Creative Commons Attribution 4.0 International Licence</dd><dt><span>references :</span></dt><dd>https://doi.org/10.5880/icgem.2015.1</dd><dt><span>long_name :</span></dt><dd>geoid height</dd><dt><span>standard_name :</span></dt><dd>geoid_height_above_reference_ellipsoid</dd><dt><span>description :</span></dt><dd>height of the geoid with respect to the WGS84 ellipsoid</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[-106.5   86. ]</dd><dt><span>icgem_metadata :</span></dt><dd>generating_institute: gfz-potsdam
+         15.400001]], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-5eb0b8b3-8a63-4bb8-989c-558d128810d2' class='xr-section-summary-in' type='checkbox'  checked><label for='section-5eb0b8b3-8a63-4bb8-989c-558d128810d2' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-180.0 -179.8 ... 179.8 180.0</div><input id='attrs-903c6632-3c5b-473e-9818-a7efd86b3242' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-903c6632-3c5b-473e-9818-a7efd86b3242' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4dc2d1f2-b1cf-4540-b1c7-cfb4fc7ef115' class='xr-var-data-in' type='checkbox'><label for='data-4dc2d1f2-b1cf-4540-b1c7-cfb4fc7ef115' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[-180.  180.]</dd></dl></div><div class='xr-var-data'><pre>array([-180.      , -179.833333, -179.666667, ...,  179.666667,  179.833333,
+        180.      ])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-90.0 -89.83 -89.67 ... 89.83 90.0</div><input id='attrs-79e2a81d-8e97-4ee6-8eff-7dfae0f1d5b6' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-79e2a81d-8e97-4ee6-8eff-7dfae0f1d5b6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-687b3948-ad23-4b4b-981d-7f96f52311e4' class='xr-var-data-in' type='checkbox'><label for='data-687b3948-ad23-4b4b-981d-7f96f52311e4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-90.  90.]</dd></dl></div><div class='xr-var-data'><pre>array([-90.      , -89.833333, -89.666667, ...,  89.666667,  89.833333,
+        90.      ])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-d5ab608d-ffef-4718-87f1-2cd13204433d' class='xr-section-summary-in' type='checkbox'  ><label for='section-d5ab608d-ffef-4718-87f1-2cd13204433d' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-c77d1c52-b07d-4881-a6f6-0a3fed424ca9' class='xr-index-data-in' type='checkbox'/><label for='index-c77d1c52-b07d-4881-a6f6-0a3fed424ca9' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([             -180.0, -179.83333333333334, -179.66666666666666,
+                    -179.5, -179.33333333333334, -179.16666666666666,
+                    -179.0, -178.83333333333334, -178.66666666666666,
+                    -178.5,
+       ...
+                     178.5,  178.66666666666663,  178.83333333333331,
+                     179.0,  179.16666666666663,  179.33333333333331,
+                     179.5,  179.66666666666663,  179.83333333333331,
+                     180.0],
+      dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=2161))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-a585b5d3-6f8e-430a-ab54-fc1a942fb4cd' class='xr-index-data-in' type='checkbox'/><label for='index-a585b5d3-6f8e-430a-ab54-fc1a942fb4cd' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([             -90.0, -89.83333333333333, -89.66666666666667,
+                    -89.5, -89.33333333333333, -89.16666666666667,
+                    -89.0, -88.83333333333333, -88.66666666666667,
+                    -88.5,
+       ...
+                     88.5,  88.66666666666666,  88.83333333333331,
+                     89.0,  89.16666666666666,  89.33333333333331,
+                     89.5,  89.66666666666666,  89.83333333333331,
+                     90.0],
+      dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=1081))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-0da53fa1-ca2b-4fe7-93d3-5050cea58ae7' class='xr-section-summary-in' type='checkbox'  ><label for='section-0da53fa1-ca2b-4fe7-93d3-5050cea58ae7' class='xr-section-summary' >Attributes: <span>(12)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>Geoid height (EIGEN-6C4) with respect to WGS84</dd><dt><span>crs :</span></dt><dd>WGS84</dd><dt><span>source :</span></dt><dd>Generated from the EIGEN-6C4 model by the ICGEM Calculation Service (http://icgem.gfz-potsdam.de)</dd><dt><span>license :</span></dt><dd>Creative Commons Attribution 4.0 International Licence</dd><dt><span>references :</span></dt><dd>https://doi.org/10.5880/icgem.2015.1</dd><dt><span>long_name :</span></dt><dd>geoid height</dd><dt><span>standard_name :</span></dt><dd>geoid_height_above_reference_ellipsoid</dd><dt><span>description :</span></dt><dd>height of the geoid with respect to the WGS84 ellipsoid</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[-106.5   86. ]</dd><dt><span>icgem_metadata :</span></dt><dd>generating_institute: gfz-potsdam
 generating_date: 2021/06/11
 product_type: gravity_field
 body: earth
@@ -923,7 +925,7 @@ attributes_units: deg. deg. meter</dd></dl></div></li></ul></div></div>
 </div>
 <br />
 <br /><p>Make a PyGMT pseudo-color map of the grid in a Mollweide projection.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://www.pygmt.org/latest/api/generated/pygmt.Figure.html#pygmt.Figure" title="pygmt.Figure" class="sphx-glr-backref-module-pygmt sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a> <span class="o">=</span> <a href="https://www.pygmt.org/latest/api/generated/pygmt.Figure.html#pygmt.Figure" title="pygmt.Figure" class="sphx-glr-backref-module-pygmt sphx-glr-backref-type-py-class"><span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span></a><span class="p">()</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://www.pygmt.org/latest/api/generated/pygmt.Figure.html#pygmt.Figure" title="pygmt.Figure" class="sphx-glr-backref-module-pygmt sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a> <span class="o">=</span> <a href="https://www.pygmt.org/latest/api/generated/pygmt.Figure.html#pygmt.Figure" title="pygmt.Figure" class="sphx-glr-backref-module-pygmt sphx-glr-backref-type-py-class"><span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span></a><span class="p">()</span>
 <a href="https://www.pygmt.org/latest/api/generated/pygmt.Figure.basemap.html#pygmt.Figure.basemap" title="pygmt.Figure.basemap" class="sphx-glr-backref-module-pygmt sphx-glr-backref-type-py-method"><span class="n">fig</span><span class="o">.</span><span class="n">basemap</span></a><span class="p">(</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;g&quot;</span><span class="p">,</span>
     <span class="n">projection</span><span class="o">=</span><span class="s2">&quot;W15c&quot;</span><span class="p">,</span>
@@ -935,60 +937,102 @@ attributes_units: deg. deg. meter</dd></dl></div></li></ul></div></div>
 <a href="https://www.pygmt.org/latest/api/generated/pygmt.Figure.show.html#pygmt.Figure.show" title="pygmt.Figure.show" class="sphx-glr-backref-module-pygmt sphx-glr-backref-type-py-method"><span class="n">fig</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../_images/sphx_glr_earth-geoid_001.png" srcset="../_images/sphx_glr_earth-geoid_001.png" alt="earth geoid" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
-</pre></div>
-</div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.631 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-gallery-earth-geoid-py">
-<div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../_downloads/94af1b22fe8825ab85e8f94c0ea64a77/earth-geoid.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">earth-geoid.py</span></code></a></p>
-</div>
+<img src="../_images/sphx_glr_earth-geoid_001.png" srcset="../_images/sphx_glr_earth-geoid_001.png" alt="earth geoid" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 4.823 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-gallery-earth-geoid-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/9600196532767199945192b9db4bfd85/earth-geoid.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">earth-geoid.ipynb</span></code></a></p>
 </div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/94af1b22fe8825ab85e8f94c0ea64a77/earth-geoid.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">earth-geoid.py</span></code></a></p>
+</div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
-</div>
+</section>
 
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="caribbean-bathymetry.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Bathymetry single-beam surveys of the Caribbean</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="caribbean-bathymetry.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bathymetry single-beam surveys of the Caribbean</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="earth-gravity.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="earth-gravity.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Earth gravity grid at 10 arc-minute resolution</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-        &copy; Copyright 2022, The Ensaio Developers.<br/>
-      Last updated on Nov 24, 2022.<br/>
-  </p>
-</footer>
-</main>
-
-
-      </div>
-    </div>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
 
+  <p class="copyright">
+    
+      © Copyright 2024, The Ensaio Developers.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on Feb 07, 2024.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

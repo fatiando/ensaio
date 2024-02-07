@@ -2,53 +2,62 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     
         <title>Available datasets | Ensaio dev</title>
     
 
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.87249bd3f7b54630a2508c1b61607c7f.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=fc90c160" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/thebelab-helper.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'gallery/index';</script>
+    <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Bathymetry single-beam surveys of the Caribbean" href="caribbean-bathymetry.html" />
@@ -57,378 +66,372 @@
     <script defer data-domain="fatiando.org" src="https://plausible.io/js/plausible.js"></script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
-      
-      
-      <img src="../_static/ensaio-logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Ensaio <span class="project-version">dev</span></h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  User Guide
- </span>
-</p>
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Ensaio <span class="project-version">dev</span></p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../install.html">
-   Installing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../tutorial/using.html">
-   Downloading data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../tutorial/developers.html">
-   Using Ensaio in your project
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
-   Available datasets
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="caribbean-bathymetry.html">
-     Bathymetry single-beam surveys of the Caribbean
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="earth-geoid.html">
-     Earth geoid height grid at 10 arc-minute resolution
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="earth-gravity.html">
-     Earth gravity grid at 10 arc-minute resolution
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="earth-topography.html">
-     Earth topography grid at 10 arc-minute resolution
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="alps-gps-velocity.html">
-     GPS velocities (3-component) for the Alps
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="bushveld-gravity.html">
-     Gravity ground-based data over the Bushveld Complex, Southern Africa
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="southern-africa-gravity.html">
-     Gravity ground-based surveys of Southern Africa
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="britain-magnetic.html">
-     Magnetic airborne survey of Britain
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="osborne-magnetic.html">
-     Magnetic airborne survey of the Osborne Mine, Australia
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="lightning-creek-magnetic.html">
-     Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="southern-africa-topography.html">
-     Topography and bathymetry of Southern Africa
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sierra-negra-topography.html">
-     Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="british-columbia-lidar.html">
-     Topography of the Trail Islands in British Columbia, Canada
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/using.html">Downloading data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/developers.html">Using Ensaio in your project</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Available datasets</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="caribbean-bathymetry.html">Bathymetry single-beam surveys of the Caribbean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="earth-geoid.html">Earth geoid height grid at 10 arc-minute resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="earth-gravity.html">Earth gravity grid at 10 arc-minute resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="earth-topography.html">Earth topography grid at 10 arc-minute resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alps-gps-velocity.html">GPS velocities (3-component) for the Alps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bushveld-gravity.html">Gravity ground-based data over the Bushveld Complex, Southern Africa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="southern-africa-gravity.html">Gravity ground-based surveys of Southern Africa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="britain-magnetic.html">Magnetic airborne survey of Britain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osborne-magnetic.html">Magnetic airborne survey of the Osborne Mine, Australia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lightning-creek-magnetic.html">Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="southern-africa-topography.html">Topography and bathymetry of Southern Africa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sierra-negra-topography.html">Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="british-columbia-lidar.html">Topography of the Trail Islands in British Columbia, Canada</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Reference
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../api/index.html">
-   List of functions and classes (API)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.locate.html">
-     ensaio.locate
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_alps_gps.html">
-     ensaio.fetch_alps_gps
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_britain_magnetic.html">
-     ensaio.fetch_britain_magnetic
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_british_columbia_lidar.html">
-     ensaio.fetch_british_columbia_lidar
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_bushveld_gravity.html">
-     ensaio.fetch_bushveld_gravity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_caribbean_bathymetry.html">
-     ensaio.fetch_caribbean_bathymetry
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_earth_geoid.html">
-     ensaio.fetch_earth_geoid
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_earth_gravity.html">
-     ensaio.fetch_earth_gravity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_earth_topography.html">
-     ensaio.fetch_earth_topography
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_lightning_creek_magnetic.html">
-     ensaio.fetch_lightning_creek_magnetic
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_osborne_magnetic.html">
-     ensaio.fetch_osborne_magnetic
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_sierra_negra_topography.html">
-     ensaio.fetch_sierra_negra_topography
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_southern_africa_gravity.html">
-     ensaio.fetch_southern_africa_gravity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../api/generated/ensaio.fetch_southern_africa_topography.html">
-     ensaio.fetch_southern_africa_topography
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../compatibility.html">
-   Version compatibility
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../changes.html">
-   Changelog
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../versions.html">
-   Documentation for other versions
-  </a>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Community
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference external" href="https://www.fatiando.org/contact/">
-   Join the community
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://github.com/fatiando/community/blob/main/CODE_OF_CONDUCT.md">
-   Code of Conduct
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://github.com/fatiando/ensaio/blob/main/CONTRIBUTING.md">
-   How to contribute
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://github.com/fatiando/ensaio">
-   Source code on GitHub
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://github.com/fatiando/ensaio/blob/main/AUTHORS.md">
-   Authors
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://www.fatiando.org">
-   Fatiando a Terra
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/index.html">List of functions and classes (API)</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.locate.html">ensaio.locate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_alps_gps.html">ensaio.fetch_alps_gps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_britain_magnetic.html">ensaio.fetch_britain_magnetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_british_columbia_lidar.html">ensaio.fetch_british_columbia_lidar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_bushveld_gravity.html">ensaio.fetch_bushveld_gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_caribbean_bathymetry.html">ensaio.fetch_caribbean_bathymetry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_earth_geoid.html">ensaio.fetch_earth_geoid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_earth_gravity.html">ensaio.fetch_earth_gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_earth_topography.html">ensaio.fetch_earth_topography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_lightning_creek_magnetic.html">ensaio.fetch_lightning_creek_magnetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_osborne_magnetic.html">ensaio.fetch_osborne_magnetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_sierra_negra_topography.html">ensaio.fetch_sierra_negra_topography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_southern_africa_gravity.html">ensaio.fetch_southern_africa_gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/generated/ensaio.fetch_southern_africa_topography.html">ensaio.fetch_southern_africa_topography</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../compatibility.html">Version compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versions.html">Documentation for other versions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.fatiando.org/contact/">Join the community</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fatiando/community/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fatiando/ensaio/blob/main/CONTRIBUTING.md">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fatiando/ensaio">Source code on GitHub</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fatiando/ensaio/blob/main/AUTHORS.md">Authors</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.fatiando.org">Fatiando a Terra</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/gallery/index.rst.txt"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.rst</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/fatiando/ensaio" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fatiando/ensaio/edit/main/doc/gallery/index.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fatiando/ensaio/issues/new?title=Issue%20on%20page%20%2Fgallery/index.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/fatiando/ensaio"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/fatiando/ensaio/issues/new?title=Issue%20on%20page%20%2Fgallery/index.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/fatiando/ensaio/edit/main/doc/gallery/index.rst"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/gallery/index.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Available datasets</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Available datasets</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+
+              
                 
-  <div class="section" id="available-datasets">
-<span id="gallery"></span><span id="sphx-glr-gallery"></span><h1>Available datasets<a class="headerlink" href="#available-datasets" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="available-datasets">
+<span id="gallery"></span><h1>Available datasets<a class="headerlink" href="#available-datasets" title="Link to this heading">#</a></h1>
 <p>Use the functions in the <a class="reference internal" href="../api/index.html#module-ensaio" title="ensaio"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ensaio</span></code></a> module to download and cache (store)
 each dataset on your computer.
 See the <a class="reference internal" href="../api/index.html#api"><span class="std std-ref">List of functions and classes (API)</span></a> for more information about each dataset, the original data
@@ -441,125 +444,134 @@ organization.</p>
 <p>Click on the images for examples of fetching, loading, and plotting each
 dataset.</p>
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="This dataset is a compilation of several public domain single-beam bathymetry surveys of the oc..."><div class="figure align-default" id="id1">
-<img alt="Bathymetry single-beam surveys of the Caribbean" src="../_images/sphx_glr_caribbean-bathymetry_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="caribbean-bathymetry.html#sphx-glr-gallery-caribbean-bathymetry-py"><span class="std std-ref">Bathymetry single-beam surveys of the Caribbean</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This dataset is a compilation of several public domain single-beam bathymetry surveys of the oc..."><img alt="" src="../_images/sphx_glr_caribbean-bathymetry_thumb.png" />
+<p><a class="reference internal" href="caribbean-bathymetry.html#sphx-glr-gallery-caribbean-bathymetry-py"><span class="std std-ref">Bathymetry single-beam surveys of the Caribbean</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Bathymetry single-beam surveys of the Caribbean</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="The grid is grid-node registered and stored in netCDF with CF-compliant metadata. The geoid hei..."><img alt="" src="../_images/sphx_glr_earth-geoid_thumb.png" />
+<p><a class="reference internal" href="earth-geoid.html#sphx-glr-gallery-earth-geoid-py"><span class="std std-ref">Earth geoid height grid at 10 arc-minute resolution</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Earth geoid height grid at 10 arc-minute resolution</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="The grid is grid-node registered and stored in netCDF with CF-compliant metadata. The gravity v..."><img alt="" src="../_images/sphx_glr_earth-gravity_thumb.png" />
+<p><a class="reference internal" href="earth-gravity.html#sphx-glr-gallery-earth-gravity-py"><span class="std std-ref">Earth gravity grid at 10 arc-minute resolution</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Earth gravity grid at 10 arc-minute resolution</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="The grid is grid-node registered and stored in netCDF with CF-compliant metadata. The values ar..."><img alt="" src="../_images/sphx_glr_earth-topography_thumb.png" />
+<p><a class="reference internal" href="earth-topography.html#sphx-glr-gallery-earth-topography-py"><span class="std std-ref">Earth topography grid at 10 arc-minute resolution</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Earth topography grid at 10 arc-minute resolution</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This is a compilation of 3D GPS velocities for the Alps. The horizontal velocities are referenc..."><img alt="" src="../_images/sphx_glr_alps-gps-velocity_thumb.png" />
+<p><a class="reference internal" href="alps-gps-velocity.html#sphx-glr-gallery-alps-gps-velocity-py"><span class="std std-ref">GPS velocities (3-component) for the Alps</span></a></p>
+  <div class="sphx-glr-thumbnail-title">GPS velocities (3-component) for the Alps</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This dataset contains ground gravity observations over the area that comprises the Bushveld Ige..."><img alt="" src="../_images/sphx_glr_bushveld-gravity_thumb.png" />
+<p><a class="reference internal" href="bushveld-gravity.html#sphx-glr-gallery-bushveld-gravity-py"><span class="std std-ref">Gravity ground-based data over the Bushveld Complex, Southern Africa</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Gravity ground-based data over the Bushveld Complex, Southern Africa</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This dataset is a compilation of several public domain ground measurements of gravity from Sout..."><img alt="" src="../_images/sphx_glr_southern-africa-gravity_thumb.png" />
+<p><a class="reference internal" href="southern-africa-gravity.html#sphx-glr-gallery-southern-africa-gravity-py"><span class="std std-ref">Gravity ground-based surveys of Southern Africa</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Gravity ground-based surveys of Southern Africa</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This is a digitization of an airborne magnetic survey of Britain. Data are sampled where flight..."><img alt="" src="../_images/sphx_glr_britain-magnetic_thumb.png" />
+<p><a class="reference internal" href="britain-magnetic.html#sphx-glr-gallery-britain-magnetic-py"><span class="std std-ref">Magnetic airborne survey of Britain</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Magnetic airborne survey of Britain</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This is a section of a survey acquired in 1990 by the Queensland Government, Australia. The lin..."><img alt="" src="../_images/sphx_glr_osborne-magnetic_thumb.png" />
+<p><a class="reference internal" href="osborne-magnetic.html#sphx-glr-gallery-osborne-magnetic-py"><span class="std std-ref">Magnetic airborne survey of the Osborne Mine, Australia</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Magnetic airborne survey of the Osborne Mine, Australia</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This is a section of an airborne survey acquired in 1990 by the Queensland Government, Australi..."><img alt="" src="../_images/sphx_glr_lightning-creek-magnetic_thumb.png" />
+<p><a class="reference internal" href="lightning-creek-magnetic.html#sphx-glr-gallery-lightning-creek-magnetic-py"><span class="std std-ref">Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This dataset consists in a regular grid with topography and bathymetry over Southern Africa. It..."><img alt="" src="../_images/sphx_glr_southern-africa-topography_thumb.png" />
+<p><a class="reference internal" href="southern-africa-topography.html#sphx-glr-gallery-southern-africa-topography-py"><span class="std std-ref">Topography and bathymetry of Southern Africa</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Topography and bathymetry of Southern Africa</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This is a structure-from-motion point cloud of the 2018 lava flows of the Sierra Negra volcano,..."><img alt="" src="../_images/sphx_glr_sierra-negra-topography_thumb.png" />
+<p><a class="reference internal" href="sierra-negra-topography.html#sphx-glr-gallery-sierra-negra-topography-py"><span class="std std-ref">Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This is a lidar point cloud (ground reflections only) sliced to the small Trail Islands to the ..."><img alt="" src="../_images/sphx_glr_british-columbia-lidar_thumb.png" />
+<p><a class="reference internal" href="british-columbia-lidar.html#sphx-glr-gallery-british-columbia-lidar-py"><span class="std std-ref">Topography of the Trail Islands in British Columbia, Canada</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Topography of the Trail Islands in British Columbia, Canada</div>
+</div></div><div class="toctree-wrapper compound">
 </div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="The grid is grid-node registered and stored in netCDF with CF-compliant metadata. The geoid hei..."><div class="figure align-default" id="id2">
-<img alt="Earth geoid height grid at 10 arc-minute resolution" src="../_images/sphx_glr_earth-geoid_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="earth-geoid.html#sphx-glr-gallery-earth-geoid-py"><span class="std std-ref">Earth geoid height grid at 10 arc-minute resolution</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="The grid is grid-node registered and stored in netCDF with CF-compliant metadata. The gravity v..."><div class="figure align-default" id="id3">
-<img alt="Earth gravity grid at 10 arc-minute resolution" src="../_images/sphx_glr_earth-gravity_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="earth-gravity.html#sphx-glr-gallery-earth-gravity-py"><span class="std std-ref">Earth gravity grid at 10 arc-minute resolution</span></a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="The grid is grid-node registered and stored in netCDF with CF-compliant metadata. The values ar..."><div class="figure align-default" id="id4">
-<img alt="Earth topography grid at 10 arc-minute resolution" src="../_images/sphx_glr_earth-topography_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="earth-topography.html#sphx-glr-gallery-earth-topography-py"><span class="std std-ref">Earth topography grid at 10 arc-minute resolution</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="This is a compilation of 3D GPS velocities for the Alps. The horizontal velocities are referenc..."><div class="figure align-default" id="id5">
-<img alt="GPS velocities (3-component) for the Alps" src="../_images/sphx_glr_alps-gps-velocity_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="alps-gps-velocity.html#sphx-glr-gallery-alps-gps-velocity-py"><span class="std std-ref">GPS velocities (3-component) for the Alps</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="This dataset contains ground gravity observations over the area that comprises the Bushveld Ige..."><div class="figure align-default" id="id6">
-<img alt="Gravity ground-based data over the Bushveld Complex, Southern Africa" src="../_images/sphx_glr_bushveld-gravity_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="bushveld-gravity.html#sphx-glr-gallery-bushveld-gravity-py"><span class="std std-ref">Gravity ground-based data over the Bushveld Complex, Southern Africa</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="This dataset is a compilation of several public domain ground measurements of gravity from Sout..."><div class="figure align-default" id="id7">
-<img alt="Gravity ground-based surveys of Southern Africa" src="../_images/sphx_glr_southern-africa-gravity_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="southern-africa-gravity.html#sphx-glr-gallery-southern-africa-gravity-py"><span class="std std-ref">Gravity ground-based surveys of Southern Africa</span></a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="This is a digitization of an airborne magnetic survey of Britain. Data are sampled where flight..."><div class="figure align-default" id="id8">
-<img alt="Magnetic airborne survey of Britain" src="../_images/sphx_glr_britain-magnetic_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="britain-magnetic.html#sphx-glr-gallery-britain-magnetic-py"><span class="std std-ref">Magnetic airborne survey of Britain</span></a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="This is a section of a survey acquired in 1990 by the Queensland Government, Australia. The lin..."><div class="figure align-default" id="id9">
-<img alt="Magnetic airborne survey of the Osborne Mine, Australia" src="../_images/sphx_glr_osborne-magnetic_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="osborne-magnetic.html#sphx-glr-gallery-osborne-magnetic-py"><span class="std std-ref">Magnetic airborne survey of the Osborne Mine, Australia</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="This is a section of an airborne survey acquired in 1990 by the Queensland Government, Australi..."><div class="figure align-default" id="id10">
-<img alt="Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia" src="../_images/sphx_glr_lightning-creek-magnetic_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="lightning-creek-magnetic.html#sphx-glr-gallery-lightning-creek-magnetic-py"><span class="std std-ref">Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="This dataset consists in a regular grid with topography and bathymetry over Southern Africa. It..."><div class="figure align-default" id="id11">
-<img alt="Topography and bathymetry of Southern Africa" src="../_images/sphx_glr_southern-africa-topography_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="southern-africa-topography.html#sphx-glr-gallery-southern-africa-topography-py"><span class="std std-ref">Topography and bathymetry of Southern Africa</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="This is a structure-from-motion point cloud of the 2018 lava flows of the Sierra Negra volcano,..."><div class="figure align-default" id="id12">
-<img alt="Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador" src="../_images/sphx_glr_sierra-negra-topography_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="sierra-negra-topography.html#sphx-glr-gallery-sierra-negra-topography-py"><span class="std std-ref">Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador</span></a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="This is a lidar point cloud (ground reflections only) sliced to the small `Trail Islands &lt;https..."><div class="figure align-default" id="id13">
-<img alt="Topography of the Trail Islands in British Columbia, Canada" src="../_images/sphx_glr_british-columbia-lidar_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="british-columbia-lidar.html#sphx-glr-gallery-british-columbia-lidar-py"><span class="std std-ref">Topography of the Trail Islands in British Columbia, Canada</span></a></span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-clear"></div><p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
-</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
 
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../tutorial/developers.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Using Ensaio in your project</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../tutorial/developers.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Using Ensaio in your project</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="caribbean-bathymetry.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="caribbean-bathymetry.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Bathymetry single-beam surveys of the Caribbean</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-        &copy; Copyright 2022, The Ensaio Developers.<br/>
-      Last updated on Nov 24, 2022.<br/>
-  </p>
-</footer>
-</main>
-
-
-      </div>
-    </div>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
 
+  <p class="copyright">
+    
+      © Copyright 2024, The Ensaio Developers.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on Feb 07, 2024.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

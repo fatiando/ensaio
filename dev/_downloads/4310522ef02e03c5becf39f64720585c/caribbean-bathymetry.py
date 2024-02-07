@@ -10,8 +10,7 @@ Bathymetry single-beam surveys of the Caribbean
 
 This dataset is a compilation of several public domain single-beam bathymetry
 surveys of the ocean in the Caribbean. The data display a wide range of
-tectonic activity, uneven distribution, and even clear systematic errors in
-some of the survey lines.
+tectonic activity and uneven distribution.
 
 **Original source:** `NOAA NCEI
 <https://ngdc.noaa.gov/mgg/geodas/trackline.html>`__
@@ -19,6 +18,14 @@ some of the survey lines.
 **Pre-processing:** `Source code for preparation of the original dataset for
 redistribution in Ensaio
 <https://github.com/fatiando-data/caribbean-bathymetry>`__
+
+.. admonition:: Changes in version 2
+    :class: note
+
+    In version 1, there were 1,938,095 data taking up a larger area. The
+    data were ``depth_m`` and positive downward. Version 2, cropped the
+    data to make it more manageable and converted the depths to bathymetric
+    heights (negative downward).
 
 """
 import pandas as pd
@@ -28,7 +35,7 @@ import ensaio
 
 ###############################################################################
 # Download and cache the data and return the path to it on disk
-fname = ensaio.fetch_caribbean_bathymetry(version=1)
+fname = ensaio.fetch_caribbean_bathymetry(version=2)
 print(fname)
 
 ###############################################################################
@@ -37,22 +44,21 @@ data = pd.read_csv(fname)
 data
 
 ###############################################################################
-# Make a PyGMT map with the data points colored by the depth.
+# Make a PyGMT map with the data points colored by the bathymetry.
 fig = pygmt.Figure()
-fig.basemap(
-    region=[
-        data.longitude.min(),
-        data.longitude.max(),
-        data.latitude.min(),
-        data.latitude.max(),
-    ],
+pygmt.makecpt(
+    cmap="cmocean/topo+h",
+    series=[data.bathymetry_m.min(), data.bathymetry_m.max()],
+)
+fig.plot(
+    x=data.longitude,
+    y=data.latitude,
+    fill=data.bathymetry_m,
+    cmap=True,
+    style="c0.02c",
     projection="M15c",
     frame=True,
 )
-pygmt.makecpt(cmap="viridis", series=[data.depth_m.min(), data.depth_m.max()])
-fig.plot(
-    x=data.longitude, y=data.latitude, color=data.depth_m, cmap=True, style="c0.02c"
-)
-fig.colorbar(frame='af+l"bathymetric depth [m]"')
+fig.colorbar(frame='af+l"bathymetry [m]"')
 fig.coast(land="#666666")
 fig.show()

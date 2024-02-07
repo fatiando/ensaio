@@ -52,7 +52,7 @@ fig.plot(
     x=data.longitude,
     y=data.latitude,
     style="c0.02c",
-    color=data.total_field_anomaly_nt,
+    fill=data.total_field_anomaly_nt,
     cmap=True,
     projection="M15c",
 )
