@@ -56,7 +56,7 @@ pygmt.makecpt(cmap="polar+h", series=[-scale, scale], background=True)
 fig.plot(
     x=data.longitude,
     y=data.latitude,
-    color=data.total_field_anomaly_nt,
+    fill=data.total_field_anomaly_nt,
     style="c0.075c",
     cmap=True,
 )

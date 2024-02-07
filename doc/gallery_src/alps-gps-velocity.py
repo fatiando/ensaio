@@ -67,7 +67,7 @@ with fig.subplot(
             y=data.latitude,
             direction=[angle, length * scale_factor],
             style="v0.15c+e",
-            color="blue",
+            fill="blue",
             pen="1p,blue",
         )
         # Plot a quiver caption
@@ -76,7 +76,7 @@ with fig.subplot(
             y=42,
             direction=[[0], [1 * scale_factor]],
             style="v0.15c+e",
-            color="blue",
+            fill="blue",
             pen="1p,blue",
         )
         fig.text(
@@ -96,7 +96,7 @@ with fig.subplot(
         fig.plot(
             x=data.longitude,
             y=data.latitude,
-            color=data.velocity_up_mmyr,
+            fill=data.velocity_up_mmyr,
             style="c0.2c",
             cmap=True,
             pen="0.5p,black",

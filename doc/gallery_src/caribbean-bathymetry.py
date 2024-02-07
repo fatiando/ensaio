@@ -51,7 +51,7 @@ fig.basemap(
 )
 pygmt.makecpt(cmap="viridis", series=[data.depth_m.min(), data.depth_m.max()])
 fig.plot(
-    x=data.longitude, y=data.latitude, color=data.depth_m, cmap=True, style="c0.02c"
+    x=data.longitude, y=data.latitude, fill=data.depth_m, cmap=True, style="c0.02c"
 )
 fig.colorbar(frame='af+l"bathymetric depth [m]"')
 fig.coast(land="#666666")

@@ -54,7 +54,7 @@ pygmt.makecpt(cmap="viridis", series=[data.gravity_mgal.min(), data.gravity_mgal
 fig.plot(
     x=data.longitude,
     y=data.latitude,
-    color=data.gravity_mgal,
+    fill=data.gravity_mgal,
     cmap=True,
     style="c0.05c",
 )

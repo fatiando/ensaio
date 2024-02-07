@@ -2,13 +2,9 @@
 
 .. raw:: html
 
-    <h1 class="display-2 text-center">
-      Ensaio
-    </h1>
-
-.. raw:: html
-
-    <p class="centered lead front-page-callout">
+    <img class="mx-auto d-block dark-light" src="./_static/ensaio-logo.svg" width="100">
+    <h1 class="display-1 text-center">Ensaio</h1>
+    <p class="text-center lead front-page-callout">
       Practice datasets to probe your code
     </p>
     <img class="front-page-banner" src="_static/banner.png" alt="A sampling of our datasets">
@@ -24,55 +20,67 @@ caching the data on your computer.
 This means that datasets are only downloaded if they can't be found on your
 computer already.
 
-.. panels::
-    :header: text-center text-large
-    :card: border-1 m-1 text-center
+.. grid:: 1 2 1 2
+    :margin: 5 5 0 0
+    :padding: 0 0 0 0
+    :gutter: 4
 
-    **Getting started**
-    ^^^^^^^^^^^^^^^^^^^
+    .. grid-item-card:: :octicon:`info` Getting started
+        :text-align: center
+        :class-title: sd-fs-5
+        :class-card: sd-p-3
 
-    New to Ensaio? Start here!
+        New to Ensaio? Start here!
 
-    .. link-button:: using
-        :type: ref
-        :text: Downloading data
-        :classes: btn-outline-primary btn-block stretched-link
+        .. button-ref:: using
+            :ref-type: ref
+            :click-parent:
+            :color: primary
+            :outline:
+            :expand:
 
-    ---
+    .. grid-item-card:: :octicon:`paintbrush` Browse our datasets
+        :text-align: center
+        :class-title: sd-fs-5
+        :class-card: sd-p-3
 
-    **Need help?**
-    ^^^^^^^^^^^^^^
+        Take a look at what's available
 
-    Ask on our community channels
+        .. button-ref:: gallery
+            :ref-type: ref
+            :color: primary
+            :outline:
+            :expand:
 
-    .. link-button:: https://www.fatiando.org/contact
-        :type: url
-        :text: Join the conversation
-        :classes: btn-outline-primary btn-block stretched-link
+    .. grid-item-card:: :octicon:`comment-discussion` Need help?
+        :text-align: center
+        :class-title: sd-fs-5
+        :class-card: sd-p-3
 
-    ---
+        Ask on our community channels.
 
-    **Browse our datasets**
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        .. button-link:: https://www.fatiando.org/contact
+            :click-parent:
+            :color: primary
+            :outline:
+            :expand:
 
-    Take a look at what's available
+            Join the conversation :octicon:`link-external`
 
-    .. link-button:: gallery
-        :type: ref
-        :text: Gallery
-        :classes: btn-outline-primary btn-block stretched-link
+    .. grid-item-card:: :octicon:`file-badge` Reference documentation
+        :text-align: center
+        :class-title: sd-fs-5
+        :class-card: sd-p-3
 
-    ---
+        A list of modules and functions.
 
-    **Reference documentation**
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        .. button-ref:: api
+            :ref-type: ref
+            :color: primary
+            :outline:
+            :expand:
 
-    A list of modules and functions
-
-    .. link-button:: api
-        :type: ref
-        :text: API reference
-        :classes: btn-outline-primary btn-block stretched-link
+----
 
 .. seealso::
 
@@ -80,14 +88,9 @@ computer already.
     `Fatiando a Terra <https://www.fatiando.org/>`_ project.
 
 
-----
-
-
-Table of contents
------------------
-
 .. toctree::
     :caption: User Guide
+    :hidden:
     :maxdepth: 1
 
     install.rst
@@ -97,6 +100,7 @@ Table of contents
 
 .. toctree::
     :caption: Reference
+    :hidden:
     :maxdepth: 1
 
     api/index.rst
@@ -106,6 +110,7 @@ Table of contents
 
 .. toctree::
     :caption: Community
+    :hidden:
 
     Join the community <https://www.fatiando.org/contact/>
     Code of Conduct <https://github.com/fatiando/community/blob/main/CODE_OF_CONDUCT.md>
