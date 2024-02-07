@@ -19,6 +19,9 @@ FETCH_FUNCTIONS = [
     for name, function in inspect.getmembers(_fetchers, inspect.isfunction)
     if name.startswith("fetch_")
 ]
+FETCH_FUNCTIONS_V2 = [
+    _fetchers.fetch_caribbean_bathymetry,
+]
 
 
 @pytest.mark.parametrize("fetch", FETCH_FUNCTIONS)
@@ -26,6 +29,15 @@ def test_fetch_datasets(fetch):
     "Check that fetching works and the file exists once downloaded"
     path = fetch(version=1)
     assert path.exists()
+    assert "v1" in str(path)
+
+
+@pytest.mark.parametrize("fetch", FETCH_FUNCTIONS_V2)
+def test_fetch_datasets_v2(fetch):
+    "Check that fetching v2 works and the file exists once downloaded"
+    path = fetch(version=2)
+    assert path.exists()
+    assert "v2" in str(path)
 
 
 def test_locate():

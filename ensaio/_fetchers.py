@@ -47,6 +47,11 @@ REGISTRY = {
             "doi": "doi:10.5281/zenodo.5882211",
             "url": "https://github.com/fatiando-data/caribbean-bathymetry/releases/download/v1",
         },
+        "v2": {
+            "hash": "md5:79698c447daba7c15011a5528c8fe212",
+            "doi": "doi:10.5281/zenodo.10631903",
+            "url": "https://github.com/fatiando-data/caribbean-bathymetry/releases/download/v2",
+        },
     },
     "earth-geoid-10arcmin.nc": {
         "v1": {
@@ -420,14 +425,21 @@ def fetch_caribbean_bathymetry(version):
 
     This dataset is a compilation of several public domain single-beam
     bathymetry surveys of the ocean in the Caribbean. The data display a wide
-    range of tectonic activity, uneven distribution, and even clear systematic
-    errors in some of the survey lines.
+    range of tectonic activity and an uneven distribution.
 
-    The horizontal datum is WGS84 and the bathymetric depth is positive
-    downwards and referenced to "mean sea level".
+    The horizontal datum is WGS84 and the bathymetry is negative downwards and
+    is referenced to "mean sea level".
 
-    There are 1,938,095 measurements in total with 4 columns available:
-    survey ID, longitude, latitude (geodetic), and depth.
+    There are 294,321 measurements in total with 4 columns available:
+    survey ID, longitude, latitude (geodetic), and bathymetry (in meters).
+
+    .. admonition:: Changes in version 2
+        :class: note
+
+        In version 1, there were 1,938,095 data taking up a larger area. The
+        data were ``depth_m`` and positive downward. Version 2, cropped the
+        data to make it more manageable and converted the depths to bathymetric
+        heights (negative downward).
 
     **Format:** CSV with xz (lzma) compression.
 
@@ -447,6 +459,10 @@ def fetch_caribbean_bathymetry(version):
     * `1
       <https://github.com/fatiando-data/caribbean-bathymetry/releases/tag/v1>`_
       (doi:`10.5281/zenodo.5882211 <https://doi.org/10.5281/zenodo.5882211>`__)
+    * `2
+      <https://github.com/fatiando-data/caribbean-bathymetry/releases/tag/v2>`_
+      (doi:`10.5281/zenodo.10631903
+      <https://doi.org/10.5281/zenodo.10631903>`__)
 
     Parameters
     ----------
@@ -459,7 +475,7 @@ def fetch_caribbean_bathymetry(version):
         Path to the downloaded file on disk.
 
     """
-    _check_versions(version, allowed={1}, name="Caribbean bathymetry")
+    _check_versions(version, allowed={1, 2}, name="Caribbean bathymetry")
     fname = "caribbean-bathymetry.csv.xz"
     return Path(_repository(fname, version).fetch(fname))
 
