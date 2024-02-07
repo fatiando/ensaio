@@ -3,6 +3,32 @@
 Changelog
 =========
 
+Version 0.6.0
+-------------
+
+Released on: 2024/02/07
+
+DOI: https://doi.org/10.5281/zenodo.10632724
+
+Updated data:
+
+* Update the Caribbean bathymetry data to v2. The new version has fewer points (smaller area), removed the very dense surveys, removed the surveys with systematic errors (`#54 <https://github.com/fatiando/ensaio/pull/54>`__)
+
+Documentation:
+
+* Update documentation dependencies to use the latest sphinx, theme, and plugins (`#53 <https://github.com/fatiando/ensaio/pull/53>`__)
+
+Maintenance:
+
+* Add testing and support for Python 3.11 (`#61 <https://github.com/fatiando/ensaio/pull/61>`__)
+* Use Dependabot to update GitHub Actions (`#55 <https://github.com/fatiando/ensaio/pull/55>`__)
+* Remove the schedule CI run of the tests (`#52 <https://github.com/fatiando/ensaio/pull/52>`__)
+* Fail CI if codecov upload fails (`#51 <https://github.com/fatiando/ensaio/pull/51>`__)
+
+This release contains contributions from:
+
+* Leonardo Uieda
+
 Version 0.5.0
 -------------
 
