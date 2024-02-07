@@ -25,6 +25,7 @@ clean:
 	rm -rf $(BUILDDIR)/doctrees
 	rm -rf $(BUILDDIR)/linkcheck
 	rm -rf api/generated
+	rm -rf gallery
 	rm -rf .ipynb_checkpoints
 
 clean-all: clean

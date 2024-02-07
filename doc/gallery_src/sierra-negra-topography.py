@@ -52,7 +52,7 @@ fig.basemap(
 )
 pygmt.makecpt(cmap="viridis", series=[data.elevation_m.min(), data.elevation_m.max()])
 fig.plot(
-    x=data.longitude, y=data.latitude, color=data.elevation_m, cmap=True, style="c0.01c"
+    x=data.longitude, y=data.latitude, fill=data.elevation_m, cmap=True, style="c0.01c"
 )
 fig.colorbar(frame='af+l"elevation [m]"')
 fig.show()

@@ -33,17 +33,10 @@ extensions = [
     "sphinx.ext.extlinks",
     "sphinx.ext.intersphinx",
     "sphinx.ext.napoleon",
-    "sphinx_panels",
+    "sphinx_design",
     "sphinx_gallery.gen_gallery",
     "jupyter_sphinx",
 ]
-
-# Disable including boostrap CSS for sphinx_panels since it's already included
-# with sphinx-book-theme
-panels_add_bootstrap_css = False
-panels_css_variables = {
-    "tabs-color-label-inactive": "hsla(231, 99%, 66%, 0.5)",
-}
 
 # Configuration to include links to other project docs when referencing
 # functions/classes
@@ -51,7 +44,7 @@ intersphinx_mapping = {
     "python": ("https://docs.python.org/3/", None),
     "numpy": ("https://numpy.org/doc/stable/", None),
     "pandas": ("https://pandas.pydata.org/pandas-docs/stable/", None),
-    "xarray": ("https://xarray.pydata.org/en/stable/", None),
+    "xarray": ("https://docs.xarray.dev/en/stable/", None),
     "pooch": ("https://www.fatiando.org/pooch/latest/", None),
     "pygmt": ("https://www.pygmt.org/latest/", None),
 }
@@ -103,7 +96,7 @@ sphinx_gallery_conf = {
 # -----------------------------------------------------------------------------
 html_title = f'{project} <span class="project-version">{version}</span>'
 html_short_title = project
-html_logo = "_static/ensaio-logo.png"
+# html_logo = "_static/ensaio-logo.png"
 html_favicon = "_static/favicon.png"
 html_last_updated_fmt = "%b %d, %Y"
 html_copy_source = True

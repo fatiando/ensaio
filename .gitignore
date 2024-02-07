@@ -18,3 +18,4 @@ MANIFEST
 .coverage.*
 *.ipynb
 **/_version_generated.py
+doc/sg_execution_times.rst

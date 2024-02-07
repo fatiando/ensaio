@@ -64,7 +64,7 @@ pygmt.makecpt(
 fig.plot(
     x=data.longitude,
     y=data.latitude,
-    color=data.gravity_disturbance_mgal,
+    fill=data.gravity_disturbance_mgal,
     cmap=True,
     style="c0.1c",
 )
