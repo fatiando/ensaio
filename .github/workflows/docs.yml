@@ -103,21 +103,21 @@ jobs:
 
       - name: Cache the datasets
         if: github.event_name == 'pull_request'
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ runner.temp }}/cache/ensaio
           key: ensaio-data-${{ hashFiles('ensaio/_fetchers.py') }}
 
       - name: Cache the sphinx-gallery runs
         if: github.event_name == 'pull_request'
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: doc/gallery/
           key: gallery-${{ hashFiles('doc/gallery_src/*.py') }}
 
       - name: Cache the tutorial sphinx-gallery runs
         if: github.event_name == 'pull_request'
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: doc/tutorial
           key: tutorial-${{ hashFiles('doc/tutorial_src/*.py') }}
