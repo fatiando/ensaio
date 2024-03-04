@@ -1,5 +1,44 @@
-# Specify that we use setuptools and setuptools_scm (to generate the version
-# string). Actual configuration is in setup.cfg.
+[project]
+name = "ensaio"
+description = "Practice datasets to probe your code"
+dynamic = ["version"]
+authors = [
+  {name="The Ensaio Developers", email="fatiandoaterra@protonmail.com"},
+]
+maintainers = [
+  {name = "Leonardo Uieda", email = "leo@uieda.com"}
+]
+readme = "README.md"
+license = {text = "BSD 3-Clause"}
+keywords = ["geophysics", "geodesy", "data"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "pooch>=1.5.0,<2.0.0",
+]
+
+[project.urls]
+"Documentation" = "https://www.fatiando.org/ensaio"
+"Changelog" = "https://www.fatiando.org/ensaio/latest/changes.html"
+"Bug Tracker" = "https://github.com/fatiando/ensaio/issues"
+"Source Code" = "https://github.com/fatiando/ensaio"
+
 [build-system]
 requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
