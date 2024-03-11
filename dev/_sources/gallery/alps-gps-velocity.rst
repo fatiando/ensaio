@@ -414,7 +414,7 @@ velocities encoded as colored points.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.859 seconds)
+   **Total running time of the script:** (0 minutes 4.021 seconds)
 
 
 .. _sphx_glr_download_gallery_alps-gps-velocity.py:
