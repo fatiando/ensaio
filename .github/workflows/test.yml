@@ -160,7 +160,7 @@ jobs:
       - name: Upload coverage report as an artifact
         uses: actions/upload-artifact@v4
         with:
-          name: coverage_${{ matrix.os }}_${{ matrix.dependencies }}
+          name: coverage_${{ matrix.os }}_${{ matrix.dependencies }}_${{ matrix.cached }}
           path: ./coverage.xml
 
 
