@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**01:58.933** total execution time for 13 files **from gallery**:
+**01:39.275** total execution time for 13 files **from gallery**:
 
 .. container::
 
@@ -32,42 +32,42 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_gallery_bushveld-gravity.py` (``bushveld-gravity.py``)
-     - 00:23.026
-     - 0.0
    * - :ref:`sphx_glr_gallery_sierra-negra-topography.py` (``sierra-negra-topography.py``)
-     - 00:20.380
+     - 00:20.739
      - 0.0
    * - :ref:`sphx_glr_gallery_osborne-magnetic.py` (``osborne-magnetic.py``)
-     - 00:14.896
+     - 00:15.056
      - 0.0
    * - :ref:`sphx_glr_gallery_british-columbia-lidar.py` (``british-columbia-lidar.py``)
-     - 00:13.640
+     - 00:13.132
      - 0.0
    * - :ref:`sphx_glr_gallery_britain-magnetic.py` (``britain-magnetic.py``)
-     - 00:09.318
+     - 00:09.448
      - 0.0
    * - :ref:`sphx_glr_gallery_caribbean-bathymetry.py` (``caribbean-bathymetry.py``)
-     - 00:06.497
+     - 00:06.735
      - 0.0
    * - :ref:`sphx_glr_gallery_earth-gravity.py` (``earth-gravity.py``)
-     - 00:06.228
+     - 00:06.586
      - 0.0
    * - :ref:`sphx_glr_gallery_earth-topography.py` (``earth-topography.py``)
-     - 00:05.844
+     - 00:06.276
      - 0.0
    * - :ref:`sphx_glr_gallery_earth-geoid.py` (``earth-geoid.py``)
-     - 00:04.823
+     - 00:04.788
      - 0.0
    * - :ref:`sphx_glr_gallery_southern-africa-topography.py` (``southern-africa-topography.py``)
-     - 00:04.313
-     - 0.0
-   * - :ref:`sphx_glr_gallery_lightning-creek-magnetic.py` (``lightning-creek-magnetic.py``)
-     - 00:03.653
+     - 00:04.433
      - 0.0
    * - :ref:`sphx_glr_gallery_southern-africa-gravity.py` (``southern-africa-gravity.py``)
-     - 00:03.457
+     - 00:03.244
+     - 0.0
+   * - :ref:`sphx_glr_gallery_lightning-creek-magnetic.py` (``lightning-creek-magnetic.py``)
+     - 00:03.166
+     - 0.0
+   * - :ref:`sphx_glr_gallery_bushveld-gravity.py` (``bushveld-gravity.py``)
+     - 00:02.995
      - 0.0
    * - :ref:`sphx_glr_gallery_alps-gps-velocity.py` (``alps-gps-velocity.py``)
-     - 00:02.859
+     - 00:02.677
      - 0.0
