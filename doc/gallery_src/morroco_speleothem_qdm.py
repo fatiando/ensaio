@@ -17,7 +17,8 @@ past geomagnetic field variations recorded in cave deposits.
 **Original source:** Carmo, Janine; Fu, Roger; Trindade, Ricardo; Piascik,
 Samuel (2023). QDM magnetic microscopy dataset of a speleothem from
 Morocco. figshare. Dataset.
-`10.6084/m9.figshare.22965200.v1 <https://doi.org/10.6084/m9.figshare.22965200.v1>`__
+`10.6084/m9.figshare.22965200.v1
+<https://doi.org/10.6084/m9.figshare.22965200.v1>`__
 
 **Pre-processing:** `Source code for preparation of the original dataset for
 redistribution in Ensaio
@@ -32,7 +33,7 @@ import ensaio
 ###############################################################################
 # Download and cache the data and return the path to it on disk. We'll use the
 # netCDF version because it's smaller and can be loaded with xarray easily.
-fname = ensaio.fetch_morroco_speleothem_qdm(version=1, format="netcdf")
+fname = ensaio.fetch_morroco_speleothem_qdm(version=1, file_format="netcdf")
 print(fname)
 
 ###############################################################################

@@ -40,14 +40,14 @@ def test_fetch_datasets_v2(fetch):
     assert "v2" in str(path)
 
 
-@pytest.mark.parametrize("format", ["matlab", "netcdf"])
-def test_fetch_morroco_speleothem(format):
+@pytest.mark.parametrize("file_format", ["matlab", "netcdf"])
+def test_fetch_morroco_speleothem(file_format):
     "Check that fetching different formats works"
     extension = {"matlab": ".mat", "netcdf": ".nc"}
-    path = _fetchers.fetch_morroco_speleothem_qdm(version=1, format=format)
+    path = _fetchers.fetch_morroco_speleothem_qdm(version=1, file_format=file_format)
     assert path.exists()
     assert "v1" in str(path)
-    assert path.suffix == extension[format]
+    assert path.suffix == extension[file_format]
 
 
 def test_locate():

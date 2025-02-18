@@ -692,7 +692,7 @@ def fetch_lightning_creek_magnetic(version):
     return Path(_repository(fname, version).fetch(fname))
 
 
-def fetch_morroco_speleothem_qdm(version, format):
+def fetch_morroco_speleothem_qdm(version, file_format):
     """
     QDM magnetic microscopy dataset of a speleothem from Morocco
 
@@ -707,14 +707,14 @@ def fetch_morroco_speleothem_qdm(version, format):
 
     **Format:** netCDF4 with zlib compression or Matlab ``.mat`` file.
 
-    **Load with:** :func:`xarray.load_dataarray` (for netCDF; requires the `netcdf4
-    <https://github.com/Unidata/netcdf4-python>`__ library) or
+    **Load with:** :func:`xarray.load_dataarray` (for netCDF; requires the
+    `netcdf4 <https://github.com/Unidata/netcdf4-python>`__ library) or
     :func:`magali.read_qdm_harvard` (for Matlab format)
 
     **Original source:** Carmo, Janine; Fu, Roger; Trindade, Ricardo; Piascik,
     Samuel (2023). QDM magnetic microscopy dataset of a speleothem from
-    Morocco. figshare. Dataset.
-    `10.6084/m9.figshare.22965200.v1 <https://doi.org/10.6084/m9.figshare.22965200.v1>`__
+    Morocco. figshare. Dataset. `10.6084/m9.figshare.22965200.v1
+    <https://doi.org/10.6084/m9.figshare.22965200.v1>`__
 
     **Original license:** CC0
 
@@ -726,13 +726,14 @@ def fetch_morroco_speleothem_qdm(version, format):
 
     * `1
       <https://github.com/fatiando-data/morroco-speleothem-qdm/releases/tag/v1>`_
-      (doi:`10.5281/zenodo.14884823 <https://doi.org/10.5281/zenodo.14884823>`__)
+      (doi:`10.5281/zenodo.14884823
+      <https://doi.org/10.5281/zenodo.14884823>`__)
 
     Parameters
     ----------
     version : int
         The data version to fetch. See the available versions above.
-    format : str
+    file_format : str
         Which of the two data formats to fetch. Should be either ``"netcdf"``
         or ``"matlab"``.
 
@@ -745,16 +746,16 @@ def fetch_morroco_speleothem_qdm(version, format):
     name = "Morroco speleothem QDM"
     allowed_formats = {"matlab", "netcdf"}
     _check_versions(version, allowed={1}, name=name)
-    if format.lower() not in allowed_formats:
+    if file_format.lower() not in allowed_formats:
         raise ValueError(
-            f"Invalid data format '{format}' for the {name} data. "
+            f"Invalid data format '{file_format}' for the {name} data. "
             f"Must be one of {allowed_formats}."
         )
     fnames = {
         "netcdf": "morroco-speleothem-qdm.nc",
         "matlab": "morroco-speleothem-qdm.mat",
     }
-    fname = fnames[format]
+    fname = fnames[file_format]
     return Path(_repository(fname, version).fetch(fname))
 
 
