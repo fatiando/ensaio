@@ -81,6 +81,20 @@ REGISTRY = {
             "url": "https://github.com/fatiando-data/lightning-creek-magnetic-grid/releases/download/v1",
         },
     },
+    "morroco-speleothem-qdm.nc": {
+        "v1": {
+            "hash": "md5:fc2f5eafaa06cf32961bedbc737c58f5",
+            "doi": "doi:10.5281/zenodo.14884823",
+            "url": "https://github.com/fatiando-data/morroco-speleothem-qdm/releases/download/v1",
+        },
+    },
+    "morroco-speleothem-qdm.mat": {
+        "v1": {
+            "hash": "md5:268bd3af5e350188d239ff8bd0a88227",
+            "doi": "doi:10.5281/zenodo.14884823",
+            "url": "https://github.com/fatiando-data/morroco-speleothem-qdm/releases/download/v1",
+        },
+    },
     "osborne-magnetic.csv.xz": {
         "v1": {
             "hash": "md5:b26777bdde2f1ecb97dda655c8b1cf71",
@@ -675,6 +689,72 @@ def fetch_lightning_creek_magnetic(version):
     """
     _check_versions(version, allowed={1}, name="Lightning Creek magnetic")
     fname = "lightning-creek-magnetic-grid.nc"
+    return Path(_repository(fname, version).fetch(fname))
+
+
+def fetch_morroco_speleothem_qdm(version, format):
+    """
+    QDM magnetic microscopy dataset of a speleothem from Morocco
+
+    High-resolution magnetic map of a stalagmite sample from Wintimdouine Cave,
+    Morocco, created using Quantum Diamond Microscope (QDM) measurements at
+    Harvard University. The data were collected to explore the magnetic
+    remanence properties of hematite and magnetite within the sample, providing
+    insight into past geomagnetic field variations recorded in cave deposits.
+
+    Available as both a compressed netCDF file as well as the original Matlab
+    file (``.mat``) in the Harvard format.
+
+    **Format:** netCDF4 with zlib compression or Matlab ``.mat`` file.
+
+    **Load with:** :func:`xarray.load_dataarray` (for netCDF; requires the `netcdf4
+    <https://github.com/Unidata/netcdf4-python>`__ library) or
+    :func:`magali.read_harvard_qdm` (for Matlab format)
+
+    **Original source:** Carmo, Janine; Fu, Roger; Trindade, Ricardo; Piascik,
+    Samuel (2023). QDM magnetic microscopy dataset of a speleothem from
+    Morocco. figshare. Dataset.
+    `10.6084/m9.figshare.22965200.v1 <https://doi.org/10.6084/m9.figshare.22965200.v1>`__
+
+    **Original license:** CC0
+
+    **Pre-processing:** `Source code for preparation of the original dataset
+    for redistribution in Ensaio
+    <https://github.com/fatiando-data/morroco-speleothem-qdm>`__
+
+    **Versions:**
+
+    * `1
+      <https://github.com/fatiando-data/morroco-speleothem-qdm/releases/tag/v1>`_
+      (doi:`10.5281/zenodo.14884823 <https://doi.org/10.5281/zenodo.14884823>`__)
+
+    Parameters
+    ----------
+    version : int
+        The data version to fetch. See the available versions above.
+    format : str
+        Which of the two data formats to fetch. Should be either ``"netcdf"``
+        or ``"matlab"``.
+
+    Returns
+    -------
+    fname : :class:`pathlib.Path`
+        Path to the downloaded file on disk.
+
+    """
+    name = "Morroco speleothem QDM"
+    allowed_formats = {"matlab", "netcdf"}
+    _check_versions(version, allowed={1}, name=name)
+    if format.lower() not in allowed_formats:
+        raise ValueError(
+            f"Invalid data format '{format}' for the {name} data. "
+            f"Must be one of {allowed_formats}."
+        )
+    fnames = {
+        "netcdf": "morroco-speleothem-qdm.nc",
+        "matlab": "morroco-speleothem-qdm.mat",
+    }
+    fname = fnames[format]
     return Path(_repository(fname, version).fetch(fname))
 
 
