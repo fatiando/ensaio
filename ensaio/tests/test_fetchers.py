@@ -50,6 +50,13 @@ def test_fetch_morroco_speleothem(file_format):
     assert path.suffix == extension[file_format]
 
 
+def test_fetch_morroco_speleothem_invalid_format():
+    "Check that the function fails for invalid formats"
+    with pytest.raises(ValueError) as error:
+        _fetchers.fetch_morroco_speleothem_qdm(version=1, file_format="csv")
+    assert "csv" in str(error)
+
+
 def test_locate():
     "Check that the cache folder exists by default after a fetch call"
     FETCH_FUNCTIONS[0](version=1)
