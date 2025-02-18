@@ -17,7 +17,7 @@ from .. import _fetchers
 FETCH_FUNCTIONS = [
     function
     for name, function in inspect.getmembers(_fetchers, inspect.isfunction)
-    if name.startswith("fetch_")
+    if name.startswith("fetch_") and name not in {"fetch_morroco_speleothem_qdm"}
 ]
 FETCH_FUNCTIONS_V2 = [
     _fetchers.fetch_caribbean_bathymetry,
@@ -38,6 +38,23 @@ def test_fetch_datasets_v2(fetch):
     path = fetch(version=2)
     assert path.exists()
     assert "v2" in str(path)
+
+
+@pytest.mark.parametrize("file_format", ["matlab", "netcdf"])
+def test_fetch_morroco_speleothem(file_format):
+    "Check that fetching different formats works"
+    extension = {"matlab": ".mat", "netcdf": ".nc"}
+    path = _fetchers.fetch_morroco_speleothem_qdm(version=1, file_format=file_format)
+    assert path.exists()
+    assert "v1" in str(path)
+    assert path.suffix == extension[file_format]
+
+
+def test_fetch_morroco_speleothem_invalid_format():
+    "Check that the function fails for invalid formats"
+    with pytest.raises(ValueError) as error:
+        _fetchers.fetch_morroco_speleothem_qdm(version=1, file_format="csv")
+    assert "csv" in str(error)
 
 
 def test_locate():
