@@ -709,7 +709,7 @@ def fetch_morroco_speleothem_qdm(version, format):
 
     **Load with:** :func:`xarray.load_dataarray` (for netCDF; requires the `netcdf4
     <https://github.com/Unidata/netcdf4-python>`__ library) or
-    :func:`magali.read_harvard_qdm` (for Matlab format)
+    :func:`magali.read_qdm_harvard` (for Matlab format)
 
     **Original source:** Carmo, Janine; Fu, Roger; Trindade, Ricardo; Piascik,
     Samuel (2023). QDM magnetic microscopy dataset of a speleothem from
