@@ -272,7 +272,7 @@ are the Lightning Creek sill complex (the largest) and the Brumby prospect
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 14.896 seconds)
+   **Total running time of the script:** (0 minutes 15.124 seconds)
 
 
 .. _sphx_glr_download_gallery_osborne-magnetic.py:

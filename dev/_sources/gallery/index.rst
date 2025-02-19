@@ -197,6 +197,23 @@ organization.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="High-resolution magnetic map of a stalagmite sample from Wintimdouine Cave, Morocco, created us...">
+
+.. only:: html
+
+  .. image:: /gallery/images/thumb/sphx_glr_morroco_speleothem_qdm_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_gallery_morroco_speleothem_qdm.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">QDM magnetic microscopy dataset of a speleothem from Morocco</div>
+    </div>
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="This dataset consists in a regular grid with topography and bathymetry over Southern Africa. It...">
 
 .. only:: html
@@ -264,6 +281,7 @@ organization.
    /gallery/britain-magnetic
    /gallery/osborne-magnetic
    /gallery/lightning-creek-magnetic
+   /gallery/morroco_speleothem_qdm
    /gallery/southern-africa-topography
    /gallery/sierra-negra-topography
    /gallery/british-columbia-lidar

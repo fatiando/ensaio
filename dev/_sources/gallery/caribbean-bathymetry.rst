@@ -249,7 +249,7 @@ Make a PyGMT map with the data points colored by the bathymetry.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 6.497 seconds)
+   **Total running time of the script:** (0 minutes 6.584 seconds)
 
 
 .. _sphx_glr_download_gallery_caribbean-bathymetry.py:

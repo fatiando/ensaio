@@ -123,13 +123,14 @@ Load the netCDF grid with xarray
       --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
     }
 
-    html[theme=dark],
-    body[data-theme=dark],
+    html[theme="dark"],
+    html[data-theme="dark"],
+    body[data-theme="dark"],
     body.vscode-dark {
       --xr-font-color0: rgba(255, 255, 255, 1);
       --xr-font-color2: rgba(255, 255, 255, 0.54);
       --xr-font-color3: rgba(255, 255, 255, 0.38);
-      --xr-border-color: #1F1F1F;
+      --xr-border-color: #1f1f1f;
       --xr-disabled-color: #515151;
       --xr-background-color: #111111;
       --xr-background-color-row-even: #111111;
@@ -174,7 +175,7 @@ Load the netCDF grid with xarray
     .xr-sections {
       padding-left: 0 !important;
       display: grid;
-      grid-template-columns: 150px auto auto 1fr 20px 20px;
+      grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
     }
 
     .xr-section-item {
@@ -182,7 +183,9 @@ Load the netCDF grid with xarray
     }
 
     .xr-section-item input {
-      display: none;
+      display: inline-block;
+      opacity: 0;
+      height: 0;
     }
 
     .xr-section-item input + label {
@@ -192,6 +195,10 @@ Load the netCDF grid with xarray
     .xr-section-item input:enabled + label {
       cursor: pointer;
       color: var(--xr-font-color2);
+    }
+
+    .xr-section-item input:focus + label {
+      border: 2px solid var(--xr-font-color0);
     }
 
     .xr-section-item input:enabled + label:hover {
@@ -215,7 +222,7 @@ Load the netCDF grid with xarray
 
     .xr-section-summary-in + label:before {
       display: inline-block;
-      content: '►';
+      content: "►";
       font-size: 11px;
       width: 15px;
       text-align: center;
@@ -226,7 +233,7 @@ Load the netCDF grid with xarray
     }
 
     .xr-section-summary-in:checked + label:before {
-      content: '▼';
+      content: "▼";
     }
 
     .xr-section-summary-in:checked + label > span {
@@ -298,15 +305,15 @@ Load the netCDF grid with xarray
     }
 
     .xr-dim-list:before {
-      content: '(';
+      content: "(";
     }
 
     .xr-dim-list:after {
-      content: ')';
+      content: ")";
     }
 
     .xr-dim-list li:not(:last-child):after {
-      content: ',';
+      content: ",";
       padding-right: 5px;
     }
 
@@ -456,24 +463,24 @@ Load the netCDF grid with xarray
       stroke: currentColor;
       fill: currentColor;
     }
-    </style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;total_field_anomaly&#x27; (northing: 370, easting: 346)&gt;
-    array([[  35.        ,   36.19995   ,   36.69995   , ..., -101.099976  ,
-            -100.400024  ,  -99.599976  ],
-           [  36.5       ,   37.599976  ,   38.        , ..., -102.20007   ,
-            -101.5       , -100.70007   ],
-           [  37.099976  ,   38.19995   ,   38.599976  , ..., -103.30005   ,
-            -102.599976  , -101.900024  ],
+    </style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;total_field_anomaly&#x27; (northing: 370, easting: 346)&gt; Size: 1MB
+    array([[  34.99995117,   36.19995117,   36.69995117, ..., -101.10004883,
+            -100.40004883,  -99.60004883],
+           [  36.49995117,   37.59995117,   37.99995117, ..., -102.20004883,
+            -101.50004883, -100.70004883],
+           [  37.09995117,   38.19995117,   38.59995117, ..., -103.30004883,
+            -102.60004883, -101.90004883],
            ...,
-           [ 182.79993   ,  172.40002   ,  160.79993   , ...,    0.79992676,
-             -24.200073  ,  -41.80005   ],
-           [ 182.09998   ,  172.59998   ,  161.40002   , ...,    6.        ,
-             -21.5       ,  -41.        ],
-           [ 178.79993   ,  170.40002   ,  160.29993   , ...,   11.400024  ,
-             -16.        ,  -35.80005   ]], dtype=float32)
+           [ 182.79995117,  172.39995117,  160.79995117, ...,    0.79995117,
+             -24.20004883,  -41.80004883],
+           [ 182.09995117,  172.59995117,  161.39995117, ...,    5.99995117,
+             -21.50004883,  -41.00004883],
+           [ 178.79995117,  170.39995117,  160.29995117, ...,   11.39995117,
+             -16.00004883,  -35.80004883]], shape=(370, 346))
     Coordinates:
-      * easting   (easting) float64 4.655e+05 4.656e+05 ... 4.827e+05 4.828e+05
-      * northing  (northing) float64 7.576e+06 7.576e+06 ... 7.595e+06 7.595e+06
-        height    (northing, easting) float64 500.0 500.0 500.0 ... 500.0 500.0
+      * easting   (easting) float64 3kB 4.655e+05 4.656e+05 ... 4.827e+05 4.828e+05
+      * northing  (northing) float64 3kB 7.576e+06 7.576e+06 ... 7.595e+06 7.595e+06
+        height    (northing, easting) float64 1MB 500.0 500.0 500.0 ... 500.0 500.0
     Attributes:
         Conventions:   CF-1.8
         title:         Magnetic total-field anomaly of the Lightning Creek sill c...
@@ -483,27 +490,27 @@ Load the netCDF grid with xarray
         references:    Geophysical Acquisition &amp; Processing Section 2019. MIM Dat...
         long_name:     total-field magnetic anomaly
         units:         nT
-        actual_range:  [-1785.  3798.]</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'total_field_anomaly'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>northing</span>: 370</li><li><span class='xr-has-index'>easting</span>: 346</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-e1720c40-2bcd-4e59-ad7a-c9cb04e52050' class='xr-array-in' type='checkbox' checked><label for='section-e1720c40-2bcd-4e59-ad7a-c9cb04e52050' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>35.0 36.2 36.7 36.6 36.3 35.6 ... 113.1 78.6 43.7 11.4 -16.0 -35.8</span></div><div class='xr-array-data'><pre>array([[  35.        ,   36.19995   ,   36.69995   , ..., -101.099976  ,
-            -100.400024  ,  -99.599976  ],
-           [  36.5       ,   37.599976  ,   38.        , ..., -102.20007   ,
-            -101.5       , -100.70007   ],
-           [  37.099976  ,   38.19995   ,   38.599976  , ..., -103.30005   ,
-            -102.599976  , -101.900024  ],
+        actual_range:  [-1785.  3798.]</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'total_field_anomaly'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>northing</span>: 370</li><li><span class='xr-has-index'>easting</span>: 346</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-b9e0ccce-f92f-4185-9601-f8420a0015ac' class='xr-array-in' type='checkbox' checked><label for='section-b9e0ccce-f92f-4185-9601-f8420a0015ac' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>35.0 36.2 36.7 36.6 36.3 35.6 ... 113.1 78.6 43.7 11.4 -16.0 -35.8</span></div><div class='xr-array-data'><pre>array([[  34.99995117,   36.19995117,   36.69995117, ..., -101.10004883,
+            -100.40004883,  -99.60004883],
+           [  36.49995117,   37.59995117,   37.99995117, ..., -102.20004883,
+            -101.50004883, -100.70004883],
+           [  37.09995117,   38.19995117,   38.59995117, ..., -103.30004883,
+            -102.60004883, -101.90004883],
            ...,
-           [ 182.79993   ,  172.40002   ,  160.79993   , ...,    0.79992676,
-             -24.200073  ,  -41.80005   ],
-           [ 182.09998   ,  172.59998   ,  161.40002   , ...,    6.        ,
-             -21.5       ,  -41.        ],
-           [ 178.79993   ,  170.40002   ,  160.29993   , ...,   11.400024  ,
-             -16.        ,  -35.80005   ]], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-42cfff77-5062-4348-b480-ba307af9f734' class='xr-section-summary-in' type='checkbox'  checked><label for='section-42cfff77-5062-4348-b480-ba307af9f734' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>easting</span></div><div class='xr-var-dims'>(easting)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>4.655e+05 4.656e+05 ... 4.828e+05</div><input id='attrs-aec65457-7570-411d-b6fa-a5bd8ab22fd7' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-aec65457-7570-411d-b6fa-a5bd8ab22fd7' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-def55b4b-d269-4540-aefc-d97cd3b7aff6' class='xr-var-data-in' type='checkbox'><label for='data-def55b4b-d269-4540-aefc-d97cd3b7aff6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>UTM easting</dd><dt><span>standard_name :</span></dt><dd>projection_x_coordinate</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[465533.31767977 482783.31767977]</dd></dl></div><div class='xr-var-data'><pre>array([465533.31768, 465583.31768, 465633.31768, ..., 482683.31768,
-           482733.31768, 482783.31768])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>northing</span></div><div class='xr-var-dims'>(northing)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>7.576e+06 7.576e+06 ... 7.595e+06</div><input id='attrs-cfbb1ee6-9752-49d7-96e5-0cfdf10a4297' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-cfbb1ee6-9752-49d7-96e5-0cfdf10a4297' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3a1e1b6e-f8af-47e2-b583-401096c18036' class='xr-var-data-in' type='checkbox'><label for='data-3a1e1b6e-f8af-47e2-b583-401096c18036' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>UTM northing</dd><dt><span>standard_name :</span></dt><dd>projection_y_coordinate</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[7576368.82029097 7594818.82029097]</dd></dl></div><div class='xr-var-data'><pre>array([7576368.820291, 7576418.820291, 7576468.820291, ..., 7594718.820291,
-           7594768.820291, 7594818.820291])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>(northing, easting)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>500.0 500.0 500.0 ... 500.0 500.0</div><input id='attrs-1fd63a95-609a-4ae8-8371-80d2a9e0e5a0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1fd63a95-609a-4ae8-8371-80d2a9e0e5a0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3bf2f174-887b-4f06-9174-4cb3c39c5f4d' class='xr-var-data-in' type='checkbox'><label for='data-3bf2f174-887b-4f06-9174-4cb3c39c5f4d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>orthometric height</dd><dt><span>standard_name :</span></dt><dd>height_above_geopotential_datum</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[500. 500.]</dd></dl></div><div class='xr-var-data'><pre>array([[500., 500., 500., ..., 500., 500., 500.],
+           [ 182.79995117,  172.39995117,  160.79995117, ...,    0.79995117,
+             -24.20004883,  -41.80004883],
+           [ 182.09995117,  172.59995117,  161.39995117, ...,    5.99995117,
+             -21.50004883,  -41.00004883],
+           [ 178.79995117,  170.39995117,  160.29995117, ...,   11.39995117,
+             -16.00004883,  -35.80004883]], shape=(370, 346))</pre></div></div></li><li class='xr-section-item'><input id='section-2b616b46-fbd0-4b91-b282-f715bc8b6b5e' class='xr-section-summary-in' type='checkbox'  checked><label for='section-2b616b46-fbd0-4b91-b282-f715bc8b6b5e' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>easting</span></div><div class='xr-var-dims'>(easting)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>4.655e+05 4.656e+05 ... 4.828e+05</div><input id='attrs-583805d7-e20f-4f9f-bc6c-4bf08b935b12' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-583805d7-e20f-4f9f-bc6c-4bf08b935b12' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a62b4dbc-ba37-4353-adac-65c7067de3e1' class='xr-var-data-in' type='checkbox'><label for='data-a62b4dbc-ba37-4353-adac-65c7067de3e1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>UTM easting</dd><dt><span>standard_name :</span></dt><dd>projection_x_coordinate</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[465533.31767977 482783.31767977]</dd></dl></div><div class='xr-var-data'><pre>array([465533.31768, 465583.31768, 465633.31768, ..., 482683.31768,
+           482733.31768, 482783.31768], shape=(346,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>northing</span></div><div class='xr-var-dims'>(northing)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>7.576e+06 7.576e+06 ... 7.595e+06</div><input id='attrs-b69edd0e-96ed-4465-848b-7f690de541c0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b69edd0e-96ed-4465-848b-7f690de541c0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-866cf691-6557-4729-aa9b-41109df250c6' class='xr-var-data-in' type='checkbox'><label for='data-866cf691-6557-4729-aa9b-41109df250c6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>UTM northing</dd><dt><span>standard_name :</span></dt><dd>projection_y_coordinate</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[7576368.82029097 7594818.82029097]</dd></dl></div><div class='xr-var-data'><pre>array([7576368.820291, 7576418.820291, 7576468.820291, ..., 7594718.820291,
+           7594768.820291, 7594818.820291], shape=(370,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>(northing, easting)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>500.0 500.0 500.0 ... 500.0 500.0</div><input id='attrs-bb101d21-1cdd-42c2-96dc-0db43c01da53' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-bb101d21-1cdd-42c2-96dc-0db43c01da53' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-abd5e739-6be2-4afe-9cdd-26fb0339aeef' class='xr-var-data-in' type='checkbox'><label for='data-abd5e739-6be2-4afe-9cdd-26fb0339aeef' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>orthometric height</dd><dt><span>standard_name :</span></dt><dd>height_above_geopotential_datum</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[500. 500.]</dd></dl></div><div class='xr-var-data'><pre>array([[500., 500., 500., ..., 500., 500., 500.],
            [500., 500., 500., ..., 500., 500., 500.],
            [500., 500., 500., ..., 500., 500., 500.],
            ...,
            [500., 500., 500., ..., 500., 500., 500.],
            [500., 500., 500., ..., 500., 500., 500.],
-           [500., 500., 500., ..., 500., 500., 500.]])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-ca0f989e-947f-4c29-a72e-0736382d0841' class='xr-section-summary-in' type='checkbox'  ><label for='section-ca0f989e-947f-4c29-a72e-0736382d0841' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>easting</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-3270a206-c728-4a45-a176-e0bd6c71e07e' class='xr-index-data-in' type='checkbox'/><label for='index-3270a206-c728-4a45-a176-e0bd6c71e07e' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([465533.31767976715, 465583.31767976715, 465633.31767976715,
+           [500., 500., 500., ..., 500., 500., 500.]], shape=(370, 346))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-361f08e2-f843-48c5-b8fc-b52d435692e5' class='xr-section-summary-in' type='checkbox'  ><label for='section-361f08e2-f843-48c5-b8fc-b52d435692e5' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>easting</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-b57ebc75-10c6-4a0a-ab36-31ba40279ebb' class='xr-index-data-in' type='checkbox'/><label for='index-b57ebc75-10c6-4a0a-ab36-31ba40279ebb' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([465533.31767976715, 465583.31767976715, 465633.31767976715,
            465683.31767976715, 465733.31767976715, 465783.31767976715,
            465833.31767976715, 465883.31767976715, 465933.31767976715,
            465983.31767976715,
@@ -512,14 +519,14 @@ Load the netCDF grid with xarray
            482483.31767976715, 482533.31767976715, 482583.31767976715,
            482633.31767976715, 482683.31767976715, 482733.31767976715,
            482783.31767976715],
-          dtype=&#x27;float64&#x27;, name=&#x27;easting&#x27;, length=346))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>northing</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-55c69fd4-af2c-46e7-b19b-cb13acddc5eb' class='xr-index-data-in' type='checkbox'/><label for='index-55c69fd4-af2c-46e7-b19b-cb13acddc5eb' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([7576368.82029097, 7576418.82029097, 7576468.82029097, 7576518.82029097,
+          dtype=&#x27;float64&#x27;, name=&#x27;easting&#x27;, length=346))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>northing</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-b4fa71dc-dc68-4600-83b7-891ea7f4227f' class='xr-index-data-in' type='checkbox'/><label for='index-b4fa71dc-dc68-4600-83b7-891ea7f4227f' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([7576368.82029097, 7576418.82029097, 7576468.82029097, 7576518.82029097,
            7576568.82029097, 7576618.82029097, 7576668.82029097, 7576718.82029097,
            7576768.82029097, 7576818.82029097,
            ...
            7594368.82029097, 7594418.82029097, 7594468.82029097, 7594518.82029097,
            7594568.82029097, 7594618.82029097, 7594668.82029097, 7594718.82029097,
            7594768.82029097, 7594818.82029097],
-          dtype=&#x27;float64&#x27;, name=&#x27;northing&#x27;, length=370))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-2873893a-c225-42d5-880f-1661874a9deb' class='xr-section-summary-in' type='checkbox'  checked><label for='section-2873893a-c225-42d5-880f-1661874a9deb' class='xr-section-summary' >Attributes: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>Magnetic total-field anomaly of the Lightning Creek sill complex, Australia</dd><dt><span>crs :</span></dt><dd>proj=utm zone=54 south datum=WGS84 units=m no_defs ellps=WGS84 towgs84=0,0,0</dd><dt><span>source :</span></dt><dd>Interpolated from airborne magnetic line data using gradient-boosted equivalent sources</dd><dt><span>license :</span></dt><dd>Creative Commons Attribution 4.0 International Licence</dd><dt><span>references :</span></dt><dd>Geophysical Acquisition &amp; Processing Section 2019. MIM Data from Mt Isa Inlier, QLD (P1029), magnetic line data, AWAGS levelled. Geoscience Australia, Canberra. http://pid.geoscience.gov.au/dataset/ga/142419</dd><dt><span>long_name :</span></dt><dd>total-field magnetic anomaly</dd><dt><span>units :</span></dt><dd>nT</dd><dt><span>actual_range :</span></dt><dd>[-1785.  3798.]</dd></dl></div></li></ul></div></div>
+          dtype=&#x27;float64&#x27;, name=&#x27;northing&#x27;, length=370))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-93cf3972-f220-40de-b530-53d5119a961f' class='xr-section-summary-in' type='checkbox'  checked><label for='section-93cf3972-f220-40de-b530-53d5119a961f' class='xr-section-summary' >Attributes: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>Magnetic total-field anomaly of the Lightning Creek sill complex, Australia</dd><dt><span>crs :</span></dt><dd>proj=utm zone=54 south datum=WGS84 units=m no_defs ellps=WGS84 towgs84=0,0,0</dd><dt><span>source :</span></dt><dd>Interpolated from airborne magnetic line data using gradient-boosted equivalent sources</dd><dt><span>license :</span></dt><dd>Creative Commons Attribution 4.0 International Licence</dd><dt><span>references :</span></dt><dd>Geophysical Acquisition &amp; Processing Section 2019. MIM Data from Mt Isa Inlier, QLD (P1029), magnetic line data, AWAGS levelled. Geoscience Australia, Canberra. http://pid.geoscience.gov.au/dataset/ga/142419</dd><dt><span>long_name :</span></dt><dd>total-field magnetic anomaly</dd><dt><span>units :</span></dt><dd>nT</dd><dt><span>actual_range :</span></dt><dd>[-1785.  3798.]</dd></dl></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -567,7 +574,7 @@ The anomaly at the top right is the  Lightning Creek sill complex.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.653 seconds)
+   **Total running time of the script:** (0 minutes 3.631 seconds)
 
 
 .. _sphx_glr_download_gallery_lightning-creek-magnetic.py:

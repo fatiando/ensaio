@@ -271,7 +271,7 @@ anomaly.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 9.318 seconds)
+   **Total running time of the script:** (0 minutes 9.658 seconds)
 
 
 .. _sphx_glr_download_gallery_britain-magnetic.py:

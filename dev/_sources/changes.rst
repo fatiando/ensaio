@@ -3,12 +3,44 @@
 Changelog
 =========
 
+Version 0.7.0
+-------------
+
+Released on: 2025/02/19
+
+DOI: https://doi.org/10.5281/zenodo.14894937
+
+New data:
+
+- QDM magnetic microscopy data of a speleothem from Morroco (`#86 <https://github.com/fatiando/ensaio/pull/86>`__)
+
+Documentation:
+
+- Add a link to the Fatiando Forum in the README (`#91 <https://github.com/fatiando/ensaio/pull/91>`__)
+
+Maintenance:
+
+- Drop support for Python 3.7 + 3.8, add for 3.13 (`#88 <https://github.com/fatiando/ensaio/pull/88>`__)
+- Move package config from setup.cfg to pyproject.toml (`#70 <https://github.com/fatiando/ensaio/pull/70>`__)
+- Use Burocrata to check license notices in code (`#69 <https://github.com/fatiando/ensaio/pull/69>`__)
+
+This release contains contributions from:
+
+- Yago Moreira Castro
+- Santiago Soler
+- Leonardo Uieda
+
 Version 0.6.0
 -------------
 
 Released on: 2024/02/07
 
 DOI: https://doi.org/10.5281/zenodo.10632724
+
+.. warning::
+
+    **Ensaio v0.6.0 is the last release that is compatible with Python 3.7 and
+    3.8.**
 
 Updated data:
 

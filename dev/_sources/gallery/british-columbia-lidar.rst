@@ -230,7 +230,7 @@ Make a PyGMT map with the data points colored by the elevation.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 13.640 seconds)
+   **Total running time of the script:** (0 minutes 13.441 seconds)
 
 
 .. _sphx_glr_download_gallery_british-columbia-lidar.py:

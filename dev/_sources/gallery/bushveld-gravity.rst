@@ -293,7 +293,7 @@ Make a PyGMT map with the data points colored by the gravity data.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 23.026 seconds)
+   **Total running time of the script:** (0 minutes 3.193 seconds)
 
 
 .. _sphx_glr_download_gallery_bushveld-gravity.py:

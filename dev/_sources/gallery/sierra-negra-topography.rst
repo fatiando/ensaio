@@ -231,7 +231,7 @@ Make a PyGMT map with the data points colored by the elevation.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 20.380 seconds)
+   **Total running time of the script:** (0 minutes 20.702 seconds)
 
 
 .. _sphx_glr_download_gallery_sierra-negra-topography.py:
