@@ -6,7 +6,8 @@
 <a href="https://www.fatiando.org/ensaio"><strong>Documentation</strong> (latest)</a> •
 <a href="https://www.fatiando.org/ensaio/dev"><strong>Documentation</strong> (main branch)</a> •
 <a href="https://github.com/fatiando/ensaio/blob/main/CONTRIBUTING.md"><strong>Contributing</strong></a> •
-<a href="https://www.fatiando.org/contact/"><strong>Contact</strong></a>
+<a href="https://www.fatiando.org/contact/"><strong>Contact</strong></a> •
+<a href="https://github.com/orgs/fatiando/discussions"><strong>Ask a question</strong></a>
 </p>
 
 <p align="center">
@@ -60,18 +61,18 @@ how we can improve the project.
 
 ## Getting involved
 
-🗨️ **Contact us:** 
-Find out more about how to reach us at 
+🗨️ **Contact us:**
+Find out more about how to reach us at
 [fatiando.org/contact](https://www.fatiando.org/contact/).
 
-👩🏾‍💻 **Contributing to project development:** 
-Please read our 
-[Contributing Guide](https://github.com/fatiando/ensaio/blob/main/CONTRIBUTING.md) 
+👩🏾‍💻 **Contributing to project development:**
+Please read our
+[Contributing Guide](https://github.com/fatiando/ensaio/blob/main/CONTRIBUTING.md)
 to see how you can help and give feedback.
 
-🧑🏾‍🤝‍🧑🏼 **Code of conduct:** 
-This project is released with a 
-[Code of Conduct](https://github.com/fatiando/community/blob/main/CODE_OF_CONDUCT.md). 
+🧑🏾‍🤝‍🧑🏼 **Code of conduct:**
+This project is released with a
+[Code of Conduct](https://github.com/fatiando/community/blob/main/CODE_OF_CONDUCT.md).
 By participating in this project you agree to abide by its terms.
 
 > **Imposter syndrome disclaimer:**
