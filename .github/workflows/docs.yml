@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       REQUIREMENTS: env/requirements-docs.txt env/requirements-build.txt
-      PYTHON: "3.11"
+      PYTHON: "3.13"
 
     steps:
       # Cancel any previous run of the test job
@@ -83,6 +83,14 @@ jobs:
           done
           echo ""
           echo "Collected dependencies:"
+          cat requirements-full.txt
+
+      - name: Rename conda-forge packages
+        run: |
+          echo "Rename conda-forge packages in requirements-full.txt"
+          # Replace "build" for "python-build"
+          sed -s --in-place 's/^build$/python-build/' requirements-full.txt
+          echo "Renamed dependencies:"
           cat requirements-full.txt
 
       - name: Install requirements
