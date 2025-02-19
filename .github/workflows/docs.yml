@@ -24,7 +24,8 @@ defaults:
     # The -l {0} is necessary for conda environments to be activated
     # But this breaks on MacOS if using actions/setup-python:
     # https://github.com/actions/setup-python/issues/132
-    shell: bash -l {0}
+    # -e makes sure builds fail if any command fails
+    shell: bash -e -l {0}
 
 jobs:
   #############################################################################
