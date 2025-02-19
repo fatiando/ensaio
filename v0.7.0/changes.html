@@ -1,0 +1,714 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    
+        <title>Changelog | Ensaio v0.7.0</title>
+    
+
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/style.css?v=fc90c160" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/thebelab-helper.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'changes';</script>
+    <link rel="icon" href="_static/favicon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Documentation for other versions" href="versions.html" />
+    <link rel="prev" title="Version compatibility" href="compatibility.html" />
+    <!-- Plausible analytics for anonymous usage statistics -->
+    <script defer data-domain="fatiando.org" src="https://plausible.io/js/plausible.js"></script>
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Ensaio <span class="project-version">v0.7.0</span></p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/using.html">Downloading data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/developers.html">Using Ensaio in your project</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="gallery/index.html">Available datasets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="gallery/caribbean-bathymetry.html">Bathymetry single-beam surveys of the Caribbean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/earth-geoid.html">Earth geoid height grid at 10 arc-minute resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/earth-gravity.html">Earth gravity grid at 10 arc-minute resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/earth-topography.html">Earth topography grid at 10 arc-minute resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/alps-gps-velocity.html">GPS velocities (3-component) for the Alps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/bushveld-gravity.html">Gravity ground-based data over the Bushveld Complex, Southern Africa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/southern-africa-gravity.html">Gravity ground-based surveys of Southern Africa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/britain-magnetic.html">Magnetic airborne survey of Britain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/osborne-magnetic.html">Magnetic airborne survey of the Osborne Mine, Australia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/lightning-creek-magnetic.html">Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/morroco_speleothem_qdm.html">QDM magnetic microscopy dataset of a speleothem from Morocco</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/southern-africa-topography.html">Topography and bathymetry of Southern Africa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/sierra-negra-topography.html">Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/british-columbia-lidar.html">Topography of the Trail Islands in British Columbia, Canada</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="api/index.html">List of functions and classes (API)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/ensaio.locate.html">ensaio.locate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/ensaio.fetch_alps_gps.html">ensaio.fetch_alps_gps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/ensaio.fetch_britain_magnetic.html">ensaio.fetch_britain_magnetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/ensaio.fetch_british_columbia_lidar.html">ensaio.fetch_british_columbia_lidar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/ensaio.fetch_bushveld_gravity.html">ensaio.fetch_bushveld_gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/ensaio.fetch_caribbean_bathymetry.html">ensaio.fetch_caribbean_bathymetry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/ensaio.fetch_earth_geoid.html">ensaio.fetch_earth_geoid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/ensaio.fetch_earth_gravity.html">ensaio.fetch_earth_gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/ensaio.fetch_earth_topography.html">ensaio.fetch_earth_topography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/ensaio.fetch_lightning_creek_magnetic.html">ensaio.fetch_lightning_creek_magnetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/ensaio.fetch_morroco_speleothem_qdm.html">ensaio.fetch_morroco_speleothem_qdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/ensaio.fetch_osborne_magnetic.html">ensaio.fetch_osborne_magnetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/ensaio.fetch_sierra_negra_topography.html">ensaio.fetch_sierra_negra_topography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/ensaio.fetch_southern_africa_gravity.html">ensaio.fetch_southern_africa_gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/generated/ensaio.fetch_southern_africa_topography.html">ensaio.fetch_southern_africa_topography</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="compatibility.html">Version compatibility</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versions.html">Documentation for other versions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.fatiando.org/contact/">Join the community</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fatiando/community/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fatiando/ensaio/blob/main/CONTRIBUTING.md">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fatiando/ensaio">Source code on GitHub</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fatiando/ensaio/blob/main/AUTHORS.md">Authors</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.fatiando.org">Fatiando a Terra</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/fatiando/ensaio" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fatiando/ensaio/edit/main/doc/changes.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fatiando/ensaio/issues/new?title=Issue%20on%20page%20%2Fchanges.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/changes.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Changelog</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-7-0">Version 0.7.0</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-6-0">Version 0.6.0</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-5-0">Version 0.5.0</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-4-0">Version 0.4.0</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-3-0">Version 0.3.0</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-2-0">Version 0.2.0</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-1-0">Version 0.1.0</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="changelog">
+<span id="changes"></span><h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">#</a></h1>
+<section id="version-0-7-0">
+<h2>Version 0.7.0<a class="headerlink" href="#version-0-7-0" title="Link to this heading">#</a></h2>
+<p>Released on: 2025/02/19</p>
+<p>DOI: <a class="reference external" href="https://doi.org/10.5281/zenodo.14894937">https://doi.org/10.5281/zenodo.14894937</a></p>
+<p>New data:</p>
+<ul class="simple">
+<li><p>QDM magnetic microscopy data of a speleothem from Morroco (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/86">#86</a>)</p></li>
+</ul>
+<p>Documentation:</p>
+<ul class="simple">
+<li><p>Add a link to the Fatiando Forum in the README (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/91">#91</a>)</p></li>
+</ul>
+<p>Maintenance:</p>
+<ul class="simple">
+<li><p>Drop support for Python 3.7 + 3.8, add for 3.13 (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/88">#88</a>)</p></li>
+<li><p>Move package config from setup.cfg to pyproject.toml (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/70">#70</a>)</p></li>
+<li><p>Use Burocrata to check license notices in code (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/69">#69</a>)</p></li>
+</ul>
+<p>This release contains contributions from:</p>
+<ul class="simple">
+<li><p>Yago Moreira Castro</p></li>
+<li><p>Santiago Soler</p></li>
+<li><p>Leonardo Uieda</p></li>
+</ul>
+</section>
+<section id="version-0-6-0">
+<h2>Version 0.6.0<a class="headerlink" href="#version-0-6-0" title="Link to this heading">#</a></h2>
+<p>Released on: 2024/02/07</p>
+<p>DOI: <a class="reference external" href="https://doi.org/10.5281/zenodo.10632724">https://doi.org/10.5281/zenodo.10632724</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Ensaio v0.6.0 is the last release that is compatible with Python 3.7 and
+3.8.</strong></p>
+</div>
+<p>Updated data:</p>
+<ul class="simple">
+<li><p>Update the Caribbean bathymetry data to v2. The new version has fewer points (smaller area), removed the very dense surveys, removed the surveys with systematic errors (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/54">#54</a>)</p></li>
+</ul>
+<p>Documentation:</p>
+<ul class="simple">
+<li><p>Update documentation dependencies to use the latest sphinx, theme, and plugins (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/53">#53</a>)</p></li>
+</ul>
+<p>Maintenance:</p>
+<ul class="simple">
+<li><p>Add testing and support for Python 3.11 (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/61">#61</a>)</p></li>
+<li><p>Use Dependabot to update GitHub Actions (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/55">#55</a>)</p></li>
+<li><p>Remove the schedule CI run of the tests (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/52">#52</a>)</p></li>
+<li><p>Fail CI if codecov upload fails (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/51">#51</a>)</p></li>
+</ul>
+<p>This release contains contributions from:</p>
+<ul class="simple">
+<li><p>Leonardo Uieda</p></li>
+</ul>
+</section>
+<section id="version-0-5-0">
+<h2>Version 0.5.0<a class="headerlink" href="#version-0-5-0" title="Link to this heading">#</a></h2>
+<p>Released on: 2022/11/24</p>
+<p>DOI: <a class="reference external" href="https://doi.org/10.5281/zenodo.7260639">https://doi.org/10.5281/zenodo.7260639</a></p>
+<p>New data:</p>
+<ul class="simple">
+<li><p>Add the Lightning Creek magnetic anomaly grid (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/38">#38</a>)</p></li>
+</ul>
+<p>Documentation:</p>
+<ul class="simple">
+<li><p>Add links to processing repositories on GitHub (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/40">#40</a>, <a class="reference external" href="https://github.com/fatiando/ensaio/pull/45">#45</a> and <a class="reference external" href="https://github.com/fatiando/ensaio/pull/46">#46</a>)</p></li>
+<li><p>Add impostor syndrome disclaimer etc to the README (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/37">#37</a>)</p></li>
+</ul>
+<p>Maintenance:</p>
+<ul class="simple">
+<li><p>Drop support for Python 3.6  (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/50">#50</a>)</p></li>
+<li><p>Update method of setting outputs in Actions (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/44">#44</a>)</p></li>
+<li><p>Simplify the CI matrix for the test workflow (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/43">#43</a>)</p></li>
+<li><p>Update the GitHub Actions “cache” to v3 (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/42">#42</a>)</p></li>
+</ul>
+<p>This release contains contributions from:</p>
+<ul class="simple">
+<li><p>Mariana Gomez</p></li>
+<li><p>Leonardo Uieda</p></li>
+</ul>
+</section>
+<section id="version-0-4-0">
+<h2>Version 0.4.0<a class="headerlink" href="#version-0-4-0" title="Link to this heading">#</a></h2>
+<p>Released on: 2022/05/03</p>
+<p>DOI: <a class="reference external" href="https://doi.org/10.5281/zenodo.6513957">https://doi.org/10.5281/zenodo.6513957</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Ensaio v0.4.0 is the last release that is compatible with Python 3.6.</strong></p>
+</div>
+<p>New data:</p>
+<ul class="simple">
+<li><p>Gravity ground-based data for the Bushveld Igneous Complex, Southern Africa.
+Includes observation heights referenced to the ellipsoid and geoid, as well
+as precomputed gravity disturbance and a topography-free gravity disturbance.
+Useful for tutorials that are broken up into parts so we don’t have to start
+computations from observed gravity every time.
+(<a class="reference external" href="https://github.com/fatiando/ensaio/pull/32">#32</a>)</p></li>
+<li><p>Topography grid for Southern Africa at full ETOPO1 resolution. Pairs with the
+Southern Africa gravity data. (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/27">#27</a>)</p></li>
+</ul>
+<p>Documentation:</p>
+<ul class="simple">
+<li><p>A logo for Ensaio! (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/28">#28</a>)</p></li>
+<li><p>Convert tutorials from sphinx-gallery <cite>.py</cite> files to plain <cite>.rst</cite> files using
+jupyter-sphinx (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/31">#31</a>)</p></li>
+</ul>
+<p>Maintenance:</p>
+<ul class="simple">
+<li><p>Convert the README to Markdown (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/29">#29</a>)</p></li>
+</ul>
+<p>This release contains contributions from:</p>
+<ul class="simple">
+<li><p>Santiago Soler</p></li>
+<li><p>Leonardo Uieda</p></li>
+</ul>
+</section>
+<section id="version-0-3-0">
+<h2>Version 0.3.0<a class="headerlink" href="#version-0-3-0" title="Link to this heading">#</a></h2>
+<p>Released on: 2022/03/28</p>
+<p>DOI: <a class="reference external" href="https://doi.org/10.5281/zenodo.6390020">https://doi.org/10.5281/zenodo.6390020</a></p>
+<p>New data:</p>
+<ul class="simple">
+<li><p>Add the Sierra Negra volcano point cloud topography data (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/23">#23</a>)</p></li>
+<li><p>Add the Osborne Mine aeromagnetic data (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/22">#22</a>)</p></li>
+</ul>
+<p>This release contains contributions from:</p>
+<ul class="simple">
+<li><p>Leonardo Uieda</p></li>
+</ul>
+</section>
+<section id="version-0-2-0">
+<h2>Version 0.2.0<a class="headerlink" href="#version-0-2-0" title="Link to this heading">#</a></h2>
+<p>Released on: 2022/02/18</p>
+<p>doi:<a class="reference external" href="https://doi.org/10.5281/zenodo.6143350">10.5281/zenodo.6143350</a></p>
+<p><strong>Breaking change</strong>:</p>
+<ul class="simple">
+<li><p>Version datasets individually instead of using the entire data bundle and
+versioning all datasets based on the module name. This means that functions
+won’t have to be repeated and updating one dataset doesn’t mean copying all
+of the others along with it (since the collection would be new). Versions are
+now specified as a required <code class="docutils literal notranslate"><span class="pre">version</span></code> argument in all <code class="docutils literal notranslate"><span class="pre">fetch_*</span></code>
+functions. (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/18">#18</a>)</p></li>
+</ul>
+<p>Maintenance:</p>
+<ul class="simple">
+<li><p>Replace Google Analytics for Plausible so our docs have a more privacy-friendly analytics solution (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/17">#17</a>)</p></li>
+<li><p>Use <a class="reference external" href="https://github.com/fatiando/dependente">Dependente</a> to capture dependencies on CI (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/16">#16</a>)</p></li>
+<li><p>Use <a class="reference external" href="https://github.com/pypa/build/">build</a> instead of <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/15">#15</a>)</p></li>
+<li><p>Remove unused files from the source distributions (<a class="reference external" href="https://github.com/fatiando/ensaio/pull/14">#14</a>)</p></li>
+</ul>
+<p>This release contains contributions from:</p>
+<ul class="simple">
+<li><p>Santiago Soler</p></li>
+<li><p>Leonardo Uieda</p></li>
+</ul>
+</section>
+<section id="version-0-1-0">
+<h2>Version 0.1.0<a class="headerlink" href="#version-0-1-0" title="Link to this heading">#</a></h2>
+<p>Released on: 2021/12/23</p>
+<p>doi:<a class="reference external" href="https://doi.org/10.5281/zenodo.5784203">10.5281/zenodo.5784203</a></p>
+<p>First trial release of Ensaio. Used for testing our systems and implementation.</p>
+<p>This release contains contributions from:</p>
+<ul class="simple">
+<li><p>Leonardo Uieda</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="compatibility.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Version compatibility</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="versions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Documentation for other versions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-7-0">Version 0.7.0</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-6-0">Version 0.6.0</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-5-0">Version 0.5.0</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-4-0">Version 0.4.0</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-3-0">Version 0.3.0</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-2-0">Version 0.2.0</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-1-0">Version 0.1.0</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, The Ensaio Developers.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on Feb 19, 2025.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
