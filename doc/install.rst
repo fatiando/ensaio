@@ -5,50 +5,43 @@ Installing
 
 There are different ways to install Ensaio:
 
-.. tabbed:: pip
+.. tab-set::
 
-    Using the `pip <https://pypi.org/project/pip/>`__ package manager:
+    .. tab-item:: pip
 
-    .. code:: bash
+        Using the `pip package manager <https://pypi.org/project/pip/>`__:
 
-        python -m pip install ensaio
+        .. code:: bash
 
-.. tabbed:: conda
+            pip install ensaio
 
-    Using the `conda <https://conda.io/>`__ package manager that comes with the
-    Anaconda/Miniconda distribution:
+    .. tab-item:: conda/mamba
 
-    .. code:: bash
+        Using the `conda package manager <https://conda.io/>`__ (or ``mamba``)
+        that comes with the Anaconda, Miniconda, or Miniforge distributions:
 
-        conda install ensaio --channel conda-forge
+        .. code:: bash
 
-.. tabbed:: Development version
+            conda install ensaio --channel conda-forge
 
-    Using ``pip`` to install the latest **unreleased** version from GitHub
-    (**not recommended** in most situations):
+    .. tab-item:: Development version
 
-    .. code:: bash
+        You can use ``pip`` to install the latest **unreleased** version from
+        GitHub (**not recommended** in most situations):
 
-        python -m pip install --upgrade git+https://github.com/fatiando/ensaio
+        .. code:: bash
+
+            python -m pip install --upgrade git+https://github.com/fatiando/ensaio
 
 .. note::
 
     The commands above should be executed in a terminal. On Windows, use the
     ``cmd.exe`` or the "Anaconda Prompt" app if you're using Anaconda.
 
-Which Python?
--------------
+.. admonition:: Which Python?
+    :class: tip
 
-You'll need **Python >= 3.7** (see :ref:`python-versions` for information on
-Python version compatibility).
-
-We recommend using the
-`Anaconda <https://www.anaconda.com/download>`__
-or `Miniconda <https://docs.conda.io/en/latest/miniconda.html>`__
-Python distributions to ensure you have all dependencies installed and the
-``conda`` package manager available.
-Installing Anaconda does not require administrative rights to your computer and
-doesn't interfere with any other Python installations in your system.
+    See :ref:`python-versions` for a list of  supported Python versions.
 
 .. _dependencies:
 

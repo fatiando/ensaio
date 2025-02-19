@@ -54,4 +54,7 @@ following releases to ensure compatibility:
       - **Last compatible release**
     * - 3.6
       - 0.4.0
-
+    * - 3.7
+      - 0.6.0
+    * - 3.8
+      - 0.6.0

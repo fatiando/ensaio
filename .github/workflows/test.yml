@@ -48,9 +48,9 @@ jobs:
           - dependencies: oldest
             python: "3.9"
           - dependencies: latest
-            python: "3.11"
+            python: "3.13"
           - os: ubuntu
-            python: "3.11"
+            python: "3.13"
             dependencies: latest
             cached: false
 
