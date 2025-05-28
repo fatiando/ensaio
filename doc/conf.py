@@ -14,12 +14,8 @@ import ensaio
 # Project information
 # -----------------------------------------------------------------------------
 project = "Ensaio"
-copyright = f"{datetime.date.today().year}, The {project} Developers"  # noqa: A001
-if len(ensaio.__version__.split(".")) > 3:
-    version = "dev"
-else:
-    version = ensaio.__version__
-
+copyright = f"{datetime.date.today().year}, The {project} Developers"
+version = "dev" if len(ensaio.__version__.split(".")) > 3 else ensaio.__version__
 
 # General configuration
 # -----------------------------------------------------------------------------

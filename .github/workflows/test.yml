@@ -1,4 +1,4 @@
-# Run tests and upload to Codecov with GitHub Actions
+# Configuration for running tests with GitHub Actions
 #
 # NOTE: Pin actions to a specific commit to avoid having the authentication
 # token stolen if the Action is compromised. See the comments and links here:
@@ -18,10 +18,16 @@ on:
     types:
       - published
 
+permissions: {}
+
 # Use bash by default in all jobs
 defaults:
   run:
-    shell: bash
+    # The -l {0} is necessary for conda environments to be activated
+    # But this breaks on MacOS if using actions/setup-python:
+    # https://github.com/actions/setup-python/issues/132
+    # -e makes sure builds fail if any command fails
+    shell: bash -e -o pipefail -l {0}
 
 jobs:
 
@@ -29,26 +35,21 @@ jobs:
   # Run tests
   test:
     name: ${{ matrix.os }} python=${{ matrix.python }} dependencies=${{ matrix.dependencies }} cached=${{ matrix.cached }}
-    runs-on: ${{ matrix.os }}-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       # Otherwise, the workflow would stop if a single job fails. We want to
       # run all of them to catch failures in different combinations.
       fail-fast: false
       matrix:
-        os:
-          - ubuntu
-          - macos
-          - windows
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: ["3.9", "3.13"]
         cached:
           - true
-        dependencies:
-          - oldest
-          - latest
         include:
-          - dependencies: oldest
-            python: "3.9"
-          - dependencies: latest
-            python: "3.13"
+          - python: "3.9"
+            dependencies: oldest
+          - python: "3.13"
+            dependencies: latest
           # Run once without caching the datasets to make sure everything works
           - os: ubuntu
             python: "3.13"
@@ -120,18 +121,11 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('requirements-full.txt') }}
 
       - name: Install requirements
-        run: |
-          python -m pip install --requirement requirements-full.txt
+        run: python -m pip install --requirement requirements-full.txt
 
-      - name: Build source and wheel distributions
-        run: |
-          make build
-          echo ""
-          echo "Generated files:"
-          ls -lh dist/
-
-      - name: Install the package
-        run: python -m pip install --no-deps dist/*.whl
+      # Needs to be editable for coverage reporting to work
+      - name: Install the package in editable mode
+        run: python -m pip install --no-deps --editable .
 
       - name: List installed packages
         run: python -m pip freeze
@@ -146,7 +140,10 @@ jobs:
       - name: Run the tests
         run: make test
         env:
-          ENSAIO_DATA_DIR: ${{ runner.temp }}/cache/ensaio
+          # Define directory where sample data will be stored
+          ENSAIO_DATA_DIR: ${{ runner.temp }}/cache/ensaio/
+          # Don't spam Zenodo from CI
+          ENSAIO_DATA_FROM_GITHUB: true
 
       - name: Convert coverage report to XML for codecov
         run: coverage xml
@@ -179,7 +176,7 @@ jobs:
         run: ls -l -R .
 
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@18283e04ce6e62d37312384ff67231eb8fd56d24
         with:
           # Upload all coverage report files
           files: ./coverage_*/coverage.xml

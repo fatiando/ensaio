@@ -22,6 +22,7 @@ redistribution in Ensaio
 <https://github.com/fatiando-data/sierra-negra-topography>`__
 
 """
+
 import pandas as pd
 import pygmt
 

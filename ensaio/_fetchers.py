@@ -7,6 +7,7 @@
 """
 Functions that fetch each of our sample datasets.
 """
+
 import os
 from pathlib import Path
 
@@ -128,7 +129,7 @@ REGISTRY = {
 
 def _repository(fname, version):
     """
-    Create the Pooch instance that fetches a dataset of a particular version
+    Create the Pooch instance that fetches a dataset of a particular version.
 
     Cache location defaults to ``pooch.os_cache("ensaio")`` and can be
     overwritten with the ``ENSAIO_DATA_DIR`` environment variable.
@@ -173,7 +174,7 @@ def _repository(fname, version):
 
 def _sanitize_url(url):
     """
-    Makes sure that the URL ends with a trailing ``/`` for Pooch.
+    Make sure that the URL ends with a trailing ``/`` for Pooch.
 
     Parameters
     ----------
@@ -192,7 +193,7 @@ def _sanitize_url(url):
 
 def locate():
     """
-    Return the location of the system-dependent data cache folder
+    Return the location of the system-dependent data cache folder.
 
     This folder is not guaranteed to exist in the file system until a dataset
     has been downloaded.
@@ -224,14 +225,15 @@ def _check_versions(version, allowed, name):
 
     """
     if version not in allowed:
-        raise ValueError(
+        message = (
             f"Invalid version={version} for {name} dataset. Must be one of {allowed}."
         )
+        raise ValueError(message)
 
 
 def fetch_alps_gps(version):
     """
-    Alpine 3-component GPS velocity dataset
+    Alpine 3-component GPS velocity dataset.
 
     This is a compilation of 3D GPS velocities for the Alps. The horizontal
     velocities are reference to the Eurasian frame. Coordinates are referenced
@@ -280,7 +282,7 @@ def fetch_alps_gps(version):
 
 def fetch_britain_magnetic(version):
     """
-    Digitized airborne magnetic survey of Britain
+    Digitized airborne magnetic survey of Britain.
 
     This is a digitization of an airborne magnetic survey of Britain. Data are
     sampled where flight lines crossed contours on the archive maps. Contains
@@ -334,7 +336,7 @@ def fetch_britain_magnetic(version):
 
 def fetch_british_columbia_lidar(version):
     """
-    Topography (lidar point cloud) data of the Trail Islands in BC, Canada
+    Topography (lidar point cloud) data of the Trail Islands in BC, Canada.
 
     This is a lidar point cloud (ground reflections only) sliced to the small
     `Trail Islands <https://apps.gov.bc.ca/pub/bcgnws/names/21973.html>`__
@@ -384,7 +386,7 @@ def fetch_british_columbia_lidar(version):
 
 def fetch_bushveld_gravity(version):
     """
-    Gravity ground-based data over the Bushveld Complex, Southern Africa
+    Gravity ground-based data over the Bushveld Complex, Southern Africa.
 
     This dataset contains ground gravity observations over the area that
     comprises the Bushveld Igenous Complex in Southern Africa, including
@@ -435,7 +437,7 @@ def fetch_bushveld_gravity(version):
 
 def fetch_caribbean_bathymetry(version):
     """
-    Single-beam bathymetry of the Caribbean
+    Single-beam bathymetry of the Caribbean.
 
     This dataset is a compilation of several public domain single-beam
     bathymetry surveys of the ocean in the Caribbean. The data display a wide
@@ -496,7 +498,7 @@ def fetch_caribbean_bathymetry(version):
 
 def fetch_earth_geoid(version):
     """
-    Geoid height of the Earth at 10 arc-minute resolution
+    Geoid height of the Earth at 10 arc-minute resolution.
 
     The grid is global with node spacing of 10 arc-minutes (grid-node
     registered) and stored in netCDF with CF-compliant metadata.
@@ -546,7 +548,7 @@ def fetch_earth_geoid(version):
 
 def fetch_earth_gravity(version):
     """
-    Gravity of the Earth at 10 arc-minute resolution
+    Gravity of the Earth at 10 arc-minute resolution.
 
     The grid is global with node spacing of 10 arc-minutes (grid-node
     registered) and stored in netCDF with CF-compliant metadata.
@@ -598,7 +600,7 @@ def fetch_earth_gravity(version):
 
 def fetch_earth_topography(version):
     """
-    Topography of the Earth at 10 arc-minute resolution
+    Topography of the Earth at 10 arc-minute resolution.
 
     The grid is global with node spacing of 10 arc-minutes (grid-node
     registered) and stored in netCDF with CF-compliant metadata.
@@ -647,7 +649,7 @@ def fetch_earth_topography(version):
 
 def fetch_lightning_creek_magnetic(version):
     """
-    Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia
+    Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia.
 
     This is a section of a survey acquired in 1990 by the Queensland
     Government, Australia. The grid has 50 m resolution (UTM coordinates) and
@@ -694,7 +696,7 @@ def fetch_lightning_creek_magnetic(version):
 
 def fetch_morroco_speleothem_qdm(version, file_format):
     """
-    QDM magnetic microscopy dataset of a speleothem from Morocco
+    QDM magnetic microscopy dataset of a speleothem from Morocco.
 
     High-resolution magnetic map of a stalagmite sample from Wintimdouine Cave,
     Morocco, created using Quantum Diamond Microscope (QDM) measurements at
@@ -747,10 +749,11 @@ def fetch_morroco_speleothem_qdm(version, file_format):
     allowed_formats = {"matlab", "netcdf"}
     _check_versions(version, allowed={1}, name=name)
     if file_format.lower() not in allowed_formats:
-        raise ValueError(
+        message = (
             f"Invalid data format '{file_format}' for the {name} data. "
             f"Must be one of {allowed_formats}."
         )
+        raise ValueError(message)
     fnames = {
         "netcdf": "morroco-speleothem-qdm.nc",
         "matlab": "morroco-speleothem-qdm.mat",
@@ -761,7 +764,7 @@ def fetch_morroco_speleothem_qdm(version, file_format):
 
 def fetch_osborne_magnetic(version):
     """
-    Magnetic airborne survey of the Osborne Mine and surroundings, Australia
+    Magnetic airborne survey of the Osborne Mine and surroundings, Australia.
 
     This is a section of a survey acquired in 1990 by the Queensland
     Government, Australia. The line data have approximately 80 m terrain
@@ -814,7 +817,7 @@ def fetch_osborne_magnetic(version):
 
 def fetch_sierra_negra_topography(version):
     """
-    Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador
+    Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador.
 
     This is a structure-from-motion point cloud of the 2018 lava flows of the
     Sierra Negra volcano, located on the Galápagos islands, Ecuador. The survey
@@ -862,7 +865,7 @@ def fetch_sierra_negra_topography(version):
 
 def fetch_southern_africa_gravity(version):
     """
-    Gravity ground-based surveys of Southern Africa
+    Gravity ground-based surveys of Southern Africa.
 
     This dataset is a compilation of several public domain ground measurements
     of gravity from Southern Africa. The observations are the absolute gravity
@@ -911,7 +914,7 @@ def fetch_southern_africa_gravity(version):
 
 def fetch_southern_africa_topography(version):
     """
-    Topography and bathymetry data for Southern Africa
+    Topography and bathymetry data for Southern Africa.
 
     This is a topography and bathymetry grid with a resolution of 1 arc-minute
     over Southern Africa. The grid was generated by cropping the ETOPO1 global

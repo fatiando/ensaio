@@ -4,7 +4,10 @@
 #
 # This code is part of the Fatiando a Terra project (https://www.fatiando.org)
 #
-# Import functions/classes to make the public API
+"""
+These are the functions and classes that make up the Ensaio API.
+"""
+
 from ._fetchers import (
     fetch_alps_gps,
     fetch_britain_magnetic,
