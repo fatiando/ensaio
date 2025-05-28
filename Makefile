@@ -3,6 +3,9 @@ PROJECT=ensaio
 TESTDIR=tmp-test-dir-with-unique-name
 PYTEST_ARGS=--cov-config=../.coveragerc --cov-report=term-missing --cov=$(PROJECT) --doctest-modules -v --pyargs
 CHECK_STYLE=$(PROJECT) doc
+GITHUB_ACTIONS=.github/workflows
+
+.PHONY: help build install test format check check-format check-style check-actions clean
 
 help:
 	@echo "Commands:"
@@ -19,7 +22,7 @@ build:
 	python -m build .
 
 install:
-	python -m pip install --no-deps -e .
+	python -m pip install --no-deps --editable .
 
 test:
 	# Run a tmp folder to make sure the tests are run on the installed version
@@ -29,23 +32,27 @@ test:
 	rm -rvf $(TESTDIR)
 
 format:
-	isort $(CHECK_STYLE)
-	black $(CHECK_STYLE)
+	ruff check --select I --fix $(CHECK_STYLE) # fix isort errors
+	ruff format $(CHECK_STYLE)
 	burocrata --extension=py $(CHECK_STYLE)
 
-check: check-style check-format
-
-check-style:
-	flake8 $(CHECK_STYLE)
+check: check-format check-style check-actions
 
 check-format:
-	isort --check $(CHECK_STYLE)
-	black --check $(CHECK_STYLE)
+	ruff format --check $(CHECK_STYLE)
 	burocrata --check --extension=py $(CHECK_STYLE)
 
+check-style:
+	ruff check $(CHECK_STYLE)
+
+check-actions:
+	zizmor $(GITHUB_ACTIONS)
+
 clean:
-	find . -name "*.pyc" -exec rm -v {} \;
-	find . -name ".coverage.*" -exec rm -v {} \;
-	find . -name "*.orig" -exec rm -v {} \;
-	rm -rvf build dist MANIFEST *.egg-info __pycache__ .coverage .cache .pytest_cache
-	rm -rvf $(TESTDIR) dask-worker-space
+	find . -name "*.pyc" -exec rm -v "{}" \;
+	find . -name "*.orig" -exec rm -v "{}" \;
+	find . -name ".coverage.*" -exec rm -v "{}" \;
+	find . -name "_version_generated.py" -exec rm -v "{}" \;
+	find . -name "*.egg-info" -type d -exec rm -vr "{}" \; -prune
+	find . -name "__pycache__" -type d -exec rm -vr "{}" \; -prune
+	rm -rvf build dist MANIFEST .coverage .*cache

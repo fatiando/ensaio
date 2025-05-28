@@ -22,6 +22,7 @@ redistribution in Ensaio
 <https://github.com/fatiando-data/lightning-creek-magnetic-grid>`__
 
 """
+
 import pygmt
 import xarray as xr
 

@@ -7,6 +7,7 @@
 """
 Test the dataset download functions and other utilities.
 """
+
 import inspect
 import os
 
@@ -52,7 +53,7 @@ def test_fetch_morroco_speleothem(file_format):
 
 def test_fetch_morroco_speleothem_invalid_format():
     "Check that the function fails for invalid formats"
-    with pytest.raises(ValueError) as error:
+    with pytest.raises(ValueError, match="Invalid data format") as error:
         _fetchers.fetch_morroco_speleothem_qdm(version=1, file_format="csv")
     assert "csv" in str(error)
 
@@ -66,7 +67,7 @@ def test_locate():
 
 
 @pytest.mark.parametrize(
-    "url,sanitized",
+    ("url", "sanitized"),
     [
         ("https://fatiando.org/", "https://fatiando.org/"),
         ("https://fatiando.org", "https://fatiando.org/"),
@@ -90,10 +91,7 @@ def test_data_source_from_github(use_github):
         backup = os.environ.get("ENSAIO_DATA_FROM_GITHUB")
         os.environ["ENSAIO_DATA_FROM_GITHUB"] = use_github
         repo = _fetchers._repository(fname="alps-gps-velocity.csv.xz", version=1)
-        if use_github == "True":
-            marker = "https://github.com"
-        else:
-            marker = "doi:"
+        marker = "https://github.com" if use_github == "True" else "doi:"
         assert all(url.startswith(marker) for url in repo.urls.values())
     finally:
         if backup is None:
@@ -104,6 +102,6 @@ def test_data_source_from_github(use_github):
 
 def test_check_versions():
     "Make sure an exception is raised for invalid versions"
-    with pytest.raises(ValueError) as error:
+    with pytest.raises(ValueError, match="Invalid version=3") as error:
         _fetchers._check_versions(version=3, allowed={1, 2}, name="Bla")
     assert "Bla" in str(error)
