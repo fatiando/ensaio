@@ -51,7 +51,7 @@ jobs:
           - python: "3.13"
             dependencies: latest
           # Run once without caching the datasets to make sure everything works
-          - os: ubuntu
+          - os: ubuntu-latest
             python: "3.13"
             dependencies: latest
             cached: false
