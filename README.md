@@ -17,7 +17,6 @@ Part of the <a href="https://www.fatiando.org"><strong>Fatiando a Terra</strong>
 <p align="center">
 <a href="https://pypi.python.org/pypi/ensaio"><img src="http://img.shields.io/pypi/v/ensaio.svg?style=flat-square" alt="Latest version on PyPI"></a>
 <a href="https://github.com/conda-forge/ensaio-feedstock"><img src="https://img.shields.io/conda/vn/conda-forge/ensaio.svg?style=flat-square" alt="Latest version on conda-forge"></a>
-<a href="https://codecov.io/gh/fatiando/ensaio"><img src="https://img.shields.io/codecov/c/github/fatiando/ensaio/main.svg?style=flat-square" alt="Test coverage status"></a>
 <a href="https://pypi.python.org/pypi/ensaio"><img src="https://img.shields.io/pypi/pyversions/ensaio.svg?style=flat-square" alt="Compatible Python versions."></a>
 <a href="https://doi.org/10.5281/zenodo.5784202"><img src="https://img.shields.io/badge/doi-10.5281%2Fzenodo.5784202-blue?style=flat-square" alt="DOI used to cite Ensaio"></a>
 </p>
