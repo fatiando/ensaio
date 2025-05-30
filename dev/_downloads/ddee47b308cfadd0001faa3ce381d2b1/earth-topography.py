@@ -19,6 +19,7 @@ upwards.
 redistribution in Ensaio
 <https://github.com/fatiando-data/earth-topography-10arcmin>`__
 """
+
 import pygmt
 import xarray as xr
 

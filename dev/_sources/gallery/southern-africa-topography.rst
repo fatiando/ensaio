@@ -34,9 +34,10 @@ considered as the geoid).
 redistribution in Ensaio
 <https://github.com/fatiando-data/southern-africa-topography>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 24-29
+.. GENERATED FROM PYTHON SOURCE LINES 24-30
 
 .. code-block:: Python
+
 
     import pygmt
     import xarray as xr
@@ -50,11 +51,11 @@ redistribution in Ensaio
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 30-31
+.. GENERATED FROM PYTHON SOURCE LINES 31-32
 
 Download and cache the data and return the path to it on disk
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-34
+.. GENERATED FROM PYTHON SOURCE LINES 32-35
 
 .. code-block:: Python
 
@@ -74,11 +75,11 @@ Download and cache the data and return the path to it on disk
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-36
+.. GENERATED FROM PYTHON SOURCE LINES 36-37
 
 Load the netCDF file with xarray (netcdf4 is required)
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-39
+.. GENERATED FROM PYTHON SOURCE LINES 37-40
 
 .. code-block:: Python
 
@@ -487,16 +488,16 @@ Load the netCDF file with xarray (netcdf4 is required)
         description:    height topography/bathymetry referenced to mean sea level
         units:          m
         actual_range:   [-5685.  3376.]
-        noaa_metadata:  Conventions: COARDS/CF-1.0\ntitle: ETOPO1_Ice_g_gmt4.grd\...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'topography'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1182</li><li><span class='xr-has-index'>longitude</span>: 1371</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-29a86e69-60c8-43e5-823d-248ee35c53c7' class='xr-array-in' type='checkbox' checked><label for='section-29a86e69-60c8-43e5-823d-248ee35c53c7' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-5.039e+03 -5.027e+03 -5.014e+03 -5.006e+03 ... 122.0 120.0 128.0</span></div><div class='xr-array-data'><pre>array([[-5039., -5027., -5014., ..., -3846., -3867., -3873.],
+        noaa_metadata:  Conventions: COARDS/CF-1.0\ntitle: ETOPO1_Ice_g_gmt4.grd\...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'topography'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1182</li><li><span class='xr-has-index'>longitude</span>: 1371</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-55601d3e-9ae6-40c5-8661-f40a9219969a' class='xr-array-in' type='checkbox' checked><label for='section-55601d3e-9ae6-40c5-8661-f40a9219969a' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-5.039e+03 -5.027e+03 -5.014e+03 -5.006e+03 ... 122.0 120.0 128.0</span></div><div class='xr-array-data'><pre>array([[-5039., -5027., -5014., ..., -3846., -3867., -3873.],
            [-5036., -5021., -5007., ..., -3839., -3863., -3872.],
            [-5031., -5016., -5001., ..., -3835., -3860., -3870.],
            ...,
            [-2906., -2901., -2884., ...,   173.,   134.,   118.],
            [-2908., -2906., -2888., ...,   132.,   119.,   118.],
            [-2912., -2910., -2894., ...,   122.,   120.,   128.]],
-          shape=(1182, 1371))</pre></div></div></li><li class='xr-section-item'><input id='section-d37f08eb-7604-4993-b916-c2ef0fcf486e' class='xr-section-summary-in' type='checkbox'  checked><label for='section-d37f08eb-7604-4993-b916-c2ef0fcf486e' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>10.92 10.93 10.95 ... 33.73 33.75</div><input id='attrs-114574ad-7e2c-401a-85ee-a24d06a64b65' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-114574ad-7e2c-401a-85ee-a24d06a64b65' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b16a82b4-03e0-4bc6-9ca9-64ca31a9263e' class='xr-var-data-in' type='checkbox'><label for='data-b16a82b4-03e0-4bc6-9ca9-64ca31a9263e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[10.91666667 33.75      ]</dd></dl></div><div class='xr-var-data'><pre>array([10.916667, 10.933333, 10.95    , ..., 33.716667, 33.733333, 33.75    ],
-          shape=(1371,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-36.0 -35.98 ... -16.33 -16.32</div><input id='attrs-0c122992-f045-459b-8290-50c74319388d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0c122992-f045-459b-8290-50c74319388d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9f543746-7680-4c7a-a67a-ae5f3f5cca24' class='xr-var-data-in' type='checkbox'><label for='data-9f543746-7680-4c7a-a67a-ae5f3f5cca24' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-36.         -16.31666667]</dd></dl></div><div class='xr-var-data'><pre>array([-36.      , -35.983333, -35.966667, ..., -16.35    , -16.333333,
-           -16.316667], shape=(1182,))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-c40a87c7-cfe5-40d4-af3d-f1207cf9ec4e' class='xr-section-summary-in' type='checkbox'  ><label for='section-c40a87c7-cfe5-40d4-af3d-f1207cf9ec4e' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-b7b65fbb-ee00-491a-ba30-8bdaeea55a09' class='xr-index-data-in' type='checkbox'/><label for='index-b7b65fbb-ee00-491a-ba30-8bdaeea55a09' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([10.916666666666664,  10.93333333333333, 10.949999999999998,
+          shape=(1182, 1371))</pre></div></div></li><li class='xr-section-item'><input id='section-6b5bd939-9d50-4ad1-99c7-03803b4bde6d' class='xr-section-summary-in' type='checkbox'  checked><label for='section-6b5bd939-9d50-4ad1-99c7-03803b4bde6d' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>10.92 10.93 10.95 ... 33.73 33.75</div><input id='attrs-0249c7ec-2038-400e-bc00-4d4d0bb66afa' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0249c7ec-2038-400e-bc00-4d4d0bb66afa' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f97efed5-65ec-4da9-ab70-0a524acafacf' class='xr-var-data-in' type='checkbox'><label for='data-f97efed5-65ec-4da9-ab70-0a524acafacf' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[10.91666667 33.75      ]</dd></dl></div><div class='xr-var-data'><pre>array([10.916667, 10.933333, 10.95    , ..., 33.716667, 33.733333, 33.75    ],
+          shape=(1371,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-36.0 -35.98 ... -16.33 -16.32</div><input id='attrs-7fcf7654-2223-473b-acda-a102ee1e6f7f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-7fcf7654-2223-473b-acda-a102ee1e6f7f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0f05e83b-5938-4ca2-ad36-c6222caa7291' class='xr-var-data-in' type='checkbox'><label for='data-0f05e83b-5938-4ca2-ad36-c6222caa7291' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-36.         -16.31666667]</dd></dl></div><div class='xr-var-data'><pre>array([-36.      , -35.983333, -35.966667, ..., -16.35    , -16.333333,
+           -16.316667], shape=(1182,))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-36bd4dec-5aa1-4076-b6ea-c5d3ca39a3f4' class='xr-section-summary-in' type='checkbox'  ><label for='section-36bd4dec-5aa1-4076-b6ea-c5d3ca39a3f4' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-eeada55e-252f-42b0-835a-513de8d3d408' class='xr-index-data-in' type='checkbox'/><label for='index-eeada55e-252f-42b0-835a-513de8d3d408' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([10.916666666666664,  10.93333333333333, 10.949999999999998,
            10.966666666666663,  10.98333333333333, 10.999999999999998,
            11.016666666666664, 11.033333333333331, 11.049999999999997,
            11.066666666666665,
@@ -505,7 +506,7 @@ Load the netCDF file with xarray (netcdf4 is required)
                         33.65, 33.666666666666664,  33.68333333333333,
            33.699999999999996,  33.71666666666666,  33.73333333333333,
                         33.75],
-          dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=1371))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-ddec0ef7-153f-4b76-ac81-f4880c9a3d38' class='xr-index-data-in' type='checkbox'/><label for='index-ddec0ef7-153f-4b76-ac81-f4880c9a3d38' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ -35.99999999999997, -35.983333333333306,  -35.96666666666664,
+          dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=1371))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-d6e1db9d-a2a7-4adb-b5ea-8db5394b4f48' class='xr-index-data-in' type='checkbox'/><label for='index-d6e1db9d-a2a7-4adb-b5ea-8db5394b4f48' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ -35.99999999999997, -35.983333333333306,  -35.96666666666664,
            -35.949999999999974,  -35.93333333333331, -35.916666666666636,
             -35.89999999999997, -35.883333333333304,  -35.86666666666664,
             -35.84999999999997,
@@ -514,7 +515,7 @@ Load the netCDF file with xarray (netcdf4 is required)
             -16.41666666666664, -16.399999999999974, -16.383333333333304,
             -16.36666666666664, -16.349999999999973, -16.333333333333307,
            -16.316666666666638],
-          dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=1182))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-906b8f0b-35f0-49d4-9c6f-563aeb059220' class='xr-section-summary-in' type='checkbox'  ><label for='section-906b8f0b-35f0-49d4-9c6f-563aeb059220' class='xr-section-summary' >Attributes: <span>(12)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>Topographic and bathymetric height for Southern Africa obtained from ETOPO1 (ice surface)</dd><dt><span>crs :</span></dt><dd>WGS84</dd><dt><span>source :</span></dt><dd>Downloaded from NOAA website (https://ngdc.noaa.gov/mgg/global/global.html)</dd><dt><span>license :</span></dt><dd>public domain</dd><dt><span>references :</span></dt><dd>https://doi.org/10.7289/V5C8276M</dd><dt><span>long_name :</span></dt><dd>topographic height above mean sea level</dd><dt><span>standard_name :</span></dt><dd>height_above_mean_sea_level</dd><dt><span>description :</span></dt><dd>height topography/bathymetry referenced to mean sea level</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[-5685.  3376.]</dd><dt><span>noaa_metadata :</span></dt><dd>Conventions: COARDS/CF-1.0
+          dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=1182))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-71c659f6-6557-4cb7-badc-1bf8022d2a5c' class='xr-section-summary-in' type='checkbox'  ><label for='section-71c659f6-6557-4cb7-badc-1bf8022d2a5c' class='xr-section-summary' >Attributes: <span>(12)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>Topographic and bathymetric height for Southern Africa obtained from ETOPO1 (ice surface)</dd><dt><span>crs :</span></dt><dd>WGS84</dd><dt><span>source :</span></dt><dd>Downloaded from NOAA website (https://ngdc.noaa.gov/mgg/global/global.html)</dd><dt><span>license :</span></dt><dd>public domain</dd><dt><span>references :</span></dt><dd>https://doi.org/10.7289/V5C8276M</dd><dt><span>long_name :</span></dt><dd>topographic height above mean sea level</dd><dt><span>standard_name :</span></dt><dd>height_above_mean_sea_level</dd><dt><span>description :</span></dt><dd>height topography/bathymetry referenced to mean sea level</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[-5685.  3376.]</dd><dt><span>noaa_metadata :</span></dt><dd>Conventions: COARDS/CF-1.0
     title: ETOPO1_Ice_g_gmt4.grd
     GMT_version: 4.4.0
     node_offset: 0</dd></dl></div></li></ul></div></div>
@@ -522,11 +523,11 @@ Load the netCDF file with xarray (netcdf4 is required)
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 40-41
+.. GENERATED FROM PYTHON SOURCE LINES 41-42
 
 Make a PyGMT map of the topography and bathymetry data
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-47
+.. GENERATED FROM PYTHON SOURCE LINES 42-48
 
 .. code-block:: Python
 
@@ -551,7 +552,7 @@ Make a PyGMT map of the topography and bathymetry data
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 4.533 seconds)
+   **Total running time of the script:** (0 minutes 4.464 seconds)
 
 
 .. _sphx_glr_download_gallery_southern-africa-topography.py:

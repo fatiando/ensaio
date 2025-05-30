@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**01:44.588** total execution time for 14 files **from gallery**:
+**01:40.675** total execution time for 14 files **from gallery**:
 
 .. container::
 
@@ -33,44 +33,44 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_gallery_sierra-negra-topography.py` (``sierra-negra-topography.py``)
-     - 00:20.702
-     - 0.0
-   * - :ref:`sphx_glr_gallery_osborne-magnetic.py` (``osborne-magnetic.py``)
-     - 00:15.124
+     - 00:19.710
      - 0.0
    * - :ref:`sphx_glr_gallery_british-columbia-lidar.py` (``british-columbia-lidar.py``)
-     - 00:13.441
+     - 00:15.829
+     - 0.0
+   * - :ref:`sphx_glr_gallery_osborne-magnetic.py` (``osborne-magnetic.py``)
+     - 00:13.817
      - 0.0
    * - :ref:`sphx_glr_gallery_britain-magnetic.py` (``britain-magnetic.py``)
-     - 00:09.658
+     - 00:10.501
      - 0.0
    * - :ref:`sphx_glr_gallery_earth-topography.py` (``earth-topography.py``)
-     - 00:06.613
-     - 0.0
-   * - :ref:`sphx_glr_gallery_caribbean-bathymetry.py` (``caribbean-bathymetry.py``)
-     - 00:06.584
+     - 00:07.405
      - 0.0
    * - :ref:`sphx_glr_gallery_earth-gravity.py` (``earth-gravity.py``)
-     - 00:06.368
+     - 00:07.194
      - 0.0
-   * - :ref:`sphx_glr_gallery_earth-geoid.py` (``earth-geoid.py``)
-     - 00:04.866
+   * - :ref:`sphx_glr_gallery_caribbean-bathymetry.py` (``caribbean-bathymetry.py``)
+     - 00:06.180
      - 0.0
    * - :ref:`sphx_glr_gallery_southern-africa-topography.py` (``southern-africa-topography.py``)
-     - 00:04.533
+     - 00:04.464
      - 0.0
-   * - :ref:`sphx_glr_gallery_morroco_speleothem_qdm.py` (``morroco_speleothem_qdm.py``)
-     - 00:03.708
+   * - :ref:`sphx_glr_gallery_earth-geoid.py` (``earth-geoid.py``)
+     - 00:03.707
      - 0.0
    * - :ref:`sphx_glr_gallery_lightning-creek-magnetic.py` (``lightning-creek-magnetic.py``)
-     - 00:03.631
+     - 00:02.789
+     - 0.0
+   * - :ref:`sphx_glr_gallery_morroco_speleothem_qdm.py` (``morroco_speleothem_qdm.py``)
+     - 00:02.542
      - 0.0
    * - :ref:`sphx_glr_gallery_southern-africa-gravity.py` (``southern-africa-gravity.py``)
-     - 00:03.198
+     - 00:02.346
      - 0.0
    * - :ref:`sphx_glr_gallery_bushveld-gravity.py` (``bushveld-gravity.py``)
-     - 00:03.193
+     - 00:02.140
      - 0.0
    * - :ref:`sphx_glr_gallery_alps-gps-velocity.py` (``alps-gps-velocity.py``)
-     - 00:02.970
+     - 00:02.052
      - 0.0
