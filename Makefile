@@ -24,7 +24,7 @@ install:
 	python -m pip install --no-deps --editable .
 
 test:
-	pytest $(PYTEST_ARGS) test src/$(PROJECT)
+	pytest --cov-report=term-missing --cov --doctest-modules --verbose test src/$(PROJECT)
 
 format:
 	ruff check --select I --fix $(CHECK_STYLE) # fix isort errors
