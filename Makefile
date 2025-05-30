@@ -1,8 +1,7 @@
 # Build, package, test, and clean
 PROJECT=ensaio
-TESTDIR=tmp-test-dir-with-unique-name
-PYTEST_ARGS=--cov-config=../.coveragerc --cov-report=term-missing --cov=$(PROJECT) --doctest-modules -v --pyargs
-CHECK_STYLE=$(PROJECT) doc
+PYTEST_ARGS=--cov-config=.coveragerc --cov-report=term-missing --cov=$(PROJECT) --doctest-modules --verbose
+CHECK_STYLE=src/$(PROJECT) doc test
 GITHUB_ACTIONS=.github/workflows
 
 .PHONY: help build install test format check check-format check-style check-actions clean
@@ -25,11 +24,7 @@ install:
 	python -m pip install --no-deps --editable .
 
 test:
-	# Run a tmp folder to make sure the tests are run on the installed version
-	mkdir -p $(TESTDIR)
-	cd $(TESTDIR); MPLBACKEND='agg' pytest $(PYTEST_ARGS) $(PROJECT)
-	cp $(TESTDIR)/.coverage* .
-	rm -rvf $(TESTDIR)
+	pytest $(PYTEST_ARGS) test src/$(PROJECT)
 
 format:
 	ruff check --select I --fix $(CHECK_STYLE) # fix isort errors

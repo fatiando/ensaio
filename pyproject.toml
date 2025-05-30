@@ -45,7 +45,7 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools_scm]
 version_scheme =  "post-release"
 local_scheme =  "no-local-version"
-write_to =  "ensaio/_version_generated.py"
+write_to =  "src/ensaio/_version_generated.py"
 
 [tool.burocrata]
 notice = '''
@@ -61,7 +61,7 @@ line-length = 88
 exclude = [
     "doc/_build",
     "doc/gallery/",
-    "ensaio/_version_generated.py",
+    "src/ensaio/_version_generated.py",
 ]
 
 [tool.ruff.lint]
@@ -102,7 +102,7 @@ ignore = [
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]  # Disable unused-imports errors on __init__.py
-"ensaio/tests/**" = [
+"test/**" = [
     "T20", # Allow print statements in tests
     "D",   # Ignore pydocstyle warnings in tests
 ]
