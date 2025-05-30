@@ -142,13 +142,13 @@ jobs:
           ENSAIO_DATA_FROM_GITHUB: true
 
       - name: Rename the coverage artifact
-        run: mv .coverage .coverage.${{ matrix.os }}_${{ matrix.python }}_${{ matrix.dependencies }}
+        run: mv .coverage .coverage.${{ matrix.os }}_${{ matrix.python }}_${{ matrix.dependencies }}_${{ matrix.cached }}
 
       - name: Upload coverage as artifact
         uses: actions/upload-artifact@v4
         with:
           path: .coverage.*
-          name: coverage_${{ matrix.os }}_${{ matrix.python }}_${{ matrix.dependencies }}
+          name: coverage_${{ matrix.os }}_${{ matrix.python }}_${{ matrix.dependencies }}_${{ matrix.cached }}
           if-no-files-found: ignore
           include-hidden-files: true
 
