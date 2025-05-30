@@ -13,7 +13,7 @@ import os
 
 import pytest
 
-from .. import _fetchers
+from ensaio import _fetchers
 
 FETCH_FUNCTIONS = [
     function
