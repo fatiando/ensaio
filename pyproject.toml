@@ -116,3 +116,23 @@ ignore = [
 
 [tool.ruff.lint.pydocstyle]
 convention = "numpy"
+
+[tool.coverage.run]
+source = ["ensaio"]
+omit = [
+    "**/_version_generated.py",
+    "**/__init__.py",
+]
+branch = true
+# Needed to combine coverage data from multiple OSs on CI
+relative_files = true
+
+[tool.coverage.paths]
+source = [
+    "src/ensaio",
+    "*/ensaio",
+    "*\\ensaio",
+]
+
+[tool.coverage.report]
+show_missing = true
