@@ -33,9 +33,10 @@ their isolated nature creates problems for some interpolation methods.
 redistribution in Ensaio
 <https://github.com/fatiando-data/british-columbia-lidar>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 24-29
+.. GENERATED FROM PYTHON SOURCE LINES 24-30
 
 .. code-block:: Python
+
 
     import pandas as pd
     import pygmt
@@ -49,11 +50,11 @@ redistribution in Ensaio
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 30-31
+.. GENERATED FROM PYTHON SOURCE LINES 31-32
 
 Download and cache the data and return the path to it on disk
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-34
+.. GENERATED FROM PYTHON SOURCE LINES 32-35
 
 .. code-block:: Python
 
@@ -73,11 +74,11 @@ Download and cache the data and return the path to it on disk
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-36
+.. GENERATED FROM PYTHON SOURCE LINES 36-37
 
 Load the CSV formatted data with pandas
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-39
+.. GENERATED FROM PYTHON SOURCE LINES 37-40
 
 .. code-block:: Python
 
@@ -190,11 +191,11 @@ Load the CSV formatted data with pandas
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 40-41
+.. GENERATED FROM PYTHON SOURCE LINES 41-42
 
 Make a PyGMT map with the data points colored by the elevation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-58
+.. GENERATED FROM PYTHON SOURCE LINES 42-59
 
 .. code-block:: Python
 
@@ -230,7 +231,7 @@ Make a PyGMT map with the data points colored by the elevation.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 13.441 seconds)
+   **Total running time of the script:** (0 minutes 15.540 seconds)
 
 
 .. _sphx_glr_download_gallery_british-columbia-lidar.py:

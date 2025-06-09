@@ -35,9 +35,10 @@ The data are calculated uniformly at 10 km above the WGS84 ellipsoid.
 redistribution in Ensaio
 <https://github.com/fatiando-data/earth-gravity-10arcmin>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 26-31
+.. GENERATED FROM PYTHON SOURCE LINES 26-32
 
 .. code-block:: Python
+
 
     import pygmt
     import xarray as xr
@@ -51,11 +52,11 @@ redistribution in Ensaio
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-33
+.. GENERATED FROM PYTHON SOURCE LINES 33-34
 
 Download and cache the data and return the path to it on disk.
 
-.. GENERATED FROM PYTHON SOURCE LINES 33-36
+.. GENERATED FROM PYTHON SOURCE LINES 34-37
 
 .. code-block:: Python
 
@@ -75,11 +76,11 @@ Download and cache the data and return the path to it on disk.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-38
+.. GENERATED FROM PYTHON SOURCE LINES 38-39
 
 Load the netCDF grid with xarray.
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-41
+.. GENERATED FROM PYTHON SOURCE LINES 39-42
 
 .. code-block:: Python
 
@@ -493,7 +494,7 @@ Load the netCDF grid with xarray.
         description:     magnitude of the gravity acceleration vector (gravitatio...
         units:           mGal
         actual_range:    [974748.6 980201.9]
-        icgem_metadata:  generating_institute: gfz-potsdam\ngenerating_date: 2021...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'gravity'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1081</li><li><span class='xr-has-index'>longitude</span>: 2161</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-69afd390-9ea9-4b4b-a39c-97d5ecd90c88' class='xr-array-in' type='checkbox' checked><label for='section-69afd390-9ea9-4b4b-a39c-97d5ecd90c88' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>9.801e+05 9.801e+05 9.801e+05 ... 9.802e+05 9.802e+05 9.802e+05</span></div><div class='xr-array-data'><pre>array([[980106.525, 980106.525, 980106.525, ..., 980106.525, 980106.525,
+        icgem_metadata:  generating_institute: gfz-potsdam\ngenerating_date: 2021...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'gravity'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1081</li><li><span class='xr-has-index'>longitude</span>: 2161</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-7b66b82b-d44e-4d1e-9b31-cbb40ea213c4' class='xr-array-in' type='checkbox' checked><label for='section-7b66b82b-d44e-4d1e-9b31-cbb40ea213c4' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>9.801e+05 9.801e+05 9.801e+05 ... 9.802e+05 9.802e+05 9.802e+05</span></div><div class='xr-array-data'><pre>array([[980106.525, 980106.525, 980106.525, ..., 980106.525, 980106.525,
             980106.525],
            [980108.225, 980108.225, 980108.225, ..., 980108.225, 980108.225,
             980108.225],
@@ -505,16 +506,16 @@ Load the netCDF grid with xarray.
            [980160.425, 980160.425, 980160.425, ..., 980160.425, 980160.425,
             980160.425],
            [980157.525, 980157.525, 980157.525, ..., 980157.525, 980157.525,
-            980157.525]], shape=(1081, 2161))</pre></div></div></li><li class='xr-section-item'><input id='section-a410b461-f4c6-4e1f-8fd7-f203551030af' class='xr-section-summary-in' type='checkbox'  checked><label for='section-a410b461-f4c6-4e1f-8fd7-f203551030af' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-180.0 -179.8 ... 179.8 180.0</div><input id='attrs-40e3fe35-952b-469d-86ff-60b1a90d99c5' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-40e3fe35-952b-469d-86ff-60b1a90d99c5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f7f3b5e4-d46a-4e2c-86fb-21cd07bd8211' class='xr-var-data-in' type='checkbox'><label for='data-f7f3b5e4-d46a-4e2c-86fb-21cd07bd8211' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[-180.  180.]</dd></dl></div><div class='xr-var-data'><pre>array([-180.      , -179.833333, -179.666667, ...,  179.666667,  179.833333,
-            180.      ], shape=(2161,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-90.0 -89.83 -89.67 ... 89.83 90.0</div><input id='attrs-350e7e74-8454-46d4-ae19-92dc28b8f739' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-350e7e74-8454-46d4-ae19-92dc28b8f739' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4a7c298e-61b4-473f-a8d6-f202969db248' class='xr-var-data-in' type='checkbox'><label for='data-4a7c298e-61b4-473f-a8d6-f202969db248' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-90.  90.]</dd></dl></div><div class='xr-var-data'><pre>array([-90.      , -89.833333, -89.666667, ...,  89.666667,  89.833333,
-            90.      ], shape=(1081,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>(latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>1e+04 1e+04 1e+04 ... 1e+04 1e+04</div><input id='attrs-b1803bf9-8720-4cfd-9d2b-31cb40c3f5b2' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b1803bf9-8720-4cfd-9d2b-31cb40c3f5b2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-cf4521d5-ccd2-4adc-b902-980a13b35694' class='xr-var-data-in' type='checkbox'><label for='data-cf4521d5-ccd2-4adc-b902-980a13b35694' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>geometric height</dd><dt><span>standard_name :</span></dt><dd>height_above_reference_ellipsoid</dd><dt><span>description :</span></dt><dd>height of gravity computation points above the WGS84 ellipsoid</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[10000. 10000.]</dd></dl></div><div class='xr-var-data'><pre>array([[10000., 10000., 10000., ..., 10000., 10000., 10000.],
+            980157.525]], shape=(1081, 2161))</pre></div></div></li><li class='xr-section-item'><input id='section-f143402c-8789-4896-9157-956707ad2af4' class='xr-section-summary-in' type='checkbox'  checked><label for='section-f143402c-8789-4896-9157-956707ad2af4' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-180.0 -179.8 ... 179.8 180.0</div><input id='attrs-b6aebdbd-b8d8-4dcd-852b-d09827182db1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b6aebdbd-b8d8-4dcd-852b-d09827182db1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9c440e32-b055-4ad6-825c-7ca25d35f727' class='xr-var-data-in' type='checkbox'><label for='data-9c440e32-b055-4ad6-825c-7ca25d35f727' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[-180.  180.]</dd></dl></div><div class='xr-var-data'><pre>array([-180.      , -179.833333, -179.666667, ...,  179.666667,  179.833333,
+            180.      ], shape=(2161,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-90.0 -89.83 -89.67 ... 89.83 90.0</div><input id='attrs-5740d23b-a705-454d-a49a-9eb1fc41b4b2' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5740d23b-a705-454d-a49a-9eb1fc41b4b2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ef1c15c1-3f77-483b-b4a2-79080a98dc84' class='xr-var-data-in' type='checkbox'><label for='data-ef1c15c1-3f77-483b-b4a2-79080a98dc84' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-90.  90.]</dd></dl></div><div class='xr-var-data'><pre>array([-90.      , -89.833333, -89.666667, ...,  89.666667,  89.833333,
+            90.      ], shape=(1081,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>(latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>1e+04 1e+04 1e+04 ... 1e+04 1e+04</div><input id='attrs-2be7e073-4cff-49e6-9e60-552695acae9a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2be7e073-4cff-49e6-9e60-552695acae9a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d2143799-bba3-44ed-b23c-49f9d0d96048' class='xr-var-data-in' type='checkbox'><label for='data-d2143799-bba3-44ed-b23c-49f9d0d96048' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>geometric height</dd><dt><span>standard_name :</span></dt><dd>height_above_reference_ellipsoid</dd><dt><span>description :</span></dt><dd>height of gravity computation points above the WGS84 ellipsoid</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[10000. 10000.]</dd></dl></div><div class='xr-var-data'><pre>array([[10000., 10000., 10000., ..., 10000., 10000., 10000.],
            [10000., 10000., 10000., ..., 10000., 10000., 10000.],
            [10000., 10000., 10000., ..., 10000., 10000., 10000.],
            ...,
            [10000., 10000., 10000., ..., 10000., 10000., 10000.],
            [10000., 10000., 10000., ..., 10000., 10000., 10000.],
            [10000., 10000., 10000., ..., 10000., 10000., 10000.]],
-          shape=(1081, 2161), dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-00dcf4ef-2757-48f7-8c45-f24e463e8028' class='xr-section-summary-in' type='checkbox'  ><label for='section-00dcf4ef-2757-48f7-8c45-f24e463e8028' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-7babacb1-a74f-4926-b2b5-a0d742ea2d51' class='xr-index-data-in' type='checkbox'/><label for='index-7babacb1-a74f-4926-b2b5-a0d742ea2d51' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([             -180.0, -179.83333333333334, -179.66666666666666,
+          shape=(1081, 2161), dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-da208089-1089-42eb-be3e-c678c2c9a921' class='xr-section-summary-in' type='checkbox'  ><label for='section-da208089-1089-42eb-be3e-c678c2c9a921' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-25e50700-3af2-4a79-b104-e6b9947ead2b' class='xr-index-data-in' type='checkbox'/><label for='index-25e50700-3af2-4a79-b104-e6b9947ead2b' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([             -180.0, -179.83333333333334, -179.66666666666666,
                         -179.5, -179.33333333333334, -179.16666666666666,
                         -179.0, -178.83333333333334, -178.66666666666666,
                         -178.5,
@@ -523,7 +524,7 @@ Load the netCDF grid with xarray.
                          179.0,  179.16666666666663,  179.33333333333331,
                          179.5,  179.66666666666663,  179.83333333333331,
                          180.0],
-          dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=2161))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-3a2de2d9-2cdb-4ffb-b4a4-862b8f074ad3' class='xr-index-data-in' type='checkbox'/><label for='index-3a2de2d9-2cdb-4ffb-b4a4-862b8f074ad3' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([             -90.0, -89.83333333333333, -89.66666666666667,
+          dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=2161))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-ba9bde76-b2d6-4a43-a761-df1e460d488e' class='xr-index-data-in' type='checkbox'/><label for='index-ba9bde76-b2d6-4a43-a761-df1e460d488e' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([             -90.0, -89.83333333333333, -89.66666666666667,
                         -89.5, -89.33333333333333, -89.16666666666667,
                         -89.0, -88.83333333333333, -88.66666666666667,
                         -88.5,
@@ -532,7 +533,7 @@ Load the netCDF grid with xarray.
                          89.0,  89.16666666666666,  89.33333333333331,
                          89.5,  89.66666666666666,  89.83333333333331,
                          90.0],
-          dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=1081))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-48fac21a-26ed-43c6-9227-be5c34d980ae' class='xr-section-summary-in' type='checkbox'  ><label for='section-48fac21a-26ed-43c6-9227-be5c34d980ae' class='xr-section-summary' >Attributes: <span>(11)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>Gravity acceleration (EIGEN-6C4) at a constant geometric height</dd><dt><span>crs :</span></dt><dd>WGS84</dd><dt><span>source :</span></dt><dd>Generated from the EIGEN-6C4 model by the ICGEM Calculation Service (http://icgem.gfz-potsdam.de)</dd><dt><span>license :</span></dt><dd>Creative Commons Attribution 4.0 International Licence</dd><dt><span>references :</span></dt><dd>https://doi.org/10.5880/icgem.2015.1</dd><dt><span>long_name :</span></dt><dd>gravity acceleration</dd><dt><span>description :</span></dt><dd>magnitude of the gravity acceleration vector (gravitational + centrifugal)</dd><dt><span>units :</span></dt><dd>mGal</dd><dt><span>actual_range :</span></dt><dd>[974748.6 980201.9]</dd><dt><span>icgem_metadata :</span></dt><dd>generating_institute: gfz-potsdam
+          dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=1081))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-612adbf9-6aa9-4651-b4a5-64c80a044b26' class='xr-section-summary-in' type='checkbox'  ><label for='section-612adbf9-6aa9-4651-b4a5-64c80a044b26' class='xr-section-summary' >Attributes: <span>(11)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>Gravity acceleration (EIGEN-6C4) at a constant geometric height</dd><dt><span>crs :</span></dt><dd>WGS84</dd><dt><span>source :</span></dt><dd>Generated from the EIGEN-6C4 model by the ICGEM Calculation Service (http://icgem.gfz-potsdam.de)</dd><dt><span>license :</span></dt><dd>Creative Commons Attribution 4.0 International Licence</dd><dt><span>references :</span></dt><dd>https://doi.org/10.5880/icgem.2015.1</dd><dt><span>long_name :</span></dt><dd>gravity acceleration</dd><dt><span>description :</span></dt><dd>magnitude of the gravity acceleration vector (gravitational + centrifugal)</dd><dt><span>units :</span></dt><dd>mGal</dd><dt><span>actual_range :</span></dt><dd>[974748.6 980201.9]</dd><dt><span>icgem_metadata :</span></dt><dd>generating_institute: gfz-potsdam
     generating_date: 2021/06/11
     product_type: gravity_field
     body: earth
@@ -569,11 +570,11 @@ Load the netCDF grid with xarray.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 42-43
+.. GENERATED FROM PYTHON SOURCE LINES 43-44
 
 Make a PyGMT pseudo-color map of the grid in a Mollweide projection.
 
-.. GENERATED FROM PYTHON SOURCE LINES 43-53
+.. GENERATED FROM PYTHON SOURCE LINES 44-54
 
 .. code-block:: Python
 
@@ -602,7 +603,7 @@ Make a PyGMT pseudo-color map of the grid in a Mollweide projection.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 6.368 seconds)
+   **Total running time of the script:** (0 minutes 7.018 seconds)
 
 
 .. _sphx_glr_download_gallery_earth-gravity.py:

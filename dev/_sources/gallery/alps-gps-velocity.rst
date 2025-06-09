@@ -33,9 +33,10 @@ in a lot of datasets.
 redistribution in Ensaio
 <https://github.com/fatiando-data/alps-gps-velocity>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 24-30
+.. GENERATED FROM PYTHON SOURCE LINES 24-31
 
 .. code-block:: Python
+
 
     import numpy as np
     import pandas as pd
@@ -50,11 +51,11 @@ redistribution in Ensaio
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-32
+.. GENERATED FROM PYTHON SOURCE LINES 32-33
 
 Download and cache the data and return the path to it on disk
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-35
+.. GENERATED FROM PYTHON SOURCE LINES 33-36
 
 .. code-block:: Python
 
@@ -74,11 +75,11 @@ Download and cache the data and return the path to it on disk
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-37
+.. GENERATED FROM PYTHON SOURCE LINES 37-38
 
 Load the CSV formatted data with pandas
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-40
+.. GENERATED FROM PYTHON SOURCE LINES 38-41
 
 .. code-block:: Python
 
@@ -311,12 +312,12 @@ Load the CSV formatted data with pandas
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-43
+.. GENERATED FROM PYTHON SOURCE LINES 42-44
 
 To plot the vectors with PyGMT, we need to convert the horizontal components
 into angle (azimuth) and length.
 
-.. GENERATED FROM PYTHON SOURCE LINES 43-46
+.. GENERATED FROM PYTHON SOURCE LINES 44-47
 
 .. code-block:: Python
 
@@ -330,12 +331,12 @@ into angle (azimuth) and length.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-49
+.. GENERATED FROM PYTHON SOURCE LINES 48-50
 
 Now we can make a PyGMT map with the horizontal velocity vectors and vertical
 velocities encoded as colored points.
 
-.. GENERATED FROM PYTHON SOURCE LINES 49-109
+.. GENERATED FROM PYTHON SOURCE LINES 50-110
 
 .. code-block:: Python
 
@@ -414,7 +415,7 @@ velocities encoded as colored points.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.970 seconds)
+   **Total running time of the script:** (0 minutes 1.936 seconds)
 
 
 .. _sphx_glr_download_gallery_alps-gps-velocity.py:

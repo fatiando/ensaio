@@ -19,22 +19,20 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=61a4c737" />
@@ -44,11 +42,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=fc90c160" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
@@ -80,8 +77,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -89,6 +97,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -96,8 +105,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -115,8 +124,7 @@
       
         
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -146,11 +154,15 @@
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">User Guide</span></p>
@@ -216,14 +228,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -319,16 +326,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 
 </div></div>
       
@@ -364,6 +379,7 @@
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Functions that fetch each of our sample datasets.</span>
 <span class="sd">&quot;&quot;&quot;</span>
+
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 
@@ -485,7 +501,7 @@
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Create the Pooch instance that fetches a dataset of a particular version</span>
+<span class="sd">    Create the Pooch instance that fetches a dataset of a particular version.</span>
 
 <span class="sd">    Cache location defaults to ``pooch.os_cache(&quot;ensaio&quot;)`` and can be</span>
 <span class="sd">    overwritten with the ``ENSAIO_DATA_DIR`` environment variable.</span>
@@ -530,7 +546,7 @@
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_sanitize_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Makes sure that the URL ends with a trailing ``/`` for Pooch.</span>
+<span class="sd">    Make sure that the URL ends with a trailing ``/`` for Pooch.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -551,7 +567,7 @@
 <a class="viewcode-back" href="../../api/generated/ensaio.locate.html#ensaio.locate">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">locate</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Return the location of the system-dependent data cache folder</span>
+<span class="sd">    Return the location of the system-dependent data cache folder.</span>
 
 <span class="sd">    This folder is not guaranteed to exist in the file system until a dataset</span>
 <span class="sd">    has been downloaded.</span>
@@ -584,16 +600,17 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">version</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allowed</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">(</span>
             <span class="sa">f</span><span class="s2">&quot;Invalid version=</span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2"> for </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> dataset. Must be one of </span><span class="si">{</span><span class="n">allowed</span><span class="si">}</span><span class="s2">.&quot;</span>
         <span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="fetch_alps_gps">
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_alps_gps.html#ensaio.fetch_alps_gps">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_alps_gps</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Alpine 3-component GPS velocity dataset</span>
+<span class="sd">    Alpine 3-component GPS velocity dataset.</span>
 
 <span class="sd">    This is a compilation of 3D GPS velocities for the Alps. The horizontal</span>
 <span class="sd">    velocities are reference to the Eurasian frame. Coordinates are referenced</span>
@@ -645,7 +662,7 @@
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_britain_magnetic.html#ensaio.fetch_britain_magnetic">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_britain_magnetic</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Digitized airborne magnetic survey of Britain</span>
+<span class="sd">    Digitized airborne magnetic survey of Britain.</span>
 
 <span class="sd">    This is a digitization of an airborne magnetic survey of Britain. Data are</span>
 <span class="sd">    sampled where flight lines crossed contours on the archive maps. Contains</span>
@@ -702,7 +719,7 @@
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_british_columbia_lidar.html#ensaio.fetch_british_columbia_lidar">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_british_columbia_lidar</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Topography (lidar point cloud) data of the Trail Islands in BC, Canada</span>
+<span class="sd">    Topography (lidar point cloud) data of the Trail Islands in BC, Canada.</span>
 
 <span class="sd">    This is a lidar point cloud (ground reflections only) sliced to the small</span>
 <span class="sd">    `Trail Islands &lt;https://apps.gov.bc.ca/pub/bcgnws/names/21973.html&gt;`__</span>
@@ -755,7 +772,7 @@
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_bushveld_gravity.html#ensaio.fetch_bushveld_gravity">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_bushveld_gravity</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Gravity ground-based data over the Bushveld Complex, Southern Africa</span>
+<span class="sd">    Gravity ground-based data over the Bushveld Complex, Southern Africa.</span>
 
 <span class="sd">    This dataset contains ground gravity observations over the area that</span>
 <span class="sd">    comprises the Bushveld Igenous Complex in Southern Africa, including</span>
@@ -809,7 +826,7 @@
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_caribbean_bathymetry.html#ensaio.fetch_caribbean_bathymetry">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_caribbean_bathymetry</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Single-beam bathymetry of the Caribbean</span>
+<span class="sd">    Single-beam bathymetry of the Caribbean.</span>
 
 <span class="sd">    This dataset is a compilation of several public domain single-beam</span>
 <span class="sd">    bathymetry surveys of the ocean in the Caribbean. The data display a wide</span>
@@ -873,7 +890,7 @@
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_earth_geoid.html#ensaio.fetch_earth_geoid">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_earth_geoid</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Geoid height of the Earth at 10 arc-minute resolution</span>
+<span class="sd">    Geoid height of the Earth at 10 arc-minute resolution.</span>
 
 <span class="sd">    The grid is global with node spacing of 10 arc-minutes (grid-node</span>
 <span class="sd">    registered) and stored in netCDF with CF-compliant metadata.</span>
@@ -926,7 +943,7 @@
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_earth_gravity.html#ensaio.fetch_earth_gravity">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_earth_gravity</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Gravity of the Earth at 10 arc-minute resolution</span>
+<span class="sd">    Gravity of the Earth at 10 arc-minute resolution.</span>
 
 <span class="sd">    The grid is global with node spacing of 10 arc-minutes (grid-node</span>
 <span class="sd">    registered) and stored in netCDF with CF-compliant metadata.</span>
@@ -981,7 +998,7 @@
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_earth_topography.html#ensaio.fetch_earth_topography">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_earth_topography</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Topography of the Earth at 10 arc-minute resolution</span>
+<span class="sd">    Topography of the Earth at 10 arc-minute resolution.</span>
 
 <span class="sd">    The grid is global with node spacing of 10 arc-minutes (grid-node</span>
 <span class="sd">    registered) and stored in netCDF with CF-compliant metadata.</span>
@@ -1033,7 +1050,7 @@
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_lightning_creek_magnetic.html#ensaio.fetch_lightning_creek_magnetic">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_lightning_creek_magnetic</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia</span>
+<span class="sd">    Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia.</span>
 
 <span class="sd">    This is a section of a survey acquired in 1990 by the Queensland</span>
 <span class="sd">    Government, Australia. The grid has 50 m resolution (UTM coordinates) and</span>
@@ -1083,7 +1100,7 @@
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_morroco_speleothem_qdm.html#ensaio.fetch_morroco_speleothem_qdm">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_morroco_speleothem_qdm</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">file_format</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    QDM magnetic microscopy dataset of a speleothem from Morocco</span>
+<span class="sd">    QDM magnetic microscopy dataset of a speleothem from Morocco.</span>
 
 <span class="sd">    High-resolution magnetic map of a stalagmite sample from Wintimdouine Cave,</span>
 <span class="sd">    Morocco, created using Quantum Diamond Microscope (QDM) measurements at</span>
@@ -1136,10 +1153,11 @@
     <span class="n">allowed_formats</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;matlab&quot;</span><span class="p">,</span> <span class="s2">&quot;netcdf&quot;</span><span class="p">}</span>
     <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">file_format</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allowed_formats</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">(</span>
             <span class="sa">f</span><span class="s2">&quot;Invalid data format &#39;</span><span class="si">{</span><span class="n">file_format</span><span class="si">}</span><span class="s2">&#39; for the </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> data. &quot;</span>
             <span class="sa">f</span><span class="s2">&quot;Must be one of </span><span class="si">{</span><span class="n">allowed_formats</span><span class="si">}</span><span class="s2">.&quot;</span>
         <span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
     <span class="n">fnames</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s2">&quot;netcdf&quot;</span><span class="p">:</span> <span class="s2">&quot;morroco-speleothem-qdm.nc&quot;</span><span class="p">,</span>
         <span class="s2">&quot;matlab&quot;</span><span class="p">:</span> <span class="s2">&quot;morroco-speleothem-qdm.mat&quot;</span><span class="p">,</span>
@@ -1153,7 +1171,7 @@
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_osborne_magnetic.html#ensaio.fetch_osborne_magnetic">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_osborne_magnetic</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Magnetic airborne survey of the Osborne Mine and surroundings, Australia</span>
+<span class="sd">    Magnetic airborne survey of the Osborne Mine and surroundings, Australia.</span>
 
 <span class="sd">    This is a section of a survey acquired in 1990 by the Queensland</span>
 <span class="sd">    Government, Australia. The line data have approximately 80 m terrain</span>
@@ -1209,7 +1227,7 @@
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_sierra_negra_topography.html#ensaio.fetch_sierra_negra_topography">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_sierra_negra_topography</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador</span>
+<span class="sd">    Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador.</span>
 
 <span class="sd">    This is a structure-from-motion point cloud of the 2018 lava flows of the</span>
 <span class="sd">    Sierra Negra volcano, located on the Galápagos islands, Ecuador. The survey</span>
@@ -1260,7 +1278,7 @@
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_southern_africa_gravity.html#ensaio.fetch_southern_africa_gravity">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_southern_africa_gravity</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Gravity ground-based surveys of Southern Africa</span>
+<span class="sd">    Gravity ground-based surveys of Southern Africa.</span>
 
 <span class="sd">    This dataset is a compilation of several public domain ground measurements</span>
 <span class="sd">    of gravity from Southern Africa. The observations are the absolute gravity</span>
@@ -1312,7 +1330,7 @@
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_southern_africa_topography.html#ensaio.fetch_southern_africa_topography">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_southern_africa_topography</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Topography and bathymetry data for Southern Africa</span>
+<span class="sd">    Topography and bathymetry data for Southern Africa.</span>
 
 <span class="sd">    This is a topography and bathymetry grid with a resolution of 1 arc-minute</span>
 <span class="sd">    over Southern Africa. The grid was generated by cropping the ETOPO1 global</span>
@@ -1395,7 +1413,7 @@
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Feb 19, 2025.
+  Last updated on Jun 09, 2025.
   <br/>
 </p>
   </div>
@@ -1413,8 +1431,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

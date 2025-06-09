@@ -19,6 +19,7 @@ model of the Earth's gravity field.
 redistribution in Ensaio
 <https://github.com/fatiando-data/earth-geoid-10arcmin>`__
 """
+
 import pygmt
 import xarray as xr
 

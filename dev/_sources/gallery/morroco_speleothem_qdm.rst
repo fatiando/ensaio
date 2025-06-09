@@ -37,9 +37,10 @@ Morocco. figshare. Dataset.
 redistribution in Ensaio
 <https://github.com/fatiando-data/morroco-speleothem-qdm>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 28-33
+.. GENERATED FROM PYTHON SOURCE LINES 28-34
 
 .. code-block:: Python
+
 
     import matplotlib.pyplot as plt
     import xarray as xr
@@ -53,12 +54,12 @@ redistribution in Ensaio
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 34-36
+.. GENERATED FROM PYTHON SOURCE LINES 35-37
 
 Download and cache the data and return the path to it on disk. We'll use the
 netCDF version because it's smaller and can be loaded with xarray easily.
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-39
+.. GENERATED FROM PYTHON SOURCE LINES 37-40
 
 .. code-block:: Python
 
@@ -78,11 +79,11 @@ netCDF version because it's smaller and can be loaded with xarray easily.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 40-41
+.. GENERATED FROM PYTHON SOURCE LINES 41-42
 
 Load the netCDF grid with xarray
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-44
+.. GENERATED FROM PYTHON SOURCE LINES 42-45
 
 .. code-block:: Python
 
@@ -493,7 +494,7 @@ Load the netCDF grid with xarray
         references:    Carmo, Janine; Fu, Roger; Trindade, Ricardo; Piascik, Samu...
         long_name:     vertical magnetic field
         units:         nT
-        actual_range:  [-236933.  301265.]</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'bz'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>y</span>: 600</li><li><span class='xr-has-index'>x</span>: 960</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-b9480fe3-64d3-4b8a-b51b-1abaef43ef8c' class='xr-array-in' type='checkbox' checked><label for='section-b9480fe3-64d3-4b8a-b51b-1abaef43ef8c' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>352.4 94.89 41.62 288.4 404.5 ... 101.0 -186.6 -4.196 -53.56 2.103</span></div><div class='xr-array-data'><pre>array([[ 352.40588  ,   94.89138  ,   41.619244 , ...,  470.18835  ,
+        actual_range:  [-236933.  301265.]</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'bz'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>y</span>: 600</li><li><span class='xr-has-index'>x</span>: 960</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-7910e02f-8902-4df7-8958-ace0a0a4676c' class='xr-array-in' type='checkbox' checked><label for='section-7910e02f-8902-4df7-8958-ace0a0a4676c' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>352.4 94.89 41.62 288.4 404.5 ... 101.0 -186.6 -4.196 -53.56 2.103</span></div><div class='xr-array-data'><pre>array([[ 352.40588  ,   94.89138  ,   41.619244 , ...,  470.18835  ,
              129.20056  ,   18.50121  ],
            [ 525.0481   ,  624.8466   ,   53.45418  , ...,  450.42517  ,
              240.12456  ,  -73.61368  ],
@@ -505,13 +506,13 @@ Load the netCDF grid with xarray
            [ 171.17114  , -214.47801  ,  159.23438  , ...,  124.58138  ,
              258.5433   ,  -90.33769  ],
            [  80.609505 ,  273.08368  ,  118.23499  , ...,   -4.1957254,
-             -53.55728  ,    2.1033592]], shape=(600, 960), dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-b6059cca-8b88-42f7-ac67-3baef19f1739' class='xr-section-summary-in' type='checkbox'  checked><label for='section-b6059cca-8b88-42f7-ac67-3baef19f1739' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 2.35 ... 2.251e+03 2.254e+03</div><input id='attrs-03e17731-0b1e-40db-9444-fc968fe4b39e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-03e17731-0b1e-40db-9444-fc968fe4b39e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ffc9066f-fc5d-4787-ae42-248bd38af9d0' class='xr-var-data-in' type='checkbox'><label for='data-ffc9066f-fc5d-4787-ae42-248bd38af9d0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>µm</dd></dl></div><div class='xr-var-data'><pre>array([   0.  ,    2.35,    4.7 , ..., 2248.95, 2251.3 , 2253.65], shape=(960,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 2.35 ... 1.405e+03 1.408e+03</div><input id='attrs-3d23fbfa-235f-4c20-af14-abad590ee7df' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-3d23fbfa-235f-4c20-af14-abad590ee7df' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-42c50d6d-f5c0-4b6b-bede-792a7ee06759' class='xr-var-data-in' type='checkbox'><label for='data-42c50d6d-f5c0-4b6b-bede-792a7ee06759' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>µm</dd></dl></div><div class='xr-var-data'><pre>array([   0.  ,    2.35,    4.7 , ..., 1402.95, 1405.3 , 1407.65], shape=(600,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>z</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>5.0 5.0 5.0 5.0 ... 5.0 5.0 5.0 5.0</div><input id='attrs-98c88a0f-1d84-4a72-b4df-2bec7e02091b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-98c88a0f-1d84-4a72-b4df-2bec7e02091b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5b8d0927-dc26-465e-8661-9890083ddad8' class='xr-var-data-in' type='checkbox'><label for='data-5b8d0927-dc26-465e-8661-9890083ddad8' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>sensor sample distance</dd><dt><span>units :</span></dt><dd>µm</dd></dl></div><div class='xr-var-data'><pre>array([[5., 5., 5., ..., 5., 5., 5.],
+             -53.55728  ,    2.1033592]], shape=(600, 960), dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-ae69efdc-d1b2-482b-9fef-40dd2b39e187' class='xr-section-summary-in' type='checkbox'  checked><label for='section-ae69efdc-d1b2-482b-9fef-40dd2b39e187' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 2.35 ... 2.251e+03 2.254e+03</div><input id='attrs-4c3c7bdb-61f6-41fc-a64f-b0916e4b23de' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4c3c7bdb-61f6-41fc-a64f-b0916e4b23de' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-621352ff-6003-4037-a567-d1dae544b34b' class='xr-var-data-in' type='checkbox'><label for='data-621352ff-6003-4037-a567-d1dae544b34b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>µm</dd></dl></div><div class='xr-var-data'><pre>array([   0.  ,    2.35,    4.7 , ..., 2248.95, 2251.3 , 2253.65], shape=(960,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 2.35 ... 1.405e+03 1.408e+03</div><input id='attrs-4db0b9cc-8592-420e-8bdb-4e97bf626e3e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4db0b9cc-8592-420e-8bdb-4e97bf626e3e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6782bcf1-ebe0-45b3-a21a-ada76f76ffbd' class='xr-var-data-in' type='checkbox'><label for='data-6782bcf1-ebe0-45b3-a21a-ada76f76ffbd' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>µm</dd></dl></div><div class='xr-var-data'><pre>array([   0.  ,    2.35,    4.7 , ..., 1402.95, 1405.3 , 1407.65], shape=(600,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>z</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>5.0 5.0 5.0 5.0 ... 5.0 5.0 5.0 5.0</div><input id='attrs-4d6ca6f9-bbe9-43a3-8102-beeab8db5ba0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4d6ca6f9-bbe9-43a3-8102-beeab8db5ba0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-271ca47e-a71e-4b2c-810e-fbcd3ef39247' class='xr-var-data-in' type='checkbox'><label for='data-271ca47e-a71e-4b2c-810e-fbcd3ef39247' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>sensor sample distance</dd><dt><span>units :</span></dt><dd>µm</dd></dl></div><div class='xr-var-data'><pre>array([[5., 5., 5., ..., 5., 5., 5.],
            [5., 5., 5., ..., 5., 5., 5.],
            [5., 5., 5., ..., 5., 5., 5.],
            ...,
            [5., 5., 5., ..., 5., 5., 5.],
            [5., 5., 5., ..., 5., 5., 5.],
-           [5., 5., 5., ..., 5., 5., 5.]], shape=(600, 960), dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-45192e40-7b7a-47e0-8404-7b71a52891e1' class='xr-section-summary-in' type='checkbox'  ><label for='section-45192e40-7b7a-47e0-8404-7b71a52891e1' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>x</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-ec323e27-6f41-4733-8204-9f96b3b19d0b' class='xr-index-data-in' type='checkbox'/><label for='index-ec323e27-6f41-4733-8204-9f96b3b19d0b' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([               0.0,               2.35,                4.7,
+           [5., 5., 5., ..., 5., 5., 5.]], shape=(600, 960), dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-88572140-7d38-439d-9b8f-5fdc30c94bd0' class='xr-section-summary-in' type='checkbox'  ><label for='section-88572140-7d38-439d-9b8f-5fdc30c94bd0' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>x</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-f302fd55-4c89-4d2d-b2ad-d1db63a8533b' class='xr-index-data-in' type='checkbox'/><label for='index-f302fd55-4c89-4d2d-b2ad-d1db63a8533b' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([               0.0,               2.35,                4.7,
             7.050000000000001,                9.4,              11.75,
            14.100000000000001,              16.45,               18.8,
            21.150000000000002,
@@ -520,7 +521,7 @@ Load the netCDF grid with xarray
                       2239.55,             2241.9,            2244.25,
                        2246.6, 2248.9500000000003,             2251.3,
                       2253.65],
-          dtype=&#x27;float64&#x27;, name=&#x27;x&#x27;, length=960))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>y</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-463965fe-7bf5-4343-9904-f09a7a0c60cb' class='xr-index-data-in' type='checkbox'/><label for='index-463965fe-7bf5-4343-9904-f09a7a0c60cb' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([               0.0,               2.35,                4.7,
+          dtype=&#x27;float64&#x27;, name=&#x27;x&#x27;, length=960))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>y</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-2fc491f1-199c-466c-8651-c453e136e706' class='xr-index-data-in' type='checkbox'/><label for='index-2fc491f1-199c-466c-8651-c453e136e706' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([               0.0,               2.35,                4.7,
             7.050000000000001,                9.4,              11.75,
            14.100000000000001,              16.45,               18.8,
            21.150000000000002,
@@ -529,17 +530,17 @@ Load the netCDF grid with xarray
                       1393.55,             1395.9,            1398.25,
            1400.6000000000001,            1402.95,             1405.3,
                       1407.65],
-          dtype=&#x27;float64&#x27;, name=&#x27;y&#x27;, length=600))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-8959a81e-a2e5-40a1-bbaa-11b376dca63a' class='xr-section-summary-in' type='checkbox'  checked><label for='section-8959a81e-a2e5-40a1-bbaa-11b376dca63a' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>QDM magnetic microscopy dataset of a speleothem from Morocco</dd><dt><span>source :</span></dt><dd>Measured on a Quantum Diamond Microscope (QDM) at Harvard University, using a stalagmite from Wintimdouine cave (Morroco).</dd><dt><span>license :</span></dt><dd>CC0 1.0 Universal</dd><dt><span>references :</span></dt><dd>Carmo, Janine; Fu, Roger; Trindade, Ricardo; Piascik, Samuel (2023). QDM magnetic microscopy dataset of a speleothem from Morocco. figshare. Dataset. https://doi.org/10.6084/m9.figshare.22965200.v1</dd><dt><span>long_name :</span></dt><dd>vertical magnetic field</dd><dt><span>units :</span></dt><dd>nT</dd><dt><span>actual_range :</span></dt><dd>[-236933.  301265.]</dd></dl></div></li></ul></div></div>
+          dtype=&#x27;float64&#x27;, name=&#x27;y&#x27;, length=600))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-212d878a-29ad-466f-b2ac-480c10d21245' class='xr-section-summary-in' type='checkbox'  checked><label for='section-212d878a-29ad-466f-b2ac-480c10d21245' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>QDM magnetic microscopy dataset of a speleothem from Morocco</dd><dt><span>source :</span></dt><dd>Measured on a Quantum Diamond Microscope (QDM) at Harvard University, using a stalagmite from Wintimdouine cave (Morroco).</dd><dt><span>license :</span></dt><dd>CC0 1.0 Universal</dd><dt><span>references :</span></dt><dd>Carmo, Janine; Fu, Roger; Trindade, Ricardo; Piascik, Samuel (2023). QDM magnetic microscopy dataset of a speleothem from Morocco. figshare. Dataset. https://doi.org/10.6084/m9.figshare.22965200.v1</dd><dt><span>long_name :</span></dt><dd>vertical magnetic field</dd><dt><span>units :</span></dt><dd>nT</dd><dt><span>actual_range :</span></dt><dd>[-236933.  301265.]</dd></dl></div></li></ul></div></div>
     </div>
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 45-47
+.. GENERATED FROM PYTHON SOURCE LINES 46-48
 
 Make a pseudo-color map of the magnetic microscopy data and adjust the scale
 because of some very strong sources.
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-52
+.. GENERATED FROM PYTHON SOURCE LINES 48-53
 
 .. code-block:: Python
 
@@ -563,7 +564,7 @@ because of some very strong sources.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.708 seconds)
+   **Total running time of the script:** (0 minutes 3.863 seconds)
 
 
 .. _sphx_glr_download_gallery_morroco_speleothem_qdm.py:

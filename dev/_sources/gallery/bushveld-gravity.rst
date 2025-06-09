@@ -38,9 +38,10 @@ gravity compilation available through NOAA NCEI.
 **Pre-processing:** `Source code for preparation of the original dataset for
 redistribution in Ensaio <https://github.com/fatiando-data/bushveld-gravity>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 29-35
+.. GENERATED FROM PYTHON SOURCE LINES 29-36
 
 .. code-block:: Python
+
 
     import numpy as np
     import pandas as pd
@@ -55,11 +56,11 @@ redistribution in Ensaio <https://github.com/fatiando-data/bushveld-gravity>`__
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-37
+.. GENERATED FROM PYTHON SOURCE LINES 37-38
 
 Download and cache the data and return the path to it on disk
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-40
+.. GENERATED FROM PYTHON SOURCE LINES 38-41
 
 .. code-block:: Python
 
@@ -79,11 +80,11 @@ Download and cache the data and return the path to it on disk
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-42
+.. GENERATED FROM PYTHON SOURCE LINES 42-43
 
 Load the CSV formatted data with pandas
 
-.. GENERATED FROM PYTHON SOURCE LINES 42-45
+.. GENERATED FROM PYTHON SOURCE LINES 43-46
 
 .. code-block:: Python
 
@@ -244,11 +245,11 @@ Load the CSV formatted data with pandas
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 46-47
+.. GENERATED FROM PYTHON SOURCE LINES 47-48
 
 Make a PyGMT map with the data points colored by the gravity data.
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-73
+.. GENERATED FROM PYTHON SOURCE LINES 48-74
 
 .. code-block:: Python
 
@@ -293,7 +294,7 @@ Make a PyGMT map with the data points colored by the gravity data.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.193 seconds)
+   **Total running time of the script:** (0 minutes 2.409 seconds)
 
 
 .. _sphx_glr_download_gallery_bushveld-gravity.py:

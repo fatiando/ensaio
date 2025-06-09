@@ -20,22 +20,20 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=61a4c737" />
@@ -45,11 +43,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/style.css?v=fc90c160" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
@@ -81,8 +78,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -90,6 +98,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -97,8 +106,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -116,8 +125,7 @@
       
         
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -147,11 +155,15 @@
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">User Guide</span></p>
@@ -217,14 +229,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -385,16 +392,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 
 </div></div>
       
@@ -422,7 +437,7 @@
                   
   <section id="computation-times">
 <span id="sphx-glr-gallery-sg-execution-times"></span><h1>Computation times<a class="headerlink" href="#computation-times" title="Link to this heading">#</a></h1>
-<p><strong>01:44.588</strong> total execution time for 14 files <strong>from gallery</strong>:</p>
+<p><strong>01:48.628</strong> total execution time for 14 files <strong>from gallery</strong>:</p>
 <div class="docutils container">
 <style scoped>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
@@ -444,59 +459,59 @@ $(document).ready( function () {
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="sierra-negra-topography.html#sphx-glr-gallery-sierra-negra-topography-py"><span class="std std-ref">Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador</span></a> (<code class="docutils literal notranslate"><span class="pre">sierra-negra-topography.py</span></code>)</p></td>
-<td><p>00:20.702</p></td>
+<td><p>00:26.246</p></td>
 <td><p>0.0</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="osborne-magnetic.html#sphx-glr-gallery-osborne-magnetic-py"><span class="std std-ref">Magnetic airborne survey of the Osborne Mine, Australia</span></a> (<code class="docutils literal notranslate"><span class="pre">osborne-magnetic.py</span></code>)</p></td>
-<td><p>00:15.124</p></td>
+<td><p>00:15.557</p></td>
 <td><p>0.0</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="british-columbia-lidar.html#sphx-glr-gallery-british-columbia-lidar-py"><span class="std std-ref">Topography of the Trail Islands in British Columbia, Canada</span></a> (<code class="docutils literal notranslate"><span class="pre">british-columbia-lidar.py</span></code>)</p></td>
-<td><p>00:13.441</p></td>
+<td><p>00:15.540</p></td>
 <td><p>0.0</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="britain-magnetic.html#sphx-glr-gallery-britain-magnetic-py"><span class="std std-ref">Magnetic airborne survey of Britain</span></a> (<code class="docutils literal notranslate"><span class="pre">britain-magnetic.py</span></code>)</p></td>
-<td><p>00:09.658</p></td>
+<td><p>00:08.715</p></td>
 <td><p>0.0</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="earth-topography.html#sphx-glr-gallery-earth-topography-py"><span class="std std-ref">Earth topography grid at 10 arc-minute resolution</span></a> (<code class="docutils literal notranslate"><span class="pre">earth-topography.py</span></code>)</p></td>
-<td><p>00:06.613</p></td>
+<td><p>00:07.580</p></td>
 <td><p>0.0</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="caribbean-bathymetry.html#sphx-glr-gallery-caribbean-bathymetry-py"><span class="std std-ref">Bathymetry single-beam surveys of the Caribbean</span></a> (<code class="docutils literal notranslate"><span class="pre">caribbean-bathymetry.py</span></code>)</p></td>
-<td><p>00:06.584</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="earth-gravity.html#sphx-glr-gallery-earth-gravity-py"><span class="std std-ref">Earth gravity grid at 10 arc-minute resolution</span></a> (<code class="docutils literal notranslate"><span class="pre">earth-gravity.py</span></code>)</p></td>
+<td><p>00:07.018</p></td>
 <td><p>0.0</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="earth-gravity.html#sphx-glr-gallery-earth-gravity-py"><span class="std std-ref">Earth gravity grid at 10 arc-minute resolution</span></a> (<code class="docutils literal notranslate"><span class="pre">earth-gravity.py</span></code>)</p></td>
-<td><p>00:06.368</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="caribbean-bathymetry.html#sphx-glr-gallery-caribbean-bathymetry-py"><span class="std std-ref">Bathymetry single-beam surveys of the Caribbean</span></a> (<code class="docutils literal notranslate"><span class="pre">caribbean-bathymetry.py</span></code>)</p></td>
+<td><p>00:06.162</p></td>
 <td><p>0.0</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="earth-geoid.html#sphx-glr-gallery-earth-geoid-py"><span class="std std-ref">Earth geoid height grid at 10 arc-minute resolution</span></a> (<code class="docutils literal notranslate"><span class="pre">earth-geoid.py</span></code>)</p></td>
-<td><p>00:04.866</p></td>
+<td><p>00:04.773</p></td>
 <td><p>0.0</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="southern-africa-topography.html#sphx-glr-gallery-southern-africa-topography-py"><span class="std std-ref">Topography and bathymetry of Southern Africa</span></a> (<code class="docutils literal notranslate"><span class="pre">southern-africa-topography.py</span></code>)</p></td>
-<td><p>00:04.533</p></td>
+<td><p>00:04.346</p></td>
 <td><p>0.0</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="morroco_speleothem_qdm.html#sphx-glr-gallery-morroco-speleothem-qdm-py"><span class="std std-ref">QDM magnetic microscopy dataset of a speleothem from Morocco</span></a> (<code class="docutils literal notranslate"><span class="pre">morroco_speleothem_qdm.py</span></code>)</p></td>
-<td><p>00:03.708</p></td>
-<td><p>0.0</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="lightning-creek-magnetic.html#sphx-glr-gallery-lightning-creek-magnetic-py"><span class="std std-ref">Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia</span></a> (<code class="docutils literal notranslate"><span class="pre">lightning-creek-magnetic.py</span></code>)</p></td>
-<td><p>00:03.631</p></td>
-<td><p>0.0</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="southern-africa-gravity.html#sphx-glr-gallery-southern-africa-gravity-py"><span class="std std-ref">Gravity ground-based surveys of Southern Africa</span></a> (<code class="docutils literal notranslate"><span class="pre">southern-africa-gravity.py</span></code>)</p></td>
-<td><p>00:03.198</p></td>
+<td><p>00:03.863</p></td>
 <td><p>0.0</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="bushveld-gravity.html#sphx-glr-gallery-bushveld-gravity-py"><span class="std std-ref">Gravity ground-based data over the Bushveld Complex, Southern Africa</span></a> (<code class="docutils literal notranslate"><span class="pre">bushveld-gravity.py</span></code>)</p></td>
-<td><p>00:03.193</p></td>
+<td><p>00:02.409</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="southern-africa-gravity.html#sphx-glr-gallery-southern-africa-gravity-py"><span class="std std-ref">Gravity ground-based surveys of Southern Africa</span></a> (<code class="docutils literal notranslate"><span class="pre">southern-africa-gravity.py</span></code>)</p></td>
+<td><p>00:02.353</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lightning-creek-magnetic.html#sphx-glr-gallery-lightning-creek-magnetic-py"><span class="std std-ref">Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia</span></a> (<code class="docutils literal notranslate"><span class="pre">lightning-creek-magnetic.py</span></code>)</p></td>
+<td><p>00:02.130</p></td>
 <td><p>0.0</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="alps-gps-velocity.html#sphx-glr-gallery-alps-gps-velocity-py"><span class="std std-ref">GPS velocities (3-component) for the Alps</span></a> (<code class="docutils literal notranslate"><span class="pre">alps-gps-velocity.py</span></code>)</p></td>
-<td><p>00:02.970</p></td>
+<td><p>00:01.936</p></td>
 <td><p>0.0</p></td>
 </tr>
 </tbody>
@@ -547,7 +562,7 @@ $(document).ready( function () {
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Feb 19, 2025.
+  Last updated on Jun 09, 2025.
   <br/>
 </p>
   </div>
@@ -565,8 +580,8 @@ $(document).ready( function () {
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

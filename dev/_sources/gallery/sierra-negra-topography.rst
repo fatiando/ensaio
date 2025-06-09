@@ -34,9 +34,10 @@ Galápagos, Ecuador, October 22 2018. Distributed by OpenTopography.
 redistribution in Ensaio
 <https://github.com/fatiando-data/sierra-negra-topography>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 25-30
+.. GENERATED FROM PYTHON SOURCE LINES 25-31
 
 .. code-block:: Python
+
 
     import pandas as pd
     import pygmt
@@ -50,11 +51,11 @@ redistribution in Ensaio
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-32
+.. GENERATED FROM PYTHON SOURCE LINES 32-33
 
 Download and cache the data and return the path to it on disk
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-35
+.. GENERATED FROM PYTHON SOURCE LINES 33-36
 
 .. code-block:: Python
 
@@ -74,11 +75,11 @@ Download and cache the data and return the path to it on disk
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-37
+.. GENERATED FROM PYTHON SOURCE LINES 37-38
 
 Load the CSV formatted data with pandas
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-40
+.. GENERATED FROM PYTHON SOURCE LINES 38-41
 
 .. code-block:: Python
 
@@ -191,11 +192,11 @@ Load the CSV formatted data with pandas
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-42
+.. GENERATED FROM PYTHON SOURCE LINES 42-43
 
 Make a PyGMT map with the data points colored by the elevation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 42-59
+.. GENERATED FROM PYTHON SOURCE LINES 43-60
 
 .. code-block:: Python
 
@@ -231,7 +232,7 @@ Make a PyGMT map with the data points colored by the elevation.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 20.702 seconds)
+   **Total running time of the script:** (0 minutes 26.247 seconds)
 
 
 .. _sphx_glr_download_gallery_sierra-negra-topography.py:

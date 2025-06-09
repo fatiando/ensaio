@@ -35,9 +35,10 @@ Canberra <http://pid.geoscience.gov.au/dataset/ga/142419>`__
 **Pre-processing:** `Source code for preparation of the original dataset for
 redistribution in Ensaio <https://github.com/fatiando-data/osborne-magnetic>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 25-30
+.. GENERATED FROM PYTHON SOURCE LINES 25-31
 
 .. code-block:: Python
+
 
     import pandas as pd
     import pygmt
@@ -51,11 +52,11 @@ redistribution in Ensaio <https://github.com/fatiando-data/osborne-magnetic>`__
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-32
+.. GENERATED FROM PYTHON SOURCE LINES 32-33
 
 Download and cache the data and return the path to it on disk
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-35
+.. GENERATED FROM PYTHON SOURCE LINES 33-36
 
 .. code-block:: Python
 
@@ -75,11 +76,11 @@ Download and cache the data and return the path to it on disk
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-37
+.. GENERATED FROM PYTHON SOURCE LINES 37-38
 
 Load the CSV formatted data with pandas
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-40
+.. GENERATED FROM PYTHON SOURCE LINES 38-41
 
 .. code-block:: Python
 
@@ -216,12 +217,12 @@ Load the CSV formatted data with pandas
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-43
+.. GENERATED FROM PYTHON SOURCE LINES 42-44
 
 Make a PyGMT map with the data points colored by the total field magnetic
 anomaly.
 
-.. GENERATED FROM PYTHON SOURCE LINES 43-69
+.. GENERATED FROM PYTHON SOURCE LINES 44-70
 
 .. code-block:: Python
 
@@ -263,7 +264,7 @@ anomaly.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 70-73
+.. GENERATED FROM PYTHON SOURCE LINES 71-74
 
 The anomaly at the bottom left is the Osborne Mine. The ones on the top right
 are the Lightning Creek sill complex (the largest) and the Brumby prospect
@@ -272,7 +273,7 @@ are the Lightning Creek sill complex (the largest) and the Brumby prospect
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 15.124 seconds)
+   **Total running time of the script:** (0 minutes 15.557 seconds)
 
 
 .. _sphx_glr_download_gallery_osborne-magnetic.py:

@@ -40,9 +40,10 @@ redistribution in Ensaio
     data to make it more manageable and converted the depths to bathymetric
     heights (negative downward).
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-36
+.. GENERATED FROM PYTHON SOURCE LINES 31-37
 
 .. code-block:: Python
+
 
     import pandas as pd
     import pygmt
@@ -56,11 +57,11 @@ redistribution in Ensaio
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-38
+.. GENERATED FROM PYTHON SOURCE LINES 38-39
 
 Download and cache the data and return the path to it on disk
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-41
+.. GENERATED FROM PYTHON SOURCE LINES 39-42
 
 .. code-block:: Python
 
@@ -80,11 +81,11 @@ Download and cache the data and return the path to it on disk
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 42-43
+.. GENERATED FROM PYTHON SOURCE LINES 43-44
 
 Load the CSV formatted data with pandas
 
-.. GENERATED FROM PYTHON SOURCE LINES 43-46
+.. GENERATED FROM PYTHON SOURCE LINES 44-47
 
 .. code-block:: Python
 
@@ -209,11 +210,11 @@ Load the CSV formatted data with pandas
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-48
+.. GENERATED FROM PYTHON SOURCE LINES 48-49
 
 Make a PyGMT map with the data points colored by the bathymetry.
 
-.. GENERATED FROM PYTHON SOURCE LINES 48-65
+.. GENERATED FROM PYTHON SOURCE LINES 49-66
 
 .. code-block:: Python
 
@@ -249,7 +250,7 @@ Make a PyGMT map with the data points colored by the bathymetry.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 6.584 seconds)
+   **Total running time of the script:** (0 minutes 6.162 seconds)
 
 
 .. _sphx_glr_download_gallery_caribbean-bathymetry.py:
