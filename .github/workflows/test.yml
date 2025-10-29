@@ -145,7 +145,7 @@ jobs:
         run: mv .coverage .coverage.${{ matrix.os }}_${{ matrix.python }}_${{ matrix.dependencies }}_${{ matrix.cached }}
 
       - name: Upload coverage as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           path: .coverage.*
           name: coverage_${{ matrix.os }}_${{ matrix.python }}_${{ matrix.dependencies }}_${{ matrix.cached }}
@@ -207,7 +207,7 @@ jobs:
         run: python -m coverage report --fail-under=100
 
       - name: Upload HTML report if check failed
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: html-report
           path: htmlcov
