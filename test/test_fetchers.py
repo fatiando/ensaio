@@ -18,7 +18,7 @@ from ensaio import _fetchers
 FETCH_FUNCTIONS = [
     function
     for name, function in inspect.getmembers(_fetchers, inspect.isfunction)
-    if name.startswith("fetch_") and name not in {"fetch_morroco_speleothem_qdm"}
+    if name.startswith("fetch_") and name != "fetch_morroco_speleothem_qdm"
 ]
 FETCH_FUNCTIONS_V2 = [
     _fetchers.fetch_caribbean_bathymetry,
