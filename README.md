@@ -8,7 +8,7 @@
 <a href="https://github.com/fatiando/ensaio/blob/main/CONTRIBUTING.md"><strong>Contribute</strong></a> •
 <a href="https://www.fatiando.org/contact/"><strong>Contact</strong></a> •
 <a href="https://github.com/orgs/fatiando/discussions"><strong>Ask a question</strong></a> •
-<a href="https://www.fatiando.org/ensaio/latest/citing.html"><strong>Cite</strong></a>
+<a href="https://www.fatiando.org/ensaio/dev/citing.html"><strong>Cite</strong></a>
 </p>
 
 <p align="center">
