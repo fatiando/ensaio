@@ -1,13 +1,14 @@
-<img src="https://github.com/fatiando/ensaio/raw/main/doc/_static/readme-banner.png" alt="Ensaio">
+<h1><img src="https://github.com/fatiando/ensaio/raw/main/doc/_static/readme-banner.png" alt="Ensaio"></h1>
 
-<h2 align="center">Practice datasets to probe your code</h2>
+<p align="center"><strong>Practice datasets to probe your code</strong></p>
 
 <p align="center">
 <a href="https://www.fatiando.org/ensaio"><strong>Documentation</strong> (latest)</a> •
-<a href="https://www.fatiando.org/ensaio/dev"><strong>Documentation</strong> (main branch)</a> •
-<a href="https://github.com/fatiando/ensaio/blob/main/CONTRIBUTING.md"><strong>Contributing</strong></a> •
+<a href="https://www.fatiando.org/ensaio/dev"><strong>Documentation</strong> (development)</a> •
+<a href="https://github.com/fatiando/ensaio/blob/main/CONTRIBUTING.md"><strong>Contribute</strong></a> •
 <a href="https://www.fatiando.org/contact/"><strong>Contact</strong></a> •
-<a href="https://github.com/orgs/fatiando/discussions"><strong>Ask a question</strong></a>
+<a href="https://github.com/orgs/fatiando/discussions"><strong>Ask a question</strong></a> •
+<a href="https://www.fatiando.org/ensaio/dev/citing.html"><strong>Cite</strong></a>
 </p>
 
 <p align="center">
