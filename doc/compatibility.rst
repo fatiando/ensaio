@@ -65,7 +65,10 @@ older ones are still working without causing problems.
 Whenever support for a version is dropped, we will include a note in the
 :ref:`changes`.
 
-Exact version constraints on our dependencies can be found in the `pyproject.toml file <https://github.com/fatiando/ensaio/blob/main/pyproject.toml>`__.
+.. seealso::
+
+    Exact version constraints on our dependencies can be found in the
+    `pyproject.toml file <https://github.com/fatiando/ensaio/blob/main/pyproject.toml>`__.
 
 
 .. _python-versions:
