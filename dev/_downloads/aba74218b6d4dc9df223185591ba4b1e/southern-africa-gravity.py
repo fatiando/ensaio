@@ -22,6 +22,7 @@ probably larger than geoid model differences).
 redistribution in Ensaio
 <https://github.com/fatiando-data/southern-africa-gravity>`__
 """
+
 import pandas as pd
 import pygmt
 

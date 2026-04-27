@@ -34,9 +34,10 @@ considered as the geoid).
 redistribution in Ensaio
 <https://github.com/fatiando-data/southern-africa-topography>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 24-29
+.. GENERATED FROM PYTHON SOURCE LINES 24-30
 
 .. code-block:: Python
+
 
     import pygmt
     import xarray as xr
@@ -50,11 +51,11 @@ redistribution in Ensaio
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 30-31
+.. GENERATED FROM PYTHON SOURCE LINES 31-32
 
 Download and cache the data and return the path to it on disk
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-34
+.. GENERATED FROM PYTHON SOURCE LINES 32-35
 
 .. code-block:: Python
 
@@ -74,11 +75,11 @@ Download and cache the data and return the path to it on disk
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-36
+.. GENERATED FROM PYTHON SOURCE LINES 36-37
 
 Load the netCDF file with xarray (netcdf4 is required)
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-39
+.. GENERATED FROM PYTHON SOURCE LINES 37-40
 
 .. code-block:: Python
 
@@ -108,39 +109,87 @@ Load the netCDF file with xarray (netcdf4 is required)
     </symbol>
     </defs>
     </svg>
-    <style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
-     *
-     */
+    <style>/* CSS stylesheet for displaying xarray objects in notebooks */
 
     :root {
-      --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-      --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-      --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
-      --xr-border-color: var(--jp-border-color2, #e0e0e0);
-      --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
-      --xr-background-color: var(--jp-layout-color0, white);
-      --xr-background-color-row-even: var(--jp-layout-color1, white);
-      --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+      --xr-font-color0: var(
+        --jp-content-font-color0,
+        var(--pst-color-text-base rgba(0, 0, 0, 1))
+      );
+      --xr-font-color2: var(
+        --jp-content-font-color2,
+        var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+      );
+      --xr-font-color3: var(
+        --jp-content-font-color3,
+        var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+      );
+      --xr-border-color: var(
+        --jp-border-color2,
+        hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+      );
+      --xr-disabled-color: var(
+        --jp-layout-color3,
+        hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+      );
+      --xr-background-color: var(
+        --jp-layout-color0,
+        var(--pst-color-on-background, white)
+      );
+      --xr-background-color-row-even: var(
+        --jp-layout-color1,
+        hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+      );
+      --xr-background-color-row-odd: var(
+        --jp-layout-color2,
+        hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+      );
     }
 
     html[theme="dark"],
     html[data-theme="dark"],
     body[data-theme="dark"],
     body.vscode-dark {
-      --xr-font-color0: rgba(255, 255, 255, 1);
-      --xr-font-color2: rgba(255, 255, 255, 0.54);
-      --xr-font-color3: rgba(255, 255, 255, 0.38);
-      --xr-border-color: #1f1f1f;
-      --xr-disabled-color: #515151;
-      --xr-background-color: #111111;
-      --xr-background-color-row-even: #111111;
-      --xr-background-color-row-odd: #313131;
+      --xr-font-color0: var(
+        --jp-content-font-color0,
+        var(--pst-color-text-base, rgba(255, 255, 255, 1))
+      );
+      --xr-font-color2: var(
+        --jp-content-font-color2,
+        var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+      );
+      --xr-font-color3: var(
+        --jp-content-font-color3,
+        var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+      );
+      --xr-border-color: var(
+        --jp-border-color2,
+        hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+      );
+      --xr-disabled-color: var(
+        --jp-layout-color3,
+        hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+      );
+      --xr-background-color: var(
+        --jp-layout-color0,
+        var(--pst-color-on-background, #111111)
+      );
+      --xr-background-color-row-even: var(
+        --jp-layout-color1,
+        hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+      );
+      --xr-background-color-row-odd: var(
+        --jp-layout-color2,
+        hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+      );
     }
 
     .xr-wrap {
       display: block !important;
       min-width: 300px;
       max-width: 700px;
+      line-height: 1.6;
+      padding-bottom: 4px;
     }
 
     .xr-text-repr-fallback {
@@ -151,8 +200,11 @@ Load the netCDF file with xarray (netcdf4 is required)
     .xr-header {
       padding-top: 6px;
       padding-bottom: 6px;
-      margin-bottom: 4px;
+    }
+
+    .xr-header {
       border-bottom: solid 1px var(--xr-border-color);
+      margin-bottom: 4px;
     }
 
     .xr-header > div,
@@ -163,45 +215,62 @@ Load the netCDF file with xarray (netcdf4 is required)
     }
 
     .xr-obj-type,
-    .xr-array-name {
+    .xr-obj-name {
       margin-left: 2px;
       margin-right: 10px;
     }
 
-    .xr-obj-type {
+    .xr-obj-type,
+    .xr-group-box-contents > label {
       color: var(--xr-font-color2);
+      display: block;
     }
 
     .xr-sections {
       padding-left: 0 !important;
       display: grid;
       grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+      margin-block-start: 0;
+      margin-block-end: 0;
     }
 
     .xr-section-item {
       display: contents;
     }
 
-    .xr-section-item input {
-      display: inline-block;
+    .xr-section-item > input,
+    .xr-group-box-contents > input,
+    .xr-array-wrap > input {
+      display: block;
       opacity: 0;
       height: 0;
+      margin: 0;
     }
 
-    .xr-section-item input + label {
+    .xr-section-item > input + label,
+    .xr-var-item > input + label {
       color: var(--xr-disabled-color);
     }
 
-    .xr-section-item input:enabled + label {
+    .xr-section-item > input:enabled + label,
+    .xr-var-item > input:enabled + label,
+    .xr-array-wrap > input:enabled + label,
+    .xr-group-box-contents > input:enabled + label {
       cursor: pointer;
       color: var(--xr-font-color2);
     }
 
-    .xr-section-item input:focus + label {
-      border: 2px solid var(--xr-font-color0);
+    .xr-section-item > input:focus-visible + label,
+    .xr-var-item > input:focus-visible + label,
+    .xr-array-wrap > input:focus-visible + label,
+    .xr-group-box-contents > input:focus-visible + label {
+      outline: auto;
     }
 
-    .xr-section-item input:enabled + label:hover {
+    .xr-section-item > input:enabled + label:hover,
+    .xr-var-item > input:enabled + label:hover,
+    .xr-array-wrap > input:enabled + label:hover,
+    .xr-group-box-contents > input:enabled + label:hover {
       color: var(--xr-font-color0);
     }
 
@@ -209,11 +278,25 @@ Load the netCDF file with xarray (netcdf4 is required)
       grid-column: 1;
       color: var(--xr-font-color2);
       font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .xr-section-summary > em {
+      font-weight: normal;
+    }
+
+    .xr-span-grid {
+      grid-column-end: -1;
     }
 
     .xr-section-summary > span {
       display: inline-block;
-      padding-left: 0.5em;
+      padding-left: 0.3em;
+    }
+
+    .xr-group-box-contents > input:checked + label > span {
+      display: inline-block;
+      padding-left: 0.6em;
     }
 
     .xr-section-summary-in:disabled + label {
@@ -241,9 +324,9 @@ Load the netCDF file with xarray (netcdf4 is required)
     }
 
     .xr-section-summary,
-    .xr-section-inline-details {
+    .xr-section-inline-details,
+    .xr-group-box-contents > label {
       padding-top: 4px;
-      padding-bottom: 4px;
     }
 
     .xr-section-inline-details {
@@ -251,13 +334,79 @@ Load the netCDF file with xarray (netcdf4 is required)
     }
 
     .xr-section-details {
-      display: none;
       grid-column: 1 / -1;
+      margin-top: 4px;
       margin-bottom: 5px;
+    }
+
+    .xr-section-summary-in ~ .xr-section-details {
+      display: none;
     }
 
     .xr-section-summary-in:checked ~ .xr-section-details {
       display: contents;
+    }
+
+    .xr-children {
+      display: inline-grid;
+      grid-template-columns: 100%;
+      grid-column: 1 / -1;
+      padding-top: 4px;
+    }
+
+    .xr-group-box {
+      display: inline-grid;
+      grid-template-columns: 0px 30px auto;
+    }
+
+    .xr-group-box-vline {
+      grid-column-start: 1;
+      border-right: 0.2em solid;
+      border-color: var(--xr-border-color);
+      width: 0px;
+    }
+
+    .xr-group-box-hline {
+      grid-column-start: 2;
+      grid-row-start: 1;
+      height: 1em;
+      width: 26px;
+      border-bottom: 0.2em solid;
+      border-color: var(--xr-border-color);
+    }
+
+    .xr-group-box-contents {
+      grid-column-start: 3;
+      padding-bottom: 4px;
+    }
+
+    .xr-group-box-contents > label::before {
+      content: "📂";
+      padding-right: 0.3em;
+    }
+
+    .xr-group-box-contents > input:checked + label::before {
+      content: "📁";
+    }
+
+    .xr-group-box-contents > input:checked + label {
+      padding-bottom: 0px;
+    }
+
+    .xr-group-box-contents > input:checked ~ .xr-sections {
+      display: none;
+    }
+
+    .xr-group-box-contents > input + label > span {
+      display: none;
+    }
+
+    .xr-group-box-ellipsis {
+      font-size: 1.4em;
+      font-weight: 900;
+      color: var(--xr-font-color2);
+      letter-spacing: 0.15em;
+      cursor: default;
     }
 
     .xr-array-wrap {
@@ -330,7 +479,9 @@ Load the netCDF file with xarray (netcdf4 is required)
     .xr-var-item label,
     .xr-var-item > .xr-var-name span {
       background-color: var(--xr-background-color-row-even);
+      border-color: var(--xr-background-color-row-odd);
       margin-bottom: 0;
+      padding-top: 2px;
     }
 
     .xr-var-item > .xr-var-name:hover span {
@@ -341,6 +492,7 @@ Load the netCDF file with xarray (netcdf4 is required)
     .xr-var-list > li:nth-child(odd) > label,
     .xr-var-list > li:nth-child(odd) > .xr-var-name span {
       background-color: var(--xr-background-color-row-odd);
+      border-color: var(--xr-background-color-row-even);
     }
 
     .xr-var-name {
@@ -390,8 +542,15 @@ Load the netCDF file with xarray (netcdf4 is required)
     .xr-var-data,
     .xr-index-data {
       display: none;
-      background-color: var(--xr-background-color) !important;
-      padding-bottom: 5px !important;
+      border-top: 2px dotted var(--xr-background-color);
+      padding-bottom: 20px !important;
+      padding-top: 10px !important;
+    }
+
+    .xr-var-attrs-in + label,
+    .xr-var-data-in + label,
+    .xr-index-data-in + label {
+      padding: 0 1px;
     }
 
     .xr-var-attrs-in:checked ~ .xr-var-attrs,
@@ -402,6 +561,12 @@ Load the netCDF file with xarray (netcdf4 is required)
 
     .xr-var-data > table {
       float: right;
+    }
+
+    .xr-var-data > pre,
+    .xr-index-data > pre,
+    .xr-var-data > table > tbody > tr {
+      background-color: transparent !important;
     }
 
     .xr-var-name span,
@@ -463,6 +628,14 @@ Load the netCDF file with xarray (netcdf4 is required)
       stroke: currentColor;
       fill: currentColor;
     }
+
+    .xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+    .xr-var-data-in:checked + label > .xr-icon-database,
+    .xr-index-data-in:checked + label > .xr-icon-database {
+      color: var(--xr-font-color0);
+      filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+      stroke-width: 0.8px;
+    }
     </style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;topography&#x27; (latitude: 1182, longitude: 1371)&gt; Size: 13MB
     array([[-5039., -5027., -5014., ..., -3846., -3867., -3873.],
            [-5036., -5021., -5007., ..., -3839., -3863., -3872.],
@@ -473,8 +646,8 @@ Load the netCDF file with xarray (netcdf4 is required)
            [-2912., -2910., -2894., ...,   122.,   120.,   128.]],
           shape=(1182, 1371))
     Coordinates:
-      * longitude  (longitude) float64 11kB 10.92 10.93 10.95 ... 33.72 33.73 33.75
       * latitude   (latitude) float64 9kB -36.0 -35.98 -35.97 ... -16.33 -16.32
+      * longitude  (longitude) float64 11kB 10.92 10.93 10.95 ... 33.72 33.73 33.75
     Attributes:
         Conventions:    CF-1.8
         title:          Topographic and bathymetric height for Southern Africa ob...
@@ -487,34 +660,16 @@ Load the netCDF file with xarray (netcdf4 is required)
         description:    height topography/bathymetry referenced to mean sea level
         units:          m
         actual_range:   [-5685.  3376.]
-        noaa_metadata:  Conventions: COARDS/CF-1.0\ntitle: ETOPO1_Ice_g_gmt4.grd\...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'topography'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1182</li><li><span class='xr-has-index'>longitude</span>: 1371</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-29a86e69-60c8-43e5-823d-248ee35c53c7' class='xr-array-in' type='checkbox' checked><label for='section-29a86e69-60c8-43e5-823d-248ee35c53c7' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-5.039e+03 -5.027e+03 -5.014e+03 -5.006e+03 ... 122.0 120.0 128.0</span></div><div class='xr-array-data'><pre>array([[-5039., -5027., -5014., ..., -3846., -3867., -3873.],
+        noaa_metadata:  Conventions: COARDS/CF-1.0\ntitle: ETOPO1_Ice_g_gmt4.grd\...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-obj-name'>&#x27;topography&#x27;</div><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 1182</li><li><span class='xr-has-index'>longitude</span>: 1371</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-9fba0ad1-ccac-49e3-9288-40d9fd45e3fe' class='xr-array-in' type='checkbox' checked><label for='section-9fba0ad1-ccac-49e3-9288-40d9fd45e3fe' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-5.039e+03 -5.027e+03 -5.014e+03 -5.006e+03 ... 122.0 120.0 128.0</span></div><div class='xr-array-data'><pre>array([[-5039., -5027., -5014., ..., -3846., -3867., -3873.],
            [-5036., -5021., -5007., ..., -3839., -3863., -3872.],
            [-5031., -5016., -5001., ..., -3835., -3860., -3870.],
            ...,
            [-2906., -2901., -2884., ...,   173.,   134.,   118.],
            [-2908., -2906., -2888., ...,   132.,   119.,   118.],
            [-2912., -2910., -2894., ...,   122.,   120.,   128.]],
-          shape=(1182, 1371))</pre></div></div></li><li class='xr-section-item'><input id='section-d37f08eb-7604-4993-b916-c2ef0fcf486e' class='xr-section-summary-in' type='checkbox'  checked><label for='section-d37f08eb-7604-4993-b916-c2ef0fcf486e' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>10.92 10.93 10.95 ... 33.73 33.75</div><input id='attrs-114574ad-7e2c-401a-85ee-a24d06a64b65' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-114574ad-7e2c-401a-85ee-a24d06a64b65' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b16a82b4-03e0-4bc6-9ca9-64ca31a9263e' class='xr-var-data-in' type='checkbox'><label for='data-b16a82b4-03e0-4bc6-9ca9-64ca31a9263e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[10.91666667 33.75      ]</dd></dl></div><div class='xr-var-data'><pre>array([10.916667, 10.933333, 10.95    , ..., 33.716667, 33.733333, 33.75    ],
-          shape=(1371,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-36.0 -35.98 ... -16.33 -16.32</div><input id='attrs-0c122992-f045-459b-8290-50c74319388d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0c122992-f045-459b-8290-50c74319388d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9f543746-7680-4c7a-a67a-ae5f3f5cca24' class='xr-var-data-in' type='checkbox'><label for='data-9f543746-7680-4c7a-a67a-ae5f3f5cca24' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-36.         -16.31666667]</dd></dl></div><div class='xr-var-data'><pre>array([-36.      , -35.983333, -35.966667, ..., -16.35    , -16.333333,
-           -16.316667], shape=(1182,))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-c40a87c7-cfe5-40d4-af3d-f1207cf9ec4e' class='xr-section-summary-in' type='checkbox'  ><label for='section-c40a87c7-cfe5-40d4-af3d-f1207cf9ec4e' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-b7b65fbb-ee00-491a-ba30-8bdaeea55a09' class='xr-index-data-in' type='checkbox'/><label for='index-b7b65fbb-ee00-491a-ba30-8bdaeea55a09' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([10.916666666666664,  10.93333333333333, 10.949999999999998,
-           10.966666666666663,  10.98333333333333, 10.999999999999998,
-           11.016666666666664, 11.033333333333331, 11.049999999999997,
-           11.066666666666665,
-           ...
-           33.599999999999994,  33.61666666666667,  33.63333333333333,
-                        33.65, 33.666666666666664,  33.68333333333333,
-           33.699999999999996,  33.71666666666666,  33.73333333333333,
-                        33.75],
-          dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=1371))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-ddec0ef7-153f-4b76-ac81-f4880c9a3d38' class='xr-index-data-in' type='checkbox'/><label for='index-ddec0ef7-153f-4b76-ac81-f4880c9a3d38' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ -35.99999999999997, -35.983333333333306,  -35.96666666666664,
-           -35.949999999999974,  -35.93333333333331, -35.916666666666636,
-            -35.89999999999997, -35.883333333333304,  -35.86666666666664,
-            -35.84999999999997,
-           ...
-            -16.46666666666664,  -16.44999999999997, -16.433333333333305,
-            -16.41666666666664, -16.399999999999974, -16.383333333333304,
-            -16.36666666666664, -16.349999999999973, -16.333333333333307,
-           -16.316666666666638],
-          dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=1182))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-906b8f0b-35f0-49d4-9c6f-563aeb059220' class='xr-section-summary-in' type='checkbox'  ><label for='section-906b8f0b-35f0-49d4-9c6f-563aeb059220' class='xr-section-summary' >Attributes: <span>(12)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>Topographic and bathymetric height for Southern Africa obtained from ETOPO1 (ice surface)</dd><dt><span>crs :</span></dt><dd>WGS84</dd><dt><span>source :</span></dt><dd>Downloaded from NOAA website (https://ngdc.noaa.gov/mgg/global/global.html)</dd><dt><span>license :</span></dt><dd>public domain</dd><dt><span>references :</span></dt><dd>https://doi.org/10.7289/V5C8276M</dd><dt><span>long_name :</span></dt><dd>topographic height above mean sea level</dd><dt><span>standard_name :</span></dt><dd>height_above_mean_sea_level</dd><dt><span>description :</span></dt><dd>height topography/bathymetry referenced to mean sea level</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[-5685.  3376.]</dd><dt><span>noaa_metadata :</span></dt><dd>Conventions: COARDS/CF-1.0
+          shape=(1182, 1371))</pre></div></div></li><li class='xr-section-item'><input id='section-21343503-fc8b-46e7-913b-f65a85c09022' class='xr-section-summary-in' type='checkbox' checked /><label for='section-21343503-fc8b-46e7-913b-f65a85c09022' class='xr-section-summary' title='Expand/collapse section'>Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-36.0 -35.98 ... -16.33 -16.32</div><input id='attrs-9b53f8ba-71cc-404c-849c-e76741be38dd' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9b53f8ba-71cc-404c-849c-e76741be38dd' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-97404794-f2f3-4513-a779-5694ff464bbb' class='xr-var-data-in' type='checkbox'><label for='data-97404794-f2f3-4513-a779-5694ff464bbb' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-36.         -16.31666667]</dd></dl></div><div class='xr-var-data'><pre>array([-36.      , -35.983333, -35.966667, ..., -16.35    , -16.333333,
+           -16.316667], shape=(1182,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>10.92 10.93 10.95 ... 33.73 33.75</div><input id='attrs-b7b435ef-3afb-4ca1-af0f-2da1d67e7462' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b7b435ef-3afb-4ca1-af0f-2da1d67e7462' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9ed4b970-c97d-4810-884c-89aa46fa941f' class='xr-var-data-in' type='checkbox'><label for='data-9ed4b970-c97d-4810-884c-89aa46fa941f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[10.91666667 33.75      ]</dd></dl></div><div class='xr-var-data'><pre>array([10.916667, 10.933333, 10.95    , ..., 33.716667, 33.733333, 33.75    ],
+          shape=(1371,))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-dabc7290-0178-488a-82ef-2454832991d8' class='xr-section-summary-in' type='checkbox' /><label for='section-dabc7290-0178-488a-82ef-2454832991d8' class='xr-section-summary' title='Expand/collapse section'>Attributes: <span>(12)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>Topographic and bathymetric height for Southern Africa obtained from ETOPO1 (ice surface)</dd><dt><span>crs :</span></dt><dd>WGS84</dd><dt><span>source :</span></dt><dd>Downloaded from NOAA website (https://ngdc.noaa.gov/mgg/global/global.html)</dd><dt><span>license :</span></dt><dd>public domain</dd><dt><span>references :</span></dt><dd>https://doi.org/10.7289/V5C8276M</dd><dt><span>long_name :</span></dt><dd>topographic height above mean sea level</dd><dt><span>standard_name :</span></dt><dd>height_above_mean_sea_level</dd><dt><span>description :</span></dt><dd>height topography/bathymetry referenced to mean sea level</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[-5685.  3376.]</dd><dt><span>noaa_metadata :</span></dt><dd>Conventions: COARDS/CF-1.0
     title: ETOPO1_Ice_g_gmt4.grd
     GMT_version: 4.4.0
     node_offset: 0</dd></dl></div></li></ul></div></div>
@@ -522,11 +677,11 @@ Load the netCDF file with xarray (netcdf4 is required)
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 40-41
+.. GENERATED FROM PYTHON SOURCE LINES 41-42
 
 Make a PyGMT map of the topography and bathymetry data
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-47
+.. GENERATED FROM PYTHON SOURCE LINES 42-48
 
 .. code-block:: Python
 
@@ -551,7 +706,7 @@ Make a PyGMT map of the topography and bathymetry data
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 4.533 seconds)
+   **Total running time of the script:** (0 minutes 4.769 seconds)
 
 
 .. _sphx_glr_download_gallery_southern-africa-topography.py:

@@ -21,6 +21,7 @@ considered as the geoid).
 redistribution in Ensaio
 <https://github.com/fatiando-data/southern-africa-topography>`__
 """
+
 import pygmt
 import xarray as xr
 

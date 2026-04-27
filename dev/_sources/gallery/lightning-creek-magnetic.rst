@@ -34,9 +34,10 @@ Canberra <http://pid.geoscience.gov.au/dataset/ga/142419>`__
 redistribution in Ensaio
 <https://github.com/fatiando-data/lightning-creek-magnetic-grid>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 25-30
+.. GENERATED FROM PYTHON SOURCE LINES 25-31
 
 .. code-block:: Python
+
 
     import pygmt
     import xarray as xr
@@ -50,11 +51,11 @@ redistribution in Ensaio
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-32
+.. GENERATED FROM PYTHON SOURCE LINES 32-33
 
 Download and cache the data and return the path to it on disk
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-35
+.. GENERATED FROM PYTHON SOURCE LINES 33-36
 
 .. code-block:: Python
 
@@ -74,11 +75,11 @@ Download and cache the data and return the path to it on disk
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-37
+.. GENERATED FROM PYTHON SOURCE LINES 37-38
 
 Load the netCDF grid with xarray
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-40
+.. GENERATED FROM PYTHON SOURCE LINES 38-41
 
 .. code-block:: Python
 
@@ -108,39 +109,87 @@ Load the netCDF grid with xarray
     </symbol>
     </defs>
     </svg>
-    <style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
-     *
-     */
+    <style>/* CSS stylesheet for displaying xarray objects in notebooks */
 
     :root {
-      --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-      --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-      --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
-      --xr-border-color: var(--jp-border-color2, #e0e0e0);
-      --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
-      --xr-background-color: var(--jp-layout-color0, white);
-      --xr-background-color-row-even: var(--jp-layout-color1, white);
-      --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+      --xr-font-color0: var(
+        --jp-content-font-color0,
+        var(--pst-color-text-base rgba(0, 0, 0, 1))
+      );
+      --xr-font-color2: var(
+        --jp-content-font-color2,
+        var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+      );
+      --xr-font-color3: var(
+        --jp-content-font-color3,
+        var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+      );
+      --xr-border-color: var(
+        --jp-border-color2,
+        hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+      );
+      --xr-disabled-color: var(
+        --jp-layout-color3,
+        hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+      );
+      --xr-background-color: var(
+        --jp-layout-color0,
+        var(--pst-color-on-background, white)
+      );
+      --xr-background-color-row-even: var(
+        --jp-layout-color1,
+        hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+      );
+      --xr-background-color-row-odd: var(
+        --jp-layout-color2,
+        hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+      );
     }
 
     html[theme="dark"],
     html[data-theme="dark"],
     body[data-theme="dark"],
     body.vscode-dark {
-      --xr-font-color0: rgba(255, 255, 255, 1);
-      --xr-font-color2: rgba(255, 255, 255, 0.54);
-      --xr-font-color3: rgba(255, 255, 255, 0.38);
-      --xr-border-color: #1f1f1f;
-      --xr-disabled-color: #515151;
-      --xr-background-color: #111111;
-      --xr-background-color-row-even: #111111;
-      --xr-background-color-row-odd: #313131;
+      --xr-font-color0: var(
+        --jp-content-font-color0,
+        var(--pst-color-text-base, rgba(255, 255, 255, 1))
+      );
+      --xr-font-color2: var(
+        --jp-content-font-color2,
+        var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+      );
+      --xr-font-color3: var(
+        --jp-content-font-color3,
+        var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+      );
+      --xr-border-color: var(
+        --jp-border-color2,
+        hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+      );
+      --xr-disabled-color: var(
+        --jp-layout-color3,
+        hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+      );
+      --xr-background-color: var(
+        --jp-layout-color0,
+        var(--pst-color-on-background, #111111)
+      );
+      --xr-background-color-row-even: var(
+        --jp-layout-color1,
+        hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+      );
+      --xr-background-color-row-odd: var(
+        --jp-layout-color2,
+        hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+      );
     }
 
     .xr-wrap {
       display: block !important;
       min-width: 300px;
       max-width: 700px;
+      line-height: 1.6;
+      padding-bottom: 4px;
     }
 
     .xr-text-repr-fallback {
@@ -151,8 +200,11 @@ Load the netCDF grid with xarray
     .xr-header {
       padding-top: 6px;
       padding-bottom: 6px;
-      margin-bottom: 4px;
+    }
+
+    .xr-header {
       border-bottom: solid 1px var(--xr-border-color);
+      margin-bottom: 4px;
     }
 
     .xr-header > div,
@@ -163,45 +215,62 @@ Load the netCDF grid with xarray
     }
 
     .xr-obj-type,
-    .xr-array-name {
+    .xr-obj-name {
       margin-left: 2px;
       margin-right: 10px;
     }
 
-    .xr-obj-type {
+    .xr-obj-type,
+    .xr-group-box-contents > label {
       color: var(--xr-font-color2);
+      display: block;
     }
 
     .xr-sections {
       padding-left: 0 !important;
       display: grid;
       grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+      margin-block-start: 0;
+      margin-block-end: 0;
     }
 
     .xr-section-item {
       display: contents;
     }
 
-    .xr-section-item input {
-      display: inline-block;
+    .xr-section-item > input,
+    .xr-group-box-contents > input,
+    .xr-array-wrap > input {
+      display: block;
       opacity: 0;
       height: 0;
+      margin: 0;
     }
 
-    .xr-section-item input + label {
+    .xr-section-item > input + label,
+    .xr-var-item > input + label {
       color: var(--xr-disabled-color);
     }
 
-    .xr-section-item input:enabled + label {
+    .xr-section-item > input:enabled + label,
+    .xr-var-item > input:enabled + label,
+    .xr-array-wrap > input:enabled + label,
+    .xr-group-box-contents > input:enabled + label {
       cursor: pointer;
       color: var(--xr-font-color2);
     }
 
-    .xr-section-item input:focus + label {
-      border: 2px solid var(--xr-font-color0);
+    .xr-section-item > input:focus-visible + label,
+    .xr-var-item > input:focus-visible + label,
+    .xr-array-wrap > input:focus-visible + label,
+    .xr-group-box-contents > input:focus-visible + label {
+      outline: auto;
     }
 
-    .xr-section-item input:enabled + label:hover {
+    .xr-section-item > input:enabled + label:hover,
+    .xr-var-item > input:enabled + label:hover,
+    .xr-array-wrap > input:enabled + label:hover,
+    .xr-group-box-contents > input:enabled + label:hover {
       color: var(--xr-font-color0);
     }
 
@@ -209,11 +278,25 @@ Load the netCDF grid with xarray
       grid-column: 1;
       color: var(--xr-font-color2);
       font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .xr-section-summary > em {
+      font-weight: normal;
+    }
+
+    .xr-span-grid {
+      grid-column-end: -1;
     }
 
     .xr-section-summary > span {
       display: inline-block;
-      padding-left: 0.5em;
+      padding-left: 0.3em;
+    }
+
+    .xr-group-box-contents > input:checked + label > span {
+      display: inline-block;
+      padding-left: 0.6em;
     }
 
     .xr-section-summary-in:disabled + label {
@@ -241,9 +324,9 @@ Load the netCDF grid with xarray
     }
 
     .xr-section-summary,
-    .xr-section-inline-details {
+    .xr-section-inline-details,
+    .xr-group-box-contents > label {
       padding-top: 4px;
-      padding-bottom: 4px;
     }
 
     .xr-section-inline-details {
@@ -251,13 +334,79 @@ Load the netCDF grid with xarray
     }
 
     .xr-section-details {
-      display: none;
       grid-column: 1 / -1;
+      margin-top: 4px;
       margin-bottom: 5px;
+    }
+
+    .xr-section-summary-in ~ .xr-section-details {
+      display: none;
     }
 
     .xr-section-summary-in:checked ~ .xr-section-details {
       display: contents;
+    }
+
+    .xr-children {
+      display: inline-grid;
+      grid-template-columns: 100%;
+      grid-column: 1 / -1;
+      padding-top: 4px;
+    }
+
+    .xr-group-box {
+      display: inline-grid;
+      grid-template-columns: 0px 30px auto;
+    }
+
+    .xr-group-box-vline {
+      grid-column-start: 1;
+      border-right: 0.2em solid;
+      border-color: var(--xr-border-color);
+      width: 0px;
+    }
+
+    .xr-group-box-hline {
+      grid-column-start: 2;
+      grid-row-start: 1;
+      height: 1em;
+      width: 26px;
+      border-bottom: 0.2em solid;
+      border-color: var(--xr-border-color);
+    }
+
+    .xr-group-box-contents {
+      grid-column-start: 3;
+      padding-bottom: 4px;
+    }
+
+    .xr-group-box-contents > label::before {
+      content: "📂";
+      padding-right: 0.3em;
+    }
+
+    .xr-group-box-contents > input:checked + label::before {
+      content: "📁";
+    }
+
+    .xr-group-box-contents > input:checked + label {
+      padding-bottom: 0px;
+    }
+
+    .xr-group-box-contents > input:checked ~ .xr-sections {
+      display: none;
+    }
+
+    .xr-group-box-contents > input + label > span {
+      display: none;
+    }
+
+    .xr-group-box-ellipsis {
+      font-size: 1.4em;
+      font-weight: 900;
+      color: var(--xr-font-color2);
+      letter-spacing: 0.15em;
+      cursor: default;
     }
 
     .xr-array-wrap {
@@ -330,7 +479,9 @@ Load the netCDF grid with xarray
     .xr-var-item label,
     .xr-var-item > .xr-var-name span {
       background-color: var(--xr-background-color-row-even);
+      border-color: var(--xr-background-color-row-odd);
       margin-bottom: 0;
+      padding-top: 2px;
     }
 
     .xr-var-item > .xr-var-name:hover span {
@@ -341,6 +492,7 @@ Load the netCDF grid with xarray
     .xr-var-list > li:nth-child(odd) > label,
     .xr-var-list > li:nth-child(odd) > .xr-var-name span {
       background-color: var(--xr-background-color-row-odd);
+      border-color: var(--xr-background-color-row-even);
     }
 
     .xr-var-name {
@@ -390,8 +542,15 @@ Load the netCDF grid with xarray
     .xr-var-data,
     .xr-index-data {
       display: none;
-      background-color: var(--xr-background-color) !important;
-      padding-bottom: 5px !important;
+      border-top: 2px dotted var(--xr-background-color);
+      padding-bottom: 20px !important;
+      padding-top: 10px !important;
+    }
+
+    .xr-var-attrs-in + label,
+    .xr-var-data-in + label,
+    .xr-index-data-in + label {
+      padding: 0 1px;
     }
 
     .xr-var-attrs-in:checked ~ .xr-var-attrs,
@@ -402,6 +561,12 @@ Load the netCDF grid with xarray
 
     .xr-var-data > table {
       float: right;
+    }
+
+    .xr-var-data > pre,
+    .xr-index-data > pre,
+    .xr-var-data > table > tbody > tr {
+      background-color: transparent !important;
     }
 
     .xr-var-name span,
@@ -463,6 +628,14 @@ Load the netCDF grid with xarray
       stroke: currentColor;
       fill: currentColor;
     }
+
+    .xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+    .xr-var-data-in:checked + label > .xr-icon-database,
+    .xr-index-data-in:checked + label > .xr-icon-database {
+      color: var(--xr-font-color0);
+      filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+      stroke-width: 0.8px;
+    }
     </style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;total_field_anomaly&#x27; (northing: 370, easting: 346)&gt; Size: 1MB
     array([[  34.99995117,   36.19995117,   36.69995117, ..., -101.10004883,
             -100.40004883,  -99.60004883],
@@ -478,8 +651,8 @@ Load the netCDF grid with xarray
            [ 178.79995117,  170.39995117,  160.29995117, ...,   11.39995117,
              -16.00004883,  -35.80004883]], shape=(370, 346))
     Coordinates:
-      * easting   (easting) float64 3kB 4.655e+05 4.656e+05 ... 4.827e+05 4.828e+05
       * northing  (northing) float64 3kB 7.576e+06 7.576e+06 ... 7.595e+06 7.595e+06
+      * easting   (easting) float64 3kB 4.655e+05 4.656e+05 ... 4.827e+05 4.828e+05
         height    (northing, easting) float64 1MB 500.0 500.0 500.0 ... 500.0 500.0
     Attributes:
         Conventions:   CF-1.8
@@ -490,7 +663,7 @@ Load the netCDF grid with xarray
         references:    Geophysical Acquisition &amp; Processing Section 2019. MIM Dat...
         long_name:     total-field magnetic anomaly
         units:         nT
-        actual_range:  [-1785.  3798.]</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'total_field_anomaly'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>northing</span>: 370</li><li><span class='xr-has-index'>easting</span>: 346</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-b9e0ccce-f92f-4185-9601-f8420a0015ac' class='xr-array-in' type='checkbox' checked><label for='section-b9e0ccce-f92f-4185-9601-f8420a0015ac' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>35.0 36.2 36.7 36.6 36.3 35.6 ... 113.1 78.6 43.7 11.4 -16.0 -35.8</span></div><div class='xr-array-data'><pre>array([[  34.99995117,   36.19995117,   36.69995117, ..., -101.10004883,
+        actual_range:  [-1785.  3798.]</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-obj-name'>&#x27;total_field_anomaly&#x27;</div><ul class='xr-dim-list'><li><span class='xr-has-index'>northing</span>: 370</li><li><span class='xr-has-index'>easting</span>: 346</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-3f95f72e-6cbc-4a7d-aebf-f4c6da7366b4' class='xr-array-in' type='checkbox' checked><label for='section-3f95f72e-6cbc-4a7d-aebf-f4c6da7366b4' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>35.0 36.2 36.7 36.6 36.3 35.6 ... 113.1 78.6 43.7 11.4 -16.0 -35.8</span></div><div class='xr-array-data'><pre>array([[  34.99995117,   36.19995117,   36.69995117, ..., -101.10004883,
             -100.40004883,  -99.60004883],
            [  36.49995117,   37.59995117,   37.99995117, ..., -102.20004883,
             -101.50004883, -100.70004883],
@@ -502,40 +675,24 @@ Load the netCDF grid with xarray
            [ 182.09995117,  172.59995117,  161.39995117, ...,    5.99995117,
              -21.50004883,  -41.00004883],
            [ 178.79995117,  170.39995117,  160.29995117, ...,   11.39995117,
-             -16.00004883,  -35.80004883]], shape=(370, 346))</pre></div></div></li><li class='xr-section-item'><input id='section-2b616b46-fbd0-4b91-b282-f715bc8b6b5e' class='xr-section-summary-in' type='checkbox'  checked><label for='section-2b616b46-fbd0-4b91-b282-f715bc8b6b5e' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>easting</span></div><div class='xr-var-dims'>(easting)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>4.655e+05 4.656e+05 ... 4.828e+05</div><input id='attrs-583805d7-e20f-4f9f-bc6c-4bf08b935b12' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-583805d7-e20f-4f9f-bc6c-4bf08b935b12' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a62b4dbc-ba37-4353-adac-65c7067de3e1' class='xr-var-data-in' type='checkbox'><label for='data-a62b4dbc-ba37-4353-adac-65c7067de3e1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>UTM easting</dd><dt><span>standard_name :</span></dt><dd>projection_x_coordinate</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[465533.31767977 482783.31767977]</dd></dl></div><div class='xr-var-data'><pre>array([465533.31768, 465583.31768, 465633.31768, ..., 482683.31768,
-           482733.31768, 482783.31768], shape=(346,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>northing</span></div><div class='xr-var-dims'>(northing)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>7.576e+06 7.576e+06 ... 7.595e+06</div><input id='attrs-b69edd0e-96ed-4465-848b-7f690de541c0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b69edd0e-96ed-4465-848b-7f690de541c0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-866cf691-6557-4729-aa9b-41109df250c6' class='xr-var-data-in' type='checkbox'><label for='data-866cf691-6557-4729-aa9b-41109df250c6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>UTM northing</dd><dt><span>standard_name :</span></dt><dd>projection_y_coordinate</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[7576368.82029097 7594818.82029097]</dd></dl></div><div class='xr-var-data'><pre>array([7576368.820291, 7576418.820291, 7576468.820291, ..., 7594718.820291,
-           7594768.820291, 7594818.820291], shape=(370,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>(northing, easting)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>500.0 500.0 500.0 ... 500.0 500.0</div><input id='attrs-bb101d21-1cdd-42c2-96dc-0db43c01da53' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-bb101d21-1cdd-42c2-96dc-0db43c01da53' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-abd5e739-6be2-4afe-9cdd-26fb0339aeef' class='xr-var-data-in' type='checkbox'><label for='data-abd5e739-6be2-4afe-9cdd-26fb0339aeef' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>orthometric height</dd><dt><span>standard_name :</span></dt><dd>height_above_geopotential_datum</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[500. 500.]</dd></dl></div><div class='xr-var-data'><pre>array([[500., 500., 500., ..., 500., 500., 500.],
+             -16.00004883,  -35.80004883]], shape=(370, 346))</pre></div></div></li><li class='xr-section-item'><input id='section-075fc333-4d87-4acf-ac6d-b596461a356d' class='xr-section-summary-in' type='checkbox' checked /><label for='section-075fc333-4d87-4acf-ac6d-b596461a356d' class='xr-section-summary' title='Expand/collapse section'>Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>northing</span></div><div class='xr-var-dims'>(northing)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>7.576e+06 7.576e+06 ... 7.595e+06</div><input id='attrs-1215c5e1-8271-4e77-9eff-af2bdeadfe7a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1215c5e1-8271-4e77-9eff-af2bdeadfe7a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f1072d74-234f-4b33-a8ee-9f5813666c00' class='xr-var-data-in' type='checkbox'><label for='data-f1072d74-234f-4b33-a8ee-9f5813666c00' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>UTM northing</dd><dt><span>standard_name :</span></dt><dd>projection_y_coordinate</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[7576368.82029097 7594818.82029097]</dd></dl></div><div class='xr-var-data'><pre>array([7576368.820291, 7576418.820291, 7576468.820291, ..., 7594718.820291,
+           7594768.820291, 7594818.820291], shape=(370,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>easting</span></div><div class='xr-var-dims'>(easting)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>4.655e+05 4.656e+05 ... 4.828e+05</div><input id='attrs-b1280c80-1664-46f9-bdf1-ff1946c6b35f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b1280c80-1664-46f9-bdf1-ff1946c6b35f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-970eae90-5689-408a-b61d-46401fc5b28a' class='xr-var-data-in' type='checkbox'><label for='data-970eae90-5689-408a-b61d-46401fc5b28a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>UTM easting</dd><dt><span>standard_name :</span></dt><dd>projection_x_coordinate</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[465533.31767977 482783.31767977]</dd></dl></div><div class='xr-var-data'><pre>array([465533.31768, 465583.31768, 465633.31768, ..., 482683.31768,
+           482733.31768, 482783.31768], shape=(346,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>(northing, easting)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>500.0 500.0 500.0 ... 500.0 500.0</div><input id='attrs-d4c39384-a8c2-422c-bbbe-4f4ab4a4cbe6' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d4c39384-a8c2-422c-bbbe-4f4ab4a4cbe6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f2dbb8db-d35c-4162-be04-2b13a84f931d' class='xr-var-data-in' type='checkbox'><label for='data-f2dbb8db-d35c-4162-be04-2b13a84f931d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>orthometric height</dd><dt><span>standard_name :</span></dt><dd>height_above_geopotential_datum</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>actual_range :</span></dt><dd>[500. 500.]</dd></dl></div><div class='xr-var-data'><pre>array([[500., 500., 500., ..., 500., 500., 500.],
            [500., 500., 500., ..., 500., 500., 500.],
            [500., 500., 500., ..., 500., 500., 500.],
            ...,
            [500., 500., 500., ..., 500., 500., 500.],
            [500., 500., 500., ..., 500., 500., 500.],
-           [500., 500., 500., ..., 500., 500., 500.]], shape=(370, 346))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-361f08e2-f843-48c5-b8fc-b52d435692e5' class='xr-section-summary-in' type='checkbox'  ><label for='section-361f08e2-f843-48c5-b8fc-b52d435692e5' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>easting</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-b57ebc75-10c6-4a0a-ab36-31ba40279ebb' class='xr-index-data-in' type='checkbox'/><label for='index-b57ebc75-10c6-4a0a-ab36-31ba40279ebb' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([465533.31767976715, 465583.31767976715, 465633.31767976715,
-           465683.31767976715, 465733.31767976715, 465783.31767976715,
-           465833.31767976715, 465883.31767976715, 465933.31767976715,
-           465983.31767976715,
-           ...
-           482333.31767976715, 482383.31767976715, 482433.31767976715,
-           482483.31767976715, 482533.31767976715, 482583.31767976715,
-           482633.31767976715, 482683.31767976715, 482733.31767976715,
-           482783.31767976715],
-          dtype=&#x27;float64&#x27;, name=&#x27;easting&#x27;, length=346))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>northing</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-b4fa71dc-dc68-4600-83b7-891ea7f4227f' class='xr-index-data-in' type='checkbox'/><label for='index-b4fa71dc-dc68-4600-83b7-891ea7f4227f' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([7576368.82029097, 7576418.82029097, 7576468.82029097, 7576518.82029097,
-           7576568.82029097, 7576618.82029097, 7576668.82029097, 7576718.82029097,
-           7576768.82029097, 7576818.82029097,
-           ...
-           7594368.82029097, 7594418.82029097, 7594468.82029097, 7594518.82029097,
-           7594568.82029097, 7594618.82029097, 7594668.82029097, 7594718.82029097,
-           7594768.82029097, 7594818.82029097],
-          dtype=&#x27;float64&#x27;, name=&#x27;northing&#x27;, length=370))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-93cf3972-f220-40de-b530-53d5119a961f' class='xr-section-summary-in' type='checkbox'  checked><label for='section-93cf3972-f220-40de-b530-53d5119a961f' class='xr-section-summary' >Attributes: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>Magnetic total-field anomaly of the Lightning Creek sill complex, Australia</dd><dt><span>crs :</span></dt><dd>proj=utm zone=54 south datum=WGS84 units=m no_defs ellps=WGS84 towgs84=0,0,0</dd><dt><span>source :</span></dt><dd>Interpolated from airborne magnetic line data using gradient-boosted equivalent sources</dd><dt><span>license :</span></dt><dd>Creative Commons Attribution 4.0 International Licence</dd><dt><span>references :</span></dt><dd>Geophysical Acquisition &amp; Processing Section 2019. MIM Data from Mt Isa Inlier, QLD (P1029), magnetic line data, AWAGS levelled. Geoscience Australia, Canberra. http://pid.geoscience.gov.au/dataset/ga/142419</dd><dt><span>long_name :</span></dt><dd>total-field magnetic anomaly</dd><dt><span>units :</span></dt><dd>nT</dd><dt><span>actual_range :</span></dt><dd>[-1785.  3798.]</dd></dl></div></li></ul></div></div>
+           [500., 500., 500., ..., 500., 500., 500.]], shape=(370, 346))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-159be426-a68d-4971-8ebc-cc39841b618a' class='xr-section-summary-in' type='checkbox' checked /><label for='section-159be426-a68d-4971-8ebc-cc39841b618a' class='xr-section-summary' title='Expand/collapse section'>Attributes: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>Magnetic total-field anomaly of the Lightning Creek sill complex, Australia</dd><dt><span>crs :</span></dt><dd>proj=utm zone=54 south datum=WGS84 units=m no_defs ellps=WGS84 towgs84=0,0,0</dd><dt><span>source :</span></dt><dd>Interpolated from airborne magnetic line data using gradient-boosted equivalent sources</dd><dt><span>license :</span></dt><dd>Creative Commons Attribution 4.0 International Licence</dd><dt><span>references :</span></dt><dd>Geophysical Acquisition &amp; Processing Section 2019. MIM Data from Mt Isa Inlier, QLD (P1029), magnetic line data, AWAGS levelled. Geoscience Australia, Canberra. http://pid.geoscience.gov.au/dataset/ga/142419</dd><dt><span>long_name :</span></dt><dd>total-field magnetic anomaly</dd><dt><span>units :</span></dt><dd>nT</dd><dt><span>actual_range :</span></dt><dd>[-1785.  3798.]</dd></dl></div></li></ul></div></div>
     </div>
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-42
+.. GENERATED FROM PYTHON SOURCE LINES 42-43
 
 Make a PyGMT pseudo-color map of the total field magnetic anomaly.
 
-.. GENERATED FROM PYTHON SOURCE LINES 42-58
+.. GENERATED FROM PYTHON SOURCE LINES 43-59
 
 .. code-block:: Python
 
@@ -567,14 +724,14 @@ Make a PyGMT pseudo-color map of the total field magnetic anomaly.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 59-60
+.. GENERATED FROM PYTHON SOURCE LINES 60-61
 
 The anomaly at the top right is the  Lightning Creek sill complex.
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.631 seconds)
+   **Total running time of the script:** (0 minutes 3.552 seconds)
 
 
 .. _sphx_glr_download_gallery_lightning-creek-magnetic.py:

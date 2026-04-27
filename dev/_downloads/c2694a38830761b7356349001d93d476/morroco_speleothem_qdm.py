@@ -25,6 +25,7 @@ redistribution in Ensaio
 <https://github.com/fatiando-data/morroco-speleothem-qdm>`__
 
 """
+
 import matplotlib.pyplot as plt
 import xarray as xr
 

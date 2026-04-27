@@ -37,9 +37,10 @@ Morocco. figshare. Dataset.
 redistribution in Ensaio
 <https://github.com/fatiando-data/morroco-speleothem-qdm>`__
 
-.. GENERATED FROM PYTHON SOURCE LINES 28-33
+.. GENERATED FROM PYTHON SOURCE LINES 28-34
 
 .. code-block:: Python
+
 
     import matplotlib.pyplot as plt
     import xarray as xr
@@ -53,12 +54,12 @@ redistribution in Ensaio
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 34-36
+.. GENERATED FROM PYTHON SOURCE LINES 35-37
 
 Download and cache the data and return the path to it on disk. We'll use the
 netCDF version because it's smaller and can be loaded with xarray easily.
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-39
+.. GENERATED FROM PYTHON SOURCE LINES 37-40
 
 .. code-block:: Python
 
@@ -78,11 +79,11 @@ netCDF version because it's smaller and can be loaded with xarray easily.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 40-41
+.. GENERATED FROM PYTHON SOURCE LINES 41-42
 
 Load the netCDF grid with xarray
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-44
+.. GENERATED FROM PYTHON SOURCE LINES 42-45
 
 .. code-block:: Python
 
@@ -112,39 +113,87 @@ Load the netCDF grid with xarray
     </symbol>
     </defs>
     </svg>
-    <style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
-     *
-     */
+    <style>/* CSS stylesheet for displaying xarray objects in notebooks */
 
     :root {
-      --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-      --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-      --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
-      --xr-border-color: var(--jp-border-color2, #e0e0e0);
-      --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
-      --xr-background-color: var(--jp-layout-color0, white);
-      --xr-background-color-row-even: var(--jp-layout-color1, white);
-      --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+      --xr-font-color0: var(
+        --jp-content-font-color0,
+        var(--pst-color-text-base rgba(0, 0, 0, 1))
+      );
+      --xr-font-color2: var(
+        --jp-content-font-color2,
+        var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+      );
+      --xr-font-color3: var(
+        --jp-content-font-color3,
+        var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+      );
+      --xr-border-color: var(
+        --jp-border-color2,
+        hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+      );
+      --xr-disabled-color: var(
+        --jp-layout-color3,
+        hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+      );
+      --xr-background-color: var(
+        --jp-layout-color0,
+        var(--pst-color-on-background, white)
+      );
+      --xr-background-color-row-even: var(
+        --jp-layout-color1,
+        hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+      );
+      --xr-background-color-row-odd: var(
+        --jp-layout-color2,
+        hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+      );
     }
 
     html[theme="dark"],
     html[data-theme="dark"],
     body[data-theme="dark"],
     body.vscode-dark {
-      --xr-font-color0: rgba(255, 255, 255, 1);
-      --xr-font-color2: rgba(255, 255, 255, 0.54);
-      --xr-font-color3: rgba(255, 255, 255, 0.38);
-      --xr-border-color: #1f1f1f;
-      --xr-disabled-color: #515151;
-      --xr-background-color: #111111;
-      --xr-background-color-row-even: #111111;
-      --xr-background-color-row-odd: #313131;
+      --xr-font-color0: var(
+        --jp-content-font-color0,
+        var(--pst-color-text-base, rgba(255, 255, 255, 1))
+      );
+      --xr-font-color2: var(
+        --jp-content-font-color2,
+        var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+      );
+      --xr-font-color3: var(
+        --jp-content-font-color3,
+        var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+      );
+      --xr-border-color: var(
+        --jp-border-color2,
+        hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+      );
+      --xr-disabled-color: var(
+        --jp-layout-color3,
+        hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+      );
+      --xr-background-color: var(
+        --jp-layout-color0,
+        var(--pst-color-on-background, #111111)
+      );
+      --xr-background-color-row-even: var(
+        --jp-layout-color1,
+        hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+      );
+      --xr-background-color-row-odd: var(
+        --jp-layout-color2,
+        hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+      );
     }
 
     .xr-wrap {
       display: block !important;
       min-width: 300px;
       max-width: 700px;
+      line-height: 1.6;
+      padding-bottom: 4px;
     }
 
     .xr-text-repr-fallback {
@@ -155,8 +204,11 @@ Load the netCDF grid with xarray
     .xr-header {
       padding-top: 6px;
       padding-bottom: 6px;
-      margin-bottom: 4px;
+    }
+
+    .xr-header {
       border-bottom: solid 1px var(--xr-border-color);
+      margin-bottom: 4px;
     }
 
     .xr-header > div,
@@ -167,45 +219,62 @@ Load the netCDF grid with xarray
     }
 
     .xr-obj-type,
-    .xr-array-name {
+    .xr-obj-name {
       margin-left: 2px;
       margin-right: 10px;
     }
 
-    .xr-obj-type {
+    .xr-obj-type,
+    .xr-group-box-contents > label {
       color: var(--xr-font-color2);
+      display: block;
     }
 
     .xr-sections {
       padding-left: 0 !important;
       display: grid;
       grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+      margin-block-start: 0;
+      margin-block-end: 0;
     }
 
     .xr-section-item {
       display: contents;
     }
 
-    .xr-section-item input {
-      display: inline-block;
+    .xr-section-item > input,
+    .xr-group-box-contents > input,
+    .xr-array-wrap > input {
+      display: block;
       opacity: 0;
       height: 0;
+      margin: 0;
     }
 
-    .xr-section-item input + label {
+    .xr-section-item > input + label,
+    .xr-var-item > input + label {
       color: var(--xr-disabled-color);
     }
 
-    .xr-section-item input:enabled + label {
+    .xr-section-item > input:enabled + label,
+    .xr-var-item > input:enabled + label,
+    .xr-array-wrap > input:enabled + label,
+    .xr-group-box-contents > input:enabled + label {
       cursor: pointer;
       color: var(--xr-font-color2);
     }
 
-    .xr-section-item input:focus + label {
-      border: 2px solid var(--xr-font-color0);
+    .xr-section-item > input:focus-visible + label,
+    .xr-var-item > input:focus-visible + label,
+    .xr-array-wrap > input:focus-visible + label,
+    .xr-group-box-contents > input:focus-visible + label {
+      outline: auto;
     }
 
-    .xr-section-item input:enabled + label:hover {
+    .xr-section-item > input:enabled + label:hover,
+    .xr-var-item > input:enabled + label:hover,
+    .xr-array-wrap > input:enabled + label:hover,
+    .xr-group-box-contents > input:enabled + label:hover {
       color: var(--xr-font-color0);
     }
 
@@ -213,11 +282,25 @@ Load the netCDF grid with xarray
       grid-column: 1;
       color: var(--xr-font-color2);
       font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .xr-section-summary > em {
+      font-weight: normal;
+    }
+
+    .xr-span-grid {
+      grid-column-end: -1;
     }
 
     .xr-section-summary > span {
       display: inline-block;
-      padding-left: 0.5em;
+      padding-left: 0.3em;
+    }
+
+    .xr-group-box-contents > input:checked + label > span {
+      display: inline-block;
+      padding-left: 0.6em;
     }
 
     .xr-section-summary-in:disabled + label {
@@ -245,9 +328,9 @@ Load the netCDF grid with xarray
     }
 
     .xr-section-summary,
-    .xr-section-inline-details {
+    .xr-section-inline-details,
+    .xr-group-box-contents > label {
       padding-top: 4px;
-      padding-bottom: 4px;
     }
 
     .xr-section-inline-details {
@@ -255,13 +338,79 @@ Load the netCDF grid with xarray
     }
 
     .xr-section-details {
-      display: none;
       grid-column: 1 / -1;
+      margin-top: 4px;
       margin-bottom: 5px;
+    }
+
+    .xr-section-summary-in ~ .xr-section-details {
+      display: none;
     }
 
     .xr-section-summary-in:checked ~ .xr-section-details {
       display: contents;
+    }
+
+    .xr-children {
+      display: inline-grid;
+      grid-template-columns: 100%;
+      grid-column: 1 / -1;
+      padding-top: 4px;
+    }
+
+    .xr-group-box {
+      display: inline-grid;
+      grid-template-columns: 0px 30px auto;
+    }
+
+    .xr-group-box-vline {
+      grid-column-start: 1;
+      border-right: 0.2em solid;
+      border-color: var(--xr-border-color);
+      width: 0px;
+    }
+
+    .xr-group-box-hline {
+      grid-column-start: 2;
+      grid-row-start: 1;
+      height: 1em;
+      width: 26px;
+      border-bottom: 0.2em solid;
+      border-color: var(--xr-border-color);
+    }
+
+    .xr-group-box-contents {
+      grid-column-start: 3;
+      padding-bottom: 4px;
+    }
+
+    .xr-group-box-contents > label::before {
+      content: "📂";
+      padding-right: 0.3em;
+    }
+
+    .xr-group-box-contents > input:checked + label::before {
+      content: "📁";
+    }
+
+    .xr-group-box-contents > input:checked + label {
+      padding-bottom: 0px;
+    }
+
+    .xr-group-box-contents > input:checked ~ .xr-sections {
+      display: none;
+    }
+
+    .xr-group-box-contents > input + label > span {
+      display: none;
+    }
+
+    .xr-group-box-ellipsis {
+      font-size: 1.4em;
+      font-weight: 900;
+      color: var(--xr-font-color2);
+      letter-spacing: 0.15em;
+      cursor: default;
     }
 
     .xr-array-wrap {
@@ -334,7 +483,9 @@ Load the netCDF grid with xarray
     .xr-var-item label,
     .xr-var-item > .xr-var-name span {
       background-color: var(--xr-background-color-row-even);
+      border-color: var(--xr-background-color-row-odd);
       margin-bottom: 0;
+      padding-top: 2px;
     }
 
     .xr-var-item > .xr-var-name:hover span {
@@ -345,6 +496,7 @@ Load the netCDF grid with xarray
     .xr-var-list > li:nth-child(odd) > label,
     .xr-var-list > li:nth-child(odd) > .xr-var-name span {
       background-color: var(--xr-background-color-row-odd);
+      border-color: var(--xr-background-color-row-even);
     }
 
     .xr-var-name {
@@ -394,8 +546,15 @@ Load the netCDF grid with xarray
     .xr-var-data,
     .xr-index-data {
       display: none;
-      background-color: var(--xr-background-color) !important;
-      padding-bottom: 5px !important;
+      border-top: 2px dotted var(--xr-background-color);
+      padding-bottom: 20px !important;
+      padding-top: 10px !important;
+    }
+
+    .xr-var-attrs-in + label,
+    .xr-var-data-in + label,
+    .xr-index-data-in + label {
+      padding: 0 1px;
     }
 
     .xr-var-attrs-in:checked ~ .xr-var-attrs,
@@ -406,6 +565,12 @@ Load the netCDF grid with xarray
 
     .xr-var-data > table {
       float: right;
+    }
+
+    .xr-var-data > pre,
+    .xr-index-data > pre,
+    .xr-var-data > table > tbody > tr {
+      background-color: transparent !important;
     }
 
     .xr-var-name span,
@@ -467,6 +632,14 @@ Load the netCDF grid with xarray
       stroke: currentColor;
       fill: currentColor;
     }
+
+    .xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+    .xr-var-data-in:checked + label > .xr-icon-database,
+    .xr-index-data-in:checked + label > .xr-icon-database {
+      color: var(--xr-font-color0);
+      filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+      stroke-width: 0.8px;
+    }
     </style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;bz&#x27; (y: 600, x: 960)&gt; Size: 2MB
     array([[ 352.40588  ,   94.89138  ,   41.619244 , ...,  470.18835  ,
              129.20056  ,   18.50121  ],
@@ -482,8 +655,8 @@ Load the netCDF grid with xarray
            [  80.609505 ,  273.08368  ,  118.23499  , ...,   -4.1957254,
              -53.55728  ,    2.1033592]], shape=(600, 960), dtype=float32)
     Coordinates:
-      * x        (x) float64 8kB 0.0 2.35 4.7 7.05 ... 2.249e+03 2.251e+03 2.254e+03
       * y        (y) float64 5kB 0.0 2.35 4.7 7.05 ... 1.403e+03 1.405e+03 1.408e+03
+      * x        (x) float64 8kB 0.0 2.35 4.7 7.05 ... 2.249e+03 2.251e+03 2.254e+03
         z        (y, x) float32 2MB 5.0 5.0 5.0 5.0 5.0 5.0 ... 5.0 5.0 5.0 5.0 5.0
     Attributes:
         Conventions:   CF-1.8
@@ -493,7 +666,7 @@ Load the netCDF grid with xarray
         references:    Carmo, Janine; Fu, Roger; Trindade, Ricardo; Piascik, Samu...
         long_name:     vertical magnetic field
         units:         nT
-        actual_range:  [-236933.  301265.]</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'bz'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>y</span>: 600</li><li><span class='xr-has-index'>x</span>: 960</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-b9480fe3-64d3-4b8a-b51b-1abaef43ef8c' class='xr-array-in' type='checkbox' checked><label for='section-b9480fe3-64d3-4b8a-b51b-1abaef43ef8c' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>352.4 94.89 41.62 288.4 404.5 ... 101.0 -186.6 -4.196 -53.56 2.103</span></div><div class='xr-array-data'><pre>array([[ 352.40588  ,   94.89138  ,   41.619244 , ...,  470.18835  ,
+        actual_range:  [-236933.  301265.]</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-obj-name'>&#x27;bz&#x27;</div><ul class='xr-dim-list'><li><span class='xr-has-index'>y</span>: 600</li><li><span class='xr-has-index'>x</span>: 960</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-8eefc11d-6c76-4d0f-a5e0-5d4ab7a9b722' class='xr-array-in' type='checkbox' checked><label for='section-8eefc11d-6c76-4d0f-a5e0-5d4ab7a9b722' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>352.4 94.89 41.62 288.4 404.5 ... 101.0 -186.6 -4.196 -53.56 2.103</span></div><div class='xr-array-data'><pre>array([[ 352.40588  ,   94.89138  ,   41.619244 , ...,  470.18835  ,
              129.20056  ,   18.50121  ],
            [ 525.0481   ,  624.8466   ,   53.45418  , ...,  450.42517  ,
              240.12456  ,  -73.61368  ],
@@ -505,41 +678,23 @@ Load the netCDF grid with xarray
            [ 171.17114  , -214.47801  ,  159.23438  , ...,  124.58138  ,
              258.5433   ,  -90.33769  ],
            [  80.609505 ,  273.08368  ,  118.23499  , ...,   -4.1957254,
-             -53.55728  ,    2.1033592]], shape=(600, 960), dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-b6059cca-8b88-42f7-ac67-3baef19f1739' class='xr-section-summary-in' type='checkbox'  checked><label for='section-b6059cca-8b88-42f7-ac67-3baef19f1739' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 2.35 ... 2.251e+03 2.254e+03</div><input id='attrs-03e17731-0b1e-40db-9444-fc968fe4b39e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-03e17731-0b1e-40db-9444-fc968fe4b39e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ffc9066f-fc5d-4787-ae42-248bd38af9d0' class='xr-var-data-in' type='checkbox'><label for='data-ffc9066f-fc5d-4787-ae42-248bd38af9d0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>µm</dd></dl></div><div class='xr-var-data'><pre>array([   0.  ,    2.35,    4.7 , ..., 2248.95, 2251.3 , 2253.65], shape=(960,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 2.35 ... 1.405e+03 1.408e+03</div><input id='attrs-3d23fbfa-235f-4c20-af14-abad590ee7df' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-3d23fbfa-235f-4c20-af14-abad590ee7df' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-42c50d6d-f5c0-4b6b-bede-792a7ee06759' class='xr-var-data-in' type='checkbox'><label for='data-42c50d6d-f5c0-4b6b-bede-792a7ee06759' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>µm</dd></dl></div><div class='xr-var-data'><pre>array([   0.  ,    2.35,    4.7 , ..., 1402.95, 1405.3 , 1407.65], shape=(600,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>z</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>5.0 5.0 5.0 5.0 ... 5.0 5.0 5.0 5.0</div><input id='attrs-98c88a0f-1d84-4a72-b4df-2bec7e02091b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-98c88a0f-1d84-4a72-b4df-2bec7e02091b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5b8d0927-dc26-465e-8661-9890083ddad8' class='xr-var-data-in' type='checkbox'><label for='data-5b8d0927-dc26-465e-8661-9890083ddad8' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>sensor sample distance</dd><dt><span>units :</span></dt><dd>µm</dd></dl></div><div class='xr-var-data'><pre>array([[5., 5., 5., ..., 5., 5., 5.],
+             -53.55728  ,    2.1033592]], shape=(600, 960), dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-c5eb95d8-2646-4200-b484-26622ab5b066' class='xr-section-summary-in' type='checkbox' checked /><label for='section-c5eb95d8-2646-4200-b484-26622ab5b066' class='xr-section-summary' title='Expand/collapse section'>Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 2.35 ... 1.405e+03 1.408e+03</div><input id='attrs-3a485361-e9a9-4ca7-beff-b6b26346e43b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-3a485361-e9a9-4ca7-beff-b6b26346e43b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-74b1d52c-9f38-420a-b4b7-ee52445ad13d' class='xr-var-data-in' type='checkbox'><label for='data-74b1d52c-9f38-420a-b4b7-ee52445ad13d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>µm</dd></dl></div><div class='xr-var-data'><pre>array([   0.  ,    2.35,    4.7 , ..., 1402.95, 1405.3 , 1407.65], shape=(600,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 2.35 ... 2.251e+03 2.254e+03</div><input id='attrs-e6fc6fe5-7f08-4768-adf2-af440e6d4e56' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e6fc6fe5-7f08-4768-adf2-af440e6d4e56' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e43d9217-210f-49bd-8312-690f0e649d0c' class='xr-var-data-in' type='checkbox'><label for='data-e43d9217-210f-49bd-8312-690f0e649d0c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>µm</dd></dl></div><div class='xr-var-data'><pre>array([   0.  ,    2.35,    4.7 , ..., 2248.95, 2251.3 , 2253.65], shape=(960,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>z</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>5.0 5.0 5.0 5.0 ... 5.0 5.0 5.0 5.0</div><input id='attrs-f7c649d1-08f9-4a85-8982-b09cd9d878c8' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f7c649d1-08f9-4a85-8982-b09cd9d878c8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-47d341bb-02b2-4696-af46-267f194a5c30' class='xr-var-data-in' type='checkbox'><label for='data-47d341bb-02b2-4696-af46-267f194a5c30' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>sensor sample distance</dd><dt><span>units :</span></dt><dd>µm</dd></dl></div><div class='xr-var-data'><pre>array([[5., 5., 5., ..., 5., 5., 5.],
            [5., 5., 5., ..., 5., 5., 5.],
            [5., 5., 5., ..., 5., 5., 5.],
            ...,
            [5., 5., 5., ..., 5., 5., 5.],
            [5., 5., 5., ..., 5., 5., 5.],
-           [5., 5., 5., ..., 5., 5., 5.]], shape=(600, 960), dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-45192e40-7b7a-47e0-8404-7b71a52891e1' class='xr-section-summary-in' type='checkbox'  ><label for='section-45192e40-7b7a-47e0-8404-7b71a52891e1' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>x</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-ec323e27-6f41-4733-8204-9f96b3b19d0b' class='xr-index-data-in' type='checkbox'/><label for='index-ec323e27-6f41-4733-8204-9f96b3b19d0b' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([               0.0,               2.35,                4.7,
-            7.050000000000001,                9.4,              11.75,
-           14.100000000000001,              16.45,               18.8,
-           21.150000000000002,
-           ...
-                       2232.5,            2234.85, 2237.2000000000003,
-                      2239.55,             2241.9,            2244.25,
-                       2246.6, 2248.9500000000003,             2251.3,
-                      2253.65],
-          dtype=&#x27;float64&#x27;, name=&#x27;x&#x27;, length=960))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>y</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-463965fe-7bf5-4343-9904-f09a7a0c60cb' class='xr-index-data-in' type='checkbox'/><label for='index-463965fe-7bf5-4343-9904-f09a7a0c60cb' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([               0.0,               2.35,                4.7,
-            7.050000000000001,                9.4,              11.75,
-           14.100000000000001,              16.45,               18.8,
-           21.150000000000002,
-           ...
-                       1386.5, 1388.8500000000001,             1391.2,
-                      1393.55,             1395.9,            1398.25,
-           1400.6000000000001,            1402.95,             1405.3,
-                      1407.65],
-          dtype=&#x27;float64&#x27;, name=&#x27;y&#x27;, length=600))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-8959a81e-a2e5-40a1-bbaa-11b376dca63a' class='xr-section-summary-in' type='checkbox'  checked><label for='section-8959a81e-a2e5-40a1-bbaa-11b376dca63a' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>QDM magnetic microscopy dataset of a speleothem from Morocco</dd><dt><span>source :</span></dt><dd>Measured on a Quantum Diamond Microscope (QDM) at Harvard University, using a stalagmite from Wintimdouine cave (Morroco).</dd><dt><span>license :</span></dt><dd>CC0 1.0 Universal</dd><dt><span>references :</span></dt><dd>Carmo, Janine; Fu, Roger; Trindade, Ricardo; Piascik, Samuel (2023). QDM magnetic microscopy dataset of a speleothem from Morocco. figshare. Dataset. https://doi.org/10.6084/m9.figshare.22965200.v1</dd><dt><span>long_name :</span></dt><dd>vertical magnetic field</dd><dt><span>units :</span></dt><dd>nT</dd><dt><span>actual_range :</span></dt><dd>[-236933.  301265.]</dd></dl></div></li></ul></div></div>
+           [5., 5., 5., ..., 5., 5., 5.]], shape=(600, 960), dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-0f6d0bd4-ff1c-40be-b872-2ea11ebeeee3' class='xr-section-summary-in' type='checkbox' checked /><label for='section-0f6d0bd4-ff1c-40be-b872-2ea11ebeeee3' class='xr-section-summary' title='Expand/collapse section'>Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.8</dd><dt><span>title :</span></dt><dd>QDM magnetic microscopy dataset of a speleothem from Morocco</dd><dt><span>source :</span></dt><dd>Measured on a Quantum Diamond Microscope (QDM) at Harvard University, using a stalagmite from Wintimdouine cave (Morroco).</dd><dt><span>license :</span></dt><dd>CC0 1.0 Universal</dd><dt><span>references :</span></dt><dd>Carmo, Janine; Fu, Roger; Trindade, Ricardo; Piascik, Samuel (2023). QDM magnetic microscopy dataset of a speleothem from Morocco. figshare. Dataset. https://doi.org/10.6084/m9.figshare.22965200.v1</dd><dt><span>long_name :</span></dt><dd>vertical magnetic field</dd><dt><span>units :</span></dt><dd>nT</dd><dt><span>actual_range :</span></dt><dd>[-236933.  301265.]</dd></dl></div></li></ul></div></div>
     </div>
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 45-47
+.. GENERATED FROM PYTHON SOURCE LINES 46-48
 
 Make a pseudo-color map of the magnetic microscopy data and adjust the scale
 because of some very strong sources.
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-52
+.. GENERATED FROM PYTHON SOURCE LINES 48-53
 
 .. code-block:: Python
 
@@ -563,7 +718,7 @@ because of some very strong sources.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.708 seconds)
+   **Total running time of the script:** (0 minutes 5.524 seconds)
 
 
 .. _sphx_glr_download_gallery_morroco_speleothem_qdm.py:

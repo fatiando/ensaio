@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**01:44.588** total execution time for 14 files **from all galleries**:
+**02:04.548** total execution time for 14 files **from all galleries**:
 
 .. container::
 
@@ -33,44 +33,44 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_gallery_sierra-negra-topography.py` (``gallery_src/sierra-negra-topography.py``)
-     - 00:20.702
-     - 0.0
-   * - :ref:`sphx_glr_gallery_osborne-magnetic.py` (``gallery_src/osborne-magnetic.py``)
-     - 00:15.124
+     - 00:27.881
      - 0.0
    * - :ref:`sphx_glr_gallery_british-columbia-lidar.py` (``gallery_src/british-columbia-lidar.py``)
-     - 00:13.441
+     - 00:17.536
+     - 0.0
+   * - :ref:`sphx_glr_gallery_osborne-magnetic.py` (``gallery_src/osborne-magnetic.py``)
+     - 00:16.201
      - 0.0
    * - :ref:`sphx_glr_gallery_britain-magnetic.py` (``gallery_src/britain-magnetic.py``)
-     - 00:09.658
+     - 00:11.081
      - 0.0
    * - :ref:`sphx_glr_gallery_earth-topography.py` (``gallery_src/earth-topography.py``)
-     - 00:06.613
-     - 0.0
-   * - :ref:`sphx_glr_gallery_caribbean-bathymetry.py` (``gallery_src/caribbean-bathymetry.py``)
-     - 00:06.584
+     - 00:08.774
      - 0.0
    * - :ref:`sphx_glr_gallery_earth-gravity.py` (``gallery_src/earth-gravity.py``)
-     - 00:06.368
+     - 00:08.034
      - 0.0
-   * - :ref:`sphx_glr_gallery_earth-geoid.py` (``gallery_src/earth-geoid.py``)
-     - 00:04.866
-     - 0.0
-   * - :ref:`sphx_glr_gallery_southern-africa-topography.py` (``gallery_src/southern-africa-topography.py``)
-     - 00:04.533
+   * - :ref:`sphx_glr_gallery_caribbean-bathymetry.py` (``gallery_src/caribbean-bathymetry.py``)
+     - 00:06.289
      - 0.0
    * - :ref:`sphx_glr_gallery_morroco_speleothem_qdm.py` (``gallery_src/morroco_speleothem_qdm.py``)
-     - 00:03.708
+     - 00:05.524
      - 0.0
-   * - :ref:`sphx_glr_gallery_lightning-creek-magnetic.py` (``gallery_src/lightning-creek-magnetic.py``)
-     - 00:03.631
+   * - :ref:`sphx_glr_gallery_southern-africa-topography.py` (``gallery_src/southern-africa-topography.py``)
+     - 00:04.769
      - 0.0
-   * - :ref:`sphx_glr_gallery_southern-africa-gravity.py` (``gallery_src/southern-africa-gravity.py``)
-     - 00:03.198
-     - 0.0
-   * - :ref:`sphx_glr_gallery_bushveld-gravity.py` (``gallery_src/bushveld-gravity.py``)
-     - 00:03.193
+   * - :ref:`sphx_glr_gallery_earth-geoid.py` (``gallery_src/earth-geoid.py``)
+     - 00:04.731
      - 0.0
    * - :ref:`sphx_glr_gallery_alps-gps-velocity.py` (``gallery_src/alps-gps-velocity.py``)
-     - 00:02.970
+     - 00:03.896
+     - 0.0
+   * - :ref:`sphx_glr_gallery_lightning-creek-magnetic.py` (``gallery_src/lightning-creek-magnetic.py``)
+     - 00:03.552
+     - 0.0
+   * - :ref:`sphx_glr_gallery_southern-africa-gravity.py` (``gallery_src/southern-africa-gravity.py``)
+     - 00:03.425
+     - 0.0
+   * - :ref:`sphx_glr_gallery_bushveld-gravity.py` (``gallery_src/bushveld-gravity.py``)
+     - 00:02.854
      - 0.0
