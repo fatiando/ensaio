@@ -26,6 +26,7 @@ gravity compilation available through NOAA NCEI.
 redistribution in Ensaio <https://github.com/fatiando-data/bushveld-gravity>`__
 
 """
+
 import numpy as np
 import pandas as pd
 import pygmt

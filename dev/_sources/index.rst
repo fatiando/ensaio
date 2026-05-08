@@ -104,6 +104,7 @@ computer already.
     :maxdepth: 1
 
     api/index.rst
+    citing.rst
     compatibility.rst
     changes.rst
     versions.rst

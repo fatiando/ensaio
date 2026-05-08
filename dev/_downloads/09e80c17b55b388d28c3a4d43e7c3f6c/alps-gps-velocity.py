@@ -21,6 +21,7 @@ redistribution in Ensaio
 <https://github.com/fatiando-data/alps-gps-velocity>`__
 
 """
+
 import numpy as np
 import pandas as pd
 import pygmt

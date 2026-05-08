@@ -3,6 +3,32 @@
 Changelog
 =========
 
+Version 0.7.1
+-------------
+
+Released on: 2026/05/08
+
+DOI: https://doi.org/10.5281/zenodo.20072698
+
+Documentation:
+
+- General improvements to the Installing and Version Compatibility pages (`#119 <https://github.com/fatiando/ensaio/pull/119>`__)
+- Use an admonition to add more visibility to the ``pyproject.toml`` file link in the Version Compatibility page (`#120 <https://github.com/fatiando/ensaio/pull/120>`__)
+- Make the README banner the h1 element for proper HTML heading progression, create a citing.rst page and add a link it in the README (`#118 <https://github.com/fatiando/ensaio/pull/118>`__)
+
+Maintenance:
+
+- Move to a ``src`` layout, with all the code in the ``src`` directory and tests in the ``test`` directory (which isn’t distributed with the package anymore to make downloads smaller) (`#97 <https://github.com/fatiando/ensaio/pull/97>`__)
+- Allow official Actions to use version numbers since they should be trustworthy enough (`#114 <https://github.com/fatiando/ensaio/pull/114>`__)
+- Fix Ruff error about checking against single item container (`#115 <https://github.com/fatiando/ensaio/pull/115>`__)
+- Replace Codecov with a GitHub Actions job to check if coverage is 100%, eliminating another third-party dependency (`#98 <https://github.com/fatiando/ensaio/pull/98>`__)
+- Use Ruff and zizmor for linting and formatting instead of flake8, isort, and black (`#96 <https://github.com/fatiando/ensaio/pull/96>`__)
+
+This release contains contributions from:
+
+- Santiago Soler
+- Leonardo Uieda
+
 Version 0.7.0
 -------------
 

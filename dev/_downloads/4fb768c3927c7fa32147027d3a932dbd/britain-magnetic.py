@@ -25,6 +25,7 @@ Contains British Geological Survey materials © UKRI 2021.
 redistribution in Ensaio <https://github.com/fatiando-data/britain-magnetic>`__
 
 """
+
 import numpy as np
 import pandas as pd
 import pygmt
