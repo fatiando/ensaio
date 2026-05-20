@@ -21,12 +21,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           persist-credentials: false
 
       - name: Setup Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
         with:
           python-version: "3.13"
 
@@ -35,7 +35,7 @@ jobs:
         run: echo "dir=$(pip cache dir)" >> $GITHUB_OUTPUT
 
       - name: Setup caching for pip packages
-        uses: actions/cache@v5
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
         with:
           path: ${{ steps.pip-cache.outputs.dir }}
           key: ${{ runner.os }}-pip-${{ hashFiles('env/requirements-style.txt') }}
