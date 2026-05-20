@@ -76,7 +76,7 @@ Download and cache the data and return the path to it on disk
 
  .. code-block:: none
 
-    /home/runner/work/_temp/cache/ensaio/v2/caribbean-bathymetry.csv.xz
+    /home/runner/.cache/ensaio/v2/caribbean-bathymetry.csv.xz
 
 
 
@@ -250,7 +250,7 @@ Make a PyGMT map with the data points colored by the bathymetry.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 7.437 seconds)
+   **Total running time of the script:** (0 minutes 7.940 seconds)
 
 
 .. _sphx_glr_download_gallery_caribbean-bathymetry.py:
