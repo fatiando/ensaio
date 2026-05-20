@@ -6,8 +6,16 @@
 #
 name: code-style
 
+# Only run on main or when relevant sources where edited.
 on:
   pull_request:
+    paths:
+      - src
+      - test
+      - doc/conf.py
+      - pyproject.toml
+      - env/requirements-style.txt
+      - .github/workflows/style.yml
   push:
     branches:
       - main

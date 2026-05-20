@@ -6,10 +6,16 @@
 #
 name: documentation
 
-# Don't need to run on pushes to main since the publish.yml workflow does it
-# already.
+# Don't need to run on pushes to main since the publish.yml does it already.
 on:
   pull_request:
+    paths:
+      - doc
+      - src
+      - pyproject.toml
+      - env/requirements-build.txt
+      - env/requirements-docs.txt
+      - .github/workflows/docs.yml
 
 permissions: {}
 
