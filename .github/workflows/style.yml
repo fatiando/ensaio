@@ -10,8 +10,8 @@ name: code-style
 on:
   pull_request:
     paths:
-      - src
-      - test
+      - src/**
+      - test/**
       - doc/conf.py
       - pyproject.toml
       - env/requirements-style.txt

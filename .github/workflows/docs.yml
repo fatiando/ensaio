@@ -10,8 +10,8 @@ name: documentation
 on:
   pull_request:
     paths:
-      - doc
-      - src
+      - doc/**
+      - src/**
       - pyproject.toml
       - env/requirements-build.txt
       - env/requirements-docs.txt

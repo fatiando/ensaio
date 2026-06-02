@@ -10,8 +10,8 @@ name: test
 on:
   pull_request:
     paths:
-      - src
-      - test
+      - src/**
+      - test/**
       - pyproject.toml
       - env/requirements-build.txt
       - env/requirements-test.txt
