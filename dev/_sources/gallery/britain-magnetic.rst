@@ -74,7 +74,7 @@ Download and cache the data and return the path to it on disk
 
  .. code-block:: none
 
-    /home/runner/work/_temp/cache/ensaio/v1/britain-magnetic.csv.xz
+    /home/runner/.cache/ensaio/v1/britain-magnetic.csv.xz
 
 
 
@@ -272,7 +272,7 @@ anomaly.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 8.938 seconds)
+   **Total running time of the script:** (0 minutes 10.900 seconds)
 
 
 .. _sphx_glr_download_gallery_britain-magnetic.py:

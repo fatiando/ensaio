@@ -70,7 +70,7 @@ Download and cache the data and return the path to it on disk
 
  .. code-block:: none
 
-    /home/runner/work/_temp/cache/ensaio/v1/sierra-negra-topography.csv.xz
+    /home/runner/.cache/ensaio/v1/sierra-negra-topography.csv.xz
 
 
 
@@ -232,7 +232,7 @@ Make a PyGMT map with the data points colored by the elevation.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 20.265 seconds)
+   **Total running time of the script:** (0 minutes 21.129 seconds)
 
 
 .. _sphx_glr_download_gallery_sierra-negra-topography.py:

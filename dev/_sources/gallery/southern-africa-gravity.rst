@@ -71,7 +71,7 @@ Download and cache the data and return the path to it on disk
 
  .. code-block:: none
 
-    /home/runner/work/_temp/cache/ensaio/v1/southern-africa-gravity.csv.xz
+    /home/runner/.cache/ensaio/v1/southern-africa-gravity.csv.xz
 
 
 
@@ -250,7 +250,7 @@ Make a PyGMT map with the data points colored by the gravity data.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.077 seconds)
+   **Total running time of the script:** (0 minutes 3.210 seconds)
 
 
 .. _sphx_glr_download_gallery_southern-africa-gravity.py:
