@@ -377,9 +377,9 @@ document.write(`
 <span class="c1">#</span>
 <span class="c1"># This code is part of the Fatiando a Terra project (https://www.fatiando.org)</span>
 <span class="c1">#</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 <span class="sd">Functions that fetch each of our sample datasets.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
@@ -387,124 +387,124 @@ document.write(`
 <span class="kn">import</span><span class="w"> </span><span class="nn">pooch</span>
 
 <span class="n">REGISTRY</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;alps-gps-velocity.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:195ee3d88783ce01b6190c2af89f2b14&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5879163&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/alps-gps-velocity/releases/download/v1&quot;</span><span class="p">,</span>
+    <span class="s2">"alps-gps-velocity.csv.xz"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"v1"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"md5:195ee3d88783ce01b6190c2af89f2b14"</span><span class="p">,</span>
+            <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"doi:10.5281/zenodo.5879163"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/fatiando-data/alps-gps-velocity/releases/download/v1"</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
-    <span class="s2">&quot;britain-magnetic.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:8dbbda02c7e74f63adc461909358f056&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5879260&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/britain-magnetic/releases/download/v1&quot;</span><span class="p">,</span>
+    <span class="s2">"britain-magnetic.csv.xz"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"v1"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"md5:8dbbda02c7e74f63adc461909358f056"</span><span class="p">,</span>
+            <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"doi:10.5281/zenodo.5879260"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/fatiando-data/britain-magnetic/releases/download/v1"</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
-    <span class="s2">&quot;british-columbia-lidar.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:354c725a95036bd8340bc14e043ece5a&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5881887&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/british-columbia-lidar/releases/download/v1&quot;</span><span class="p">,</span>
+    <span class="s2">"british-columbia-lidar.csv.xz"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"v1"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"md5:354c725a95036bd8340bc14e043ece5a"</span><span class="p">,</span>
+            <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"doi:10.5281/zenodo.5881887"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/fatiando-data/british-columbia-lidar/releases/download/v1"</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
-    <span class="s2">&quot;bushveld-gravity.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:368284cc210c6bbe256e9e49e892f262&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.6511942&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/bushveld-gravity/releases/download/v1&quot;</span><span class="p">,</span>
+    <span class="s2">"bushveld-gravity.csv.xz"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"v1"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"md5:368284cc210c6bbe256e9e49e892f262"</span><span class="p">,</span>
+            <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"doi:10.5281/zenodo.6511942"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/fatiando-data/bushveld-gravity/releases/download/v1"</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
-    <span class="s2">&quot;caribbean-bathymetry.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:a7332aa6e69c77d49d7fb54b764caa82&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5882211&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/caribbean-bathymetry/releases/download/v1&quot;</span><span class="p">,</span>
+    <span class="s2">"caribbean-bathymetry.csv.xz"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"v1"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"md5:a7332aa6e69c77d49d7fb54b764caa82"</span><span class="p">,</span>
+            <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"doi:10.5281/zenodo.5882211"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/fatiando-data/caribbean-bathymetry/releases/download/v1"</span><span class="p">,</span>
         <span class="p">},</span>
-        <span class="s2">&quot;v2&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:79698c447daba7c15011a5528c8fe212&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.10631903&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/caribbean-bathymetry/releases/download/v2&quot;</span><span class="p">,</span>
-        <span class="p">},</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;earth-geoid-10arcmin.nc&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:39b97344e704eb68fa381df2eb47da0f&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5882205&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/earth-geoid-10arcmin/releases/download/v1&quot;</span><span class="p">,</span>
+        <span class="s2">"v2"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"md5:79698c447daba7c15011a5528c8fe212"</span><span class="p">,</span>
+            <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"doi:10.5281/zenodo.10631903"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/fatiando-data/caribbean-bathymetry/releases/download/v2"</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
-    <span class="s2">&quot;earth-gravity-10arcmin.nc&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:56df20e0e67e28ebe4739a2f0357c4a6&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5882207&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/earth-gravity-10arcmin/releases/download/v1&quot;</span><span class="p">,</span>
+    <span class="s2">"earth-geoid-10arcmin.nc"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"v1"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"md5:39b97344e704eb68fa381df2eb47da0f"</span><span class="p">,</span>
+            <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"doi:10.5281/zenodo.5882205"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/fatiando-data/earth-geoid-10arcmin/releases/download/v1"</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
-    <span class="s2">&quot;earth-topography-10arcmin.nc&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:c43b61322e03669c4313ba3d9a58028d&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5882203&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/earth-topography-10arcmin/releases/download/v1&quot;</span><span class="p">,</span>
+    <span class="s2">"earth-gravity-10arcmin.nc"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"v1"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"md5:56df20e0e67e28ebe4739a2f0357c4a6"</span><span class="p">,</span>
+            <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"doi:10.5281/zenodo.5882207"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/fatiando-data/earth-gravity-10arcmin/releases/download/v1"</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
-    <span class="s2">&quot;lightning-creek-magnetic-grid.nc&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:4b19c2eabe75865183964983861cbf68&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.7079711&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/lightning-creek-magnetic-grid/releases/download/v1&quot;</span><span class="p">,</span>
+    <span class="s2">"earth-topography-10arcmin.nc"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"v1"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"md5:c43b61322e03669c4313ba3d9a58028d"</span><span class="p">,</span>
+            <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"doi:10.5281/zenodo.5882203"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/fatiando-data/earth-topography-10arcmin/releases/download/v1"</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
-    <span class="s2">&quot;morroco-speleothem-qdm.nc&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:fc2f5eafaa06cf32961bedbc737c58f5&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.14884823&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/morroco-speleothem-qdm/releases/download/v1&quot;</span><span class="p">,</span>
+    <span class="s2">"lightning-creek-magnetic-grid.nc"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"v1"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"md5:4b19c2eabe75865183964983861cbf68"</span><span class="p">,</span>
+            <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"doi:10.5281/zenodo.7079711"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/fatiando-data/lightning-creek-magnetic-grid/releases/download/v1"</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
-    <span class="s2">&quot;morroco-speleothem-qdm.mat&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:268bd3af5e350188d239ff8bd0a88227&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.14884823&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/morroco-speleothem-qdm/releases/download/v1&quot;</span><span class="p">,</span>
+    <span class="s2">"morroco-speleothem-qdm.nc"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"v1"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"md5:fc2f5eafaa06cf32961bedbc737c58f5"</span><span class="p">,</span>
+            <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"doi:10.5281/zenodo.14884823"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/fatiando-data/morroco-speleothem-qdm/releases/download/v1"</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
-    <span class="s2">&quot;osborne-magnetic.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:b26777bdde2f1ecb97dda655c8b1cf71&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5882209&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/osborne-magnetic/releases/download/v1&quot;</span><span class="p">,</span>
+    <span class="s2">"morroco-speleothem-qdm.mat"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"v1"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"md5:268bd3af5e350188d239ff8bd0a88227"</span><span class="p">,</span>
+            <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"doi:10.5281/zenodo.14884823"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/fatiando-data/morroco-speleothem-qdm/releases/download/v1"</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
-    <span class="s2">&quot;sierra-negra-topography.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:9f6f64d47d26773e37b154cf964724e3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.6139057&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/sierra-negra-topography/releases/download/v1&quot;</span><span class="p">,</span>
+    <span class="s2">"osborne-magnetic.csv.xz"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"v1"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"md5:b26777bdde2f1ecb97dda655c8b1cf71"</span><span class="p">,</span>
+            <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"doi:10.5281/zenodo.5882209"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/fatiando-data/osborne-magnetic/releases/download/v1"</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
-    <span class="s2">&quot;southern-africa-gravity.csv.xz&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:1dee324a14e647855366d6eb01a1ef35&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.5882430&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/southern-africa-gravity/releases/download/v1&quot;</span><span class="p">,</span>
+    <span class="s2">"sierra-negra-topography.csv.xz"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"v1"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"md5:9f6f64d47d26773e37b154cf964724e3"</span><span class="p">,</span>
+            <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"doi:10.5281/zenodo.6139057"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/fatiando-data/sierra-negra-topography/releases/download/v1"</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
-    <span class="s2">&quot;southern-africa-topography.nc&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;v1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;md5:609d14fe4e551c5dcf320cdceedd30e8&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;doi&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5281/zenodo.6481379&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/fatiando-data/southern-africa-topography/releases/download/v1&quot;</span><span class="p">,</span>
+    <span class="s2">"southern-africa-gravity.csv.xz"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"v1"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"md5:1dee324a14e647855366d6eb01a1ef35"</span><span class="p">,</span>
+            <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"doi:10.5281/zenodo.5882430"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/fatiando-data/southern-africa-gravity/releases/download/v1"</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s2">"southern-africa-topography.nc"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"v1"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"md5:609d14fe4e551c5dcf320cdceedd30e8"</span><span class="p">,</span>
+            <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"doi:10.5281/zenodo.6481379"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://github.com/fatiando-data/southern-africa-topography/releases/download/v1"</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
 <span class="p">}</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Create the Pooch instance that fetches a dataset of a particular version.</span>
 
-<span class="sd">    Cache location defaults to ``pooch.os_cache(&quot;ensaio&quot;)`` and can be</span>
+<span class="sd">    Cache location defaults to ``pooch.os_cache("ensaio")`` and can be</span>
 <span class="sd">    overwritten with the ``ENSAIO_DATA_DIR`` environment variable.</span>
 
 <span class="sd">    The data source defaults to the Zenodo DOI and can be switched to the</span>
@@ -522,31 +522,31 @@ document.write(`
 <span class="sd">    -------</span>
 <span class="sd">    repository : :class:`pooch.Pooch`</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">version_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;v</span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">version_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"v</span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span>
     <span class="c1"># Decide if we need to pull data from GitHub or the Zenodo DOIs</span>
-    <span class="n">envvar</span> <span class="o">=</span> <span class="s2">&quot;ENSAIO_DATA_FROM_GITHUB&quot;</span>
-    <span class="k">if</span> <span class="n">envvar</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">envvar</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;true&quot;</span><span class="p">:</span>
-        <span class="n">source</span> <span class="o">=</span> <span class="s2">&quot;url&quot;</span>
+    <span class="n">envvar</span> <span class="o">=</span> <span class="s2">"ENSAIO_DATA_FROM_GITHUB"</span>
+    <span class="k">if</span> <span class="n">envvar</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">envvar</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"true"</span><span class="p">:</span>
+        <span class="n">source</span> <span class="o">=</span> <span class="s2">"url"</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">source</span> <span class="o">=</span> <span class="s2">&quot;doi&quot;</span>
+        <span class="n">source</span> <span class="o">=</span> <span class="s2">"doi"</span>
     <span class="n">entry</span> <span class="o">=</span> <span class="n">REGISTRY</span><span class="p">[</span><span class="n">fname</span><span class="p">][</span><span class="n">version_str</span><span class="p">]</span>
     <span class="n">repository</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-        <span class="n">path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="n">pooch</span><span class="o">.</span><span class="n">os_cache</span><span class="p">(</span><span class="s2">&quot;ensaio&quot;</span><span class="p">)),</span>
-        <span class="c1"># Just here so that Pooch doesn&#39;t complain about there not being a</span>
+        <span class="n">path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="n">pooch</span><span class="o">.</span><span class="n">os_cache</span><span class="p">(</span><span class="s2">"ensaio"</span><span class="p">)),</span>
+        <span class="c1"># Just here so that Pooch doesn't complain about there not being a</span>
         <span class="c1"># format marker in the string.</span>
-        <span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">{version}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">base_url</span><span class="o">=</span><span class="s2">"</span><span class="si">{version}</span><span class="s2">"</span><span class="p">,</span>
         <span class="n">version</span><span class="o">=</span><span class="n">version_str</span><span class="p">,</span>
-        <span class="n">env</span><span class="o">=</span><span class="s2">&quot;ENSAIO_DATA_DIR&quot;</span><span class="p">,</span>
+        <span class="n">env</span><span class="o">=</span><span class="s2">"ENSAIO_DATA_DIR"</span><span class="p">,</span>
         <span class="n">retry_if_failed</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-        <span class="n">registry</span><span class="o">=</span><span class="p">{</span><span class="n">fname</span><span class="p">:</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;hash&quot;</span><span class="p">]},</span>
+        <span class="n">registry</span><span class="o">=</span><span class="p">{</span><span class="n">fname</span><span class="p">:</span> <span class="n">entry</span><span class="p">[</span><span class="s2">"hash"</span><span class="p">]},</span>
         <span class="n">urls</span><span class="o">=</span><span class="p">{</span><span class="n">fname</span><span class="p">:</span> <span class="n">_sanitize_url</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="n">source</span><span class="p">])</span> <span class="o">+</span> <span class="n">fname</span><span class="p">},</span>
     <span class="p">)</span>
     <span class="k">return</span> <span class="n">repository</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_sanitize_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Make sure that the URL ends with a trailing ``/`` for Pooch.</span>
 
 <span class="sd">    Parameters</span>
@@ -558,16 +558,16 @@ document.write(`
 <span class="sd">    -------</span>
 <span class="sd">    url : str</span>
 <span class="sd">        Sanitized download URL.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">url</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">url</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">"/"</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">"/"</span>
     <span class="k">return</span> <span class="n">url</span>
 
 
 <div class="viewcode-block" id="locate">
 <a class="viewcode-back" href="../../api/generated/ensaio.locate.html#ensaio.locate">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">locate</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Return the location of the system-dependent data cache folder.</span>
 
 <span class="sd">    This folder is not guaranteed to exist in the file system until a dataset</span>
@@ -581,13 +581,13 @@ document.write(`
 <span class="sd">    -------</span>
 <span class="sd">    path : :class:`pathlib.Path`</span>
 <span class="sd">        Path to the cache folder.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="s2">&quot;alps-gps-velocity.csv.xz&quot;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">abspath</span><span class="o">.</span><span class="n">parent</span></div>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="s2">"alps-gps-velocity.csv.xz"</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">abspath</span><span class="o">.</span><span class="n">parent</span></div>
 
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Check if the version is in the allowed range, raise an error if not.</span>
 
 <span class="sd">    Parameters</span>
@@ -599,10 +599,10 @@ document.write(`
 <span class="sd">    name : str</span>
 <span class="sd">        Name of the dataset (used in the error message).</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">if</span> <span class="n">version</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allowed</span><span class="p">:</span>
         <span class="n">message</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Invalid version=</span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2"> for </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> dataset. Must be one of </span><span class="si">{</span><span class="n">allowed</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="sa">f</span><span class="s2">"Invalid version=</span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2"> for </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> dataset. Must be one of </span><span class="si">{</span><span class="n">allowed</span><span class="si">}</span><span class="s2">."</span>
         <span class="p">)</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 
@@ -610,7 +610,7 @@ document.write(`
 <div class="viewcode-block" id="fetch_alps_gps">
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_alps_gps.html#ensaio.fetch_alps_gps">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_alps_gps</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Alpine 3-component GPS velocity dataset.</span>
 
 <span class="sd">    This is a compilation of 3D GPS velocities for the Alps. The horizontal</span>
@@ -652,9 +652,9 @@ document.write(`
 <span class="sd">    fname : :class:`pathlib.Path`</span>
 <span class="sd">        Path to the downloaded file on disk.</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alps GPS velocity&quot;</span><span class="p">)</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;alps-gps-velocity.csv.xz&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Alps GPS velocity"</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">"alps-gps-velocity.csv.xz"</span>
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
 
 
@@ -662,7 +662,7 @@ document.write(`
 <div class="viewcode-block" id="fetch_britain_magnetic">
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_britain_magnetic.html#ensaio.fetch_britain_magnetic">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_britain_magnetic</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Digitized airborne magnetic survey of Britain.</span>
 
 <span class="sd">    This is a digitization of an airborne magnetic survey of Britain. Data are</span>
@@ -709,9 +709,9 @@ document.write(`
 <span class="sd">    fname : :class:`pathlib.Path`</span>
 <span class="sd">        Path to the downloaded file on disk.</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Britain aeromagnetic&quot;</span><span class="p">)</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;britain-magnetic.csv.xz&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Britain aeromagnetic"</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">"britain-magnetic.csv.xz"</span>
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
 
 
@@ -719,7 +719,7 @@ document.write(`
 <div class="viewcode-block" id="fetch_british_columbia_lidar">
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_british_columbia_lidar.html#ensaio.fetch_british_columbia_lidar">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_british_columbia_lidar</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Topography (lidar point cloud) data of the Trail Islands in BC, Canada.</span>
 
 <span class="sd">    This is a lidar point cloud (ground reflections only) sliced to the small</span>
@@ -727,8 +727,8 @@ document.write(`
 <span class="sd">    to the North of Vancouver. The islands have some nice looking topography</span>
 <span class="sd">    and their isolated nature creates problems for some interpolation methods.</span>
 
-<span class="sd">    The horizontal datum is WGS84 and the elevation is referenced to &quot;mean sea</span>
-<span class="sd">    level&quot;.</span>
+<span class="sd">    The horizontal datum is WGS84 and the elevation is referenced to "mean sea</span>
+<span class="sd">    level".</span>
 
 <span class="sd">    There are ~800,000 measurements in total with 3 columns available:</span>
 <span class="sd">    longitude, latitude (geodetic), and ground elevation (orthometric).</span>
@@ -762,9 +762,9 @@ document.write(`
 <span class="sd">    fname : :class:`pathlib.Path`</span>
 <span class="sd">        Path to the downloaded file on disk.</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;British Columbia lidar&quot;</span><span class="p">)</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;british-columbia-lidar.csv.xz&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">"British Columbia lidar"</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">"british-columbia-lidar.csv.xz"</span>
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
 
 
@@ -772,7 +772,7 @@ document.write(`
 <div class="viewcode-block" id="fetch_bushveld_gravity">
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_bushveld_gravity.html#ensaio.fetch_bushveld_gravity">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_bushveld_gravity</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Gravity ground-based data over the Bushveld Complex, Southern Africa.</span>
 
 <span class="sd">    This dataset contains ground gravity observations over the area that</span>
@@ -816,9 +816,9 @@ document.write(`
 <span class="sd">    -------</span>
 <span class="sd">    fname : :class:`pathlib.Path`</span>
 <span class="sd">        Path to the downloaded file on disk.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Bushveld gravity data&quot;</span><span class="p">)</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;bushveld-gravity.csv.xz&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Bushveld gravity data"</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">"bushveld-gravity.csv.xz"</span>
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
 
 
@@ -826,7 +826,7 @@ document.write(`
 <div class="viewcode-block" id="fetch_caribbean_bathymetry">
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_caribbean_bathymetry.html#ensaio.fetch_caribbean_bathymetry">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_caribbean_bathymetry</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Single-beam bathymetry of the Caribbean.</span>
 
 <span class="sd">    This dataset is a compilation of several public domain single-beam</span>
@@ -834,7 +834,7 @@ document.write(`
 <span class="sd">    range of tectonic activity and an uneven distribution.</span>
 
 <span class="sd">    The horizontal datum is WGS84 and the bathymetry is negative downwards and</span>
-<span class="sd">    is referenced to &quot;mean sea level&quot;.</span>
+<span class="sd">    is referenced to "mean sea level".</span>
 
 <span class="sd">    There are 294,321 measurements in total with 4 columns available:</span>
 <span class="sd">    survey ID, longitude, latitude (geodetic), and bathymetry (in meters).</span>
@@ -880,9 +880,9 @@ document.write(`
 <span class="sd">    fname : :class:`pathlib.Path`</span>
 <span class="sd">        Path to the downloaded file on disk.</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Caribbean bathymetry&quot;</span><span class="p">)</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;caribbean-bathymetry.csv.xz&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Caribbean bathymetry"</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">"caribbean-bathymetry.csv.xz"</span>
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
 
 
@@ -890,13 +890,13 @@ document.write(`
 <div class="viewcode-block" id="fetch_earth_geoid">
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_earth_geoid.html#ensaio.fetch_earth_geoid">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_earth_geoid</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Geoid height of the Earth at 10 arc-minute resolution.</span>
 
 <span class="sd">    The grid is global with node spacing of 10 arc-minutes (grid-node</span>
 <span class="sd">    registered) and stored in netCDF with CF-compliant metadata.</span>
 <span class="sd">    The geoid height is derived from the EIGEN-6C4 spherical harmonic model of</span>
-<span class="sd">    the Earth&#39;s gravity field with respect to the WGS84 ellipsoid.</span>
+<span class="sd">    the Earth's gravity field with respect to the WGS84 ellipsoid.</span>
 
 <span class="sd">    The horizontal datum is WGS84.</span>
 
@@ -933,9 +933,9 @@ document.write(`
 <span class="sd">    fname : :class:`pathlib.Path`</span>
 <span class="sd">        Path to the downloaded file on disk.</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Earth geoid grid&quot;</span><span class="p">)</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;earth-geoid-10arcmin.nc&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Earth geoid grid"</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">"earth-geoid-10arcmin.nc"</span>
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
 
 
@@ -943,14 +943,14 @@ document.write(`
 <div class="viewcode-block" id="fetch_earth_gravity">
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_earth_gravity.html#ensaio.fetch_earth_gravity">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_earth_gravity</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Gravity of the Earth at 10 arc-minute resolution.</span>
 
 <span class="sd">    The grid is global with node spacing of 10 arc-minutes (grid-node</span>
 <span class="sd">    registered) and stored in netCDF with CF-compliant metadata.</span>
 
 <span class="sd">    The gravity values are derived from the EIGEN-6C4 spherical harmonic model</span>
-<span class="sd">    (calculated uniformly at 10 km above the WGS84 ellipsoid). Here &quot;gravity&quot;</span>
+<span class="sd">    (calculated uniformly at 10 km above the WGS84 ellipsoid). Here "gravity"</span>
 <span class="sd">    refers to the combined gravitational and centrifugal accelerations.</span>
 
 <span class="sd">    The horizontal and vertical datum is WGS84.</span>
@@ -988,9 +988,9 @@ document.write(`
 <span class="sd">    fname : :class:`pathlib.Path`</span>
 <span class="sd">        Path to the downloaded file on disk.</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Earth gravity grid&quot;</span><span class="p">)</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;earth-gravity-10arcmin.nc&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Earth gravity grid"</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">"earth-gravity-10arcmin.nc"</span>
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
 
 
@@ -998,14 +998,14 @@ document.write(`
 <div class="viewcode-block" id="fetch_earth_topography">
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_earth_topography.html#ensaio.fetch_earth_topography">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_earth_topography</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Topography of the Earth at 10 arc-minute resolution.</span>
 
 <span class="sd">    The grid is global with node spacing of 10 arc-minutes (grid-node</span>
 <span class="sd">    registered) and stored in netCDF with CF-compliant metadata.</span>
 
 <span class="sd">    The values are derived from a spherical harmonic model of the ETOPO1</span>
-<span class="sd">    bedrock grid. Topography/bathymetry values are referenced to &quot;sea level&quot;</span>
+<span class="sd">    bedrock grid. Topography/bathymetry values are referenced to "sea level"</span>
 <span class="sd">    and are positive upwards. The horizontal datum is WGS84.</span>
 
 <span class="sd">    There are 1081 x 2161 grid points in total. Coordinates are longitude and</span>
@@ -1040,9 +1040,9 @@ document.write(`
 <span class="sd">    fname : :class:`pathlib.Path`</span>
 <span class="sd">        Path to the downloaded file on disk.</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Earth topography grid&quot;</span><span class="p">)</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;earth-topography-10arcmin.nc&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Earth topography grid"</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">"earth-topography-10arcmin.nc"</span>
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
 
 
@@ -1050,7 +1050,7 @@ document.write(`
 <div class="viewcode-block" id="fetch_lightning_creek_magnetic">
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_lightning_creek_magnetic.html#ensaio.fetch_lightning_creek_magnetic">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_lightning_creek_magnetic</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Magnetic anomaly grid of the Lightning Creek Sill Complex, Australia.</span>
 
 <span class="sd">    This is a section of a survey acquired in 1990 by the Queensland</span>
@@ -1090,9 +1090,9 @@ document.write(`
 <span class="sd">    fname : :class:`pathlib.Path`</span>
 <span class="sd">        Path to the downloaded file on disk.</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Lightning Creek magnetic&quot;</span><span class="p">)</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;lightning-creek-magnetic-grid.nc&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Lightning Creek magnetic"</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">"lightning-creek-magnetic-grid.nc"</span>
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
 
 
@@ -1100,7 +1100,7 @@ document.write(`
 <div class="viewcode-block" id="fetch_morroco_speleothem_qdm">
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_morroco_speleothem_qdm.html#ensaio.fetch_morroco_speleothem_qdm">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_morroco_speleothem_qdm</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">file_format</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    QDM magnetic microscopy dataset of a speleothem from Morocco.</span>
 
 <span class="sd">    High-resolution magnetic map of a stalagmite sample from Wintimdouine Cave,</span>
@@ -1141,27 +1141,27 @@ document.write(`
 <span class="sd">    version : int</span>
 <span class="sd">        The data version to fetch. See the available versions above.</span>
 <span class="sd">    file_format : str</span>
-<span class="sd">        Which of the two data formats to fetch. Should be either ``&quot;netcdf&quot;``</span>
-<span class="sd">        or ``&quot;matlab&quot;``.</span>
+<span class="sd">        Which of the two data formats to fetch. Should be either ``"netcdf"``</span>
+<span class="sd">        or ``"matlab"``.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
 <span class="sd">    fname : :class:`pathlib.Path`</span>
 <span class="sd">        Path to the downloaded file on disk.</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Morroco speleothem QDM&quot;</span>
-    <span class="n">allowed_formats</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;matlab&quot;</span><span class="p">,</span> <span class="s2">&quot;netcdf&quot;</span><span class="p">}</span>
+<span class="sd">    """</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">"Morroco speleothem QDM"</span>
+    <span class="n">allowed_formats</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"matlab"</span><span class="p">,</span> <span class="s2">"netcdf"</span><span class="p">}</span>
     <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">file_format</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allowed_formats</span><span class="p">:</span>
         <span class="n">message</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Invalid data format &#39;</span><span class="si">{</span><span class="n">file_format</span><span class="si">}</span><span class="s2">&#39; for the </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> data. &quot;</span>
-            <span class="sa">f</span><span class="s2">&quot;Must be one of </span><span class="si">{</span><span class="n">allowed_formats</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="sa">f</span><span class="s2">"Invalid data format '</span><span class="si">{</span><span class="n">file_format</span><span class="si">}</span><span class="s2">' for the </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> data. "</span>
+            <span class="sa">f</span><span class="s2">"Must be one of </span><span class="si">{</span><span class="n">allowed_formats</span><span class="si">}</span><span class="s2">."</span>
         <span class="p">)</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
     <span class="n">fnames</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;netcdf&quot;</span><span class="p">:</span> <span class="s2">&quot;morroco-speleothem-qdm.nc&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;matlab&quot;</span><span class="p">:</span> <span class="s2">&quot;morroco-speleothem-qdm.mat&quot;</span><span class="p">,</span>
+        <span class="s2">"netcdf"</span><span class="p">:</span> <span class="s2">"morroco-speleothem-qdm.nc"</span><span class="p">,</span>
+        <span class="s2">"matlab"</span><span class="p">:</span> <span class="s2">"morroco-speleothem-qdm.mat"</span><span class="p">,</span>
     <span class="p">}</span>
     <span class="n">fname</span> <span class="o">=</span> <span class="n">fnames</span><span class="p">[</span><span class="n">file_format</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
@@ -1171,7 +1171,7 @@ document.write(`
 <div class="viewcode-block" id="fetch_osborne_magnetic">
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_osborne_magnetic.html#ensaio.fetch_osborne_magnetic">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_osborne_magnetic</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Magnetic airborne survey of the Osborne Mine and surroundings, Australia.</span>
 
 <span class="sd">    This is a section of a survey acquired in 1990 by the Queensland</span>
@@ -1217,9 +1217,9 @@ document.write(`
 <span class="sd">    fname : :class:`pathlib.Path`</span>
 <span class="sd">        Path to the downloaded file on disk.</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Osborne mine magnetic&quot;</span><span class="p">)</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;osborne-magnetic.csv.xz&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Osborne mine magnetic"</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">"osborne-magnetic.csv.xz"</span>
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
 
 
@@ -1227,13 +1227,13 @@ document.write(`
 <div class="viewcode-block" id="fetch_sierra_negra_topography">
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_sierra_negra_topography.html#ensaio.fetch_sierra_negra_topography">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_sierra_negra_topography</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Topography of the 2018 lava flows of the Sierra Negra volcano, Ecuador.</span>
 
 <span class="sd">    This is a structure-from-motion point cloud of the 2018 lava flows of the</span>
 <span class="sd">    Sierra Negra volcano, located on the Galápagos islands, Ecuador. The survey</span>
 <span class="sd">    is of a small region on the flank of the volcano. The horizontal datum is</span>
-<span class="sd">    WGS84 but the vertical datum for &quot;elevation&quot; is unspecified.</span>
+<span class="sd">    WGS84 but the vertical datum for "elevation" is unspecified.</span>
 
 <span class="sd">    There are ~1,700,000 measurements in total with 3 columns available:</span>
 <span class="sd">    longitude, latitude (geodetic), elevation.</span>
@@ -1268,9 +1268,9 @@ document.write(`
 <span class="sd">    fname : :class:`pathlib.Path`</span>
 <span class="sd">        Path to the downloaded file on disk.</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Sierra Negra volcano topography&quot;</span><span class="p">)</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;sierra-negra-topography.csv.xz&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Sierra Negra volcano topography"</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">"sierra-negra-topography.csv.xz"</span>
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
 
 
@@ -1278,13 +1278,13 @@ document.write(`
 <div class="viewcode-block" id="fetch_southern_africa_gravity">
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_southern_africa_gravity.html#ensaio.fetch_southern_africa_gravity">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_southern_africa_gravity</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Gravity ground-based surveys of Southern Africa.</span>
 
 <span class="sd">    This dataset is a compilation of several public domain ground measurements</span>
 <span class="sd">    of gravity from Southern Africa. The observations are the absolute gravity</span>
 <span class="sd">    values in mGal. The horizontal datum is not specified and heights are</span>
-<span class="sd">    referenced to &quot;sea level&quot;, which we will interpret as the geoid (which</span>
+<span class="sd">    referenced to "sea level", which we will interpret as the geoid (which</span>
 <span class="sd">    realization is likely not relevant since the uncertainty in the height is</span>
 <span class="sd">    probably larger than geoid model differences).</span>
 
@@ -1320,9 +1320,9 @@ document.write(`
 <span class="sd">    fname : :class:`pathlib.Path`</span>
 <span class="sd">        Path to the downloaded file on disk.</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Southern Africa gravity&quot;</span><span class="p">)</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;southern-africa-gravity.csv.xz&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Southern Africa gravity"</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">"southern-africa-gravity.csv.xz"</span>
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
 
 
@@ -1330,7 +1330,7 @@ document.write(`
 <div class="viewcode-block" id="fetch_southern_africa_topography">
 <a class="viewcode-back" href="../../api/generated/ensaio.fetch_southern_africa_topography.html#ensaio.fetch_southern_africa_topography">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">fetch_southern_africa_topography</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Topography and bathymetry data for Southern Africa.</span>
 
 <span class="sd">    This is a topography and bathymetry grid with a resolution of 1 arc-minute</span>
@@ -1366,9 +1366,9 @@ document.write(`
 <span class="sd">    fname : :class:`pathlib.Path`</span>
 <span class="sd">        Path to the downloaded file on disk.</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Southern Africa topography&quot;</span><span class="p">)</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;southern-africa-topography.nc&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">_check_versions</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Southern Africa topography"</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="s2">"southern-africa-topography.nc"</span>
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">_repository</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
 
 </pre></div>
@@ -1414,7 +1414,7 @@ document.write(`
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on May 08, 2026.
+  Last updated on Sep 24, 2026.
   <br/>
 </p>
   </div>
