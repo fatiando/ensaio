@@ -4,7 +4,7 @@
 #
 # This code is part of the Fatiando a Terra project (https://www.fatiando.org)
 #
-import datetime
+import datetime as dt
 
 import pygmt.sphinx_gallery
 from sphinx_gallery.sorting import ExampleTitleSortKey
@@ -14,8 +14,10 @@ import ensaio
 # Project information
 # -----------------------------------------------------------------------------
 project = "Ensaio"
-copyright = f"{datetime.date.today().year}, The {project} Developers"
-version = "dev" if len(ensaio.__version__.split(".")) > 3 else ensaio.__version__
+year = dt.datetime.now(tz=dt.timezone.utc).date().year
+copyright = f"{year}, The {project} Developers"
+is_dev_version = len(ensaio.__version__.split(".")) > 3
+version = "dev" if is_dev_version else ensaio.__version__
 
 # General configuration
 # -----------------------------------------------------------------------------
