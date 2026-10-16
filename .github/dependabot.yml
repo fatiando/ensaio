@@ -4,12 +4,12 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
 
   - package-ecosystem: "pip"
     directory: "env/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     allow:
       - dependency-name: "zizmor"
         update-types:
