@@ -23,6 +23,7 @@ dependencies:
   - jupyter-sphinx==0.5.*
   - numpy
   - pandas
+  - matplotlib
   - xarray
   - netcdf4
   - pygmt==0.11.0
