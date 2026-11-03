@@ -3,7 +3,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python==3.13
+  - python==3.15
   - pip
   - make
   # Run
@@ -16,18 +16,18 @@ dependencies:
   - pytest-cov
   - coverage
   # Documentation
-  - sphinx==7.2.*
-  - sphinx-book-theme==1.1.*
-  - sphinx-gallery==0.15.*
-  - sphinx-design==0.5.*
+  - sphinx==9.2.*
+  - sphinx-book-theme==1.4.*
+  - sphinx-gallery==0.22.*
+  - sphinx-design==0.7.*
   - jupyter-sphinx==0.5.*
   - numpy
   - pandas
   - matplotlib
   - xarray
   - netcdf4
-  - pygmt==0.11.0
-  - gmt==6.5.0
+  - pygmt==0.19.0
+  - gmt==6.7.0
   - ipython
   # Style
   - ruff
