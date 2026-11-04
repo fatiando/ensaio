@@ -15,7 +15,8 @@ import ensaio
 # -----------------------------------------------------------------------------
 project = "Ensaio"
 year = dt.datetime.now(tz=dt.timezone.utc).date().year
-copyright = f"{year}, The {project} Developers"
+author = f"The {project} Developers"
+copyright = f"{year}, {author}"
 is_dev_version = len(ensaio.__version__.split(".")) > 3
 version = "dev" if is_dev_version else ensaio.__version__
 
@@ -93,9 +94,8 @@ sphinx_gallery_conf = {
 
 # HTML output configuration
 # -----------------------------------------------------------------------------
-html_title = f'{project} <span class="project-version">{version}</span>'
+html_title = f"{project} {version}"
 html_short_title = project
-# html_logo = "_static/ensaio-logo.png"
 html_favicon = "_static/favicon.png"
 html_last_updated_fmt = "%b %d, %Y"
 html_copy_source = True
@@ -109,6 +109,11 @@ html_show_copyright = True
 
 html_theme = "sphinx_book_theme"
 html_theme_options = {
+    "logo": {
+        "text": f'Ensaio <span class="project-version">{version}</span>',
+        "image_light": "_static/ensaio-logo.png",
+        "image_dark": "_static/ensaio-logo.png",
+    },
     "repository_url": f"https://github.com/fatiando/{project.lower()}",
     "repository_branch": "main",
     "path_to_docs": "doc",
