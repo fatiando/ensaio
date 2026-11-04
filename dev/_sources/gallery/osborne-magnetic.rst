@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_gallery_osborne-magnetic.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -71,7 +71,7 @@ Download and cache the data and return the path to it on disk
 
  .. code-block:: none
 
-    /home/runner/work/_temp/cache/ensaio/v1/osborne-magnetic.csv.xz
+    /home/runner/.cache/ensaio/v1/osborne-magnetic.csv.xz
 
 
 
@@ -273,7 +273,7 @@ are the Lightning Creek sill complex (the largest) and the Brumby prospect
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 14.668 seconds)
+   **Total running time of the script:** (0 minutes 12.309 seconds)
 
 
 .. _sphx_glr_download_gallery_osborne-magnetic.py:
@@ -289,6 +289,10 @@ are the Lightning Creek sill complex (the largest) and the Brumby prospect
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: osborne-magnetic.py <osborne-magnetic.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: osborne-magnetic.zip <osborne-magnetic.zip>`
 
 
 .. only:: html

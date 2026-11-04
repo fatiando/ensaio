@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_gallery_sierra-negra-topography.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -70,7 +70,7 @@ Download and cache the data and return the path to it on disk
 
  .. code-block:: none
 
-    /home/runner/work/_temp/cache/ensaio/v1/sierra-negra-topography.csv.xz
+    /home/runner/.cache/ensaio/v1/sierra-negra-topography.csv.xz
 
 
 
@@ -232,7 +232,7 @@ Make a PyGMT map with the data points colored by the elevation.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 20.265 seconds)
+   **Total running time of the script:** (0 minutes 31.352 seconds)
 
 
 .. _sphx_glr_download_gallery_sierra-negra-topography.py:
@@ -248,6 +248,10 @@ Make a PyGMT map with the data points colored by the elevation.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: sierra-negra-topography.py <sierra-negra-topography.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: sierra-negra-topography.zip <sierra-negra-topography.zip>`
 
 
 .. only:: html

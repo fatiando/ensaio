@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_gallery_britain-magnetic.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -74,7 +74,7 @@ Download and cache the data and return the path to it on disk
 
  .. code-block:: none
 
-    /home/runner/work/_temp/cache/ensaio/v1/britain-magnetic.csv.xz
+    /home/runner/.cache/ensaio/v1/britain-magnetic.csv.xz
 
 
 
@@ -272,7 +272,7 @@ anomaly.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 8.938 seconds)
+   **Total running time of the script:** (0 minutes 10.372 seconds)
 
 
 .. _sphx_glr_download_gallery_britain-magnetic.py:
@@ -288,6 +288,10 @@ anomaly.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: britain-magnetic.py <britain-magnetic.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: britain-magnetic.zip <britain-magnetic.zip>`
 
 
 .. only:: html

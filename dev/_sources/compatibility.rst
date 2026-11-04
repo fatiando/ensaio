@@ -91,3 +91,5 @@ following releases to ensure compatibility:
       - 0.6.0
     * - 3.8
       - 0.6.0
+    * - 3.9
+      - 0.7.1

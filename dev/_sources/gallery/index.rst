@@ -19,22 +19,27 @@ organization.
     dataset.
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This dataset is a compilation of several public domain single-beam bathymetry surveys of the oc...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This dataset is a compilation of several public domain single-beam bathymetry surveys of the ocean in the Caribbean. The data display a wide range of tectonic activity and uneven distribution.">
 
 .. only:: html
 
   .. image:: /gallery/images/thumb/sphx_glr_caribbean-bathymetry_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_caribbean-bathymetry.py`
+  :doc:`/gallery/caribbean-bathymetry`
 
 .. raw:: html
 
@@ -44,14 +49,14 @@ organization.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="The grid is grid-node registered and stored in netCDF with CF-compliant metadata. The geoid hei...">
+    <div class="sphx-glr-thumbcontainer" tooltip="The grid is grid-node registered and stored in netCDF with CF-compliant metadata. The geoid height is derived from the EIGEN-6C4 spherical harmonic model of the Earth&#x27;s gravity field.">
 
 .. only:: html
 
   .. image:: /gallery/images/thumb/sphx_glr_earth-geoid_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_earth-geoid.py`
+  :doc:`/gallery/earth-geoid`
 
 .. raw:: html
 
@@ -61,14 +66,14 @@ organization.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="The grid is grid-node registered and stored in netCDF with CF-compliant metadata. The gravity v...">
+    <div class="sphx-glr-thumbcontainer" tooltip="The grid is grid-node registered and stored in netCDF with CF-compliant metadata. The gravity values are derived from the EIGEN-6C4 spherical harmonic model. Here &quot;gravity&quot; refers to the combined gravitational and centrifugal accelerations.">
 
 .. only:: html
 
   .. image:: /gallery/images/thumb/sphx_glr_earth-gravity_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_earth-gravity.py`
+  :doc:`/gallery/earth-gravity`
 
 .. raw:: html
 
@@ -78,14 +83,14 @@ organization.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="The grid is grid-node registered and stored in netCDF with CF-compliant metadata. The values ar...">
+    <div class="sphx-glr-thumbcontainer" tooltip="The grid is grid-node registered and stored in netCDF with CF-compliant metadata. The values are derived from a spherical harmonic model of the ETOPO1 bedrock grid. Topography values are referenced to &quot;sea level&quot; and are positive upwards.">
 
 .. only:: html
 
   .. image:: /gallery/images/thumb/sphx_glr_earth-topography_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_earth-topography.py`
+  :doc:`/gallery/earth-topography`
 
 .. raw:: html
 
@@ -95,14 +100,14 @@ organization.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is a compilation of 3D GPS velocities for the Alps. The horizontal velocities are referenc...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a compilation of 3D GPS velocities for the Alps. The horizontal velocities are reference to the Eurasian frame. All velocity components and even the position have error estimates, which is very useful and rare to find in a lot of datasets.">
 
 .. only:: html
 
   .. image:: /gallery/images/thumb/sphx_glr_alps-gps-velocity_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_alps-gps-velocity.py`
+  :doc:`/gallery/alps-gps-velocity`
 
 .. raw:: html
 
@@ -112,14 +117,14 @@ organization.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This dataset contains ground gravity observations over the area that comprises the Bushveld Ige...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This dataset contains ground gravity observations over the area that comprises the Bushveld Igenous Complex in Southern Africa, including preprocessed gravity fields such as the gravity disturbance and the Bouguer gravity disturbance (topography-free gravity disturbance). In addition, the dataset contains the heights of the observation points referenced on the WGS84 reference ellipsoid and over the mean sea-level (what can be considered to be the geoid). This dataset was built upon a portion of the Southern Africa gravity compilation available through NOAA NCEI.">
 
 .. only:: html
 
   .. image:: /gallery/images/thumb/sphx_glr_bushveld-gravity_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_bushveld-gravity.py`
+  :doc:`/gallery/bushveld-gravity`
 
 .. raw:: html
 
@@ -129,14 +134,14 @@ organization.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This dataset is a compilation of several public domain ground measurements of gravity from Sout...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This dataset is a compilation of several public domain ground measurements of gravity from Southern Africa. The observations are the absolute gravity values in mGal. The horizontal datum is not specified and heights are referenced to &quot;sea level&quot;, which we will interpret as the geoid (which realization is likely not relevant since the uncertainty in the height is probably larger than geoid model differences).">
 
 .. only:: html
 
   .. image:: /gallery/images/thumb/sphx_glr_southern-africa-gravity_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_southern-africa-gravity.py`
+  :doc:`/gallery/southern-africa-gravity`
 
 .. raw:: html
 
@@ -146,14 +151,14 @@ organization.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is a digitization of an airborne magnetic survey of Britain. Data are sampled where flight...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a digitization of an airborne magnetic survey of Britain. Data are sampled where flight lines crossed contours on the archive maps. Contains only the total field magnetic anomaly, not the magnetic field intensity measurements or corrections.">
 
 .. only:: html
 
   .. image:: /gallery/images/thumb/sphx_glr_britain-magnetic_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_britain-magnetic.py`
+  :doc:`/gallery/britain-magnetic`
 
 .. raw:: html
 
@@ -163,14 +168,14 @@ organization.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is a section of a survey acquired in 1990 by the Queensland Government, Australia. The lin...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a section of a survey acquired in 1990 by the Queensland Government, Australia. The line data have approximately 80 m terrain clearance and 200 m line spacing. The section contains the total field magnetic anomalies associated with the Osborne Mine, Lightning Creek sill complex, and the Brumby prospect.">
 
 .. only:: html
 
   .. image:: /gallery/images/thumb/sphx_glr_osborne-magnetic_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_osborne-magnetic.py`
+  :doc:`/gallery/osborne-magnetic`
 
 .. raw:: html
 
@@ -180,14 +185,14 @@ organization.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is a section of an airborne survey acquired in 1990 by the Queensland Government, Australi...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a section of an airborne survey acquired in 1990 by the Queensland Government, Australia. The grid has 50 m resolution (UTM coordinates) and is at a uniform orthometric height of 500 m.">
 
 .. only:: html
 
   .. image:: /gallery/images/thumb/sphx_glr_lightning-creek-magnetic_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_lightning-creek-magnetic.py`
+  :doc:`/gallery/lightning-creek-magnetic`
 
 .. raw:: html
 
@@ -197,14 +202,14 @@ organization.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="High-resolution magnetic map of a stalagmite sample from Wintimdouine Cave, Morocco, created us...">
+    <div class="sphx-glr-thumbcontainer" tooltip="High-resolution magnetic map of a stalagmite sample from Wintimdouine Cave, Morocco, created using Quantum Diamond Microscope (QDM) measurements at Harvard University. The data were collected to explore the magnetic remanence properties of hematite and magnetite within the sample, providing insight into past geomagnetic field variations recorded in cave deposits.">
 
 .. only:: html
 
   .. image:: /gallery/images/thumb/sphx_glr_morroco_speleothem_qdm_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_morroco_speleothem_qdm.py`
+  :doc:`/gallery/morroco_speleothem_qdm`
 
 .. raw:: html
 
@@ -214,14 +219,14 @@ organization.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This dataset consists in a regular grid with topography and bathymetry over Southern Africa. It...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This dataset consists in a regular grid with topography and bathymetry over Southern Africa. It was generated by cropping the ETOPO1 global topography grid to the desired area. The topography and bathymetry heights are referenced to sea level (what can be considered as the geoid).">
 
 .. only:: html
 
   .. image:: /gallery/images/thumb/sphx_glr_southern-africa-topography_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_southern-africa-topography.py`
+  :doc:`/gallery/southern-africa-topography`
 
 .. raw:: html
 
@@ -231,14 +236,14 @@ organization.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is a structure-from-motion point cloud of the 2018 lava flows of the Sierra Negra volcano,...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a structure-from-motion point cloud of the 2018 lava flows of the Sierra Negra volcano, located on the Galápagos islands, Ecuador. The survey covers a small region at the flank of the volcano and shows different structures and terrain roughness on the lava flows.">
 
 .. only:: html
 
   .. image:: /gallery/images/thumb/sphx_glr_sierra-negra-topography_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_sierra-negra-topography.py`
+  :doc:`/gallery/sierra-negra-topography`
 
 .. raw:: html
 
@@ -248,20 +253,22 @@ organization.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is a lidar point cloud (ground reflections only) sliced to the small Trail Islands to the ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a lidar point cloud (ground reflections only) sliced to the small Trail Islands to the North of Vancouver. The islands have some nice looking topography and their isolated nature creates problems for some interpolation methods.">
 
 .. only:: html
 
   .. image:: /gallery/images/thumb/sphx_glr_british-columbia-lidar_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_british-columbia-lidar.py`
+  :doc:`/gallery/british-columbia-lidar`
 
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Topography of the Trail Islands in British Columbia, Canada</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
