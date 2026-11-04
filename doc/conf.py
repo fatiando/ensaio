@@ -94,7 +94,7 @@ sphinx_gallery_conf = {
 
 # HTML output configuration
 # -----------------------------------------------------------------------------
-html_title = f'{project} {version}'
+html_title = f"{project} {version}"
 html_short_title = project
 html_favicon = "_static/favicon.png"
 html_last_updated_fmt = "%b %d, %Y"
