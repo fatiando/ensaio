@@ -101,7 +101,7 @@ html_last_updated_fmt = "%b %d, %Y"
 html_copy_source = True
 html_static_path = ["_static"]
 # CSS files are relative to the static path
-html_css_files = ["style.css"]
+html_css_files = ["custom.css"]
 html_extra_path = []
 html_show_sourcelink = False
 html_show_sphinx = True
@@ -110,9 +110,9 @@ html_show_copyright = True
 html_theme = "sphinx_book_theme"
 html_theme_options = {
     "logo": {
-        "text": f'Ensaio <span class="project-version">{version}</span>',
-        "image_light": "_static/ensaio-logo.png",
-        "image_dark": "_static/ensaio-logo.png",
+        "text": f'{project} <span class="project-version">{version}</span>',
+        "image_light": f"_static/{project.lower()}-logo.png",
+        "image_dark": f"_static/{project.lower()}-logo.png",
     },
     "repository_url": f"https://github.com/fatiando/{project.lower()}",
     "repository_branch": "main",
